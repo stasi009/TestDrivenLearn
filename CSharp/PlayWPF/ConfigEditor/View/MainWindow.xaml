@@ -1,0 +1,44 @@
+﻿<Window x:Class="ConfigEditor.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:ConfigEditor.View"
+        Title="Configuration Editor" 
+        Loaded="Window_Loaded"
+        Closing="Window_Closing"
+        Height="640" Width="821">
+
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Save" Command="{Binding Path=SaveCmd}"></MenuItem>
+            <MenuItem Header="About"></MenuItem>
+        </Menu>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+
+            <GroupBox Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" Header="Other Settings">
+                <local:UserCtrlOtherSettings 
+                    x:Name="viewOtherSettings"
+                    DataContext="{Binding Path=OtherSettingsViewModel}"/>
+            </GroupBox>
+            <GridSplitter Grid.Row="0" Grid.Column="1" Grid.RowSpan="3"  Width="5" VerticalAlignment="Stretch" HorizontalAlignment="Center"/>
+            <GroupBox Grid.Row="0" Grid.Column="2" Header="All Measurements">
+                <local:UserCtrlAllMeasurements DataContext="{Binding Path=AllMeasurementsViewModel}"/>
+            </GroupBox>
+            <GridSplitter Grid.Row="1" Grid.Column="2"  Height="5" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+            <GroupBox Grid.Row="2" Grid.Column="2" Header="Selected Measurements">
+                <local:UserCtrlChosenMeasurements DataContext="{Binding Path=ChosenMeasurementViewModel}"/>
+            </GroupBox>
+
+        </Grid>
+    </DockPanel>
+
+</Window>

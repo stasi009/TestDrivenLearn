@@ -1,0 +1,41 @@
+﻿<Window x:Class="DemoMessage.SyncWithMessage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SyncWithMessage" Height="300" Width="300">
+    <Window.Resources>
+        <Style TargetType="ListBox">
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <!--
+        <ListBox ItemsSource="{Binding Path=All}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <CheckBox Content="{Binding Path=Name}" IsChecked="{Binding Path=IsSelected}"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        -->
+        <DataGrid ItemsSource="{Binding All}" Margin="5" AutoGenerateColumns="False" CanUserAddRows="False">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header=" ">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate >
+                            <!--UpdateSourceTrigger is necessary and important, otherwise the binding is just one way-->
+                            <CheckBox IsChecked="{Binding IsSelected,UpdateSourceTrigger=PropertyChanged}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}" IsReadOnly="True" Width="*" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <ListBox Grid.Column="1" ItemsSource="{Binding Path=Selected}" DisplayMemberPath="Name">
+        </ListBox>
+    </Grid>
+</Window>

@@ -1,0 +1,9 @@
+﻿<!--note: startupuri can contain sub-directory-->
+<Application x:Class="_06.ResourceStyle.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="Resource/ResourceInCode.xaml">
+    <Application.Resources>
+
+    </Application.Resources>
+</Application>

@@ -1,0 +1,28 @@
+﻿<Window x:Class="_06.ResourceStyle.Style.BasedOnStyle"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="BasedOnStyle" Height="88" Width="304">
+    <Window.Resources>
+        <Style x:Key="baseStyle" TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="BorderBrush" Value="DarkGreen"/>
+        </Style>
+        <!--derived style which only add new properties-->
+        <Style x:Key="btnStyle1" TargetType="Button" BasedOn="{StaticResource baseStyle}">
+            <Setter Property="FontWeight" Value="ultrabold"/>
+        </Style>
+        <!--note: derived style override some old properties-->
+        <Style x:Key="btnStyle2" TargetType="Button" BasedOn="{StaticResource baseStyle}">
+            <Setter Property="BorderBrush" Value="Blue"/>
+            <Setter Property="Background" Value="lightskyblue"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Button Grid.Row="0" Grid.Column="0" Content="Button1" Style="{StaticResource btnStyle1}"/>
+        <Button Grid.Row="0" Grid.Column="1" Content="Button2" Style="{StaticResource btnStyle2}"/>
+    </Grid>
+</Window>

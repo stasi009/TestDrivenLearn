@@ -1,0 +1,11 @@
+﻿<!--note: when specify StartupUri with a page, other than a window
+    WPF will automatically create a navigation window to host all these pages
+    you don't need to provide a navigation window yourself-->
+    <Application x:Class="_16.Navigation.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="FrameHolder.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

@@ -1,0 +1,39 @@
+﻿<Window x:Class="_06.ResourceStyle.Resource.DynamicResource"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="DynamicResource" Height="118" Width="576">
+    <Window.Resources>
+        <SolidColorBrush x:Key="myBrush" Color="Green"/>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition  />
+            <ColumnDefinition  />
+        </Grid.ColumnDefinitions>
+        <Label Content="Color Name: " Margin="5"  
+               VerticalContentAlignment="Center"
+               HorizontalContentAlignment="Right"/>
+        <TextBox Name="tbxColor" Grid.ColumnSpan="2" 
+                 HorizontalContentAlignment="Center"
+                  Grid.Column="1" Margin="5"/>
+        <Button Grid.Row="1" Grid.Column="0" 
+                Content="Static Resource"  
+                Name="btnStaticResource" 
+                Foreground="{StaticResource myBrush}"
+                Click="OnButtonClicked" Margin="5" />
+        <Button Grid.Row="1" Grid.Column="1" 
+                Content="Dynamic Resource"  
+                Name="btnDynamicResource" 
+                Foreground="{DynamicResource myBrush}"
+                Click="OnButtonClicked" Margin="5" />
+        <Button Grid.Row="1" Grid.Column="2" 
+                Content="Dynamic Resource In Code"  
+                Name="btnDynResourceInCode" 
+                Click="OnButtonClicked" Margin="5" />
+    </Grid>
+</Window>

@@ -1,0 +1,15 @@
+﻿<Application x:Class="Controls.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:Controls="clr-namespace:Controls" 
+             xmlns:System="clr-namespace:System;assembly=mscorlib" xmlns:EntityLib="clr-namespace:EntityLib;assembly=EntityLib" StartupUri="ListViewSample.xaml">
+    <Application.Resources>
+        <ObjectDataProvider x:Key="enumValues" 
+                                ObjectType="{x:Type System:Enum}" 
+                                MethodName="GetValues" >
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="EntityLib:Gender"/>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,81 @@
+﻿<Window x:Class="_12.BindToList.ChangeList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:_12.BindToList"
+        xmlns:p11="clr-namespace:_11.DataBinding;assembly=11.DataBinding"
+        Title="AddToList" Height="401" Width="413">
+    <Window.Resources>
+        <local:Age2ColorConverter x:Key="ageConverter"/>
+        <Thickness x:Key="margin" Left="5" Top="5" Right="5" Bottom="5"/>
+        <Style TargetType="Label">
+            <Setter Property="HorizontalContentAlignment" Value="Right"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="{StaticResource margin}"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Background" Value="PaleTurquoise"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush" Value="black"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="{StaticResource margin}"/>
+            <Setter Property="Background" Value="greenyellow"/>
+        </Style>
+        <local:PersonCollection x:Key="persons">
+            <p11:Person Age="10" Name="Henry"/>
+            <p11:Person Age="40" Name="Mary"/>
+            <p11:Person Age="70" Name="Alice"/>
+            <p11:Person Age="60" Name="Dick"/>
+        </local:PersonCollection>
+    </Window.Resources>
+    <Grid Name="gridTeam" DataContext="{StaticResource persons}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1.5*" />
+            <ColumnDefinition Width="1.5*" />
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" Content="Members: " />
+        <Label Grid.Row="1" Grid.Column="0" Content="Name: " />
+        <Label Grid.Row="2" Grid.Column="0" Content="Age: " />
+        <ListBox Grid.Column="1" Grid.ColumnSpan="2" Margin="{StaticResource margin}" 
+                 Name="lbxPersons"
+                 ItemsSource="{Binding}"
+                 IsSynchronizedWithCurrentItem="True">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock>
+                        <TextBlock Text="{Binding Path=Name}"/>
+                        (age:
+                        <TextBlock Text="{Binding Path=Age}" Foreground="{Binding Path=Age,Converter={StaticResource ageConverter}}"/>)
+                    </TextBlock>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <TextBox Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1"  
+                 Name="tbxName"
+                 Text="{Binding Path=Name}"/>
+        <TextBox Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="2" 
+                 Name="tbxAge"
+                 Text="{Binding Path=Age}"/>
+        <Button Name="btnAdd" Content="Add" Grid.Column="1" Grid.Row="3"
+                Click="btnAdd_Click"/>
+        <Button Name="btnRemove" Content="Remove" Grid.Column="2" Grid.Row="3"
+                Click="btnRemove_Click"/>
+        <Button Name="btnSortByName" Content="Sort By Name" Grid.Column="1" Grid.Row="4"
+                Click="BtnSortByName_OnClick"/>
+        <Button Name="btnSortByAge" Content="Sort By Age" Grid.Column="2" Grid.Row="4"
+                Click="BtnSortByAge_OnClick"/>
+        <Button Name="btnFilterAge" Content="Filter By Age" Grid.Column="1" Grid.Row="5"
+                Grid.ColumnSpan="2"
+                Click="btnFilterAge_Click"/>
+    </Grid>
+</Window>

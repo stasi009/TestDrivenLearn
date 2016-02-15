@@ -1,0 +1,43 @@
+﻿<Window x:Class="_04.LayoutDemo.DockVsStack"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Difference between DockPanel and StackPanel" Height="335" Width="498">
+    <Window.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontWeight" Value="Black"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <!--stackpanel only take the space it needs-->
+        <StackPanel Grid.Column="0">
+            <Label HorizontalContentAlignment="Center">stack panel</Label>
+            <Button Padding="10">button1</Button>
+            <Button Padding="10">button2</Button>
+            <Button Padding="10">button3</Button>
+        </StackPanel>
+
+        <!--dockpanel allow the last control take up all the remaining space
+        by default 'LastChildFill' is true-->
+        <DockPanel Grid.Column="1">
+            <Label DockPanel.Dock="Top" HorizontalContentAlignment="Center">default dock panel</Label>
+            <Button Padding="10" DockPanel.Dock="Top">button1</Button>
+            <Button Padding="10" DockPanel.Dock="Top">button2</Button>
+            <Button Padding="10" DockPanel.Dock="Top">button3</Button>
+        </DockPanel>
+
+        <!--note: LastChildFill="False"-->
+        <DockPanel LastChildFill="False" Grid.Column="2">
+            <Label DockPanel.Dock="Top" HorizontalContentAlignment="Center">dock panel NOT fill last</Label>
+            <Button Padding="10" DockPanel.Dock="Top">button1</Button>
+            <Button Padding="10" DockPanel.Dock="Top">button2</Button>
+            <Button Padding="10" DockPanel.Dock="Top">button3</Button>
+        </DockPanel>
+
+    </Grid>
+</Window>

@@ -1,0 +1,17 @@
+﻿<Window x:Class="DemoZedGraph.DateXAxis.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:wfi ="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"
+        xmlns:zedgraph="clr-namespace:ZedGraph;assembly=ZedGraph"
+        Loaded="Window_Loaded"
+        Title="MainWindow" Height="300" Width="634">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Next" Padding="20,5,20,5" Margin="5" FontSize="16"
+                    Command="{Binding NextCmd}"/>
+        </StackPanel>
+        <wfi:WindowsFormsHost Margin="5">
+            <zedgraph:ZedGraphControl x:Name="zedGraphControl" />
+        </wfi:WindowsFormsHost>
+    </DockPanel>
+</Window>

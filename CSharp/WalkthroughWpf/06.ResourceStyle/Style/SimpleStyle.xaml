@@ -1,0 +1,49 @@
+﻿<Window x:Class="_06.ResourceStyle.Style.SimpleStyle"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SimpleStyle" Height="106" Width="403">
+    <Window.Resources>
+        <SolidColorBrush x:Key="BtnForeColor" Color="Red"/>
+        <SolidColorBrush x:Key="BtnBordColor" Color="Blue"/>
+        <Style x:Key="BtnStyle" TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Foreground" Value="{StaticResource BtnForeColor}"/>
+            <Setter Property="Background" Value="Gold"/>
+            <Setter Property="BorderBrush" Value="{StaticResource BtnBordColor}"/>
+        </Style>
+        <!--note: although this style targets control, but it can specify the property which
+        limits to one specific control. when such style is deployed to a control which
+        doesn't support such property, then nothing happens-->
+        <Style x:Key="GeneralStyle" TargetType="Control">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Foreground" Value="DarkBlue"/>
+            <Setter Property="BorderBrush" Value="DarkGreen"/>
+            <Setter Property="TextBox.HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="TextBox.VerticalContentAlignment" Value=" Center"/>
+            <Setter Property="TextBox.MaxLength" Value=" 5"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+        <Label Content="Label: "  VerticalContentAlignment="Center"  HorizontalContentAlignment="Center" />
+        <TextBox Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource GeneralStyle}" >
+            ABC
+        </TextBox>
+        <!--note: style of the below button is not set in the XAML
+        but set in the behind codes, so it will not shown during design period, 
+        but displayed the effect of the style during runtime-->
+        <Button Content="Wait" Grid.Row="1"  Grid.Column="0" Name="btnWait"/>
+        <Button Content="OK" Grid.Row="1"  Grid.Column="1" 
+                Style="{StaticResource BtnStyle}"/>
+        <Button Content="Cancel" Grid.Row="1"  Grid.Column="2"  
+                Style="{StaticResource GeneralStyle}"/>
+    </Grid>
+</Window>

@@ -1,0 +1,45 @@
+﻿<Window x:Class="_04.LayoutDemo.DockPanelSample"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="DockPanelSample" Height="318" Width="362">
+    <DockPanel Name="MainLayout">
+        <!--*************************** menu bar ***************************-->
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File"/>
+            <MenuItem Header="_Edit"/>
+            <MenuItem Header="_Help"/>
+        </Menu>
+        <!--*************************** tool bar ***************************-->
+        <ToolBarTray Background="White" DockPanel.Dock="Top">
+            <ToolBar Band="1" BandIndex="1">
+                <Button>A</Button>
+                <Button>B</Button>
+                <Separator/>
+                <Button>C</Button>
+            </ToolBar>
+        </ToolBarTray>
+        <!--*************************** status bar ***************************-->
+        <!--note: status bar should be put before next stackpanel, 
+        otherwise, it won't be what we expected-->
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem>
+                <TextBlock><Bold>Ready</Bold></TextBlock>
+            </StatusBarItem>
+        </StatusBar>
+        <!--*************************** master panel ***************************-->
+        <!--use the default value of Dock, which is 'left'-->
+        <StackPanel >
+            <Expander Header="Useful">
+                <StackPanel>
+                    <Button Content="Don't"/>
+                    <Button Content="Press"/>
+                    <Button Content="Me"/>
+                </StackPanel>
+            </Expander>
+            <Expander Header="Less Useful"/>
+            <Expander Header="Silly"/>
+        </StackPanel>
+        <!--*************************** detail panel ***************************-->
+        <DataGrid DockPanel.Dock="Right" />
+    </DockPanel>
+</Window>

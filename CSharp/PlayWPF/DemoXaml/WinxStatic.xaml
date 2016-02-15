@@ -1,0 +1,7 @@
+﻿<Window x:Class="DemoXaml.WinxStatic"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:DemoXaml"
+        Title="{x:Static local:WinxStatic.WinTitle}" Height="84" Width="442">
+    <TextBox FontSize="16" Text="{x:Static local:WinxStatic.ShowText}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
+</Window>

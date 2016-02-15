@@ -1,0 +1,14 @@
+<Page
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Height="99" Width="504">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button Grid.Column="0">label set by tag content</Button>
+        <Button Grid.Column="1" Content="label set by 'content' attribute"/>
+
+    </Grid>
+</Page>

@@ -1,0 +1,65 @@
+﻿<Window x:Class="_06.ResourceStyle.Style.ImplicitStyle"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ImplicitStyle" Height="232" Width="369">
+    <Window.Resources>
+        <!--note: because it has no key, so it is an implicit style
+        and because it is defined at the windows level, all buttons contained in this window
+        will use this style by default-->
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Foreground" Value="Blue"/>
+            <Setter Property="Background" Value="PaleGreen"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <GroupBox Grid.Row="0" Header="Global Implicit" >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Grid.Row="0" Grid.Column="0" Content="Button1"  />
+                <Button Grid.Row="0" Grid.Column="1" Content="Button2"  />
+            </Grid>
+        </GroupBox>
+        <GroupBox Grid.Row="1" Header="Local Implicit" >
+            <!--note: local style override the entire global style
+            not just some specific properties-->
+            <GroupBox.Resources>
+                <Style TargetType="Button">
+                </Style>
+            </GroupBox.Resources>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Grid.Row="0" Grid.Column="0" Content="Button1"  />
+                <Button Grid.Row="0" Grid.Column="1" Content="Button2"  />
+            </Grid>
+        </GroupBox>
+        <GroupBox Grid.Row="2" Header="Set its own" >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <!--note: without local style, just override some specific properties
+                others remains the same as the glboal style-->
+                <Button Grid.Row="0" Grid.Column="0" Content="Button1"  
+                        Margin="10"
+                        Background="Aquamarine"
+                        Foreground="DarkGreen"/>
+                <Button Grid.Row="0" Grid.Column="1" Content="Button2"  
+                        Margin="10"
+                        FontWeight="Black"/>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>

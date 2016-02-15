@@ -1,0 +1,25 @@
+﻿<Window x:Class="_06.ResourceStyle.Resource.ReferNonResource"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:_06.ResourceStyle.Resource" 
+        Title="ReferNonResource" Height="84" Width="300">
+    <Window.Resources>
+        <SolidColorBrush x:Key="myBrush" Color="Red"/>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <!--note: use 'StaticResource' to refer resource, while use 'x:Static' to refer variables defined in code-behind files-->
+        <Button Grid.Row="0" Grid.Column="0" Content="UseResource" 
+                Foreground="{StaticResource myBrush}"
+                Margin="5" />
+        <!--note: when reference the value defined in code-behind class
+        those value will only make effect after one successful build
+        at first, XAML even cannot recognize those definition and view them as an error-->
+        <Button Grid.Row="0" Grid.Column="1" Content="UseNonResource" 
+                Foreground="{x:Static local:ReferNonResource.Brush}"
+                Margin="5" />
+    </Grid>
+</Window>

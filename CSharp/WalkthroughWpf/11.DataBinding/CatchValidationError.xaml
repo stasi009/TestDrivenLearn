@@ -1,0 +1,45 @@
+﻿<Window x:Class="_11.DataBinding.CatchValidationError"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:_11.DataBinding"
+        Title="CatchValidationError" Height="112" Width="300">
+    <Window.Resources>
+        <local:Person x:Key="someone" Name="cheka" Age="18"/>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource someone}">
+        <Grid.Resources>
+            <Style TargetType="Label">
+                <Setter Property="Margin" Value="5"/>
+                <Setter Property="FontWeight" Value="ExtraBlack"/>
+                <Setter Property="HorizontalContentAlignment" Value="Right"/>
+                <Setter Property="VerticalContentAlignment" Value="Center"/>
+            </Style>
+            <Style TargetType="TextBox">
+                <Setter Property="Margin" Value="5"/>
+                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                <Setter Property="Background" Value="GreenYellow"/>
+            </Style>
+        </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" Content="Name: "  />
+        <Label Grid.Row="1" Grid.Column="0" Content="Age: "  />
+        <TextBox Grid.Row="0" Grid.Column="1"  Text="{Binding Path=Name}" />
+        <!--note: 1. first, textbox has builtin validator, which checks the input whether 
+        can successfully be assigned to the background property
+        but this default validator will never check whether the input string makes any sense
+        2. second, only when 'NotifyOnValidationError' is set to be true, the error-handing
+        callback will be invoked, otherwise, only some red border around the textbox-->
+        <TextBox Grid.Row="1" Grid.Column="1"  
+                 Name="tbxAge"
+                 Text="{Binding Path=Age, NotifyOnValidationError=True}"
+                 Validation.Error="OnAgeError"/>
+    </Grid>
+</Window>

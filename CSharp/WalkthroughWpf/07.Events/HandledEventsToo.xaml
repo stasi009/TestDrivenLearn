@@ -1,0 +1,21 @@
+﻿<Window x:Class="_07.Events.HandledEventsToo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="HandledEventsToo" Height="138" Width="347">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <GroupBox Name="grpbxPrevent" Grid.Row="0" Grid.Column="0" Header="PreventionWorks" >
+            <Grid>
+                <Button Content="Prevent Routing, and Works" Click="Button_Click" />
+            </Grid>
+        </GroupBox>
+        <GroupBox Name="grpbxHandledToo" Grid.Row="1" Grid.Column="0" Header="HandledEventsToo" >
+            <Grid>
+                <Button Content="Prevent Routing, but NOT work"  Click="Button_Click" />
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>

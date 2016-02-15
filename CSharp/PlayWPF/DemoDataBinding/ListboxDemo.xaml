@@ -1,0 +1,16 @@
+﻿<Window x:Class="DemoDataBinding.ListboxDemo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ListboxDemo" Height="300" Width="190">
+    <DockPanel>
+        <Button DockPanel.Dock="Bottom" Content="Check Selected" Margin="5" Padding="5"
+                Command="{Binding Path=CheckCommand}"/>
+        <ListBox Margin="5" ItemsSource="{Binding Path=People}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <CheckBox IsChecked="{Binding Path=IsSelected}" Content="{Binding Path=Name}"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </DockPanel>
+</Window>

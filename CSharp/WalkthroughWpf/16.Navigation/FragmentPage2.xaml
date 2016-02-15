@@ -1,0 +1,22 @@
+﻿<Page x:Class="_16.Navigation.FragmentPage2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+	Title="FragmentPage2">
+    <ScrollViewer>
+        <TextBlock TextWrapping="Wrap">
+        <TextBlock Name="topic1">
+            <TextBlock><Bold>Topic 1</Bold></TextBlock>
+            <TextBlock>
+                Dame Elizabeth Rosemond "Liz" Taylor, DBE (February 27, 1932 – March 23, 2011)[1][2] was an English-born American actress.[3] Beginning as a child star then throughout her adulthood, she became known for her acting talent, glamour and beauty; as well as a much publicized private life, which included eight marriages, several near-death experiences, and decades spent as a social activist, championing the cause of AIDS awareness, research and cure. Taylor, a two-time winner of the Academy Award for Best Actress, was considered one of the great screen actresses of Hollywood's Golden Age. The American Film Institute named Taylor seventh on its Female Legends list.
+            </TextBlock>
+        </TextBlock>
+        <TextBlock Name="topic2">
+            <TextBlock><Bold>Topic 2</Bold></TextBlock>
+        </TextBlock>
+    </TextBlock>
+        </ScrollViewer>
+</Page>

@@ -1,0 +1,20 @@
+﻿<Window x:Class="_10.Commands.CustomCommand2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:_10.Commands"
+        Title="CustomCommand2" Height="130" Width="308">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Test" Command="local:CustomCommand2.TestCommand"/>
+        </Menu>
+        <RichTextBox DockPanel.Dock="Top" Margin="5">
+            <!--note: because this control is the only control which binds to command
+            so the menu item will automatically enables when the richtextbox get focus
+            and disables when the richtextbox lose focus-->
+            <RichTextBox.CommandBindings>
+                <CommandBinding Command="local:CustomCommand2.TestCommand"
+                                Executed="TestCommandExecuted"/>
+            </RichTextBox.CommandBindings>
+        </RichTextBox>
+    </DockPanel>
+</Window>

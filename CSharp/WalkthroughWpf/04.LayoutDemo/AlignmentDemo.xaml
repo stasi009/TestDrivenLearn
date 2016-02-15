@@ -1,0 +1,18 @@
+<Window
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" d:DesignHeight="319" d:DesignWidth="502" SizeToContent="WidthAndHeight">
+    <StackPanel VerticalAlignment="Bottom">
+        <Button Width="200" Height="50">explict size</Button>
+        <!--note:when defining margin, the first number is for left and right, while the second number is for top and bottom-->
+        <Button Margin="30 10">with margin</Button>
+        <!--note: margin is for outside size, while padding is for inside size around content
+      because the horizontal alignment is stretch by default, so the horizontal padding won't show its effect-->
+        <Button Padding="40 20">padding with stretch alignment</Button>
+        <!--note: because this time, the alignment is center, so horizontal padding show its effect-->
+        <Button Padding="40 10" HorizontalAlignment="Center">padding with center alignment</Button>
+        <Button HorizontalAlignment="Left">left alignment</Button>
+        <Button HorizontalAlignment="Right">right alignment</Button>
+        <Button HorizontalAlignment="Center">center alignment</Button>
+        <Button HorizontalAlignment="Stretch">stretch alignment (default)</Button>
+    </StackPanel>
+</Window>

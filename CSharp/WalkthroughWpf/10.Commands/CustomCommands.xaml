@@ -1,0 +1,22 @@
+﻿<Window x:Class="_10.Commands.CustomCommands"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:_10.Commands" 
+        Title="CustomCommands" Height="109" Width="352">
+    <!--note: pay attention that there are two ways to express the custom commands defined in code behind
+    with or without 'x:static', both ways are OK
+    and I think the version using x:static is the classical, long-hand version,
+    while the version without x:static is the short-hand version-->
+    <Window.CommandBindings>
+        <CommandBinding Command="local:CustomCommands.TestCommand" Executed="TestCommandExecuted"/>
+    </Window.CommandBindings>
+    <StackPanel>
+        <Menu>
+            <MenuItem Header="Test">
+                <MenuItem Header="Test" Command="local:CustomCommands.TestCommand"/>
+            </MenuItem>
+        </Menu>
+        <Button Content="Test"  Name="btnTest" 
+                Command="{x:Static local:CustomCommands.TestCommand}" />
+    </StackPanel>
+</Window>

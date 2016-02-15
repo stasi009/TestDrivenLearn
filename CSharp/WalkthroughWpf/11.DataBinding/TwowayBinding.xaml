@@ -1,0 +1,59 @@
+﻿<Window x:Class="_11.DataBinding.TwowayBinding"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:_11.DataBinding"
+        Title="TwowayBinding" Height="124" Width="422">
+    <Window.Resources>
+        <local:Person x:Key="author" Name="Cheka" Age="30"/>
+        <Thickness x:Key="Margin" Left="5" Top="5" Right="5" Bottom="5"/>
+        <Style x:Key="headerLabelStyle" TargetType="Label">
+            <Setter Property="HorizontalContentAlignment" Value="Right"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="{StaticResource Margin}"/>
+            <Setter Property="FontWeight" Value="Black"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Margin" Value="{StaticResource Margin}"/>
+            <Setter Property="Background" Value="LemonChiffon"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="{StaticResource Margin}"/>
+        </Style>
+    </Window.Resources>
+    <!--note: DataContext can be set at both XAML and code-behind-->
+    <Grid DataContext="{StaticResource author}">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition  />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="4*" />
+            <ColumnDefinition Width="1.5*" />
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" Content="Name: "
+               Style="{StaticResource headerLabelStyle}"/>
+        <Label Grid.Row="1" Grid.Column="0" Content="Age: "
+               Style="{StaticResource headerLabelStyle}"/>
+
+        <!--note: below two textboxes get its data source from its container, 
+        which is called 'implict data source'-->
+        <!--note: here we use the default binding mode, 
+        and the default binding mode for editable control, such as TextBox
+        is always 'Twoway'-->
+        <TextBox Grid.Row="0" Grid.Column="1"  Text="{Binding Path=Name}"/>
+        <!--note: and textbox itself embed some converter and validator
+        to convert string into number, and check the content in the textbox must be number-->
+        <TextBox Grid.Row="1" Grid.Column="1"  Text="{Binding Path=Age}"/>
+
+    	<Button Grid.Row="0" Grid.Column="2"  Name="btnInfo" Content="Information" 
+                Click="btnInfo_Click"/>
+        <Button Grid.Row="1" Grid.Column="2"  Name="btnYounger" Content="Younger!" 
+                Click="btnYounger_Click"/>
+        
+    </Grid>
+</Window>

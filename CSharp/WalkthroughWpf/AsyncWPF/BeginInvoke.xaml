@@ -1,0 +1,29 @@
+﻿<Window x:Class="AsyncWPF.BeginInvokeDemo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="BeginInvoke Demo" Height="115" Width="326">
+    <Window.Resources>
+        <Thickness x:Key="margin" Left="5" Top="5" Right="5" Bottom="5"/>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <DockPanel>
+            <Label Name="lblProgress"
+                DockPanel.Dock="Right" Content="Progress"
+                   HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center"
+                   Margin="{StaticResource margin}"
+                   Foreground="Green"
+                   FontWeight="Black"/>
+            <ProgressBar DockPanel.Dock="Left"  Name="progBar"
+                         Margin="{StaticResource margin}"
+                         Foreground="Blue"/>
+        </DockPanel>
+        <Button Name="btnStart" 
+            Content="Start" Grid.Row="1" Margin="{StaticResource margin}"
+                Click="btnStart_Click"/>
+    </Grid>
+</Window>

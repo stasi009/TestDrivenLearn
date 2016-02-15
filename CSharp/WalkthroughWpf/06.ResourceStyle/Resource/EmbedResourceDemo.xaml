@@ -1,0 +1,34 @@
+﻿<Window x:Class="_06.ResourceStyle.EmbedResourceDemo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SimpleResourceDemo" Height="117" Width="437">
+    <Window.Resources>
+        <!--note: after changing the value, it will not be automatically redraw and show the most updated view effect
+        maybe it is because it is 'static resource', other than 'dynamic resource'-->
+        <SolidColorBrush x:Key="embedBrush" Color="Orange"/>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <!--note: when refering resource, 'static' means 'one-off', which means the value of the 
+        resource will only be read when the window is loaded, and then be forgotten
+        there will be no link built between property and the resource it uses-->
+        <Button  Grid.Row="1" Grid.Column="0" Margin="6" 
+                 BorderBrush="{StaticResource embedBrush}">OK</Button>
+        <Button  Grid.Row="1" Grid.Column="1" Margin="6" 
+                 BorderBrush="{StaticResource embedBrush}">Cancel</Button>
+        <DockPanel Grid.ColumnSpan="2">
+            <Label DockPanel.Dock="Left" VerticalContentAlignment="Center" Margin="6">Name:</Label>
+            <TextBox DockPanel.Dock="Right" 
+                     VerticalContentAlignment="Center" 
+                     HorizontalContentAlignment="Center" 
+                     Margin="6"  >ABC</TextBox>
+        </DockPanel>
+    </Grid>
+</Window>

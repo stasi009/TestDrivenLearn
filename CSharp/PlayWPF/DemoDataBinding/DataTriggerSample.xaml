@@ -1,0 +1,50 @@
+﻿<Window x:Class="DemoDataBinding.DataTriggerSample"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="DataTriggerSample" Height="300" Width="300">
+    <Window.Resources>
+        <Style TargetType="ListViewItem">
+            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Path=Closeness}" Value="Family">
+                    <Setter Property="Background" Value="Orange"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Path=Closeness}" Value="GirlFriend">
+                    <Setter Property="Background" Value="LightPink"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Path=Closeness}" Value="Friend">
+                    <Setter Property="Background" Value="LightGreen"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Bottom">
+            <TextBlock>
+                <TextBlock Text="{Binding Path=Current.Name}" FontWeight="Black"/> 
+                is now 
+                <TextBlock Text="{Binding Path=Current.Closeness}" FontWeight="Black"/>
+            </TextBlock>
+        </StackPanel>
+        <ListView  
+            ItemsSource="{Binding Path=Relationships}"
+              SelectedValue="{Binding Path=Current}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Path=Name}" Width="100"/>
+                    <GridViewColumn Header="Level" Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <ComboBox 
+                                ItemsSource="{Binding 
+                                RelativeSource={RelativeSource Mode=FindAncestor,
+                                AncestorType={x:Type Window}},Path=DataContext.AllCloseness}"
+                                SelectedValue="{Binding Path=Closeness}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </DockPanel>
+</Window>

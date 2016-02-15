@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>9d526414-e332-433e-8b5d-2658f5c297d3</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TestFSharps</RootNamespace>
+    <AssemblyName>TestFSharps</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFSharpCoreVersion>4.3.1.0</TargetFSharpCoreVersion>
+    <Name>TestFSharps</Name>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <Tailcalls>false</Tailcalls>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <WarningLevel>3</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DocumentationFile>bin\Debug\TestFSharps.XML</DocumentationFile>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <Tailcalls>true</Tailcalls>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <WarningLevel>3</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DocumentationFile>bin\Release\TestFSharps.XML</DocumentationFile>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>
+  </PropertyGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '11.0'">
+      <PropertyGroup Condition="Exists('$(MSBuildExtensionsPath32)\..\Microsoft SDKs\F#\3.0\Framework\v4.0\Microsoft.FSharp.Targets')">
+        <FSharpTargetsPath>$(MSBuildExtensionsPath32)\..\Microsoft SDKs\F#\3.0\Framework\v4.0\Microsoft.FSharp.Targets</FSharpTargetsPath>
+      </PropertyGroup>
+    </When>
+    <Otherwise>
+      <PropertyGroup Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\FSharp\Microsoft.FSharp.Targets')">
+        <FSharpTargetsPath>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\FSharp\Microsoft.FSharp.Targets</FSharpTargetsPath>
+      </PropertyGroup>
+    </Otherwise>
+  </Choose>
+  <Import Project="$(FSharpTargetsPath)" />
+  <ItemGroup>
+    <None Include="App.config" />
+    <Compile Include="TestActivePatterns.fs" />
+    <Compile Include="TestAdvancedClasses.fs" />
+    <Compile Include="TestArray.fs" />
+    <Compile Include="TestAsyncWorkflow.fs" />
+    <Compile Include="TestBasicClasses.fs" />
+    <Compile Include="TestCache.fs" />
+    <Compile Include="TestClassInteroperate.fs" />
+    <Compile Include="TestComputationExpressions.fs" />
+    <Compile Include="TestConditional.fs" />
+    <Compile Include="TestDeferFeature.fs" />
+    <Compile Include="TestDelegate.fs" />
+    <Compile Include="TestDictionary.fs" />
+    <Compile Include="TestDiscriminatedUnions.fs" />
+    <Compile Include="TestDispose.fs" />
+    <Compile Include="TestEnum.fs" />
+    <Compile Include="TestEqualCompare.fs" />
+    <Compile Include="TestEvents.fs" />
+    <Compile Include="TestEvtInteroperate.fs" />
+    <Compile Include="TestExceptions.fs" />
+    <Compile Include="TestFsUnit.fs" />
+    <Compile Include="TestFunctions.fs" />
+    <Compile Include="TestGenericClasses.fs" />
+    <Compile Include="TestGenericFuncs.fs" />
+    <Compile Include="TestIndent.fs" />
+    <Compile Include="TestInteroperate.fs" />
+    <Compile Include="TestLists.fs" />
+    <Compile Include="TestLoop.fs" />
+    <Compile Include="TestMailboxProcessor.fs" />
+    <Compile Include="TestMapSet.fs" />
+    <Compile Include="TestModule.fs" />
+    <Compile Include="TestMonads.fs" />
+    <Compile Include="TestNumbers.fs" />
+    <Compile Include="TestOptional.fs" />
+    <Compile Include="TestOthers.fs" />
+    <Compile Include="TestOverloadOperator.fs" />
+    <Compile Include="TestPatternMatch.fs" />
+    <Compile Include="TestRecords.fs" />
+    <Compile Include="TestPrint.fs" />
+    <Compile Include="TestQueryExpression.fs" />
+    <Compile Include="TestRecursion.fs" />
+    <Compile Include="TestRefCells.fs" />
+    <Compile Include="TestReflection.fs" />
+    <Compile Include="TestSequences.fs" />
+    <Compile Include="TestString.fs" />
+    <Compile Include="TestStructs.fs" />
+    <Compile Include="TestTuples.fs" />
+    <Compile Include="TestUnchecked.fs" />
+    <Compile Include="TestUnitOfMeasure.fs" />
+    <Compile Include="Program.fs" />
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="FsUnit.NUnit">
+      <HintPath>packages\FsUnit.1.3.0.1\Lib\Net40\FsUnit.NUnit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="mscorlib" />
+    <Reference Include="FSharp.Core, Version=$(TargetFSharpCoreVersion), Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+  </ItemGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

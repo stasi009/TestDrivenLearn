@@ -1,0 +1,50 @@
+﻿<Window x:Class="MVVM.Students.StudentTable"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="StudentTable" Height="472" Width="443"
+        ResizeMode="NoResize">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <DataGrid AutoGenerateColumns="False" Grid.Row="1" Grid.ColumnSpan="4"  Margin="5" Name="dgStudents"
+                  ItemsSource="{Binding Students}"
+                  IsSynchronizedWithCurrentItem="True"
+                  IsReadOnly="False"
+                  SelectionChanged="dgStudents_SelectionChanged" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}"  Width="*" />
+                <DataGridComboBoxColumn Header="Gender" 
+                                        ItemsSource="{Binding Source={StaticResource enumValues}}"
+                                        SelectedValueBinding="{Binding Gender}"
+                                        Width="*" />
+                <DataGridCheckBoxColumn Header="Qualified?" Binding="{Binding IsQualified}"  Width="*"  />
+                <DataGridTextColumn Header="Notes" Binding="{Binding Notes}" Width="3*"   />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Save"  Grid.Row="2" Grid.Column="2" Name="btnSave" 
+                Command="{Binding SaveCommand}"  />
+        <Button Content="Remove" Grid.Row="2" Grid.Column="3" Name="btnRemove" 
+                Command="{Binding RemoveCommand}"              
+                CommandParameter="{Binding ElementName=dgStudents, Path=SelectedItem}" />
+        <!--for test and debug-->
+        <Button Content="Inspect..."  Grid.Row="2" Grid.Column="1" Name="btnInspect" Click="btnInspect_Click" />
+        <Label Content="Gender:"  Margin="5"  />
+        <ComboBox Grid.Column="1" Grid.ColumnSpan="3"  Margin="5" Name="cmbGender"  
+                  ItemsSource="{Binding GenderFilterOptions}"
+                  SelectedValue="{Binding CurrentSelectGender}"/>
+    </Grid>
+</Window>

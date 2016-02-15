@@ -1,0 +1,47 @@
+﻿<Window x:Class="ConfigEditor.View.NewSettingDlg"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="NewSettingDlg" 
+        ShowInTaskbar="False"
+        Height="144" Width="375">
+    <Window.Resources>
+        <Style TargetType="Label">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="HorizontalContentAlignment" Value="Right"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="FontWeight" Value="Black"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" Content="Key: "/>
+        <Label Grid.Row="1" Grid.Column="0" Content="Value: "/>
+
+        <TextBox Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3"
+                 Text="{Binding Path=Key}"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3"
+                 Text="{Binding Path=Value}"/>
+
+        <Button Grid.Row="2" Grid.Column="2" 
+                Content="OK" IsDefault="True" Click="Button_Click"/>
+        <Button Grid.Row="2" Grid.Column="3" Content="Cancel" IsCancel="True"/>
+    </Grid>
+</Window>

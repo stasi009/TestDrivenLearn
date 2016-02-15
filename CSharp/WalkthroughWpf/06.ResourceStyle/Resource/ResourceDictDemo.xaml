@@ -1,0 +1,33 @@
+﻿<Window x:Class="_06.ResourceStyle.ResourceDictDemo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ResourceDictDemo" Height="116" Width="446">
+    <Window.Resources>
+        <!--note: here uses relative-path to locate resource file-->
+        <ResourceDictionary Source="ResourceDict.xaml" />
+        <!--note: cannot mix 'ResourceDictionary' reference with local resource definition
+        so below line is totally forbidden-->
+        <!--<SolidColorBrush x:Key="embedBrush" Color="Orange"/>-->
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Button  Grid.Row="1" Grid.Column="0" Margin="6" 
+                 BorderBrush="{StaticResource standaloneBrush}">OK</Button>
+        <Button  Grid.Row="1" Grid.Column="1" Margin="6" 
+                 BorderBrush="{StaticResource standaloneBrush}">Cancel</Button>
+        <DockPanel Grid.ColumnSpan="2">
+            <Label DockPanel.Dock="Left" VerticalContentAlignment="Center" Margin="6">Name:</Label>
+            <TextBox DockPanel.Dock="Right" 
+                     VerticalContentAlignment="Center" 
+                     HorizontalContentAlignment="Center" 
+                     Margin="6"  >ABC</TextBox>
+        </DockPanel>
+    </Grid>
+</Window>

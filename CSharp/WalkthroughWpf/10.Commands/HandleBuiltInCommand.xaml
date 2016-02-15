@@ -1,0 +1,23 @@
+﻿<Window x:Class="_10.Commands.HandleBuiltInCommand"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="HandleBuiltInCommand" Height="130" Width="357">
+    <Window.CommandBindings>
+        <CommandBinding Command="Help" Executed="HelpExecuted"/>
+    </Window.CommandBindings>
+    <StackPanel>
+        <Menu>
+            <MenuItem Header="Help">
+                <!--note: there is two way to bind a builtin command, either use full name, 
+                such as 'ApplicationCommands.Help', or just use a short name like "Help", 
+                because there is a converter which will do the transformation work for us-->
+                <!--note: this builtin command has a shortkey, WPF automatically show that shortkey
+                on the menuitem-->
+                <MenuItem Header="About..." Command="Help"/>
+            </MenuItem>
+        </Menu>
+        <!--note: bind to same command, then will invoke same command handler-->
+        <Button Content="Help" Name="btnHelp"  Margin="50 10"
+                Command="Help"/>
+    </StackPanel>
+</Window>

@@ -1,0 +1,39 @@
+﻿<Window x:Class="MVVM.Calculator.Calculator"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Calculator" Height="108" Width="346">
+    <Window.Resources>
+        <Thickness x:Key="margin" Left="5" Top="5" Right="5" Bottom="5"/>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="{StaticResource margin}"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="{StaticResource margin}"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="numberBlock">
+            <Setter Property="FontWeight" Value="Heavy"/>
+            <Setter Property="FontStyle" Value="Italic"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <TextBox Grid.ColumnSpan="2" Text="{Binding Path=Number,UpdateSourceTrigger=PropertyChanged}" 
+                 HorizontalContentAlignment="Center"  VerticalContentAlignment="Center"/>
+        <Button Content="Square Root" Grid.Column="2" 
+                Command="{Binding SqrtCommand}" />
+        <TextBlock Grid.ColumnSpan="3" Grid.Row="1" VerticalAlignment="Center" TextAlignment="Center">
+            The Square Root of 
+            <TextBlock Text="{Binding Path=Number}" Foreground="Blue"  Style="{StaticResource numberBlock}"/> 
+            is 
+            <TextBlock Text="{Binding Path=Result}" Foreground="Green" Style="{StaticResource numberBlock}"/>
+        </TextBlock>
+    </Grid>
+</Window>
