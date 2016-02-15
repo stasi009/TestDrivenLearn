@@ -1,0 +1,5 @@
+index,a,b,c
+r1,1.0,6.5,3.0
+r2,1.0,nan,nan
+r3,nan,nan,nan
+r4,nan,6.5,3.0

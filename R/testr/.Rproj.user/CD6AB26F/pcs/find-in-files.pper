@@ -1,0 +1,10 @@
+{
+    "dialog-state" : {
+        "caseSensitive" : false,
+        "filePatterns" : [
+        ],
+        "path" : "D:/study/Practice/TestDrivenLearn/R/testr",
+        "query" : "drop=",
+        "regex" : false
+    }
+}
