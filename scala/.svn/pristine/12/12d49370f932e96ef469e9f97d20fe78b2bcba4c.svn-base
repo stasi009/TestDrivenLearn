@@ -1,5 +1,0 @@
-package demo
-
-object DateTimeDemo extends App {
-
-}

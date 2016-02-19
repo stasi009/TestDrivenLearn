@@ -1,8 +1,0 @@
-package test
-
-import org.scalatest.Spec
-import collection.mutable.HashMap
-
-sealed class MutableMapTest extends Spec {
-
-}

@@ -1,6 +1,0 @@
-package test
-
-import org.scalatest.Spec
-
-sealed class AbstractClassTest extends Spec {
-}

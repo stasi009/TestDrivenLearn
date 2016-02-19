@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy>
-<typeInfo handle="=testscala/src&lt;test{ArrayTest.scala[ArrayTest" modifiers="1" timestamp="1408447902288"/>
-<typeInfo handle="=testscala/src&lt;test{StringTest.scala[StringTest" modifiers="1" timestamp="1409316770257"/>
-<typeInfo handle="=testscala/src&lt;test{FunctionalOperatorsTest.scala[FunctionalOperatorsTest" modifiers="1" timestamp="1408715721268"/>
-<typeInfo handle="=testscala/src&lt;test{OperatorTest.scala[OperatorTest[Fraction" modifiers="1" timestamp="1408372775062"/>
-<typeInfo handle="=testscala/src&lt;test{MutableMapTest.scala[MutableMapTest" modifiers="1" timestamp="1409313408736"/>
-</typeInfoHistroy>

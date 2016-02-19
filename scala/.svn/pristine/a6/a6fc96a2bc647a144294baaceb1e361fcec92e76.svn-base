@@ -1,7 +1,0 @@
-package test
-
-import org.scalatest.Spec
-
-class EnumerationTest extends Spec {
-
-}

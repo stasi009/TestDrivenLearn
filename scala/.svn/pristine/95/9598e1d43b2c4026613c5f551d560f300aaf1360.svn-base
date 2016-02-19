@@ -1,7 +1,0 @@
-package test
-
-import org.scalatest.Spec
-
-sealed class ImplicitTest extends Spec {
-
-}
