@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demonstrate how to check browser's property</title>
+    <style type="text/css">
+        table
+        {
+            border-collapse: collapse;
+            width: 60%;
+            margin: auto;
+        }
+        th,td
+        {
+            text-align: left;
+            vertical-align: bottom;
+            padding: 5px;
+        }
+        table, td, th
+        {
+            border: 1px solid navy;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>
+                Property Name
+            </th>
+            <th>
+                Property Value
+            </th>
+        </tr>
+        <tr>
+            <td>
+                Local Storage
+            </td>
+            <td id="localStorage">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Web Socket
+            </td>
+            <td id="websocket">
+            </td>
+        </tr>
+    </table>
+    <script type="text/javascript">
+
+        function isSupported(property) {
+            if (property) {
+                return "Supported";
+            } else {
+                return "Not-supported";
+            }
+        }
+
+        window.onload = function () {
+            document.getElementById("localStorage").innerHTML = isSupported(window.localStorage);
+            document.getElementById("websocket").innerHTML = isSupported(window.WebSocket);
+        };
+    </script>
+</body>
+</html>

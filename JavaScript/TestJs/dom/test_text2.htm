@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demonstration of text node</title>
+    <script type="text/javascript" src="../common/commonFuncs.js"></script>
+    <script type="text/javascript">
+        function fool() {
+            var p = document.getElementsByTagName("p")[0];
+            printFormatMsg("innerHTML: %s", p.innerHTML);
+            printFormatMsg("textContent: %s", p.textContent);
+        }
+    </script>
+    <style type="text/css">
+        div
+        {
+            background-color: lightgray;
+            width: 80%;
+            margin: auto;
+        }
+        
+        .doc
+        {
+            color: navy;
+        }
+        
+        .codes
+        {
+            color: firebrick;
+        }
+    </style>
+</head>
+<body>
+    <div class="doc">
+        <p>
+            Hello <b>WSU</b> from Javascript</p>
+    </div>
+    <div class="codes">
+        <script type="text/javascript">            fool();</script>
+    </div>
+</body>
+</html>

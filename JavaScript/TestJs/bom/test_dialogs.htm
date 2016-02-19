@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>sample of dialogs</title>
+    <script type="text/javascript">
+        function onClickMe() {
+            do {
+                var name = prompt("What is your name?"); // Get a string
+                var correct = confirm("You entered '" + name + "'.\n" + "Click Okay to proceed or Cancel to re-enter.");
+            } while (!correct)
+            alert("Hello, " + name); // Display a plain message
+        }
+
+        window.onload = function () {
+            document.getElementById("clickme").onclick = onClickMe;
+        };
+    </script>
+    <style type="text/css">
+        .block
+        {
+            border: 1px navy solid;
+            margin: 10px;
+        }
+        
+        .note
+        {
+            color: navy;
+            border: 1px navy dashed;
+            margin: 0px;
+        }
+        
+        h3
+        {
+            color: navy;
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="block" style="text-align: center">
+        <button id="clickme">
+            click me</button>
+    </div>
+</body>
+</html>

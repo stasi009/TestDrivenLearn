@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Reference Type Feature</title>
+    <script type="text/javascript" src="../common/commonFuncs.js"></script>
+    <style type="text/css">
+        .block
+        {
+            background-color: lightblue;
+            border: 1px navy solid;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="block">
+        <script type="text/javascript">
+            var a = [];
+            var b = [];
+            printline("equal ? " + (a == b));
+
+            b = a;
+            a[2] = 100;
+            printline(b);
+            printline("equal ? " + (a == b));
+        </script>
+    </div>
+    <div class="block">
+        <script type="text/javascript">
+            // for object refernece, "pass by value" is just "pass by reference"
+            // changes inside the function will be visible outside the function
+            function fool(p) {
+                p.Count += 1;
+            }
+
+            var p = { Count: 0 };
+            for (var i = 0; i < 10; i++) {
+                fool(p);
+            }
+            printline(p.Count);
+
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>hello javascript</title>
+    <script type="text/javascript" src="../common/commonFuncs.js"></script>
+    <script type="text/javascript">
+        function displayHello(content) {
+            printline(content);
+        }
+    </script>
+</head>
+    <body>
+        <script type="text/javascript">
+            printline("document.writeln before event.")
+        </script>
+        <h1>First Javascript</h1>
+        <p id="demo">this is a paragraph.</p>
+        <button onclick='displayHello("document.writeln by event")'>Click Me !</button>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>setTimeout with parameters</title>
+    <script type="text/javascript">
+        var alarm = {
+            remind: function (aMessage) {
+                alert(aMessage);
+                delete this.timeoutID;
+            },
+
+            setup: function (input) {
+                this.cancel();
+                var self = this;
+                this.timeoutID = window.setTimeout(function (msg) { self.remind(msg); }, 1000, input);
+            },
+
+            cancel: function () {
+                if (typeof this.timeoutID == "number") {
+                    window.clearTimeout(this.timeoutID);
+                    delete this.timeoutID;
+                }
+            }
+        };
+        window.onload = function () {
+            document.getElementById("clickme").onclick = function () {
+                var input = document.getElementById("txt").value;
+                alarm.setup(input);
+            };
+        };
+    </script>
+</head>
+<body>
+    <h1>
+        setTimeout with parameters</h1>
+    <input type="text" id="txt" />
+    <button id="clickme">
+        Click to start the timer</button>
+</body>
+</html>

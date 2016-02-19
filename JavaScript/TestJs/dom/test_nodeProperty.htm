@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>sample of using Node property</title>
+    <script type="text/javascript" src="../common/commonFuncs.js"></script>
+    <script type="text/javascript">
+        var ndType2Name = {
+            1: "element",
+            2: "attribute",
+            3: "text"
+        };
+
+        printline(Node.ELEMENT_NODE);
+
+        function difference_innerHTML_nodeValue() {
+            var p1 = document.getElementById("p1");
+            printFormatMsg("innerHTML = %s", p1.innerHTML);
+
+            // <b> has only one child node, which is a text node
+            // then we can use 'nodeValue' to access its content
+            var textNode = p1.getElementsByTagName("b")[0].childNodes[0];
+            printFormatMsg("actual content = %s", textNode.nodeValue);
+        }
+
+        function testNodeValue() {
+            var element = document.getElementById("p2");
+
+            var childNodes = element.childNodes;
+            var text;
+            for (var i = 0; i < childNodes.length; i++) {
+                if (childNodes[i].nodeType == 3) {
+                    text = childNodes[i];
+                    break;
+                }
+            }
+
+            var attribute = element.getAttributeNode("id");
+
+            var nodes = [element, text, attribute];
+            for (i = 0; i < nodes.length; i++) {
+                var nd = nodes[i];
+                printFormatMsg("NodeType='%s',NodeName='%s',NodeValue=%s", ndType2Name[nd.nodeType], nd.nodeName, nd.nodeValue);
+            }
+
+        }
+
+        window.onerror = function (msg, url, line) {
+            alert("ERROR: " + msg + "\n" + url + ":" + line);
+            return true;
+        };
+    </script>
+    <style type="text/css">
+        div
+        {
+            background-color: wheat;
+            margin: 5px;
+        }
+        
+        .codes
+        {
+            color: crimson;
+        }
+        
+        .note
+        {
+            color: navy;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <p id="p1">
+            <b>paragraph one</b></p>
+        <p id="p2">
+            paragraph two</p>
+    </div>
+    <div class="codes">
+        <script type="text/javascript">            difference_innerHTML_nodeValue();</script>
+    </div>
+    <div class="codes">
+        <h3>
+            nodeValue of ElementNode, TextNode, AttributeNode</h3>
+        <script type="text/javascript">
+            testNodeValue();
+        </script>
+    </div>
+</body>
+</html>

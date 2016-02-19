@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Test Javascript's Inheritance</title>
+    <link rel="stylesheet" type="text/css" href="../common/qunit.css" />
+    <script type="text/javascript" src="../common/jquery.js"></script>
+    <script type="text/javascript" src="../common/qunit.js"></script>
+    <script type="text/javascript" src="../common/commonfuncs.js"></script>
+    <script type="text/javascript">
+        // ************************************* base class
+        function Animal(alive) {
+            this.alive = alive;
+        }
+
+        Animal.prototype.breath = function () {
+            if (this.alive) {
+                return "breathing";
+            } else {
+                return "not breathing";
+            }
+        };
+
+        // ************************************* derived class
+
+        function Dog(name) {
+            this.name = name;
+        }
+
+        Dog.prototype = new Animal();
+        Dog.prototype.bark = function () {
+            return "barking";
+        };
+
+        function simpleDemo() {
+            var a = new Animal(false);
+            equal(a.breath(), "not breathing");
+
+            var d = new Dog("wangcai");
+            d.alive = true;
+            equal(d.breath(), "breathing");
+            equal(d.bark(), "barking");
+
+            // ------------- properties in both base class and derived class are in
+            var propInDerived = ["alive", "breath", "name", "bark","toString"];
+            for (var i = 0; i < propInDerived.length; i++) {
+                ok(propInDerived[i] in d);
+            }
+            
+            // ------------- properties in both base class and derived class are in
+            ok("alive" in a);
+            ok(!("bark" in a),"not have properties defined in derived class");
+        }
+
+        $(function () {
+            test("simple demo of inheritance", simpleDemo);
+        });
+
+    </script>
+</head>
+<body>
+    <h1 id="qunit-header">Boolean Demonstration</h1>
+    <h2 id="qunit-banner"></h2>
+    <div id="qunit-testrunner-toolbar">
+    </div>
+    <h2 id="qunit-userAgent"></h2>
+    <ol id="qunit-tests">
+    </ol>
+    <div id="qunit-fixture">
+        test markup, will be hidden
+    </div>
+</body>
+</html>

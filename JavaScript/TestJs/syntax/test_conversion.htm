@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demonstrate conversion</title>
+    <script type="text/javascript" src="../common/commonFuncs.js"></script>
+    <script type="text/javascript">
+
+        function checkIsBoolean(value) {
+            var msg = "<li>Boolean(<span class='parameter'>" + wrapQuotation(value) + "</span>) returns <span class='result'>" + Boolean(value) + "</span></li>";
+            document.writeln(msg);
+        }
+
+        function checkIsNumber(value) {
+            var msg = "<li>Number(<span class='parameter'>" + wrapQuotation(value) + "</span>) returns <span class='result'>" + Number(value) + "</span></li>";
+            document.writeln(msg);
+        }
+
+        function checkParseInt(value) {
+            var msg = "<li>parseInt(<span class='parameter'>" + wrapQuotation(value) + "</span>) returns <span class='result'>" + parseInt(value) + "</span></li>";
+            document.writeln(msg);
+        }
+
+        function checkParseFloat(value) {
+            var msg = "<li>parseFloat(<span class='parameter'>" + wrapQuotation(value) + "</span>) returns <span class='result'>" + parseFloat(value) + "</span></li>";
+            document.writeln(msg);
+        }
+    </script>
+    <style type="text/css">
+        .parameter
+        {
+            color: firebrick;
+        }
+        .result
+        {
+            color: navy;
+        }
+        .parameter, .result
+        {
+            font-weight: bold;
+            font-size: 1.2em;
+            text-decoration: underline;
+            margin: 5px;
+        }
+        
+        .block
+        {
+            border: 3px green solid;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- ######################### Boolean ######################### -->
+    <div class="block">
+        <h4>
+            Boolean Rules</h4>
+        <ul>
+            <li><b>true</b>: boolean true, nonempty string (<b>including a string containing only
+                whitespaces</b>), nonzero number, any object</li>
+            <li><b>false</b>: boolean false, empty string, 0, NaN, null, undefined</li>
+        </ul>
+        <script type="text/javascript">
+            document.writeln("<h4>Boolean Sample</h4><ul>");
+            checkIsBoolean("cheka");
+            checkIsBoolean(Infinity);
+            checkIsBoolean(-Infinity);
+            checkIsBoolean(""); // empty string
+            checkIsBoolean("            "); // all white space
+            checkIsBoolean(66);
+            checkIsBoolean(0);
+            checkIsBoolean(-88);
+            checkIsBoolean(undefined);
+            checkIsBoolean(NaN);
+            checkIsBoolean(null);
+            document.writeln("</ul>");
+        </script>
+    </div>
+    <!-- ######################### Number ######################### -->
+    <div class="block">
+        <h4>
+            Number Rules</h4>
+        <ul>
+            <li><b>boolean</b>: true returns 1, false returns 0</li>
+            <li><b>numeric</b>: return itself</li>
+            <li><b>undefined</b>: return NaN</li>
+            <li><b>null</b>: return 0</li>
+            <li><b>empty string</b>: return 0</li>
+            <li><b>string consists only number</b>: return number</li>
+            <li><b>string contains any text</b>: return NaN</li>
+        </ul>
+        <script type="text/javascript">
+            document.writeln("<h4>Number Sample</h4><ul>");
+            checkIsNumber(true);
+            checkIsNumber(false);
+            checkIsNumber(3.1415925);
+            checkIsNumber(undefined);
+            checkIsNumber("");
+            checkIsNumber("                    ");
+            checkIsNumber(null);
+            checkIsNumber("88");
+            checkIsNumber("       66     ");// leading and tailing whitespace
+            checkIsNumber("010");
+            checkIsNumber("88xyz");
+            checkIsNumber("stasi");
+            document.writeln("</ul>");
+        </script>
+    </div>
+    <!-- ######################### parseInt ######################### -->
+    <div class="block">
+        <h4>
+            parseInt Rules</h4>
+        <ul>
+            <li><b>string is null</b>: NaN</li>
+            <li><b>first non-whitespace is not number</b>: NaN</li>
+            <li><b>parse until first non-numeric character</b>: return already parsed</li>
+            <li style="color: red"><b>started with 0 will return different value in different explorer.</b></li>
+        </ul>
+        <script type="text/javascript">
+            document.writeln("<h4>parseInt Sample</h4><ul>");
+            checkParseInt("");
+            checkParseInt("             ");
+            checkParseInt("6");
+            checkParseInt("           6.66");
+            checkParseInt("  x6.66");
+            checkParseInt("cheka");
+            checkParseInt("  6.66abcdefg");
+            checkParseInt("010");
+            document.writeln("</ul>");
+        </script>
+    </div>
+    <!-- ######################### parseFloat ######################### -->
+    <div class="block">
+        <h4>
+            parseFloat Rules</h4>
+        <ul>
+            <li>it can recognize the scientific notation</li>
+            <li>ignore the starting 0 or 0x</li>
+        </ul>
+        <script type="text/javascript">
+            document.writeln("<h4>parseFloat Sample</h4><ul>");
+            checkParseFloat("");
+            checkParseFloat("             ");
+            checkParseFloat("6");
+            checkParseFloat("           6.66");
+            checkParseFloat("  x6.66");
+            checkParseFloat("cheka");
+            checkParseFloat("  6.66abcdefg");
+            checkParseFloat("3.1415926e2");
+            checkParseFloat("010");
+            document.writeln("</ul>");
+        </script>
+    </div>
+</body>
+</html>

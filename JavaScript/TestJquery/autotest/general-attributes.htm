@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Test</title>
+    <link rel="stylesheet" type="text/css" href="../common/qunit.css" />
+    <script type="text/javascript" src="../common/jquery.js"></script>
+    <script type="text/javascript" src="../common/qunit.js"></script>
+    <script type="text/javascript">
+
+        function testAttr_Get() {
+            $("#qunit-fixture").append('<p>Once there was a <em title="huge, gigantic">large</em> dinosaur...</p>');
+            var em = $("#qunit-fixture p em");
+
+            // for a jquery object, attr() when getting, only return the 
+            // attributs of the first matched element
+            equal(em.attr("TITLE"), "huge, gigantic", "attribute name is case-insensitive");
+            equal(em.attr("non-existent"), undefined);
+        }
+
+        function testAttr_Set() {
+            $("#qunit-fixture").append("<div>div1</div><div>div2</div>");
+
+            // -------------------- set same values to multiple elements
+            var divs = $("#qunit-fixture div");
+            divs.attr("width", 88); // single key-value pair
+
+            // set multiple key-value pairs by passing an object
+            divs.attr({
+                width: 66,
+                height: 99
+            });
+
+            // -------------------- set different values by invoking functions
+            divs.attr("id", function (index) {
+                return "d" + index;
+            });
+
+            // -------------------- check
+            equal($("#d0").text(), "div1");
+            equal($("#d1").attr("width"), 66);
+        }
+
+        $(function () {
+            module("attr");
+            test("get attr", testAttr_Get);
+            test("set attr", testAttr_Set);
+        });
+
+    </script>
+</head>
+<body>
+    <h1 id="qunit-header">
+        Demonstration</h1>
+    <h2 id="qunit-banner">
+    </h2>
+    <div id="qunit-testrunner-toolbar">
+    </div>
+    <h2 id="qunit-userAgent">
+    </h2>
+    <ol id="qunit-tests">
+    </ol>
+    <div id="qunit-fixture">
+        test markup, will be hidden</div>
+    <script type="text/javascript"></script>
+</body>
+</html>

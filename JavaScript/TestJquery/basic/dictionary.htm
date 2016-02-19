@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Use Object As Dictionary</title>
+    <link rel="stylesheet" type="text/css" href="../common/qunit.css" />
+    <script type="text/javascript" src="../common/jquery.js"></script>
+    <script type="text/javascript" src="../common/qunit.js"></script>
+    <script type="text/javascript">
+
+        function getKeyValues(dict) {
+            var keys = [];
+            var values = [];
+            for (var key in dict) {
+                keys.push(key);
+                values.push(dict[key]);
+            }
+
+            return {
+                Keys: keys,
+                Values: values
+            };
+        }
+
+        function demoIterate() {
+            var dict = {
+                "mary": 86,
+                "tom": 9
+            };
+
+            var datas = getKeyValues(dict);
+            deepEqual(datas.Keys, ["mary", "tom"]);
+            deepEqual(datas.Values, [86, 9]);
+        }
+
+        function demoModify() {
+            var dict = {
+                "mary": 86,
+                "tom": 9
+            };
+
+            dict["mary"] = -1;
+            dict.tom = -99;
+
+            var datas = getKeyValues(dict);
+            deepEqual(datas.Values, [-1, -99]);
+        }
+
+        function demoInsert() {
+            var dict = {};
+
+            dict.mary = 100;
+            dict.alice = 99;
+
+            var datas = getKeyValues(dict);
+            deepEqual(datas.Keys, ["mary", "alice"]);
+            deepEqual(datas.Values, [100, 99]);
+        }
+
+        function demoLookup() {
+            var dict = {
+                "mary": 86,
+                "tom": 9
+            };
+
+            equal(dict["mary"], 86);
+            equal(dict["not existed"], undefined);
+
+            ok("tom" in dict);
+            ok(!("not existed" in dict));
+        }
+
+        function demoRemove() {
+            var dict = {
+                "mary": 86,
+                "tom": 9,
+                "alice": 100
+            };
+
+            delete dict["tom"];
+            delete dict["not existed"];
+
+            var datas = getKeyValues(dict);
+            deepEqual(datas.Keys, ["mary", "alice"]);
+            deepEqual(datas.Values, [86, 100]);
+        }
+
+        function demoNonStringAsKey() {
+            var dict = {};
+
+            for (var i = 0; i < 4; i++) {
+                dict[i] = i.toString();
+            }
+
+            ok(1 in dict);
+            strictEqual(dict[2], "2");
+            delete dict[0];
+
+            var datas = getKeyValues(dict);
+            // although we use integer as the key
+            // however, internally, keys are still stored as string
+            deepEqual(datas.Keys, ["1", "2", "3"]);
+        }
+    </script>
+</head>
+<body>
+    <h1 id="qunit-header">
+        Demonstration</h1>
+    <h2 id="qunit-banner">
+    </h2>
+    <div id="qunit-testrunner-toolbar">
+    </div>
+    <h2 id="qunit-userAgent">
+    </h2>
+    <ol id="qunit-tests">
+    </ol>
+    <div id="qunit-fixture">
+        test markup, will be hidden</div>
+    <script type="text/javascript">
+        test("iterate a dictionary", demoIterate);
+        test("modify elements in dictionary", demoModify);
+        test("insert into dictionary", demoInsert);
+        test("lookup value by key in dictionary", demoLookup);
+        test("remove by key from dictionary", demoRemove);
+        test("use non-string as the key", demoNonStringAsKey);
+    </script>
+</body>
+</html>

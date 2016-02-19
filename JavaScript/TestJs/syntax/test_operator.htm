@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demonstrate operators</title>
+    <script type="text/javascript" src="../common/commonFuncs.js"></script>
+    <script type="text/javascript">
+        function checkAdd(x, y) {
+            var msg = formatTwoParmExpression(x, "+", y, "=", x + y);
+            document.writeln(msg);
+        }
+
+    </script>
+    <style type="text/css">
+        .parameter
+        {
+            color: firebrick;
+        }
+        .result
+        {
+            color: navy;
+        }
+        .parameter, .result
+        {
+            font-weight: bold;
+            font-size: 1.2em;
+            text-decoration: underline;
+            margin: 5px;
+        }
+        
+        .block
+        {
+            border: 3px orangered solid;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- ##################################################### -->
+    <div class="block">
+        <script type="text/javascript">
+            document.writeln("<h3>+</h3><ul>");
+            checkAdd(1, 2);
+            checkAdd("hello", "world");
+            checkAdd("100", 1);
+            checkAdd("xyz", 100000);
+            document.writeln("</ul>");
+        </script>
+    </div>
+</body>
+</html>

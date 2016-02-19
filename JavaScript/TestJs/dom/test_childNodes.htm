@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>sample of using childNodes property</title>
+    <style type="text/css">
+        div
+        {
+            background-color: wheat;
+            margin: 5px;
+        }
+        
+        h3 {
+            text-align: center;
+        }
+    </style>
+    <script type="text/javascript" src="../common/commonFuncs.js"></script>
+    <script type="text/javascript">
+
+        var ndType2Name = {};
+        ndType2Name[Node.ELEMENT_NODE] = "element";
+        ndType2Name[Node.TEXT_NODE] = "text";
+        ndType2Name[Node.ATTRIBUTE_NODE] = "attribute";
+            
+        function printChildren(id,children) {
+            var count = children.length;
+
+            printFormatMsg("****************** id='%s' has %d children", id, count);
+            for (var i = 0; i < count; i++) {
+                var nd = children[i];
+                var typename = ndType2Name[nd.nodeType];
+                printFormatMsg("[%d] type='%s', innerHTML='%s'", i + 1, typename, nd.innerHTML);
+            }
+        }
+
+        function listChildNodes(id) {
+            var parent = document.getElementById(id);
+            printChildren(id,parent.childNodes);
+        }
+
+        function listChildren(id) {
+            var parent = document.getElementById(id);
+            printChildren(id, parent.children);
+        }
+
+    </script>
+</head>
+<body>
+    <!--DOM will view 'line break' as text node, whose innerHTML is undefined-->
+    <div id="div1">
+        <p id="p1">
+            paragraph one</p>
+        <p id="p2">
+            paragraph two</p>
+    </div>
+    <div id="div2"><p>paragraph three</p><p>paragraph four</p></div>
+    <div style="color: crimson">
+        <h3>childNodes: include TextNodes</h3>
+        <script type="text/javascript">
+            var ids = ["div1", "div2"];
+            for (var i = 0; i < ids.length; i++) {
+                listChildNodes(ids[i]);
+            }
+        </script>
+    </div>
+    <div style="color: navy">
+        <h3>children: ignore TextNodes, but only containe ElementNodes</h3>
+        <script type="text/javascript">
+            var ids = ["div1", "div2"];
+            for (var i = 0; i < ids.length; i++) {
+                listChildren(ids[i]);
+            }
+        </script>
+    </div>
+</body>
+</html>

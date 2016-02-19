@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Test Javascript's String</title>
+    <link rel="stylesheet" type="text/css" href="../common/qunit.css" />
+    <script type="text/javascript" src="../common/jquery.js"></script>
+    <script type="text/javascript" src="../common/qunit.js"></script>
+    <script type="text/javascript">
+
+        function demoQuote() {
+            ok("Wouldn't you prefer O'Reilly's book?", "single-quote characters may be contained within strings delimited by double quotes");
+            ok('name="myform"', "Double-quote characters may be contained within strings delimited by single-quote characters");
+        }
+
+        function demoArrayFeature() {
+            var s = "stasi";
+            equal(5, s.length);
+            equal("s", s[0], "there is no character type in Javascript, so element of the string is also string");
+            equal("i", s[s.length - 1]);
+
+            s[1] = "x";
+            equal(s, "stasi", "string is ready-only, assigning will not throw exception, but will be ignored");
+        }
+
+        function demoUpperLower() {
+            var s = "Tsinghua";
+            equal("TSINGHUA", s.toUpperCase());
+            equal("tsinghua", s.toLowerCase());
+        }
+
+        function demoSplit() {
+            var s = "hello, javascript";
+            var splitted = s.split(", ");
+            equal(2, splitted.length);
+            equal("hello", splitted[0]);
+            equal("javascript", splitted[1]);
+        }
+
+        function demoImmutableFeature() {
+            var s = "stasi";
+
+            s[0] = "x";
+            equal("stasi", s, "assign element will be ignored");
+
+            var newInstance = s.toUpperCase();
+            notEqual("STASI", s);
+            equal("stasi", s, "return a new string, itself remain unchanged");
+        }
+
+        function demoFormatNumber() {
+
+            var n = 123456.789;
+
+            // ------------ toFixed(n), n digits after decimal point
+            equal(n.toFixed(0), "123457");
+            equal(n.toFixed(2), "123456.79");
+            equal(n.toFixed(5), "123456.78900");
+
+            // ------------ toExponential(n), n digits after decimal point
+            equal(n.toExponential(1), "1.2e+5");
+            equal(n.toExponential(3), "1.235e+5");
+
+            // ------------ toPrecision(n), n significant digits you specify
+            equal(n.toPrecision(4), "1.235e+5");
+            equal(n.toPrecision(7), "123456.8");
+            equal(n.toPrecision(10), "123456.7890");
+        }
+
+        $(function () {
+            test("how to define string with quote", demoQuote);
+            test("string can be viewed as read-only array", demoArrayFeature);
+            test("upperCase/lowerCase", demoUpperLower);
+            test("split", demoSplit);
+            test("string is immutable", demoImmutableFeature);
+            test("demo how to format float numbers", demoFormatNumber);
+        });
+
+    </script>
+</head>
+<body>
+    <h1 id="qunit-header">
+        String Demonstration</h1>
+    <h2 id="qunit-banner">
+    </h2>
+    <div id="qunit-testrunner-toolbar">
+    </div>
+    <h2 id="qunit-userAgent">
+    </h2>
+    <ol id="qunit-tests">
+    </ol>
+    <div id="qunit-fixture">
+        test markup, will be hidden</div>
+</body>
+</html>

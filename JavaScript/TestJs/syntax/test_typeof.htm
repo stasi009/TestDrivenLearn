@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demonstrate typeof operator</title>
+    <script type="text/javascript" src="../common/commonFuncs.js"></script>
+    <script type="text/javascript">
+
+        function Point(x, y) {
+            this.x = x;
+            this.y = y;
+        }
+
+        Point.prototype.toString = function () {
+            return "point(" + this.x + "," + this.y + ")";
+
+        };
+
+        function printValueAndType(value) {
+            var msg = "<p>Value=<span class='attention value'>" + wrapQuotation(value);
+            msg += "</span>,Type=<span class='attention type'>" + typeof (value);
+            msg += "</span></p>";
+            document.writeln(msg);
+        }
+    </script>
+    <style type="text/css">
+        .attention
+        {
+            font-weight: bold;
+            font-size: 1.2em;
+            text-decoration: underline;
+            margin: 5px;
+        }
+        .value
+        {
+            color: crimson;
+        }
+        .type
+        {
+            color: navy;
+        }
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+        var value = 66;
+        printValueAndType(value);
+        printValueAndType("stasi");
+        printValueAndType(true);
+        printValueAndType(false);
+
+        value = "66";
+        printValueAndType(value);
+
+        var undef;
+        printValueAndType(undef);
+
+        printValueAndType(null);
+
+        var p = new Point(1, 2);
+        printline("Is " + p + " Point class? " + (p instanceof Point));
+        printValueAndType(p);
+
+        printline("for user-defined functions, typeof returns: <span class='attention type'>" + (typeof printValueAndType) + "</span>");
+
+        // chekanote: typeof array only returns "object", not array
+        printValueAndType([1, 2, 3]);
+
+        // chekanote: because we are accessing one "not-existed" value
+        // below codes will cause error and then be ignored
+        // so nothing will be printed on the web page
+        printValueAndType(notExisted);
+    </script>
+    <h4>
+        for user-defined class, typeof just returns "object", it cannot return the detailed
+        name of the class.
+    </h4>
+</body>
+</html>

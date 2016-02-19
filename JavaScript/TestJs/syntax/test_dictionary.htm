@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demonstrate how to use object as dictionary</title>
+    <script type="text/javascript" src="../common/commonFuncs.js"></script>
+    <script type="text/javascript">
+        function iterate(dict) {
+            for (var key in dict) {
+                printline("[" + wrapQuotation(key) + "]: " + dict[key]);
+            }
+        }
+
+        function lookup_withIn(dict, key) {
+            if (key in dict) {
+                printline("found " + wrapQuotation(dict[key]) + " for key[" + key + "]");
+            } else {
+                printline("!!! key[" + key + "] doesn't exist");
+            }
+        }
+
+        function lookup_checkUndef(dict, key) {
+            var value = dict[key];
+            if (value === undefined) {
+                printline("!!! key[" + key + "] doesn't exist");
+            } else {
+                printline("found " + wrapQuotation(dict[key]) + " for key[" + key + "]");
+            }
+        }
+    </script>
+    <style type="text/css">
+        .block
+        {
+            background-color: #F5DD95;
+            color: firebrick;
+            border: 1px orangered solid;
+            margin: 5px;
+        }
+        
+        .note
+        {
+            color: navy;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="block">
+        <script type="text/javascript">
+            printline("********************* insert into dictionary");
+            var dict = {
+                "main title": "javascript",
+                "sub title": "the definitive guide"
+            };
+
+            printline("********************* enumerate dictionary");
+            iterate(dict);
+
+            printline("********************* insert new key/value pair");
+            dict["author"] = "David Flanagan";
+            dict["version"] = 5;
+            iterate(dict);
+
+            var keys = ["main title", "version", "none"];
+            printline("********************* retreive value by key (by using 'in')");
+            for (var i = 0; i < keys.length; i++) {
+                lookup_withIn(dict, keys[i]);
+            }
+
+            printline("********************* retreive value by key (by checking undefined)");
+            for (var i = 0; i < keys.length; i++) {
+                lookup_checkUndef(dict, keys[i]);
+            }
+
+            printline("********************* modify existing value");
+            dict.version += 1;
+            iterate(dict);
+
+            printline("********************* delete key/value pair");
+            dict.title = dict["main title"] + "-" + dict["sub title"];
+            delete dict["main title"];
+            delete dict["sub title"];
+            iterate(dict);
+            
+        </script>
+    </div>
+    <div class="block">
+        <script type="text/javascript">
+            var dict = {};
+            dict[1] = "One";
+            dict[100] = "Hundred";
+            dict[-10] = "negative ten";
+
+            iterate(dict);
+
+            lookup_withIn(dict, -10);
+            lookup_withIn(dict, 100);
+        </script>
+        <h4 class="note">
+            when using, the expression inside must evaluate to a string or a value that can
+            be converted to a string. so we can use integer directly as the key, and the object
+            will transfer them automatically into string.
+        </h4>
+    </div>
+</body>
+</html>

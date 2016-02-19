@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Sample of Appending Child</title>
+    <style type="text/css">
+        div
+        {
+            width: 60%;
+            margin: 10px auto;
+        }
+        
+        table
+        {
+            width: 100%;
+        }
+        .col1
+        {
+            width: 25%;
+        }
+        
+        .col2
+        {
+            text-align: center;
+        }
+        
+        input
+        {
+            width: 90%;
+        }
+    </style>
+    <script type="text/javascript">
+        function onBtnAdd() {
+            var caption = document.getElementById("caption").value;
+            var url = document.getElementById("url").value;
+
+            var newlink = document.createElement("a");
+            newlink.setAttribute("href", url);
+            // newlink.setAttribute("target", "_blank");
+            newlink.innerHTML = caption;
+
+            var newitem = document.createElement("li");
+            newitem.appendChild(newlink);
+
+            document.getElementById("list").appendChild(newitem);
+        }
+    </script>
+</head>
+<body>
+    <div style="background-color: wheat">
+        <table>
+            <tr>
+                <td class="col1">
+                    Caption:
+                </td>
+                <td class="col2">
+                    <input type="text" id="caption" />
+                </td>
+            </tr>
+            <tr>
+                <td class="col1">
+                    URL:
+                </td>
+                <td class="col2">
+                    <input type="text" id="url" />
+                </td>
+            </tr>
+            <tr>
+                <td class="col1">
+                </td>
+                <td class="col2">
+                    <input type="button" value="Add" onclick="onBtnAdd()" />
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div style="background-color: lightblue">
+        <ol id="list">
+        </ol>
+    </div>
+</body>
+</html>

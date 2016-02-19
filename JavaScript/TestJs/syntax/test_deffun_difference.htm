@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demonstrate the difference of defining functions with declaration and expression
+    </title>
+    <script type="text/javascript" src="../common/commonFuncs.js"></script>
+    <style type="text/css">
+        .block
+        {
+            border: 1px navy solid;
+            background-color: lightblue;
+            margin: 10px;
+        }
+        
+        .note
+        {
+            font-style: italic;
+            color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="block">
+        <script type="text/javascript">
+            var flag = false;
+
+            if (flag) {
+                var fool_expression = function () {
+                    printline("true branch.");
+                };
+            } else {
+                var fool_expression = function () {
+                    printline("false branch.");
+                };
+            }
+
+            fool_expression();
+        </script>
+        <h4 class="note">
+            Note: when using function expression, which definition will be called, depends on
+            the execution flow.</h4>
+    </div>
+    <div class="block">
+        <script type="text/javascript">
+            var flag = true;
+
+            if (flag) {
+                function fool_declaration() {
+                    printline("first declaration.");
+                }
+            } else {
+                function fool_declaration() {
+                    printline("second declaration.");
+                }
+            }
+
+            fool_declaration(); // always the latest declaration overwrites the previous one
+        </script>
+        <h4 class="note">
+            Note: when using function declaration, which definition will be called, depends
+            on the declaration order.</h4>
+    </div>
+</body>
+</html>

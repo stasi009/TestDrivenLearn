@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>QUnit's Equal Test</title>
+    <link rel="stylesheet" type="text/css" href="../common/qunit.css" />
+    <script type="text/javascript" src="../common/jquery.js"></script>
+    <script type="text/javascript" src="../common/qunit.js"></script>
+    <script type="text/javascript">
+        function testEqual() {
+            var value = 1;
+            equal(value, 1, "1 == 1");
+            equal(value, true, "1 == true");
+            equal(0, false, "0 == false");
+            equal(null, undefined, "null == undefined");
+        }
+
+        function testStrictEqual() {
+            var value = 1;
+            strictEqual(value, 1, "1 === 1");
+            notStrictEqual(value, true, "1 !== true");
+        }
+
+        function testDeepEqual() {
+            var actual = { a: 1 };
+            notEqual(actual, { a: 1 }, "not equal, same content, but different object, NOT equal");
+            // note: below testcase fails in Chrome
+            // but succeeds in Firefox and IE
+            notDeepEqual(actual, { a: "1" }, "not deepEqual, expected value is a string, actual a number");
+            deepEqual(actual, { a: 1 }, "deepEqual, same content, but different object, NOT equal but deepEqual");
+        }
+
+        $(function () {
+            test("'equal' pass when 'actual == expect'", testEqual);
+            test("'strictEqual' pass when 'actual === expect'", testStrictEqual);
+            test("'deepEqual' deep recursive comparison by using === to compare each element", testDeepEqual);
+        });
+    </script>
+</head>
+<body>
+    <h1 id="qunit-header">
+        QUnit's Equal Test</h1>
+    <h2 id="qunit-banner">
+    </h2>
+    <div id="qunit-testrunner-toolbar">
+    </div>
+    <h2 id="qunit-userAgent">
+    </h2>
+    <ol id="qunit-tests">
+    </ol>
+    <div id="qunit-fixture">
+        test markup, will be hidden</div>
+</body>
+</html>

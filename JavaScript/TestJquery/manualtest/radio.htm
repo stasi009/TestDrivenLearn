@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script type="text/javascript" src="../common/jquery.js"></script>
+    <title></title>
+    <style type="text/css">
+        .block
+        {
+            background: wheat;
+            border: 1px firebrick solid;
+            margin: 5px auto;
+        }
+    </style>
+    <script type="text/javascript">
+
+        function demo1() {
+            $("#shipmethod input").click(function () {
+                var choice = $("#shipmethod input[name='method']:radio:checked").val();
+                $("#ship-choice").text(choice);
+            });
+        }
+
+        function demo2() {
+            var log = $("#fruits-selection div:last");
+
+            $("#fruits-selection input[name='fruit']").click(function () {
+                var choice = $(this).val();
+                log.html("<b>" + choice + "</b>");
+            });
+        }
+
+        $(function () {
+            demo1();
+            demo2();
+        });
+    </script>
+</head>
+<body>
+    <div class="block">
+        <fieldset id="shipmethod">
+            <legend>Shipping Method</legend>
+            <label>
+                <input type="radio" name="method" value="1st" checked="checked" />First-class</label>
+            <label>
+                <input type="radio" name="method" value="2day" />2-day Air</label>
+            <label>
+                <input type="radio" name="method" value="overnite" />Overnight</label>
+        </fieldset>
+        <p id="ship-choice">
+            not selected yet</p>
+    </div>
+    <div class="block" id="fruits-selection">
+        <div>
+            <input type="radio" name="fruit" value="orange" />
+            <label>
+                orange</label>
+        </div>
+        <div>
+            <input type="radio" name="fruit" value="apple" />
+            <label>
+                apple</label>
+        </div>
+        <div>
+            <input type="radio" name="fruit" value="banana" />
+            <label>
+                banana</label>
+        </div>
+        <div>
+            not selected yet</div>
+    </div>
+</body>
+</html>

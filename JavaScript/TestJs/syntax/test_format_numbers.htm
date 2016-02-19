@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demonstrate how to format numbers</title>
+    <script type="text/javascript" src="../common/commonFuncs.js"></script>
+    <script type="text/javascript">
+        function checkToFixed(value, precision) {
+            printline(value + ".toFixed(" + precision + ") = " + value.toFixed(precision));
+        }
+
+        function checkToExp(value, precision) {
+            printline(value + ".toExponential(" + precision + ") = " + value.toExponential(precision));
+        }
+
+        function checkToPrecision(value, precision) {
+            printline(value + ".toPrecision(" + precision + ") = " + value.toPrecision(precision));
+        }
+
+        function test(n) {
+            printline("orignal value = " + n);
+
+            checkToFixed(n, 0);
+            checkToFixed(n, 2);
+            checkToFixed(n, 5);
+
+            checkToExp(n, 1);
+            checkToExp(n, 3);
+
+            checkToPrecision(n, 4);
+            checkToPrecision(n, 7);
+            checkToPrecision(n, 10);
+        }
+    </script>
+    <style type="text/css">
+        .block {
+            border: 1px navy solid;
+            background-color: lightgrey;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="block">
+        <script type="text/javascript">
+            var n = 123456.789;
+            test(n);
+        </script>
+    </div>
+    <div class="block">
+        <script type="text/javascript">
+            var n = 0.003145;
+            test(n);
+        </script>
+    </div>
+</body>
+</html>

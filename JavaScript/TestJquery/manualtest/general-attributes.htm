@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>general attributes</title>
+    <style type="text/css">
+        .block
+        {
+            background-color: lightgray;
+            border: 1px navy solid;
+            margin: 5px auto;
+        }
+        
+        h2
+        {
+            color: navy;
+        }
+        
+        .attention
+        {
+            background-color: gold;
+            color: firebrick;
+            font-size: 300%;
+            font-weight: bold;
+            width: 60%;
+            margin: 5px auto;
+            text-align: center;
+        }
+    </style>
+    <script type="text/javascript" src="../common/jquery.js"></script>
+    <script type="text/javascript">
+        function demoSetAttr() {
+            $("#setattr input[name='choose-target']").click(function () {
+                var option = $(this).attr("value");
+                $("#setattr a").attr("target", option);
+            });
+        }
+
+        // "curValue" is string, in the format, "number + px"
+        function demoSetCss() {
+            $("#setcss>button").click(function () {
+                $("#setcss p").css("font-size", function (index, curValue) {
+                    console.log(curValue);
+                    return (index + 1) * parseInt(curValue);
+                });
+            });
+        }
+
+        function demoToggleClass() {
+            $("#toggleClass input:checkbox").change(function () {
+                $("#toggleClass p").toggleClass("attention");
+            });
+        }
+
+        $(function () {
+            demoSetAttr();
+            demoSetCss();
+            demoToggleClass();
+        });
+
+    </script>
+</head>
+<body>
+    <div class="block" id="setattr">
+        <h2>
+            set attributes by using attr()</h2>
+        <a href="http://www.wsu.edu/">WSU</a> <a href="http://www.apple.com/">Apple</a>
+        <input type="radio" name="choose-target" value="_self" checked="checked" />Local
+        <input type="radio" name="choose-target" value="_blank" />New Page
+    </div>
+    <div class="block" id="setcss">
+        <h2>
+            set css by using css()</h2>
+        <p>
+            p1</p>
+        <p>
+            p2</p>
+        <p>
+            p3</p>
+        <button>
+            Change
+        </button>
+    </div>
+    <div class="block" id="toggleClass">
+        <h2>
+            toggleClass: add if not, remove if already exists</h2>
+        <p>
+            Javascript</p>
+        <input type="checkbox" />
+        Switch Style
+    </div>
+</body>
+</html>

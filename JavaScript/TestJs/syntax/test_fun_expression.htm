@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demonstrate function declaration</title>
+    <script type="text/javascript" src="../common/commonFuncs.js"></script>
+    <script type="text/javascript">
+        function testOrder() {
+            // variable declaration can be hoisted to the top
+            // however, its assignment cannot be hoisted
+            // so first-time it is used, it is 'undefined' and cause exception
+            try {
+                var result = demo(1, 2);
+                printline("nothing will be printed before the function expression.");
+            } catch (e) {
+                printError(e);
+            }
+
+            var demo = function (x, y) {
+                return x + y;
+            };
+
+            result = demo(6, 9);
+            printline("the function is only available after the expression, result=" + result);
+        }
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        testOrder();
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>sample of location</title>
+    <script type="text/javascript" src="../common/commonFuncs.js"></script>
+    <script type="text/javascript">
+        function testReadLocation() {
+            var properties = ["host", "hostname", "href", "pathname", "port", "protocol", "search"];
+            for (var i = 0; i < properties.length; i++) {
+                printline(sprintf("[%s]: %s", properties[i], location[properties[i]]));
+            }
+        }
+
+        // the location can be both absolute URL or relative URL
+        // relative URL will be resolved against the current URL
+        window.onload = function () {
+            document.getElementById("btnGoto").onclick = function () {
+                window.location = document.getElementById("url").value
+            };
+        };
+    </script>
+    <style type="text/css">
+        .block
+        {
+            background-color: wheat;
+            color: crimson;
+            margin: 10px;
+        }
+        
+        .note
+        {
+            color: navy;
+            border: 1px navy dashed;
+            margin: 0px;
+        }
+        
+        h3
+        {
+            color: navy;
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="block">
+        <script type="text/javascript">            testReadLocation();</script>
+    </div>
+    <div class="block">
+        <input type="text" id="url" />
+        <input type="button" id="btnGoto" value="Go to ......" />
+    </div>
+</body>
+</html>

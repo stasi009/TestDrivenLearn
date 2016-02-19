@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demonstrate ProType Pattern</title>
+    <script type="text/javascript" src="../common/commonFuncs.js"></script>
+    <script type="text/javascript">
+
+        // *************** instance fields
+        function Point(x, y) {
+            if (isNaN(x) || isNaN(y)) {
+                throw new TypeError();
+            }
+            this.x = x;
+            this.y = y;
+        }
+
+        // *************** instance methods
+        // (using below fashion, it won't overwrite predefined prototype which contains 'constructor' property)
+        Point.prototype.r = function () {
+            return Math.sqrt(this.x * this.x + this.y * this.y);
+        };
+        Point.prototype.toString = function () {
+            return "(" + this.x + "," + this.y + ")";
+        };
+        Point.prototype.equal = function (that) {
+            return that != null
+                && that.constructor === Point
+                    && that.x === this.x && that.y === this.y;
+        };
+
+        // *************** class fields
+        Point.Zero = new Point(0, 0);
+        Point.Parse = function (s) {
+            var a = s.split(",");
+            return new Point(parseFloat(a[0]), parseFloat(a[1]));
+        };
+
+    </script>
+    <style type="text/css">
+        .block
+        {
+            background-color: lightblue;
+            border: 1px navy solid;
+            margin: 10px;
+        }
+        
+        .note
+        {
+            color: darkgreen;
+            font-weight: bold;
+            font-style: italic;
+        }
+        
+        h3
+        {
+            color: navy;
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="block">
+        <script type="text/javascript">
+            var points = [
+                new Point(3, 4),
+                new Point(1, 2),
+                new Point(6, 9)
+            ];
+
+            document.writeln("<ol>");
+            for (var i = 0; i < points.length; i++) {
+                document.writeln("<li>" + points[i] + ": " + points[i].r().toFixed(2) + "</ul>");
+            }
+            document.writeln("</ol>");
+        </script>
+    </div>
+    <div class="block">
+        <script type="text/javascript">
+            var dot = new Point(8, 9);
+
+            for (var p in dot) {
+                printline(p + " : " + dot[p] + " --- " + (typeof dot[p]));
+            }
+        </script>
+        <h4 class="note">
+            this piece of codes demonstrate that all user-defined properties are enumerable,
+            including functions. and we can distinguish them by checking by typeof result.
+        </h4>
+    </div>
+    <div class="block">
+        <h3>
+            test equal</h3>
+        <script type="text/javascript">
+            var p = new Point(8, 9);
+            printline(p.equal({ x: 8, y: 9 }));
+            printline(p.equal(new Point(8, 9)));
+        </script>
+    </div>
+</body>
+</html>

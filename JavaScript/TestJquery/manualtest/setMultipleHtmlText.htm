@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>set multiple html()/text()</title>
+    <style type="text/css">
+        div {
+            border: 2px blue solid;
+            width: 90%;
+            margin: 5px auto;
+            background-color: lightgrey;
+        }
+    </style>
+    <script type="text/javascript" src="../common/jquery.js"></script>
+    <script type="text/javascript">
+        function setMultipleSameHtml() {
+            $("#4multiSameHtml li").html("set same content by html()");
+        }
+
+        $(function () {
+            setMultipleSameHtml();
+        });
+    </script>
+</head>
+<body>
+    <div id="4multiSameHtml">
+        <ol>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </div>
+</body>
+</html>

@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demonstrate myarray</title>
+    <style type="text/css">
+        h1
+        {
+            text-align: center;
+            color: seagreen;
+            margin: 0px;
+            border: 1px seagreen dashed;
+            font-size: 150%;
+        }
+        .block
+        {
+            border: 2px blue solid;
+            margin: 5px;
+            background-color: lightgrey;
+        }
+        .note
+        {
+            color: navy;
+            font-style: italic;
+            margin: 0px;
+            border: 1px navy dashed;
+        }
+    </style>
+    <script type="text/javascript" src="../common/commonFuncs.js"></script>
+    <script type="text/javascript">
+        function testCreate() {
+            printline("empty myarray: " + (new Array()));
+            printline("empty myarray but allocates slots: " + (new Array(10)));
+            printline(new Array("hello", "wsu", 100)); // array can contain different types
+            printline(["hi", "stasi", 9]);
+            printline("empty myarray: " + []);
+        }
+
+        function testAPI() {
+            var myarray = [3.14];
+            myarray.push("hello", 5, 99);
+            printline(myarray);
+
+            var last = myarray.pop();
+            printline("pop out: " + last);
+            printline("after poping:" + myarray);
+
+            var contents = myarray.join();
+            printline("join by default (comma): " + contents);
+
+            contents = myarray.join(" ");
+            printline("join by whitespace: " + contents);
+        }
+
+        function testSpliceToRemove() {
+            var array = [9, "cheka", 3.14];
+            printline("***************** before splicing: [" + array + "]");
+
+            var indexToDelete = 1;
+            array.splice(indexToDelete, 1);
+            printline("***************** after splicing: [" + array + "]");
+            printline("it has " + array.length + " elements");
+            for (var i = 0; i < array.length; i++) {
+                printline("[" + i + "]: " + array[i]);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="block">
+        <h1>
+            different methods to create an myarray</h1>
+        <script type="text/javascript">
+            testCreate();
+        </script>
+    </div>
+    <div class="block">
+        <h1>
+            length of the myarray</h1>
+        <script type="text/javascript">
+            var myarray = [];
+            printline("empty myarray's length=" + myarray.length);
+
+            myarray = new Array(10);
+            printline("empty but allocated array has length=" + myarray.length);
+
+            myarray = ["hello", 3.14];
+            printline("array has length=" + myarray.length);
+
+            myarray[4] = 99;
+            printline("automatically increased to length=" + myarray.length + ", and cells are:");
+            printline("########### loop by for:");
+            for (var i = 0; i < myarray.length; i++) {
+                printline("[" + i + "]: " + myarray[i]);
+            }
+            printline("########### loop by for..in:");
+            for (var i in myarray) {
+                printline("[" + i + "]: " + myarray[i]);
+            }
+
+            printline("shrink by setting a smaller length");
+            myarray.length = 0;
+            printline("########### after shrinking, array=[" + myarray + "]");
+        </script>
+    </div>
+    <div class="block">
+        <h1>
+            Array's API</h1>
+        <script type="text/javascript">
+            testAPI();
+        </script>
+    </div>
+    <div class="block">
+        <h1>
+            read over-range position</h1>
+        <script type="text/javascript">
+
+            function fool(myarray, index) {
+                printline("array's length = " + myarray.length + ",array[" + index + "] = " + myarray[index]);
+                printline("after accessing a position that exceeds the length, the length is still: " + myarray.length);
+
+            }
+
+            fool([1, 2], 100);
+            fool([1, 2], -1);
+        </script>
+        <h4 class="note">
+            when read a position that exceeds the range of the array, whether too big or negative,
+            array will not throw any exception, but return undefined, while not affect the length
+            of the array. array will be automatically be expanded only when writing to a over-range
+            position not reading.
+        </h4>
+    </div>
+    <div class="block">
+        <h1>
+            write over-range position</h1>
+        <script type="text/javascript">
+            function fool(title, myarray, index) {
+                printline("####################### " + title);
+                printline("index<" + index + "> in the array?" + (index in myarray));
+                printline("before writing to index<" + index + ">, length=" + myarray.length);
+                myarray[index] = index;
+                printline("after writing to index<" + index + ">, length=" + myarray.length);
+            }
+
+            var myarray = [0, 0, 0];
+            fool("write position in-range", myarray, 1);
+            fool("write too-big position", myarray, 5);
+            fool("write negative position", myarray, -1);
+            printline("####################### final result=" + myarray);
+            printline("index<-1> in the array? <b>" + (-1 in myarray) + "</b>");
+        </script>
+        <h4 class="note">
+            <ul>
+                <li>writing into too-big position, will automatically expand the array</li>
+                <li>writing into negative position, will not affect the array, just ignore that writing
+                    action.</li>
+                <li>negative position, since it cannot be converted into valid index, so it will be
+                    treated as ordinary property</li>
+            </ul>
+        </h4>
+    </div>
+    <div class="block">
+        <h1>
+            whether "index in array"?</h1>
+        <script type="text/javascript">
+            var array = [7, 8, 9];
+            printline("array is: [" + array + "]");
+
+            var indices = [0, 1, 2, 7, 8, 9];
+            for (var i = 0; i < indices.length; i++) {
+                var index = indices[i];
+                printline("index<" + index + "> in the array? " + (index in array));
+            }
+        </script>
+        <h4 class="note">
+            when using "in" against array, it is checking whether the index is in the array
+            or not, rather than checking the value.</h4>
+    </div>
+    <div class="block">
+        <h1>
+            delete element from array</h1>
+        <script type="text/javascript">
+            var array = [9, "cheka", 3.14];
+            printline("***************** before deleting: [" + array + "]");
+
+            var indexToDelete = 0;
+            delete array[indexToDelete];
+            printline("***************** after deleting: [" + array + "]");
+            printline("it has " + array.length + " elements");
+            for (var i in array) {
+                printline("[" + i + "]: " + array[i]);
+            }
+
+            if (indexToDelete in array) {
+                printline("deleted index still in"); // not executed
+            } else {
+                printline("!!!!!!! deleted index not in"); // this line will be executed
+            }
+
+            if (delete array) {
+                printline("delete succeeds");
+            } else {
+                // user-defined variables declared with the varstatement cannot be deleted
+                printline("failed to delete, because it is declared with 'var'");
+            }
+        </script>
+        <h4 class="note">
+            delete will not change the length of the array. details see <a href="https://developer.mozilla.org/en/JavaScript/Reference/Operators/delete#Deleting_array_elements">
+                "MDN"</a></h4>
+    </div>
+    <div class="block">
+        <h1>
+            use "splice" to remove elements</h1>
+        <script type="text/javascript">
+            
+
+            testSpliceToRemove();
+        </script>
+    </div>
+</body>
+</html>

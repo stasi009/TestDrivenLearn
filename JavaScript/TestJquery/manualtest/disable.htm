@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demo disabled property</title>
+    <script type="text/javascript" src="../common/jquery.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            var allinputs = $("form input");
+            var btn = $("button");
+
+            function enable() {
+                allinputs.each(function () {
+                    this.disabled = false;
+                });
+                btn.text("Disable All");
+            }
+
+            function disable() {
+                allinputs.each(function () {
+                    this.disabled = true;
+                });
+                btn.text("Enable All");
+            }
+
+            btn.toggle(disable, enable);
+        });
+    </script>
+</head>
+<body>
+    <form>
+    Email:
+    <input type="text" /><br />
+    Password:
+    <input type="password" /><br />
+    <input type="checkbox" />Do you like summer?
+    </form>
+    <button>
+        Disable All</button>
+</body>
+</html>

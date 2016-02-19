@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Test Javascript's Object</title>
+    <link rel="stylesheet" type="text/css" href="../common/qunit.css" />
+    <script type="text/javascript" src="../common/jquery.js"></script>
+    <script type="text/javascript" src="../common/qunit.js"></script>
+    <script type="text/javascript" src="../common/commonfuncs.js"></script>
+    <script type="text/javascript">
+
+        function demoTypeof() {
+
+            function Record(value, typename) {
+                this.Value = value;
+                this.TypeName = typename;
+            }
+
+            var userdefObj = new Record(1, "number");
+
+            var records = [
+                new Record(6, "number"),
+                new Record("9", "string"),
+                new Record(true, "boolean"),
+                new Record([1, 2], "object"),
+                new Record(userdefObj, "object")
+            ];
+
+            for (var i = 0; i < records.length; i++) {
+                var r = records[i];
+                equal(typeof r.Value, r.TypeName);
+            }
+        }
+
+        function demoIn() {
+            var p = { x: 1, y: 2 };
+            ok("x" in p, "own property in");
+            ok("toString" in p, "inherited property in");
+            ok(!("z" in p), "non-existing property not in");
+
+            var datas = [1, 2, 3];
+            ok("0" in datas, "index (as string) in the array");
+            ok(2 in datas, "index (as number) in the array");
+            ok(!(-1 in datas), "negative index not in the array");
+            ok(!(100 in datas), "too large index not in the array");
+        }
+
+        function demoHasOwnProperty() {
+            var p = { x: 1, y: 2 };
+            ok("x" in p, "own property returns true");
+            ok(!(p.hasOwnProperty("toString")),"inherited property returns false");
+        }
+
+        function demoDelete() {
+            var p = { x: 1, y: 2 };
+            ok("x" in p);
+
+            delete p.x;
+            ok(!("x" in p));
+        }
+
+        function demoInstanceof() {
+            var a = [1, "stasi"];
+            ok(a instanceof Array, wrap4display(a) + " is Array");
+            ok(a instanceof Object, wrap4display(a) + " is Object");
+
+            function Point(x, y) {
+                this.X = x;
+                this.Y = y;
+            }
+
+            var p = new Point(0, 0);
+            ok(p instanceof Point, "instanceof user-defined type");
+            ok(p instanceof Object, "user-defined type inherits from Object");
+        }
+
+        function demoPropertyAccess() {
+            var p = { x: 1, y: 2 };
+
+            equal(p.x, 1, "read by dot");
+
+            p["y"] = 200;
+            equal(p["y"], 200, "write by []");
+
+            p.z = 8;
+            equal(p["z"], 8, "assign unknown property will create one");
+
+            equal(p.notExisted, undefined, "read non-existing property will return undefined,other than throwing exception");
+        }
+    </script>
+</head>
+<body>
+    <h1 id="qunit-header">
+        Demonstration</h1>
+    <h2 id="qunit-banner">
+    </h2>
+    <div id="qunit-testrunner-toolbar">
+    </div>
+    <h2 id="qunit-userAgent">
+    </h2>
+    <ol id="qunit-tests">
+    </ol>
+    <div id="qunit-fixture">
+        test markup, will be hidden</div>
+    <script type="text/javascript">
+        test("demo 'in' operator", demoIn);
+        test("demo hasOwnProperty", demoHasOwnProperty);
+        test("demo typeof", demoTypeof);
+        test("demo instanceof", demoInstanceof);
+        test("demo deleting property from object", demoDelete);
+        test("demo property access by [] and dot", demoPropertyAccess);
+    </script>
+</body>
+</html>

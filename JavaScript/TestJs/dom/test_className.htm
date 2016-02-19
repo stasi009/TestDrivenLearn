@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>change class</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            var head1 = document.getElementsByTagName("h1")[0];
+            var checkbox = document.getElementsByTagName("input")[0];
+            checkbox.onchange = function () {
+                if (this.checked) {
+                    head1.className = "attention";
+                } else {
+                    head1.className = "";
+                }
+            };
+        };
+
+    </script>
+    <style type="text/css">
+        .attention
+        {
+            background-color: gold;
+            color: firebrick;
+            font-size: 300%;
+            width: 60%;
+            margin: 5px auto;
+        }
+    </style>
+</head>
+<body>
+    <div style="text-align: center">
+        <h1>
+            Javascript</h1>
+        <input type="checkbox" />
+        Switch Style
+    </div>
+</body>
+</html>

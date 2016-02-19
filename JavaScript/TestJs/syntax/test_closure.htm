@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demonstrate closure in javascript</title>
+    <style type="text/css">
+        h1 {
+            color: firebrick;
+        }
+        .block
+        {
+            border: 1px navy solid;
+            background-color: lightgrey;
+            margin: 10px;
+        }
+        
+        .note
+        {
+            color: green;
+            font-style: italic;
+        }
+    </style>
+    <script type="text/javascript" src="../common/commonFuncs.js"></script>
+    <script type="text/javascript">
+        function testDeferExecution(name) {
+            printline(greet + "," + name);
+        }
+
+        function testWriteToClosureVariables(x, y) {
+            z = x + y; // z is not global, it is still a "outer captured variable"
+        }
+
+        function testGlobalVariable(x, y) {
+            // create a global variable
+            myGlobal = x * y;
+        }
+
+    </script>
+</head>
+<body>
+    <div class="block">
+        <h1>
+            Test Deferred Execution Effect of Closure</h1>
+        <script type="text/javascript">
+            printline("*****: use the original value of captured variable.");
+            var greet = "hello";
+            testDeferExecution("wsu");
+
+            printline("*****: changing the value of captured variable will affect the output.");
+            greet = "Good morning";
+            testDeferExecution("wsu");
+        </script>
+        <h4 class="note">
+            like C# or 'reference cell' in F#, the closure of Javascript, has the defered-execution
+            feature. inside the function, it will always use the latest value of the captured
+            variables.</h4>
+    </div>
+    <div class="block">
+        <h1>
+            Test Write Into Closure</h1>
+        <script type="text/javascript">
+            var z = 0;
+            printline("original value of z = " + z);
+
+            testWriteToClosureVariables(60, 8);
+            printline("after the function, z now = " + z);
+        </script>
+    </div>
+    <div class="block">
+        <h1>
+            Test Global Variables</h1>
+        <script type="text/javascript">
+            // below codes access a variable which even cannot be found in the global scope
+            // (because it is writen into that global scope, only after the function is executed)
+            // so below line of codes will generate an error which cause the entire following
+            // codes are ignored.
+            // printline("original value of myGlobal = " + myGlobal);
+
+            testGlobalVariable(3, 4);
+            printline("after the function, myGlobal now = " + myGlobal);
+
+            var myGlobal;
+            printline("declare but not define the same-name variable as global one, it won't shadow the global one, now myGlobal is still " + myGlobal);
+
+            myGlobal = -1;
+            printline("local variable shadow the global one, from now one, myGlobal represents the local one = " + myGlobal);
+        </script>
+    </div>
+    <div class="block">
+        <h1>
+            {} won't create an isolated block</h1>
+        <script type="text/javascript">
+            if (true) {
+                var a = 100;
+            } else {
+                var b = 6;
+            }
+
+            printline("a is visible outside {}, its value is" + a);
+            printline("b is also visible outside {}, but its value is " + b);
+
+            for (var i = 0; i < 10; i++) {
+            }
+            printline("loop variable is also visible, value = " + i);
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Test Javascript's Exception</title>
+    <link rel="stylesheet" type="text/css" href="../common/qunit.css" />
+    <script type="text/javascript" src="../common/jquery.js"></script>
+    <script type="text/javascript" src="../common/qunit.js"></script>
+    <script type="text/javascript">
+        function demoThrowCatch() {
+
+            function throwAnything(value) {
+                var result;
+
+                try {
+                    throw value;
+                } catch (e) {
+                    result = e;
+                }
+
+                return result;
+            }
+
+            equal(throwAnything(10), 10);
+            equal(throwAnything("stasi"), "stasi");
+        }
+
+        function Record() {
+            this.Result = undefined;
+            this.FinallyInvoked = false;
+        }
+
+        function fool(success, r) {
+            try {
+                if (success) {
+                    r.Result = 99;
+                } else {
+                    throw 88;
+                }
+            } finally {
+                r.FinallyInvoked = true;
+            } // finally
+        }
+
+        function demoFinallyNoError() {
+            var r = new Record();
+            ok(!r.FinallyInvoked);
+
+            fool(true, r);
+            equal(r.Result, 99);
+            ok(r.FinallyInvoked);
+        }
+
+        function demoFinallyHasError() {
+            expect(3);
+
+            var r = new Record();
+            ok(!r.FinallyInvoked);
+
+            try {
+                fool(false, r);
+            } catch (e) {
+                equal(e, 88);
+            }
+            ok(r.FinallyInvoked);
+        }
+
+    </script>
+</head>
+<body>
+    <h1 id="qunit-header">
+        Demonstration</h1>
+    <h2 id="qunit-banner">
+    </h2>
+    <div id="qunit-testrunner-toolbar">
+    </div>
+    <h2 id="qunit-userAgent">
+    </h2>
+    <ol id="qunit-tests">
+    </ol>
+    <div id="qunit-fixture">
+        test markup, will be hidden</div>
+    <script type="text/javascript">
+        test("throw/catch any type", demoThrowCatch);
+        test("finally will always be invoked (no error)", demoFinallyNoError);
+        test("finally will always be invoked (has error)", demoFinallyHasError);
+    </script>
+</body>
+</html>

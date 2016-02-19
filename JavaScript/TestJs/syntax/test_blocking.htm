@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <script type="text/javascript" src="blockAlertDialog.js"></script>
+
+        <title>demonstrate the blocking feature of javascript</title>
+    
+        <style type="text/css">
+            .note {
+                color: orangered;
+                font-style: italic;
+            }
+        
+            .attention 
+            {
+                font-weight: bold;
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <script type="text/javascript">
+            window.alert("Press me to see the content.");
+        </script>
+        <div class="note">
+            <p>this script demonstrate that "blocking javascript" will block the following codes to execute.</p>
+            <p>the first javascript is in &lt;head&gt;, which block showing the title.</p>
+            <p>the second javascript is in &lt;body&gt;, which block showing the content.</p>
+        </div>
+    </body>
+</html>

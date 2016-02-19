@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demonstrate string</title>
+    <script type="text/javascript" src="../common/commonFuncs.js"></script>
+    <script type="text/javascript">
+        function testConcat() {
+            var result = "";
+
+            for (var i = 0; i < arguments.length; i++) {
+                result += arguments[i];
+            }
+
+            return result;
+        }
+
+        function checkUpperLowerCase(x) {
+            var block = document.getElementById("upperLowerCase");
+
+            var original = document.createElement("p");
+            original.innerHTML = "original: " + x;
+
+            var lists = document.createElement("ul");
+
+            var item = document.createElement("li");
+            item.innerHTML = "uppercase: " + x.toUpperCase();
+            lists.appendChild(item);
+
+            item = document.createElement("li");
+            item.innerHTML = "lowercase: " + x.toLowerCase();
+            lists.appendChild(item);
+
+            block.appendChild(original);
+            block.appendChild(lists);
+        }
+
+        function testSplit() {
+            var str = "How      are you doing        today?";
+
+            printline("separator omitted, return the original string: " + str.split());
+            printline("separated with whitespace: " + str.split(" "));
+            printline("separated with empty string: " + str.split(""));
+            printline("separated with max elements: " + str.split(" ", 3));
+        }
+
+        function testArrayFeature() {
+
+            function fool(text) {
+                printline(text + "has " + text.length + " characters");
+                for (var i = 0; i < text.length; i++) {
+                    printline("[" + i + "]: '" + text[i] + "'");
+                }
+            }
+
+            fool("stasi");
+        }
+
+    </script>
+    <style type="text/css">
+        .block
+        {
+            border: 1px navy solid;
+            background-color: lightgrey;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="block">
+        <script type="text/javascript">
+            printline(testConcat("1", 2));
+        </script>
+    </div>
+    <div class="block" id="upperLowerCase">
+        <script type="text/javascript">
+            checkUpperLowerCase("Tsinghua University");
+            checkUpperLowerCase("Washington State University");
+        </script>
+    </div>
+    <div class="block">
+        <script type="text/javascript">
+            testSplit();
+        </script>
+    </div>
+    <div class="block">
+        <script type="text/javascript">            testArrayFeature();</script>
+    </div>
+</body>
+</html>

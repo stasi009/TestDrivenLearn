@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demo get()</title>
+    <style type="text/css">
+        #inputtable input
+        {
+            width: 100%;
+        }
+        
+        #outputtable
+        {
+            border-collapse: collapse;
+            width: 30%;
+        }
+        #outputtable table, #outputtable td, #outputtable th
+        {
+            border: 1px solid black;
+        }
+    </style>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+
+        function fillOutputTable(result) {
+            $("#outputtable tr:has(td)").remove();
+
+            var table = $("#outputtable");
+            $.each(result, function (index, item) {
+                var row = $("<tr/>");
+                $("<td/>", { text: item.Id }).appendTo(row);
+                $("<td/>", { text: item.Name }).appendTo(row);
+                $("<td/>", { text: item.Price }).appendTo(row);
+                table.append(row);
+            });
+        }
+
+        function demoGet() {
+            var texts = $("input:text");
+            var fromtext = $(texts[0]);
+            var totext = $(texts[1]);
+
+            $("input:button").click(function () {
+                var parameter = {
+                    from: fromtext.val(),
+                    to: totext.val()
+                };
+
+                $.get("/get", parameter, "json")
+                    .success(fillOutputTable)
+                    .error(function (xhr, status, error) {
+                        alert(status + "[" + xhr.status + "]: " + xhr.responseText);
+                    });
+            });
+        }
+
+        $(function () {
+            demoGet();
+        });
+    </script>
+</head>
+<body>
+    <table id="inputtable">
+        <tr>
+            <td>
+                From:
+            </td>
+            <td>
+                <input type="text" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                To:
+            </td>
+            <td>
+                <input type="text" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <input type="button" value="GET" />
+            </td>
+        </tr>
+    </table>
+    <table id="outputtable">
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Price
+            </th>
+        </tr>
+    </table>
+</body>
+</html>

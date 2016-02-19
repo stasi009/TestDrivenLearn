@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>strict mode</title>
+    <script type="text/javascript" src="../common/commonFuncs.js"></script>
+    <script type="text/javascript">
+        function checkInStrictMode() {
+            var strictmode = !this;
+            if (strictmode) {
+                printline("in strict mode");
+            } else {
+                printline("NOT in strict mode");
+            }
+        }
+
+        function testNotStrictModeFunction() {
+            checkInStrictMode();
+        }
+
+        // call another function by a strict mode function
+        // inside the function being called, it is still NOT strict mode
+        function testStrictModeCannotInherit() {
+            "use strict";
+            checkInStrictMode();
+        }
+
+        function demoStrictMode() {
+            "use strict";
+
+            var strictmode = !this;
+            if (strictmode) {
+                printline("in strict mode");
+            } else {
+                printline("NOT in strict mode");
+            }
+        }
+
+        
+    </script>
+    <style type="text/css">
+        .block
+        {
+            background-color: wheat;
+            color: firebrick;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="block">
+        <script type="text/javascript">
+            testNotStrictModeFunction();
+            testStrictModeCannotInherit();
+            demoStrictMode();
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demonstrate == and ===</title>
+    <script type="text/javascript" src="../common/commonFuncs.js"></script>
+    <script type="text/javascript">
+
+        function format(x, operator, y) {
+            return "<li><span class='parameter'>" + wrapQuotation(x) + "</span> " + operator + " <span class='parameter'>" + wrapQuotation(y) + "</span> ";
+        }
+
+        function checkEqual(x, y) {
+            document.writeln("<div class='block'><ul>");
+
+            var sign = x == y ? "==" : "!=";
+            var msg = format(x, sign, y);
+            document.writeln(msg);
+
+            sign = x === y ? "===" : "!==";
+            msg = format(x, sign, y);
+            document.writeln(msg);
+
+            document.writeln("</ul></div>");
+        }
+    </script>
+    <style type="text/css">
+        .parameter
+        {
+            color: firebrick;
+        }
+        .result
+        {
+            color: navy;
+        }
+        .parameter, .result
+        {
+            font-weight: bold;
+            font-size: 1.2em;
+            text-decoration: underline;
+            margin: 5px;
+        }
+        
+        .block
+        {
+            background-color: #F5F073;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+        checkEqual(10, 10);
+        checkEqual("stasi", "stasi");
+        checkEqual("66", 66);
+        checkEqual("x", 1);
+        checkEqual(null, undefined);
+        checkEqual(NaN, NaN);
+        checkEqual(false, 0);
+        checkEqual(true, 1);
+        checkEqual("1", true);
+        checkEqual(true, 2);
+        checkEqual(0, undefined);
+        checkEqual(null, 0);
+        checkEqual(false, null);
+        checkEqual(false, undefined);
+        checkEqual("689", 689);
+        checkEqual("0", false);
+
+        // array is reference type, it checks equality based on "reference equality"
+        // so below two arrays are not 'equal'
+        checkEqual([], []);
+        checkEqual([6, 8, 9], [6, 8, 9]);
+    </script>
+</body>
+</html>

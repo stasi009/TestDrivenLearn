@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>functional programming</title>
+    <script type="text/javascript" src="../common/commonFuncs.js"></script>
+    <script type="text/javascript">
+        function testDirectInvoke() {
+
+            function fool(func, input) {
+                var output = func(input);
+                printline("input=" + input + ",output=" + output);
+            }
+
+            fool(function (x) {
+                return x * x;
+            }, 9);
+
+            fool(function (x) {
+                return x * 2;
+            }, 8);
+
+            try {
+                fool(1, 6);
+            } catch (e) {
+                printError(e);
+            }
+
+        }
+    </script>
+    <style type="text/css">
+        .block
+        {
+            background-color: wheat;
+            color: crimson;
+            margin: 10px;
+        }
+        
+        .note
+        {
+            color: navy;
+            border: 1px navy dashed;
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="block">
+        <script type="text/javascript">            testDirectInvoke();</script>
+    </div>
+</body>
+</html>

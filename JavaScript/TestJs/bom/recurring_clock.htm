@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Repeated Timer</title>
+    <style type="text/css">
+        #clock
+        {
+            /* Style apply to element with id="clock" */
+            font: bold 24pt sans; /* Use a big bold font */
+            background: #ddf; /* On a light bluish-gray background */
+            padding: 10px; /* Surround it with some space */
+            border: solid black 2px; /* And a solid black border */
+            border-radius: 15px; /* Round the corners (where supported) */
+        }
+    </style>
+    <script type="text/javascript">
+        // Define a function to display the current time
+        function displayTime() {
+            var elt = document.getElementById("clock"); // Find element with id="clock"
+            var now = new Date(); // Get current time
+            elt.innerHTML = now.toLocaleTimeString(); // Make elt display it
+            setTimeout(displayTime, 1000); // Run again in 1 second
+        }
+        window.onload = displayTime; // Start displaying the time when document loads.
+    </script>
+</head>
+<body>
+    <h1>
+        Digital Clock</h1>
+    <!-- Display a title -->
+    <span id="clock"></span>
+    <!-- The time gets inserted here -->
+</body>
+</html>

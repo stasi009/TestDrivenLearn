@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Test</title>
+    <link rel="stylesheet" type="text/css" href="../common/qunit.css" />
+    <script type="text/javascript" src="../common/jquery.js"></script>
+    <script type="text/javascript" src="../common/qunit.js"></script>
+    <script type="text/javascript">
+
+        function demoReplaceWith() {
+            $("#qunit-fixture").html('\
+                        <div class="container">\
+                            <div>1</div>\
+                            <div>2</div>\
+                            <div>3</div>\
+                        </div>');
+            // ----------------- before replace
+            equal($("#qunit-fixture>div").length, 1);
+
+            var removed = $("#qunit-fixture>div").replaceWith(function () {
+                return $(this).children();
+            });
+            equal(removed.attr("class"), "container");
+
+            var newcontents = $("#qunit-fixture>div");
+            equal(newcontents.length, 3);
+            equal(newcontents.text(), "123");
+        }
+
+        $(function () {
+            test("demo replaceWith", demoReplaceWith);
+        });
+
+    </script>
+</head>
+<body>
+    <h1 id="qunit-header">
+        Demonstration</h1>
+    <h2 id="qunit-banner">
+    </h2>
+    <div id="qunit-testrunner-toolbar">
+    </div>
+    <h2 id="qunit-userAgent">
+    </h2>
+    <ol id="qunit-tests">
+    </ol>
+    <div id="qunit-fixture">
+    </div>
+    <script type="text/javascript"></script>
+</body>
+</html>

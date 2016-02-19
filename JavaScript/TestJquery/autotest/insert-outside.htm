@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Test</title>
+    <link rel="stylesheet" type="text/css" href="../common/qunit.css" />
+    <script type="text/javascript" src="../common/jquery.js"></script>
+    <script type="text/javascript" src="../common/qunit.js"></script>
+    <script type="text/javascript">
+
+        function demoAfter() {
+            $("#qunit-fixture").append("<p>hello</p>");
+            equal($("#qunit-fixture>*").length, 1);
+
+            $("#qunit-fixture > p").after("<div id='testsecond'>wsu</div>");
+            equal($("#qunit-fixture>*").length, 2);
+
+            var second = $("#qunit-fixture>p + div");
+            equal(second.attr("id"), "testsecond");
+            equal(second.text(), "wsu");
+
+            $("#testsecond").is("#qunit-fixture>p+div");
+        }
+
+        function demoInsertAfter() {
+            $("#qunit-fixture").append("<p>hello</p>");
+            equal($("#qunit-fixture>*").length, 1);
+
+            $("<div>jquery</div>").insertAfter("#qunit-fixture > p");
+            equal($("#qunit-fixture>*").length, 2);
+
+            var contents = $("#qunit-fixture>*").map(function (index) {
+                return index + "-" + this.tagName + "-" + this.textContent;
+            }).toArray();
+            deepEqual(contents, ["0-P-hello", "1-DIV-jquery"]);
+
+            equal($("#qunit-fixture>p + div").text(), "jquery");
+        }
+
+        $(function () {
+            module("$(target).method(content)");
+            test("demo after", demoAfter);
+
+            module("$(content).method(target)");
+            test("demo insertAfter", demoInsertAfter);
+        });
+
+    </script>
+</head>
+<body>
+    <h1 id="qunit-header">
+        Demonstration</h1>
+    <h2 id="qunit-banner">
+    </h2>
+    <div id="qunit-testrunner-toolbar">
+    </div>
+    <h2 id="qunit-userAgent">
+    </h2>
+    <ol id="qunit-tests">
+    </ol>
+    <div id="qunit-fixture">
+        test markup, will be hidden</div>
+    <script type="text/javascript"></script>
+</body>
+</html>

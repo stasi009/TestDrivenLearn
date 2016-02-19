@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Test Javascript's Compare</title>
+    <link rel="stylesheet" type="text/css" href="../common/qunit.css" />
+    <script type="text/javascript" src="../common/jquery.js"></script>
+    <script type="text/javascript" src="../common/qunit.js"></script>
+    <script type="text/javascript" src="../common/commonfuncs.js"></script>
+    <script type="text/javascript">
+        function testConvertAndEqual() {
+
+            function Record(left, right) {
+                this.Left = left;
+                this.Right = right;
+                this.Description = wrap4display(left) + " == " + wrap4display(right);
+            }
+
+            var records = [
+                new Record(undefined, null),
+                new Record("69", 69),
+                new Record(0, false),
+                new Record(true, 1),
+                new Record("1", true),
+                new Record("9,cheka", [9, "cheka"]),
+                new Record([8], 8)
+            ];
+
+            var r;
+            for (var i = 0; i < records.length; i++) {
+                r = records[i];
+                ok(r.Left == r.Right, r.Description);
+            }
+        }
+
+        function testConvertStillNotEqual() {
+            function Record(left, right) {
+                this.Left = left;
+                this.Right = right;
+                this.Description = wrap4display(left) + " != " + wrap4display(right);
+            }
+
+            var records = [
+                new Record(0, null),
+                new Record(false, undefined),
+                new Record(false, null)
+            ];
+
+            var r;
+            for (var i = 0; i < records.length; i++) {
+                r = records[i];
+                ok(r.Left != r.Right, r.Description);
+            }
+        }
+
+        function testObjReferenceEqual() {
+            var o1 = { x: 1 };
+            var o2 = { x: 1 };
+
+            equal(o1.x, o2.x, "equal content");
+            ok(o1 != o2, "same content but isolated instance, still not equal");
+        }
+
+        function testCompareOrder() {
+            ok("11" < "3", "compare as string");
+            ok("11" > 3, "compare as numbers");
+        }
+    </script>
+</head>
+<body>
+    <h1 id="qunit-header">
+        Demonstration</h1>
+    <h2 id="qunit-banner">
+    </h2>
+    <div id="qunit-testrunner-toolbar">
+    </div>
+    <h2 id="qunit-userAgent">
+    </h2>
+    <ol id="qunit-tests">
+    </ol>
+    <div id="qunit-fixture">
+        test markup, will be hidden</div>
+    <script type="text/javascript">
+        test("auto convert and equal", testConvertAndEqual);
+        test("auto convert but still not equal", testConvertStillNotEqual);
+        test("object equal is based on reference other than value", testObjReferenceEqual);
+        test("convert and compare order", testCompareOrder);
+    </script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Test Numbers in Javascript</title>
+    <link rel="stylesheet" type="text/css" href="../common/qunit.css" />
+    <script type="text/javascript" src="../common/jquery.js"></script>
+    <script type="text/javascript" src="../common/qunit.js"></script>
+    <script type="text/javascript" src="../common/commonfuncs.js"></script>
+    <script type="text/javascript">
+
+        function testInfinite() {
+            var posOverflow = Number.MAX_VALUE + Number.MAX_VALUE;
+            equal(posOverflow, Infinity, "positive overflow");
+            ok(!isFinite(posOverflow), "isFinite returns false");
+
+            var negOverflow = Number.MIN_VALUE - Number.MAX_VALUE * 2;
+            equal(negOverflow, -Infinity, "negative overflow");
+            ok(!isFinite(negOverflow), "isFinite returns false");
+
+            equal(1 / 0, Infinity, "positive divided by zero returns Infinity");
+            equal(-1 / 0, -Infinity, "negative divided by zero returns -Infinity");
+        }
+
+        function testNan() {
+            ok(isNaN(0 / 0), "0/0 returns Nan");
+            ok(isNaN(Math.sqrt(-1)), "sqrt negative returns Nan");
+        }
+
+        function demoIsNan() {
+            ok(isNaN(NaN));
+            ok(isNaN("stasi"), "isNaN(non-numeric) also returns true");
+            ok(!isNaN(89));
+        }
+
+        function demoIsFinite() {
+            ok(!isFinite(NaN), "isFinite(NaN) returns false");
+        }
+
+        function demoNumberConvertable() {
+            function Record(original, converted) {
+                this.Original = original;
+                this.Converted = converted;
+                this.Description = "Number(" + wrap4display(original) + ") returns " + converted;
+            }
+
+            var convertable = [
+                new Record(true, 1),
+                new Record(false, 0),
+                new Record(null, 0),
+                new Record("", 0),
+                new Record(" ", 0),
+                new Record("            98   ", 98),
+                new Record("069", 69),
+                new Record(3.14, 3.14)
+            ];
+            for (var i = 0; i < convertable.length; i++) {
+                var r = convertable[i];
+                equal(r.Converted, Number(r.Original), r.Description);
+            }
+        }
+
+        function demoNumberNotConvertable() {
+            var nonConvertable = [
+                undefined,
+                "98x",
+                "y69",
+                "wsu",
+            ];
+            for (var i = 0; i < nonConvertable.length; i++) {
+                var v = nonConvertable[i];
+                var description = "Number(" + wrap4display(v) + ") returns NaN";
+                ok(isNaN(Number(nonConvertable[i])), description);
+            } //for
+        }
+
+        function demoParseIntSuccess() {
+            equal(parseInt("8"), 8);
+            equal(parseInt("-6.98"), -6, "for float, it only return the integer part, won't round");
+            equal(parseInt("010"), 8, "starting with 0, parsed as octal");
+            equal(parseInt("    9.9  "), 9, "allow whitespace before and after the number");
+            equal(parseInt(" 8.6abcd"), 8, "don't allow non-number before, but allow them after");
+            equal(parseInt("0xFF"), 255);
+            equal(parseInt("-0Xff"), -255);
+        }
+
+        function demoParseIntFail() {
+            var strings = [
+                "",
+                " ",
+                " x9"
+            ];
+            for (var i = 0; i < strings.length; i++) {
+                var n = parseInt(strings[i]);
+                ok(isNaN(n));
+            }
+        }
+
+        function demoParseFloatSuccess() {
+            function Record(text, value) {
+                this.Text = text;
+                this.Value = value;
+                this.Description = "parseFloat(" + wrap4display(text) + ") = " + value;
+            }
+
+            var records = [
+                new Record("6", 6),
+                new Record("    8.69 ", 8.69),
+                new Record("  6.9abc", 6.9),
+                new Record("3.1415926e2", 314.15926),
+                new Record(".1",0.1),// can neglect zero-part here
+                new Record("010", 10)
+            ];
+
+            for (var i = 0; i < records.length; i++) {
+                var r = records[i];
+                equal(parseFloat(r.Text), r.Value, r.Description);
+            }
+        }
+
+        function demoParseFloatFail() {
+            var texts = [
+                "",
+                " ",
+                "x",
+                "x6.69"
+            ];
+            for (var i = 0; i < texts.length; i++) {
+                ok(isNaN(parseFloat(texts[i])));
+            }
+        }
+
+        $(function () {
+            test("infinity demo", testInfinite);
+            test("nan demo", testNan);
+            test("demo isNaN", demoIsNan);
+            test("demo isFinite", demoIsFinite);
+            test("convertable by Number", demoNumberConvertable);
+            test("not convertable by Number", demoNumberNotConvertable);
+            test("parseInt return int", demoParseIntSuccess);
+            test("parseInt return NaN", demoParseIntFail);
+            test("parseFloat returns float", demoParseFloatSuccess);
+            test("parseFloat returns NaN", demoParseFloatFail);
+        });
+
+    </script>
+</head>
+<body>
+    <h1 id="qunit-header">
+        Number Demonstration</h1>
+    <h2 id="qunit-banner">
+    </h2>
+    <div id="qunit-testrunner-toolbar">
+    </div>
+    <h2 id="qunit-userAgent">
+    </h2>
+    <ol id="qunit-tests">
+    </ol>
+    <div id="qunit-fixture">
+        test markup, will be hidden</div>
+</body>
+</html>

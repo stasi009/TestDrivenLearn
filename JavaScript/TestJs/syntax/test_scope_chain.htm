@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demonstrate scope chain</title>
+    <script type="text/javascript" src="../common/commonFuncs.js"></script>
+    <style type="text/css">
+        .block
+        {
+            border: 1px navy solid;
+            background-color: lightgrey;
+            margin: 10px;
+        }
+        
+        .note
+        {
+            color: green;
+            font-weight: bold;
+            font-style: italic;
+        }
+    </style>
+    <script type="text/javascript">
+        function fool1() {
+            printline("function declared before expected variables, still found the variables in the outer scope.");
+            printline("x = " + x);
+            printline("y = " + y);
+            // printline("z = " + z);// this line will cause all the following lines ignored
+        }
+    </script>
+</head>
+<body>
+    <div class="block">
+        <script type="text/javascript">
+            var x = 66;
+            var y = 99;
+            fool1();
+
+            function fool2() {
+                printline("function declared after the expected variables. <br/>because it cannot find variables in local scope, so it will search through upper scope, then it foudn them.");
+                printline("x = " + x);
+                printline("y = " + y);
+            }
+
+            fool2();
+        </script>
+        <h4 class="note">
+            if the function cannot find the variables in the local scope, then it will try to
+            find them in the outer scope, so called "closure". since all function-declaration
+            are loaded before execution, so the variables defined in the closure can always
+            be found, no matter the function is defined after the expected variables or before
+            them.
+        </h4>
+    </div>
+    <div class="block">
+        <script type="text/javascript">
+            function fool3() {
+                printline("even in the following block, it can still access variables defined in the previous block.");
+                printline("x = " + x);
+                printline("y = " + y);
+            }
+
+            fool3();
+        </script>
+    </div>
+    <div class="block">
+        <script type="text/javascript">
+            function fool4(x, y) {
+                printline("local variables shadows the same-name variables in the outer space.");
+                printline("x = " + x);
+                printline("y = " + y);
+            }
+
+            fool4();
+        </script>
+    </div>
+    <div class="block">
+        <script type="text/javascript">
+            var scope = "global";
+
+            function fool5() {
+                // it won't print "global" 
+                // although it is used before initialization
+                // but still there is one local definition, which will shadow the global one
+                // note: it just seems like, all local variables are defined at the top of the function
+                // although actually, their definition can be in anywhere of the function
+                printline("scope=" + scope);
+                var scope = "local";
+                printline("scope=" + scope);
+            }
+
+            fool5();
+
+            // the original fool5 is just the same as below
+            function fool5_equivalent() {
+                var scope;
+                printline("scope=" + scope);
+                scope = "local";
+                printline("scope=" + scope);
+
+            }
+        </script>
+        <h4 class="note">
+            Javascript has "function scope", which allows all variables declared within a function
+            are visi-ble throughoutthe body of the function. that also means, it is visible
+            even before they are declared.
+        </h4>
+        <h4 class="note">
+            It works like, all local variable are defined at the top of the function, even actually
+            their definition can be in anywhere of the function.</h4>
+    </div>
+</body>
+</html>

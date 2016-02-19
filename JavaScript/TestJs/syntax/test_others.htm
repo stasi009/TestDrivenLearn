@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>others</title>
+    <script type="text/javascript" src="../common/commonFuncs.js"></script>
+    <script type="text/javascript">
+        function testSwitch() {
+            function equal(a, b) {
+                if (a == b) {
+                    printline(a + " == " + b);
+                } else {
+                    printline(a + " != " + b);
+                }
+            }
+
+            // below tests demonstrate and verifies that "switch...case..."
+            // checks equality based on "===", other than "=="
+            function fool(v) {
+                switch (v) {
+                    case 0:
+                        printline("switch returns zero");
+                        break;
+
+                    case undefined:
+                        printline("switch returns undefined");
+                        break;
+
+                    case null:
+                        printline("switch returns null");
+                        break;
+
+                    case false:
+                        printline("switch returns false");
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            equal(0, false);
+            equal(undefined, null);
+
+            var values = [0, false, undefined, null];
+            for (var i = 0; i < values.length; i++) {
+                fool(values[i]);
+            }
+        }
+    </script>
+    <style type="text/css">
+        .block
+        {
+            background-color: wheat;
+            color: crimson;
+            margin: 10px;
+        }
+        
+        .note
+        {
+            color: navy;
+            border: 1px navy dashed;
+            margin: 0px;
+        }
+        
+        h3
+        {
+            color: navy;
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="block">
+        <script type="text/javascript">            testSwitch();</script>
+    </div>
+</body>
+</html>

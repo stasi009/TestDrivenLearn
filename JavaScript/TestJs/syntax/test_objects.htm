@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>objects</title>
+    <script type="text/javascript" src="../common/commonFuncs.js"></script>
+    <script type="text/javascript">
+        function printPerson(p) {
+            var msg;
+            if (p.SSN) {
+                msg = sprintf("Id=%d,Name=%s,SSN=%s", p.Id, p.Name, p.SSN);
+            } else {
+                msg = sprintf("Id=%d,Name=%s", p.Id, p.Name);
+            }
+            printline(msg);
+        }
+
+        function Person(id, name) {
+            this.Id = id;
+            this.Name = name;
+        }
+
+        function checkIn(p, propertyName) {
+            if (propertyName in p) {
+                printline("has property: " + propertyName);
+            } else {
+                printline("!!!!!! NOT has property: " + propertyName);
+            }
+        }
+
+        function testInstanceof() {
+            var d = new Date();
+            printline(d instanceof Date);
+            printline(d instanceof Object);
+            printline(d instanceof Person);
+
+            var p = new Person(1, "stasi");
+            printline("typeof: " + typeof p);
+
+            printline(p instanceof Person);
+            printline(p instanceof Object);
+        }
+
+        function testConstructor() {
+            var p = new Person(1, "");
+            printline(p.constructor);
+        }
+
+    </script>
+    <style type="text/css">
+        h1
+        {
+            color: firebrick;
+            margin: 1px;
+        }
+        .block
+        {
+            border: 1px green solid;
+            background-color: lightgrey;
+            margin: 10px;
+            padding: 5px;
+        }
+        
+        .note
+        {
+            color: green;
+            font-weight: bold;
+            margin: 0px;
+            border: 1px green dashed;
+        }
+    </style>
+</head>
+<body>
+    <div class="block">
+        <h1>
+            inline object</h1>
+        <script type="text/javascript">
+            printPerson({ Id: 1, Name: "stasi" });
+        </script>
+    </div>
+    <div class="block">
+        <h1>
+            dynamic add/remove properties</h1>
+        <script type="text/javascript">
+            var p = {
+                Id: 1,
+                Name: "cheka"
+            };
+            p.SSN = "123456";
+            printPerson(p);
+        </script>
+    </div>
+    <div class="block">
+        <h1>
+            property access</h1>
+        <script type="text/javascript">
+            var o = {
+                x: 1,
+                y: { z: 3 }
+            };
+            printline(o.y.z);
+            printline(o["x"]);
+        </script>
+    </div>
+    <div class="block">
+        <h1>
+            for...in... loop to access object</h1>
+        <script type="text/javascript">
+            var p = {
+                Id: 1,
+                Name: "cheka",
+                SSN: "698"
+            };
+
+            for (var property in p) {
+                printline("[" + property + "]: " + p[property]);
+            }
+        </script>
+    </div>
+    <div class="block">
+        <h1>
+            instanceof</h1>
+        <script type="text/javascript">
+            testInstanceof();
+        </script>
+        <h4 class="note">
+            "typeof user-defined-instance" will return "object", which cannot tell which class
+            is it from. however, we can use "instanceof" to verify whether a specific instance
+            is of a specific class.</h4>
+    </div>
+    <div class="block">
+        <h1>
+            "in" and "delete" against object</h1>
+        <script type="text/javascript">
+            var p = new Person(1, "cheka");
+            var propertyNames = ["Id", "id", "Name", "SSN"];
+            for (var index = 0; index < propertyNames.length; index++) {
+                checkIn(p, propertyNames[index]);
+            }
+
+            printline("**************** after add 'SSN' property");
+            p.SSN = "58";
+            checkIn(p, "SSN");
+
+            printline("**************** after delete 'Id' property");
+            delete p.Id;
+            checkIn(p, "Id");
+        </script>
+    </div>
+    <div class="block">
+        <h1>
+            instance's constructor property</h1>
+        <script type="text/javascript">            testConstructor();</script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Test</title>
+    <link rel="stylesheet" type="text/css" href="../common/qunit.css" />
+    <script type="text/javascript" src="../common/jquery.js"></script>
+    <script type="text/javascript" src="../common/qunit.js"></script>
+    <script type="text/javascript">
+
+        function simpleDemo() {
+            var fixture = $("#qunit-fixture");
+            fixture.append("<div>hello</div>");
+
+            var divs = $("div", fixture);
+            equal(divs.length, 1);
+            equal(divs.first().text(), "hello");
+        }
+
+        function demoTextGet() {
+            $("#qunit-fixture").html('\
+                <ul>\
+                    <li>1</li>\
+                    <li>2</li>\
+                    <li>3</li>\
+                </ul>');
+
+            equal($("#qunit-fixture ul").text().replace(/ /g, ''), "123", "equal after removing all the whitespace before, after and inside");
+            equal($("#qunit-fixture li").text(), "123");
+            equal($("#qunit-fixture li:first").text(), "1");
+        }
+
+        function demoTextSet() {
+            $("#qunit-fixture").html("\
+                                    <ul>\
+                                        <li>1</li>\
+                                        <li>2</li>\
+                                        <li>3</li>\
+                                    </ul>");
+
+            // ------------------ before setting
+            var items = $("#qunit-fixture ul li");
+            equal(items.text(), "123");
+
+            // ------------------ after setting
+            items.text(function (index, curVal) {
+                return "item[" + index + "]:" + curVal;
+            });
+
+            deepEqual(
+                items.map(function () { return $(this).text(); }).toArray(),
+                ["item[0]:1", "item[1]:2", "item[2]:3"]);
+
+            // ------------------ replace the whole
+            $("#qunit-fixture ul").text("all replaced");
+            equal($("#qunit-fixture ul li").length, 0);
+            equal(items.length, 3, "jquery wrapper set is a copy, not dynamic, will not updated according to DOM changes");
+            equal($("#qunit-fixture ul").text(), "all replaced");
+        }
+
+    </script>
+</head>
+<body>
+    <h1 id="qunit-header">
+        Demonstration</h1>
+    <h2 id="qunit-banner">
+    </h2>
+    <div id="qunit-testrunner-toolbar">
+    </div>
+    <h2 id="qunit-userAgent">
+    </h2>
+    <ol id="qunit-tests">
+    </ol>
+    <div id="qunit-fixture">
+    </div>
+    <script type="text/javascript">
+        test("simple demo", simpleDemo);
+        test("demo get with text(), concatenate", demoTextGet);
+        test("demo set with text()", demoTextSet);
+    </script>
+</body>
+</html>

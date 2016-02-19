@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demonstration of inline style upate</title>
+    <script type="text/javascript">
+        function onCheckboxChange() {
+            var style = document.getElementById("truth").style;
+
+            var checkbox = document.getElementById("decorate");
+            if (checkbox.checked) {
+                style.backgroundColor = "wheat";
+                style.color = "crimson";
+                style.fontWeight = "bold";
+            } else {
+                style.backgroundColor = "red";
+                style.color = "yellow";
+                style.fontWeight = "normal";
+            }
+        }
+
+        window.onload = function () {
+            document.getElementById("decorate").onchange = onCheckboxChange;
+        };
+    </script>
+    <style type="text/css">
+        div
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p id="truth">
+            Nations have no permanent friends and no permanent enemies. Only permanent interests</p>
+        <input type="checkbox" id="decorate" />Switch
+    </div>
+</body>
+</html>

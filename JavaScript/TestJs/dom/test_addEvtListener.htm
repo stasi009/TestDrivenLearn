@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demonstration of addEventListener</title>
+    <script type="text/javascript">
+
+        function attachAlertButton() {
+            var btn = document.getElementById("alertbtn");
+
+            btn.onclick = function (evt) {
+                console.log(evt.type);
+                alert("thanks the first time");
+            };
+
+            // by using addEventListener, it won't overwriting
+            // existing event handlers
+            btn.addEventListener("click", function (evt) {
+                console.log(evt.type);
+                alert("thanks again Javascript");
+            }, false);
+
+        }
+
+        window.onload = function (evt) {
+            console.log(evt.type);
+            attachAlertButton();
+        };
+    </script>
+</head>
+<body>
+    <button id="alertbtn">
+        Alert</button>
+</body>
+</html>

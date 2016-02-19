@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6CFA4287-D064-4253-9F96-7259B294A812}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestJquery</RootNamespace>
+    <AssemblyName>TestJquery</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="ajax\getJSON.htm" />
+    <Content Include="ajax\get.htm" />
+    <Content Include="ajax\load.htm" />
+    <Content Include="ajax\post.htm" />
+    <Content Include="autotest\create-element.htm" />
+    <Content Include="autotest\general-attributes.htm" />
+    <Content Include="autotest\htmltext.htm" />
+    <Content Include="autotest\insert-outside.htm" />
+    <Content Include="autotest\replace.htm" />
+    <Content Include="autotest\traverse.htm" />
+    <Content Include="autotest\selector.htm" />
+    <Content Include="autotest\utilityfuncs.htm" />
+    <Content Include="basic\array.htm" />
+    <Content Include="basic\boolean.htm" />
+    <Content Include="basic\compare.htm" />
+    <Content Include="basic\dictionary.htm" />
+    <Content Include="basic\exception.htm" />
+    <Content Include="basic\function.htm" />
+    <Content Include="basic\inherit.html" />
+    <Content Include="basic\json.htm" />
+    <Content Include="basic\method.htm" />
+    <Content Include="basic\number.htm" />
+    <Content Include="basic\object.htm" />
+    <Content Include="basic\prototype.htm" />
+    <Content Include="basic\string.htm" />
+    <Content Include="common\commonfuncs.js" />
+    <Content Include="common\jquery.js" />
+    <Content Include="common\qunit.css" />
+    <Content Include="common\qunit.js" />
+    <Content Include="common\sprintf.js" />
+    <Content Include="common\unittest_template.htm" />
+    <Content Include="manualtest\attr_prop.htm" />
+    <Content Include="manualtest\create-element.htm" />
+    <Content Include="manualtest\disable.htm" />
+    <Content Include="manualtest\forms.htm" />
+    <Content Include="manualtest\general-attributes.htm" />
+    <Content Include="manualtest\radio.htm" />
+    <Content Include="manualtest\select.htm" />
+    <Content Include="manualtest\serialize.htm" />
+    <Content Include="manualtest\setHtmlAttr.htm" />
+    <Content Include="manualtest\setMultipleHtmlText.htm" />
+    <Content Include="manualtest\toggle.htm" />
+    <Content Include="qunit\asynctest.htm" />
+    <Content Include="qunit\equal.htm" />
+    <Content Include="qunit\exception.htm" />
+    <Content Include="qunit\expect.htm" />
+    <Content Include="qunit\ok.htm" />
+    <Content Include="qunit\sample.htm" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ajax\post.fsx" />
+    <None Include="ajax\getJSON.fsx" />
+    <None Include="ajax\get.fsx" />
+    <None Include="ajax\load.fsx" />
+    <None Include="ajax\webserver.fsx" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>5173</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

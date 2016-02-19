@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demo serialize/serializeArray</title>
+    <style type="text/css">
+        .block
+        {
+            background-color: wheat;
+            border: 2px firebrick solid;
+            margin: 5px auto;
+        }
+        
+        h2
+        {
+            color: purple;
+        }
+        
+        .displayValues
+        {
+            color: navy;
+        }
+    </style>
+    <script type="text/javascript" src="../common/jquery.js"></script>
+    <script type="text/javascript">
+
+        function demoSerialize() {
+
+            function showValues() {
+                var str = $("#demoSerialize>form").serialize();
+                $("#demoSerialize>p").text(str);
+            }
+
+            $("#demoSerialize input:checkbox,#demoSerialize input:radio").click(showValues);
+            $("#demoSerialize select").change(showValues);
+
+            showValues();
+        }
+
+        function demoSerializeArray() {
+
+            var displayArray = $("#demoSerializeArray>ol");
+            var logParam = $("#demoSerializeArray>p");
+
+            function showValues() {
+                var fields = $("#demoSerializeArray :input").serializeArray();
+
+                displayArray.empty();
+                $.each(fields, function (index, field) {
+                    var content = field.name + ": " + field.value;
+                    displayArray.append("<li>" + content + "</li>");
+                });
+
+                logParam.html("$.param returns: <b>"+$.param(fields)+"</b>");
+            }
+
+            $("#demoSerializeArray input:checkbox,#demoSerializeArray input:radio").click(showValues);
+            $("#demoSerializeArray select").change(showValues);
+            showValues();
+        }
+
+        function demoParam() {
+            var myObject = {
+                name: {
+                    first: 'Yogi',
+                    last: 'Bear'
+                },
+                address: {
+                    street: '123 Anywhere Lane',
+                    city: 'Austin',
+                    state: 'TX',
+                    postalCode: '78701'
+                }
+            };
+
+            var recursiveEncoded = $.param(myObject);
+            $("<p/>", {
+                html: "<b>$.param: </b>" + recursiveEncoded
+            }).appendTo("#demoParam");
+
+            var recursiveDecoded = decodeURIComponent($.param(myObject));
+            $("<p/>", {
+                html: "<b>decodeURIComponent($.param): </b>" + recursiveDecoded
+            }).appendTo("#demoParam");
+        }
+
+        $(function () {
+            demoSerialize();
+            demoSerializeArray();
+            demoParam();
+        });
+
+    </script>
+</head>
+<body>
+    <div class="block" id="demoSerialize">
+        <h2>
+            serialize</h2>
+        <form action="#">
+        <select name="single">
+            <option value="single1">item 1</option>
+            <option value="single2">item 2</option>
+        </select>
+        <br />
+        <select name="multiple" multiple="multiple">
+            <option value="multi1" selected="selected">item 1</option>
+            <option value="multi2">item 2</option>
+            <option value="multi3" selected="selected">item 3</option>
+        </select>
+        <br />
+        <input type="checkbox" name="check" value="check1" />
+        <label for="ch1">
+            choice 1</label>
+        <input type="checkbox" name="check" value="check2" checked="checked" />
+        <label for="ch2">
+            choice 2</label>
+        <br />
+        <input type="radio" name="radio" value="radio1" checked="checked" />
+        <label for="r1">
+            option 1</label>
+        <input type="radio" name="radio" value="radio2" />
+        <label for="r2">
+            option 2</label>
+        </form>
+        <p class="displayValues">
+        </p>
+    </div>
+    <div class="block" id="demoSerializeArray">
+        <h2>
+            serializeArray</h2>
+        <form action="#">
+        <select name="single">
+            <option value="single1">item 1</option>
+            <option value="single2">item 2</option>
+        </select>
+        <br />
+        <select name="multiple" multiple="multiple">
+            <option value="multi1" selected="selected">item 1</option>
+            <option value="multi2">item 2</option>
+            <option value="multi3" selected="selected">item 3</option>
+        </select>
+        <br />
+        <input type="checkbox" name="check" value="check1" />
+        <label for="ch1">
+            choice 1</label>
+        <input type="checkbox" name="check" value="check2" checked="checked" />
+        <label for="ch2">
+            choice 2</label>
+        <br />
+        <input type="radio" name="radio" value="radio1" checked="checked" />
+        <label for="r1">
+            option 1</label>
+        <input type="radio" name="radio" value="radio2" />
+        <label for="r2">
+            option 2</label>
+        </form>
+        <ol class="displayValues">
+        </ol>
+        <p>
+            
+        </p>
+    </div>
+    <div class="block" id="demoParam">
+        <h2>
+            param</h2>
+    </div>
+</body>
+</html>

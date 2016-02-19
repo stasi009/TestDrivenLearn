@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demonstrate numbers in javascript</title>
+    <script type="text/javascript" src="../common/commonFuncs.js"></script>
+    <script type="text/javascript">
+        function displayNumbers(msg, number) {
+            document.writeln("<p>" + msg + ": <span class='number'>" + number + "</span></p>");
+        }
+
+        function checkNormalNumber(number) {
+            var nanflag = isNaN(number);
+            var finiteflag = isFinite(number);
+
+            printline(number + ": isNan returns " + nanflag + ", isFinite returns " + finiteflag);
+        }
+    </script>
+    <style type="text/css">
+        .number
+        {
+            color: navy;
+            font-weight: bold;
+            font-size: 120%;
+        }
+        
+        .block
+        {
+            border: 1px navy solid;
+            background-color: lightgrey;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="block">
+        <script type="text/javascript">
+            displayNumbers("max number", Number.MAX_VALUE);
+            displayNumbers("min number", Number.MIN_VALUE);
+
+            var positiveOverflow = Number.MAX_VALUE + Number.MAX_VALUE;
+            // only substract 'Number.MAX_VALUE' will NOT result in overflow
+            var negativeOverflow = Number.MIN_VALUE - Number.MAX_VALUE * 2;
+            displayNumbers("postive overflow", positiveOverflow);
+            displayNumbers("negative overflow", negativeOverflow);
+
+            var posDivByZero = 1 / 0;
+            var negDivByZero = -1 / 0;
+            displayNumbers("positive divided by zero", posDivByZero);
+            displayNumbers("negative divived by zero", negDivByZero);
+
+            var nan = 0 / 0;
+            displayNumbers("not a number", nan);
+
+            displayNumbers("sqrt of negative", Math.sqrt(-1));
+        </script>
+    </div>
+    <div class="block">
+        <script type="text/javascript">
+            var numbers = [3.14, NaN, Infinity, -Infinity];
+            for (var i = 0; i < numbers.length; i++) {
+                checkNormalNumber(numbers[i]);
+            }
+        </script>
+    </div>
+</body>
+</html>

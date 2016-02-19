@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demonstrate eval</title>
+    <script type="text/javascript" src="../common/commonFuncs.js"></script>
+    <script type="text/javascript">
+        function testEval(expression) {
+            var result = eval(expression);
+            printline("'" + expression + "' returns " + result);
+        }
+    </script>
+    <style type="text/css">
+        .block
+        {
+            background-color: wheat;
+            color: crimson;
+            margin: 10px;
+        }
+        
+        .note
+        {
+            color: navy;
+            border: 1px navy dashed;
+            margin: 0px;
+        }
+        
+        h3
+        {
+            color: navy;
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+        testEval("4+5");
+
+        var x = 9;
+        eval("printline(x);");
+
+        eval("x += 1");
+        printline(x);
+    </script>
+    <h3>
+        The key thing about eval() is that it uses the variable environment of the code
+        that calls it</h3>
+</body>
+</html>

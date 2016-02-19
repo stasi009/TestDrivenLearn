@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demonstrate how property is searched within object</title>
+    <script type="text/javascript">
+        function Point() {
+        }
+
+        Point.prototype = {
+            x: 1,
+            y: 2
+        };
+        Point.prototype.toString = function () {
+            return "(" + this.x + "," + this.y + ")";
+        };
+
+        function checkIn(p, propertyName) {
+            if (propertyName in p) {
+                printline("property[" + propertyName + "] In");
+            } else {
+                printline("!!!!!! property[" + propertyName + "] NOT In");
+            }
+        }
+
+        function checkHasOwnProperty(p, propertyName) {
+            if (p.hasOwnProperty(propertyName)) {
+                printline("property[" + propertyName + "] is own property");
+            } else {
+                printline("!!!!!! property[" + propertyName + "] is NOT own property");
+            }
+        }
+    </script>
+    <script type="text/javascript" src="../common/commonFuncs.js"></script>
+    <style type="text/css">
+        .block
+        {
+            background-color: wheat;
+            color: firebrick;
+            margin: 5px;
+        }
+        .note
+        {
+            color: navy;
+            font-weight: bold;
+            border: 1px navy dashed;
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="block">
+        <script type="text/javascript">
+            printline("############### create one object based on prototype with default values");
+            var oldp = new Point();
+            printline("old point = " + oldp);
+
+            printline("############### after changing the prototype");
+            Point.prototype.x = 88;
+            Point.prototype.y = 99;
+
+            var newp = new Point(); // use the latest prototype
+            printline("old point = " + oldp);
+            printline("new point = " + newp);
+        </script>
+        <h4 class="note">
+            since the "old point" doesn't have its own property, but inherit from the prototype.
+            so changes on the prototype, not only affect the following ones created after the
+            changes, but also affect the old ones which are created before the changes.</h4>
+    </div>
+    <div class="block">
+        <script type="text/javascript">
+            printline("############### create one object based on prototype with default values");
+            var oldp = new Point();
+            printline(oldp);
+
+            oldp.x += 10;
+            oldp.y += 20;
+            printline("############### after modification on instance");
+            printline(oldp);
+
+            printline("############### but prototype isn't changed, so newly-created instance still have the default values");
+            var newp = new Point();
+
+            printline("new point = " + newp);
+            printline("old point = " + oldp);
+
+            printline("############### after deleting property on the changed instance, because it cannot find its own property anymore, it refers to the property in the prototype again.");
+            delete oldp.x;
+            printline(oldp);
+        </script>
+        <h4 class="note">
+            setting new value on the instance will create new properties which will shadow the
+            same-name properties in the prototype.
+        </h4>
+    </div>
+    <div class="block">
+        <script type="text/javascript">
+            var pnt = new Point();
+            printline("read not-existed property, returns: " + pnt.z); // must return undefined
+
+            try {
+                // p.z is undefined, access property on undefined will cause an exception
+                var neverCanHappen = pnt.z.a;
+                printline("!!!!!! never will be executed");
+            } catch (e) {
+                printline("error name= " + e.name + " ,error message= " + e.message);
+            }
+        </script>
+    </div>
+    <div class="block">
+        <script type="text/javascript">
+            var pnt = new Point();
+            pnt.z = 6;
+
+            // although delete inherited property returns true
+            // but no effect, since it is its own property, that property is still "in"
+            printline("delete inherited property: " + (delete pnt.x));
+            printline("delete own property: " + (delete pnt.z));
+
+            printline("inherited property in? " + ("x" in pnt));
+            printline("own property in? " + ("z" in pnt));
+        </script>
+    </div>
+    <div class="block">
+        <script type="text/javascript">
+            function fool(pnt) {
+                printline("****** print all properties, including override properties");
+                for (var pname in pnt) {
+                    printline("[" + pname + "]: " + pnt[pname]);
+                }
+
+                printline("****** filter out inherited properties");
+                for (var pname in pnt) {
+                    if (pnt.hasOwnProperty(pname)) {
+                        printline("[" + pname + "]: " + pnt[pname]);
+                    }
+                }
+            }
+
+            var pnt = new Point();
+            pnt.z = 999;
+            printline("###################### object created by prototype");
+            fool(pnt);
+
+            printline("###################### inline object");
+            fool({ x: 1, y: 2, z: 3 }); // it doesn't include "toString"
+
+            // it also doesn't include "toString"
+            printline("###################### new Object");
+            var o = new Object();
+            o.x = 100;
+            o.y = 200;
+            fool(o);
+        </script>
+        <h4 class="note">
+            override methods added into prototype, because it is not built-in, is also enumerable.</h4>
+    </div>
+    <div class="block">
+        <script type="text/javascript">
+            var pnt = new Point();
+            pnt.z = 689;
+
+            var propertyNames = ["x", "toString", "z", "NoExist"];
+
+            printline("################ check whether property existed by using in");
+            for (var i = 0; i < propertyNames.length; i++) {
+                checkIn(pnt, propertyNames[i]);
+            }
+
+            printline("################ check whether property existed by using hasOwnProperty");
+            for (var i = 0; i < propertyNames.length; i++) {
+                checkHasOwnProperty(pnt, propertyNames[i]);
+            }
+
+        </script>
+    </div>
+    <div class="block">
+        <script type="text/javascript">
+            var pnt = new Point();
+            pnt.z = 896;
+
+            try {
+                
+                // object.keys only returns "own" and "enumrable" properties
+                var propNames = Object.keys(pnt);
+                for (var i = 0; i < propNames.length; i++) {
+                    printline(propNames[i]);
+                }
+
+            } catch (e) {
+                printline(e.name);
+                printline(e.message);
+            } 
+            
+        </script>
+    </div>
+</body>
+</html>

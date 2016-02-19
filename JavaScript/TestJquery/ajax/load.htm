@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demo load()</title>
+    <style type="text/css">
+        .block
+        {
+            background-color: wheat;
+            border: 2px firebrick solid;
+            margin: 5px auto;
+        }
+        
+        h2
+        {
+            color: purple;
+        }
+    </style>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+
+        function loadByGet() {
+            var form = $("form");
+            $("#loadByGet > button").click(function () {
+                $("#loadByGet > div").load("loadbyget", form.serialize());
+            });
+        }
+
+        function loadByPost() {
+            var form = $("form");
+            $("#loadByPost > button").click(function () {
+                $("#loadByPost > div").load("loadbypost", form.serializeArray());
+            });
+        }
+
+        $(function () {
+            loadByGet();
+            loadByPost();
+        });
+    </script>
+</head>
+<body>
+    <form class="block" action="#">
+    <select name="single">
+        <option value="single1">item 1</option>
+        <option value="single2">item 2</option>
+    </select>
+    <br />
+    <select name="multiple" multiple="multiple">
+        <option value="multi1" selected="selected">item 1</option>
+        <option value="multi2">item 2</option>
+        <option value="multi3" selected="selected">item 3</option>
+    </select>
+    <br />
+    <input type="checkbox" name="check" value="check1" />
+    <label for="ch1">
+        choice 1</label>
+    <input type="checkbox" name="check" value="check2" checked="checked" />
+    <label for="ch2">
+        choice 2</label>
+    <br />
+    <input type="radio" name="radio" value="radio1" checked="checked" />
+    <label for="r1">
+        option 1</label>
+    <input type="radio" name="radio" value="radio2" />
+    <label for="r2">
+        option 2</label>
+    </form>
+    <div class="block" id="loadByGet">
+        <h2>
+            load() by 'GET'</h2>
+        <button>
+            Load By GET</button>
+        <div>
+        </div>
+    </div>
+    <div class="block" id="loadByPost">
+        <h2>
+            load() by 'POST'</h2>
+        <button>
+            Load By POST</button>
+        <div>
+        </div>
+    </div>
+</body>
+</html>

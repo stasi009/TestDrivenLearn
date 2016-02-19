@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Sample of getElementsByTagName</title>
+    <script type="text/javascript" src="../common/commonFuncs.js"></script>
+    <script type="text/javascript">
+        function countNumber(tagName, id) {
+            var container = (id === undefined) ? document : document.getElementById(id);
+            var elements = container.getElementsByTagName(tagName);
+            return elements.length;
+        }
+    </script>
+    <style type="text/css">
+        .block
+        {
+            background-color: wheat;
+            color: crimson;
+            margin: 10px;
+        }
+        
+        .note
+        {
+            color: navy;
+            border: 1px navy dashed;
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="block" style="color: black;">
+        <p>
+            Fun Links:</p>
+        <ul id="fun">
+            <li><a href="http://www.yahoo.com">Yahoo</a></li>
+            <li><a href="http://www.google.com">Google</a></li>
+        </ul>
+        <p>
+            Serious Links:</p>
+        <ul id="serious">
+            <li><a href="http://www.etsu.edu">ETSU</a></li>
+            <li><a href="http://www.johnsoncitypress.com/">Johnson City Press</a></li>
+            <li><a href="http://einstein.etsu.edu/~pittares">Dr. Pittarese's home page</a></li>
+        </ul>
+    </div>
+    <div class="block">
+        <script type="text/javascript">
+            var number = countNumber("a");
+            printline(sprintf("%d links in the whole document", number));
+
+            var id = "serious";
+            number = countNumber("a", id);
+            printline(sprintf("%d links in id='%s'", number, id));
+
+            id = "fun";
+            number = countNumber("li", id);
+            printline(sprintf("%d listitem in id='%s'", number, id));
+        </script>
+    </div>
+</body>
+</html>

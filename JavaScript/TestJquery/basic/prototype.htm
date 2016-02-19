@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Test Javascript's Prototype mechanism</title>
+    <link rel="stylesheet" type="text/css" href="../common/qunit.css" />
+    <script type="text/javascript" src="../common/jquery.js"></script>
+    <script type="text/javascript" src="../common/qunit.js"></script>
+    <script type="text/javascript">
+        // *************** constructor, instance fields
+        function Point(x, y) {
+            if (isNaN(x) || isNaN(y)) {
+                throw new TypeError();
+            }
+            this.x = x;
+            this.y = y;
+        }
+
+        // *************** instance methods
+        // (using below fashion, it won't overwrite predefined prototype 
+        // which contains 'constructor' property)
+        Point.prototype.r = function () {
+            return Math.sqrt(this.x * this.x + this.y * this.y);
+        };
+        Point.prototype.toString = function () {
+            return "(" + this.x + "," + this.y + ")";
+        };
+        Point.prototype.equal = function (that) {
+            return that != null
+                && that.constructor === Point
+                    && that.x === this.x && that.y === this.y;
+        };
+
+        // *************** class static fields
+        Point.Zero = new Point(0, 0);
+        Point.Parse = function (s) {
+            var a = s.split(",");
+            return new Point(parseFloat(a[0]), parseFloat(a[1]));
+        };
+
+        // ################################################ test methods
+
+        function demoAPI() {
+            var points = [
+                new Point(3, 4),
+                new Point(1, 2),
+                new Point(6, 9)
+            ];
+
+            equal(points[0].r().toFixed(2), 5.00);
+            equal(points[1].toString(), "(1,2)");
+
+            var q = new Point(6, 9);
+            ok(points[2] != q);
+            ok(points[2].equal(q));
+        }
+
+        function demoConstructor() {
+            var p = new Point(3, 4);
+            strictEqual(p.constructor, Point);
+            strictEqual(Point.prototype.constructor, Point, "because we extend the prototype other than overwritting it when defining the class, so property has constructor property");
+        }
+
+        function demoPrototypeProperty() {
+            var p = new Point(9, 8);
+
+            ok(Point.prototype.isPrototypeOf(p), "constructor's prototype property is the prototype of the instance");
+        }
+
+        function demomIn() {
+            var p = new Point(3, 4);
+            p.z = 5;
+
+            ok("z" in p, "own property in");
+            ok("x" in p, "inherited property in");
+            ok("valueOf" in p, "property inherited from Object");
+        }
+
+        function demoCreate() {
+            var p = { x: 1, y: 2 };
+            var o = Object.create(p);
+
+            equal(o.x, 1);
+            equal(o.y, 2);
+            ok(p.isPrototypeOf(o));
+
+            // --------- p inherits from Objet, so o also inherits from Object
+            ok(o instanceof Object, "in-direct inherited from Object");
+            ok("toString" in o);
+
+            // --------- shadow feature
+            o.x = 100;
+            equal(o.x, 100, "instance own copy is changed");
+            equal(p.x, 1, "prototype is unchanged (so prototype only provides read-only, default value)");
+        }
+
+        function demoShadowFeature() {
+            var prototype = { x: 1, y: 2 };
+            var obj = Object.create(prototype);
+
+            equal(obj.x, 1);
+
+            // -------- changes on the prototype directly reflect on the instance
+            prototype.x = 88;
+            equal(obj.x, 88, "we can say prototype provides default value, but that default value is dynamic, alive, not just a static copy");
+
+            // -------- changes on instance will create "same-name" copy
+            // -------- within the instance, and it shadows the prototype
+            // -------- changes in the instance won't affect prototype
+            obj.y += 6;
+            equal(obj.y, 8);
+            equal(prototype.y, 2, "inheritance occurs when querying properties but not when setting them");
+
+            // -------- delete instance property
+            // -------- then it will reference back to prototype when querying
+            delete obj.y;
+            ok("y" in obj, "property from prototype still in");
+            equal(obj.y, 2, "switch back to same-name property in prototype after deleting");
+
+            // -------- delete inherited property
+            delete obj.y;
+            ok("y" in obj);
+            equal(obj.y, 2, "delete inherited property won't work");
+        }
+
+    </script>
+</head>
+<body>
+    <h1 id="qunit-header">
+        Prototype Demonstration</h1>
+    <h2 id="qunit-banner">
+    </h2>
+    <div id="qunit-testrunner-toolbar">
+    </div>
+    <h2 id="qunit-userAgent">
+    </h2>
+    <ol id="qunit-tests">
+    </ol>
+    <div id="qunit-fixture">
+        test markup, will be hidden</div>
+    <script type="text/javascript">
+        test("demo API of user-defined class", demoAPI);
+        test("constructor property", demoConstructor);
+        test("prototype property of the constructor", demoPrototypeProperty);
+        test("demo In", demomIn);
+        test("demo Object.create", demoCreate);
+        test("shadow feature of prototype", demoShadowFeature);
+    </script>
+</body>
+</html>

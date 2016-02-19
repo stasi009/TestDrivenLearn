@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Test jQuery Selectors</title>
+    <link rel="stylesheet" type="text/css" href="../common/qunit.css" />
+    <script type="text/javascript" src="../common/jquery.js"></script>
+    <script type="text/javascript" src="../common/qunit.js"></script>
+    <script type="text/javascript">
+
+        function demoFirstChild() {
+            var fixture = $("#qunit-fixture");
+            fixture.append("\
+                            <div>\
+                                <span>John,</span>\
+                                <span>Karl,</span>\
+                                <span>Brandon</span>\
+                            </div>\
+                            <div>\
+                                <span>Glen,</span>\
+                                <span>Tane,</span>\
+                                <span>Ralph</span>\
+                            </div>");
+
+            var spans = $("div span:first-child", fixture).toArray();
+
+            equal(spans.length, 2);
+            ok(spans.every(function (x) {
+                return x.tagName == "SPAN";
+            }));
+            deepEqual(spans.map(function (x) {
+                return x.tagName;
+            }), ['SPAN', 'SPAN']);
+            deepEqual(spans.map(function (x) {
+                return $(x).text();
+            }), ["John,", "Glen,"]);
+        }
+
+        function demoHas() {
+            var fixture = $("#qunit-fixture");
+            fixture.append("\
+                <div><p>div with p</p></div>\
+                <div>div without p</div>\
+            ");
+
+            equal($("div:has(p)", fixture).html(), "<p>div with p</p>");
+            equal($("div:not(:has(p))", fixture).html(), "div without p");
+        }
+
+        function demoChildren() {
+            $("#qunit-fixture").html("\
+                        <p>\
+                            <span>hello <span>jquery</span></span>\
+                        </p>\
+            ");
+
+            var allchildren = $("#qunit-fixture p span");
+            deepEqual(allchildren.map(function () {
+                return $(this).text();
+            }).toArray(), ["hello jquery", "jquery"]);
+
+            var directchild = $("#qunit-fixture p>span");
+            equal(directchild.length, 1);
+            equal(directchild.html(), "hello <span>jquery</span>");
+        }
+
+        function demoFollowing() {
+            $("#qunit-fixture").html("\
+                                        <div>\
+                                            <h1></h1>\
+                                            <p>p1</p>\
+                                            <p>p2</p>\
+                                        </div>");
+            var directfollow = $("#qunit-fixture h1+p");
+            equal(directfollow.length, 1);
+            equal(directfollow.text(), "p1");
+
+            var allfollowed = $("#qunit-fixture h1~p");
+            equal(allfollowed.length, 2);
+            equal(allfollowed.text(), "p1p2");
+        }
+
+        $(function () {
+            test("first-child: test whether the current item is first-child of its parent or not, NOT for selecting its children", demoFirstChild);
+            test("has: Selects elements which contain at least one element that matches the specified selector", demoHas);
+            test("demo 'A B' and 'A>B'", demoChildren);
+            test("demo 'A+B' and 'A~B'", demoFollowing);
+        });
+
+    </script>
+</head>
+<body>
+    <h1 id="qunit-header">
+        Selectors Demonstration</h1>
+    <h2 id="qunit-banner">
+    </h2>
+    <div id="qunit-testrunner-toolbar">
+    </div>
+    <h2 id="qunit-userAgent">
+    </h2>
+    <ol id="qunit-tests">
+    </ol>
+    <div id="qunit-fixture">
+    </div>
+    <script type="text/javascript"></script>
+</body>
+</html>

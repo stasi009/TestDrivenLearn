@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demonstration of DocumentFragments</title>
+    <script type="text/javascript" src="../common/commonFuncs.js"></script>
+    <script type="text/javascript">
+
+        function reverse(n) {
+            // Create an empty DocumentFragment as a temporary container
+            var f = document.createDocumentFragment();
+            // Now loop backward through the children, moving each one to the fragment.
+            // The last child of n becomes the first child of f, and vice-versa.
+            // Note that appending a child to f automatically removes it from n.
+            while (n.lastChild) f.appendChild(n.lastChild);
+            // Finally, move the children of f all at once back to n, all at once.
+            n.appendChild(f);
+        }
+
+        window.onload = function () {
+            var div = document.getElementsByTagName("div")[0];
+            var button = document.getElementsByTagName("button")[0];
+            button.onclick = function () {
+                reverse(div);
+            };
+        };
+
+    </script>
+    <style type="text/css">
+        p
+        {
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <script type="text/javascript">
+            for (var i = 1; i < 10; i++) {
+                document.writeln("<p>" + i + "</p>");
+            }
+        </script>
+        <button>
+            reverse</button>
+    </div>
+</body>
+</html>

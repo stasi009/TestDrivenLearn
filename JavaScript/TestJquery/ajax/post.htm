@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demo &.post</title>
+    <style type="text/css">
+        #outputtable
+        {
+            border-collapse: collapse;
+            margin: 5px;
+            width: 30%;
+        }
+        #outputtable table, #outputtable td, #outputtable th
+        {
+            border: 1px solid black;
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+        function fillOutputTable(result) {
+            $("#outputtable tr:has(td)").remove();
+
+            var table = $("#outputtable");
+            $.each(result, function (index, item) {
+                var row = $("<tr/>");
+                $("<td/>", { text: item.Id }).appendTo(row);
+                $("<td/>", { text: item.Name }).appendTo(row);
+                $("<td/>", { text: item.Price }).appendTo(row);
+                table.append(row);
+            });
+        }
+
+        function popError(xhr, status, error) {
+            alert(status + "[" + xhr.status + "]: " + xhr.responseText);
+        }
+
+        function demoPost() {
+
+            function makeProducts(prefix, count) {
+                var products = new Array(count);
+                for (var i = 0; i < count; i++) {
+                    products[i] = {
+                        Id: 0, // place holder, id is assigned at the server side
+                        Name: prefix + i,
+                        Price: Math.random() * 100
+                    };
+                }
+                return products;
+            }
+
+            var txtPrefix$ = $("#txtPrefix");
+            var txtCount$ = $("#txtCount");
+
+            $("#btnpost").click(function () {
+                this.disabled = true;
+                var self = this;
+
+                var products = makeProducts(txtPrefix$.val(), parseInt(txtCount$.val()));
+                var text = JSON.stringify(products);
+
+                $.post("post", text)
+                    .success(function () {
+                        self.disabled = false;
+                    })
+                    .error(popError);
+            });
+
+            $("#btnget").click(function () {
+                $.getJSON("get")
+                    .success(fillOutputTable)
+                    .error(popError);
+            });
+
+        }
+
+        $(demoPost);
+    </script>
+</head>
+<body>
+    <div>
+        input prefix:
+        <input type="text" id="txtPrefix" />
+        input count:
+        <input type="text" id="txtCount" />
+        <button id="btnpost">
+            Post</button>
+        <button id="btnget">
+            Get</button>
+    </div>
+    <table id="outputtable">
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Price
+            </th>
+        </tr>
+    </table>
+</body>
+</html>

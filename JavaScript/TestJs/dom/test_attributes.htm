@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Sample of manipulating attributes</title>
+    <script type="text/javascript" src="../common/commonFuncs.js"></script>
+    <script type="text/javascript">
+        function listLinks(id) {
+            var container = (id === undefined) ? document : document.getElementById(id);
+            var links = container.getElementsByTagName("a");
+
+            printline(sprintf("there are %d links, and they are linking to:", links.length));
+            for (var i = 0; i < links.length; i++) {
+                var url = links[i].getAttribute("href");
+                printline(sprintf("[%d] %s", i + 1, url));
+            }
+        }
+
+        window.onerror = function (msg, url, line) {
+            alert("ERROR: " + msg + "\n" + url + ":" + line);
+            return true;
+        };
+
+        function changeAttributes() {
+            var alllinks = document.getElementsByTagName("a");
+
+            var i, link;
+            if (document.getElementById("toggle").checked) {
+                for (i = 0; i < alllinks.length; i++) {
+                    link = alllinks[i];
+                    link.setAttribute("class", "highlight");
+                    link.setAttribute("target", "_blank");
+                }
+            } else {
+                for (i = 0; i < alllinks.length; i++) {
+                    link = alllinks[i];
+                    link.removeAttribute("class");
+                    link.removeAttribute("target");
+                }
+            }
+        }
+
+        window.onload = function () {
+            document.getElementById("toggle").onclick = changeAttributes;
+        };
+    </script>
+    <style type="text/css">
+        .block
+        {
+            background-color: wheat;
+            color: crimson;
+            margin: 10px;
+        }
+        
+        .note
+        {
+            color: navy;
+            border: 1px navy dashed;
+            margin: 0px;
+        }
+        
+        .highlight
+        {
+            background-color: #FFFF00;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        Fun Links:</p>
+    <ul id="fun">
+        <li><a href="http://www.yahoo.com">Yahoo</a></li>
+        <li><a href="http://www.google.com">Google</a></li>
+    </ul>
+    <p>
+        Serious Links:</p>
+    <ul id="serious">
+        <li><a href="http://www.etsu.edu">ETSU</a></li>
+        <li><a href="http://www.johnsoncitypress.com/">Johnson City Press</a></li>
+        <li><a href="http://einstein.etsu.edu/~pittares">Dr. Pittarese's home page</a></li>
+    </ul>
+    <input type="checkbox" id="toggle" />
+    Change Attributes
+    <div class="block">
+        <script type="text/javascript">
+            document.write("*********** in whole document,");
+            listLinks();
+            document.write("*********** in id='serious',");
+            listLinks("serious");
+        </script>
+    </div>
+</body>
+</html>

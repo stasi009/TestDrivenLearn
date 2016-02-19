@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>sampel of toggle</title>
+    <script type="text/javascript" src="../common/jquery.js"></script>
+</head>
+<body>
+    <input type="button" value="Hide" id="toggle_message" />
+    <p id="message">
+        now you can see the paragraph.</p>
+    <!--the order matter:
+    elements must already be loaded before they can be referenced in javascript codes-->
+    <script type="text/javascript">
+        $("#toggle_message").click(function () {
+
+            $("#message").toggle("slow");
+
+            // $(this) can be used to reference the object which handler is attached on
+            if ($(this).attr("value") == "Hide") {
+                $(this).attr("value", "Show");
+            } else {
+                $(this).attr("value", "Hide");
+            }
+
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>static methods</title>
+    <script type="text/javascript" src="../common/commonFuncs.js"></script>
+    <script type="text/javascript">
+        function seedSample() {
+
+            // since function definition can be hoisted
+            // so here it is valid to set property to 'getNext'
+            getNext.seed = 0;
+            function getNext() {
+                return ++getNext.seed;
+            }
+
+            var a = [];
+            for (var i = 0; i < 3; i++) {
+                a.push(getNext());
+            }
+            printline(a);
+        }
+    </script>
+    <style type="text/css">
+        .block
+        {
+            color: crimson;
+            background-color: lightgrey;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="block">
+        <script type="text/javascript">            seedSample();</script>
+    </div>
+</body>
+</html>

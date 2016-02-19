@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style type="text/css">
+        table
+        {
+            width: 100%;
+        }
+        
+        .firstcol
+        {
+            width: 25%;
+        }
+        
+        .secondcol
+        {
+            width: 75%;
+        }
+        
+        .input
+        {
+            width: 100%;
+        }
+        
+        div
+        {
+            width: 40%;
+            margin: 100px auto;
+        }
+        
+        div p
+        {
+            text-align: center;
+            font-size: 200%;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById("btnChange").onclick = function () {
+                var name = document.getElementById("txtName").value;
+                var url = document.getElementById("txtUrl").value;
+
+                var link = document.getElementById("link");
+                link.innerHTML = name;
+                link.setAttribute("href", url);
+            };
+        };
+    </script>
+</head>
+<body>
+    <div>
+        <p>
+            <a href="http://www.wsu.edu/" target="_blank" id="link">Washington State University</a></p>
+        <table>
+            <tr>
+                <td class="firstcol">
+                    Text:
+                </td>
+                <td class="secondcol">
+                    <input type="text" class="input" id="txtName" />
+                </td>
+            </tr>
+            <tr>
+                <td class="firstcol">
+                    URL:
+                </td>
+                <td class="secondcol">
+                    <input type="text" class="input" id="txtUrl" />
+                </td>
+            </tr>
+            <tr>
+                <td class="firstcol">
+                </td>
+                <td class="secondcol">
+                    <input type="button" value="change" class="input" id="btnChange" />
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

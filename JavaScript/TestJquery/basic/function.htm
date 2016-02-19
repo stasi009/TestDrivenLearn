@@ -1,0 +1,278 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Test Javascript's Function</title>
+    <link rel="stylesheet" type="text/css" href="../common/qunit.css" />
+    <script type="text/javascript" src="../common/jquery.js"></script>
+    <script type="text/javascript" src="../common/qunit.js"></script>
+    <script type="text/javascript">
+        function supersum() {
+            var sum = 0;
+
+            for (var index = 0; index < arguments.length; index++) {
+                sum += arguments[index];
+            }
+
+            return sum;
+        }
+
+        function testArguments() {
+            var result = supersum(1, 2, 3, 4, 5);
+            equal(15, result);
+
+            result = supersum("hello", " javascript");
+            equal("0hello javascript", result);
+        }
+
+        function testOvershadow() {
+            var scope = "global";
+
+            function fool() {
+                var scope = "local";
+                return scope;
+            }
+
+            equal(scope, "global");
+            equal(fool(), "local");
+        }
+
+        function testPassByCopyValueFeature() {
+
+            function fool(x) {
+                x = x * x;
+                return x;
+            }
+
+            var a = 2;
+            equal(fool(a), 4);
+            equal(a, 2, "original input not changed");
+        }
+
+        function testPassReference() {
+
+            function fool(x) {
+                x.push(1);
+                x.push("cheka");
+            }
+
+            var a = [];
+
+            fool(a);
+
+            deepEqual(a, [1,"cheka"]);
+        }
+
+        function testVarHoisted() {
+            var sum = 0;
+
+            for (var i = 0; i < 5; i++) {
+                var last = i;
+                sum += i;
+            }
+
+            equal(sum, 10);
+            equal(i, 5, "loop index is visible outside the loop");
+            equal(last, 4, "var declared inside the loop is visible outside the loop");
+        }
+
+        function testWholeFuncScope() {
+            if (false) {
+                var neverAssigned = 1;
+            }
+            equal(neverAssigned, undefined, "although unassigned, but its declaration is hoisted, so it is visible through the whole function");
+        }
+
+        function testOverShadowAndHoist() {
+            var scope = 1;
+
+            // function definition can be also hoisted to the top
+            fool();
+
+            function fool() {
+                equal(scope, undefined, "inner var hide outer var, but assigned later");
+                var scope = "local";
+                equal(scope, "local", "inner var hide out var, and get assigned");
+            }
+
+        }
+
+        // which function is effective is decided by logic
+        function testDefineByExpression() {
+            var flag = true;
+
+            if (flag) {
+                var fool = function () {
+                    return true;
+                };
+            } else {
+                var fool = function () {
+                    return false;
+                };
+            }
+
+            ok(fool());
+        }
+
+        // which function is effective is decided by coding order
+        function testDefineByDeclaration() {
+            var flag = true;
+
+            if (flag) {
+
+                function fool() {
+                    return true;
+                }
+            } else {
+
+                function fool() {
+                    return false;
+                }
+            }
+
+            ok(!fool());
+        }
+
+        function testPropertyOfFunc() {
+
+            fool.seed = 0;
+            function fool() {
+                return ++fool.seed;
+            }
+
+            equal(fool(), 1);
+            equal(fool(), 2);
+        }
+
+        function testClosureScope() {
+            var scope = "global";
+
+            function checkscope() {
+                var scope = "local";
+
+                return function () {
+                    return scope;
+                };
+            }
+
+            equal(checkscope()(), "local", "closure binding is fixed when defined, not when referenced when invoked");
+        }
+
+        function testClosureSeed() {
+
+            function counter() {
+                var seed = 0;
+
+                return {
+                    next: function () {
+                        return ++seed;
+                    },
+                    current: function () {
+                        return seed;
+                    },
+                    reset: function () {
+                        seed = 0;
+                    }
+                };
+            }
+
+            var c1 = counter(), c2 = counter(); // independent with each other
+
+            c1.next();
+            equal(c1.next(), 2);
+
+            equal(c2.current(), 0);
+        }
+
+        function testClosureInLoop_Shared() {
+            var funcs = new Array(3);
+
+            for (var i = 0; i < funcs.length; i++) {
+                funcs[i] = function () {
+                    return i;
+                };
+            }
+
+            var results = funcs.map(function (f) {
+                return f();
+            });
+            deepEqual(results, [3, 3, 3], "share the same loop variable");
+        }
+
+        function testClosure_CopyByTemp() {
+            var funcs = new Array(3);
+
+            for (var i = 0; i < funcs.length; i++) {
+                var temp = i;
+                funcs[i] = function () {
+                    return temp;
+                };
+            }
+
+            var results = funcs.map(function (f) {
+                return f();
+            });
+            deepEqual(results, [2, 2, 2], "share the same temp variable");
+        }
+
+        function testClosure_CopyByPassParameter() {
+
+            // copy the shared variable into local by passing argument
+            function copy(v) {
+                return function () {
+                    return v;
+                };
+            }
+
+            var funcs = new Array(3);
+            for (var i = 0; i < funcs.length; i++) {
+                funcs[i] = copy(i);
+            }
+
+            var results = funcs.map(function (f) {
+                return f();
+            });
+            deepEqual(results, [0,1,2], "different captured variables");
+        }
+
+
+        $(function () {
+            test("argument keyword inside function", testArguments);
+            test("func defined by var: only the func name is hoisted", testDefineByExpression);
+            test("func defined by declaration: both func name and body are hoisted", testDefineByDeclaration);
+            test("function can have its own property", testPropertyOfFunc);
+            test("passing parameter by copying value", testPassByCopyValueFeature);
+            test("for reference type, pass by value is just passing that reference", testPassReference);
+
+            module("scope");
+            test("local variable overshadow same-name variable in upper scope", testOvershadow);
+            test("variables declaration is hoisted to the top of the function", testVarHoisted);
+            test("variables is visible through the whole function", testWholeFuncScope);
+            test("example with both overshadow and hoisting", testOverShadowAndHoist);
+
+            module("closure");
+            test("closure, fixed when defined, not when invoked", testClosureScope);
+            test("closure with seed", testClosureSeed);
+
+            module("closure with loop");
+            test("all functions share the same looping variable", testClosureInLoop_Shared);
+            test("such method works in C#, but doesn't work in Javascript, because {} doesn't create a single scope and variables defined within {} are hoisted, so still share", testClosure_CopyByTemp);
+            test("copy the shared variable into local by passing argument", testClosure_CopyByPassParameter);
+        });
+
+    </script>
+</head>
+<body>
+    <h1 id="qunit-header">
+        Function Demonstration</h1>
+    <h2 id="qunit-banner">
+    </h2>
+    <div id="qunit-testrunner-toolbar">
+    </div>
+    <h2 id="qunit-userAgent">
+    </h2>
+    <ol id="qunit-tests">
+    </ol>
+    <div id="qunit-fixture">
+        test markup, will be hidden</div>
+</body>
+</html>

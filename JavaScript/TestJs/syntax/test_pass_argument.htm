@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demonstrate how to pass arguments into functions</title>
+    <script type="text/javascript" src="../common/commonFuncs.js"></script>
+    <script type="text/javascript">
+
+        function checkArguments(x, y, z) {
+            document.writeln("<div class='block'>");
+            printline("x=" + wrapQuotation(x));
+            printline("y=" + wrapQuotation(y));
+            printline("z=" + wrapQuotation(z));
+            document.writeln("</div>");
+        }
+
+        function checkPassByValue(x) {
+            x += 1000;
+            printline("inside function, x is changed to: " + x);
+        }
+    </script>
+    <style type="text/css">
+        .block
+        {
+            border: 3px navy solid;
+            margin: 5px auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        not passed arguments are undefined.</h1>
+    <script type="text/javascript">
+        checkArguments(1, 2, 3);
+        checkArguments("a", 2);
+        checkArguments("a");
+    </script>
+    <h1>
+        arguments are passed by values.</h1>
+    <div class="block">
+        <script type="text/javascript">
+            var x = 689;
+            printline("before call, x = " + x);
+
+            checkPassByValue(x);
+
+            printline("after call, x = " + x);
+        </script>
+    </div>
+</body>
+</html>

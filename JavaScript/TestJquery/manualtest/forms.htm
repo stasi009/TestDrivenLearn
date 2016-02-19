@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style type="text/css">
+        .block
+        {
+            background-color: lightgray;
+            border: 1px navy solid;
+            margin: 5px auto;
+        }
+        
+        #getValFromSelect p
+        {
+            color: red;
+            margin: 4px;
+        }
+        #getValFromSelect b
+        {
+            color: blue;
+        }
+        
+        h2
+        {
+            color: navy;
+        }
+        
+        .note
+        {
+            color: orangered;
+            font-weight: bold;
+        }
+    </style>
+    <script type="text/javascript" src="../common/jquery.js"></script>
+    <script type="text/javascript">
+        function demoGetInputValues() {
+            var singleSelect = $("#getValFromSelect select:not([multiple])");
+            var multipleSelect = $("#getValFromSelect select[multiple]");
+            var p = $("#getValFromSelect p");
+
+            $("#getValFromSelect select").change(function () {
+                var singleValue = singleSelect.val();
+                var multipleValues = multipleSelect.val() || [];
+                p.html("<b>Single:</b> "
+                    + singleValue
+                    + " <b>Multiple:</b> "
+                    + multipleValues.join(", "));
+            });
+            $("#getValFromSelect select:first").change(); // invoke the first event
+        }
+
+        function demoGetRadioValues() {
+            var displayPlace = $("#getRadioValues p:last");
+
+            $("#getRadioValues button").click(function () {
+                displayPlace.text($("#getRadioValues input:radio:checked").val());
+            }).click(); // fire the first event
+        }
+
+        function demoGetCheckboxValues() {
+
+            var displayPlace = $("#getCheckboxValues p:last");
+
+            $("#getCheckboxValues input:checkbox").click(function () {
+                var choice = $("#getCheckboxValues input:checkbox:checked").map(function () {
+                    return $(this).val();
+                }).toArray().join();
+                displayPlace.html("<b>" + choice + "</b>");
+            });
+
+            // fire first event
+            // !!!!!!!!! only fire the event, doesn't change the "checked" state
+            $("#getCheckboxValues input:checkbox:last").click();
+            // $("#getCheckboxValues input:checkbox").val(["Blue"]);
+        }
+
+        function demoSetValues() {
+            var singleSelect = $("#setValues select:not([multiple])");
+            var multiSelect = $("#setValues select[multiple]");
+
+            singleSelect.val("single3");
+            multiSelect.val(["multiple1", "multiple4"]);
+
+            $("#setValues input").val(["check3", "check2", "radio2"]);
+        }
+
+        $(function () {
+            demoGetInputValues();
+            demoGetRadioValues();
+            demoGetCheckboxValues();
+            demoSetValues();
+        });
+    </script>
+</head>
+<body>
+    <div class="block" id="getValFromSelect">
+        <p>
+        </p>
+        <select>
+            <option>Single1</option>
+            <option>Single2</option>
+        </select>
+        <select multiple="multiple">
+            <option selected="selected">Multiple1</option>
+            <option>Multiple2</option>
+            <option selected="selected">Multiple3</option>
+        </select>
+    </div>
+    <div class="block" id="getRadioValues">
+        <p>
+            <input type="radio" name="method" value="1st" checked="checked" />First-class</p>
+        <p>
+            <input type="radio" name="method" value="2day" />2-day Air</p>
+        <p>
+            <input type="radio" name="method" value="overnite" />Overnight</p>
+        <button>
+            show your choice</button>
+        <p>
+        </p>
+    </div>
+    <div class="block" id="getCheckboxValues">
+        <input type="checkbox" value="Red" checked="checked" />Red<br />
+        <input type="checkbox" value="Green" />Green<br />
+        <input type="checkbox" value="Blue" />Blue<br />
+        <p>
+        </p>
+    </div>
+    <div class="block" id="setValues">
+        <select>
+            <option value="single1">choice one</option>
+            <option value="single2">choice two</option>
+            <option value="single3">choice three</option>
+        </select>
+        <select multiple="multiple">
+            <option value="multiple1" selected="selected">Multiple1</option>
+            <option value="multiple2">Multiple2</option>
+            <option value="multiple3" selected="selected">Multiple3</option>
+            <option value="multiple4">Multiple4</option>
+        </select><br />
+        <input type="checkbox" name="checkboxname" value="check1" />
+        check1
+        <input type="checkbox" name="checkboxname" value="check2" />
+        check2
+        <input type="checkbox" name="checkboxname" value="check3" />
+        check3
+        <input type="radio" name="r" value="radio1" />
+        radio1
+        <input type="radio" name="r" value="radio2" />
+        radio2
+        <input type="radio" name="r" value="radio3" />
+        radio3
+        <p class="note">
+            for select, if not value is specified, it will match the text. however, if value
+            is provided, it will match the value. and the matching is case-sensitive.</p>
+    </div>
+</body>
+</html>

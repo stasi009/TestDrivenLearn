@@ -1,0 +1,319 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demonstrate array features in javascript</title>
+    <script type="text/javascript" src="../common/commonFuncs.js"></script>
+    <style type="text/css">
+        .block
+        {
+            background-color: wheat;
+            color: crimson;
+            margin: 10px;
+        }
+        
+        .note
+        {
+            color: navy;
+            border: 1px navy dashed;
+            margin: 0px;
+        }
+        
+        h3
+        {
+            color: navy;
+            margin: 0px;
+        }
+    </style>
+    <script type="text/javascript">
+        function testSparseFeature() {
+            function fool(array, index) {
+                printline("###################### [" + array + "]");
+                printline("length = " + array.length);
+                printline("index<" + index + "> in the array? " + (index in array));
+
+                for (var i in array) {
+                    printline("[" + i + "]: " + array[i]);
+                }
+            }
+
+            fool([, , ], 0);
+            fool(new Array(2), 0);
+            fool([undefined, undefined], 0);
+
+            var array = [1, 2];
+            var index = 6;
+            fool(array, index);
+
+            array[index] = index;
+            fool(array, index);
+            fool(array, index - 1);
+        }
+
+        function testShift() {
+            var array = [1, 2, 3];
+            printline("original array = [" + array + "]");
+
+            var head = array.shift();
+            printline("removed :" + head);
+            printline("after shift = [" + array + "]");
+
+            array.unshift("hello");
+            printline("after unshift = [" + array + "]");
+        }
+
+        // callback is invoked only for indexes of the array which have assigned values; 
+        // it is not invoked for indexes which have been deleted or 
+        // which have never been assigned values
+        function testForeach_ReadOnly() {
+            var datas = [1, 2, 3, , , , , , 4];
+            var result = 0;
+
+            datas.forEach(function (x) {
+                result += x * x;
+            });
+
+            printline(result);
+        }
+
+        function testForeach_Write() {
+            var datas = [1, 2, 3, 4];
+            printline("original: [" + datas + "]");
+
+            datas.forEach(function (v, i, a) {
+                a[i] = v + i;
+            });
+            printline("after modification: [" + datas + "]");
+        }
+
+        function testSort() {
+            var numbers = [33, 4, 1111, 222];
+            // by default, sort just convert each element into string
+            // and compare them based on 'alphabetical' order
+            printline("default sorting(based on alphabetical order): [" + numbers.sort() + "]");
+
+            numbers.sort(function (a, b) {
+                return a - b;
+            });
+            printline("sort according to number order: [" + numbers + "]");
+        }
+
+        function testConcat() {
+            var a = [1, 2];
+            var b = a.concat(3, 4);
+            printline("######### concat returns new array, doesn't happen in place.");
+            printline("the original array keeps the same: " + a);
+            printline("the returned array is:" + b);
+
+            printline(b.concat([5, 6], [7, 8]));
+        }
+
+        function testSlice() {
+
+            function fool(array, start, end) {
+                var sliced = array.slice(start, end);
+                printline("[" + start + "," + end + ") returns: " + sliced);
+            }
+
+            var a = [1, 2, 3, 4, 5];
+            printline("original array: [" + a + "]");
+
+            fool(a, 0, 3);
+            // if 'end' is undefined, it will just view it as 'one position after the end'
+            fool(a, 3);
+            fool(a, 1, -1); // -1 represents the end of the array
+        }
+
+        function testSplice_Remove() {
+            function fool(a, pos, count) {
+                var removed;
+                if (count === undefined) {
+                    removed = a.splice(pos);
+                } else {
+                    removed = a.splice(pos, count);
+                }
+                printline("********************* start from " + pos + ",remove " + count + " items, returns [" + removed + "]");
+                printline("after removing, now array = [" + a + "]");
+            }
+
+            var array = new Array(10);
+            for (var i = 0; i < array.length; i++) {
+                array[i] = i;
+            }
+            printline("original array: " + array);
+
+            fool(array, 1, 1);
+            fool(array, 0, 3);
+            fool(array, 3);
+        }
+
+        function testSplice_Insert() {
+            var a = [1, 2, 3];
+            a.splice(1, 0, "a", "b");
+            printline(a);
+
+            a.splice(2, 2, "c", "d", "e");
+            printline(a);
+
+            a.splice(2, 2, ["x", "y"]); // it will insert the array as a whole, other than flatting it
+            for (var i in a) {
+                printline("[" + i + "]: " + a[i]);
+            }
+        }
+
+        function testMap() {
+            var datas = [1, 2, 3];
+            datas[5] = 9; // create a sparse array
+
+            // If that array is sparse, the returned array will be sparse in the same way: 
+            // it will have the same length and the same missing elements.
+            var mapped = datas.map(function (x) {
+                return x * x;
+            });
+            printline(mapped);
+        }
+
+        function testFilter() {
+            var datas = [1, 2, 3, undefined];
+            datas[6] = 9;
+
+            // it will filter out "empty slot"
+            // but since [3] is a valid value but happen to have the value of "undefined"
+            // this value will be included in the returning result
+            var dense = datas.filter(function (x) {
+                return true;
+            });
+            printline(dense);
+
+            // -------------- filter out all undefined value
+            // whether that is because sparse or because of in-purpose
+            var notUndefined = datas.filter(function (x) {
+                return x !== undefined;
+            });
+            printline(notUndefined);
+        }
+
+        function testEverySome() {
+            var datas = [1, 2, 3, 4, 5];
+
+            printline(datas.every(function (x) {
+                return x < 10;
+            }));
+            printline(datas.every(function (x) {
+                return x % 2 === 0;
+            }));
+
+            printline(datas.some(function (x) {
+                return x % 2 === 0;
+            }));
+
+            printline(datas.some(isNaN));
+        }
+
+        function testReduce() {
+            var datas = [1, 2, 3, 4, 5];
+            var result = {
+                sum: datas.reduce(function (accumulate, y) {
+                    return accumulate + y;
+                }, 0),
+                product: datas.reduce(function (accumulate, y) {
+                    return accumulate * y;
+                }, 1),
+                max: datas.reduce(function (accumulate, y) {
+                    return accumulate > y ? accumulate : y;
+                })// no second argument, use the first element as the initial value
+            };
+            for (var p in result) {
+                printline(p + ": " + result[p]);
+            }
+        }
+
+        function testIndexOf() {
+
+            function fool(array, value) {
+                var index = array.indexOf(value);
+                if (index >= 0) {
+                    printline("found value=" + value + "at index=" + index);
+                } else {
+                    printline("!!! cannot find value=" + value);
+                }
+            }
+
+            var a = [0, 1, 2, 1, 0];
+            var values = [1, 0, -1];
+            for (var i = 0; i < values.length; i++) {
+                fool(a, values[i]);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="block">
+        <script type="text/javascript">
+            testSparseFeature();
+        </script>
+        <ul class="note">
+            <li>[,,] and [undefined,undefined] ARE DIFFERENT, 0 is not in first array, while 0 is
+                in the second array.</li>
+            <li>when use for..in.. loop, [,,] will get nothing, [undefined,undefined] will get two
+                undefined values.</li>
+            <li>when writing into a very-big index, the array will be automatically expanded, but
+                those expanded index are still NOT in the range.</li>
+        </ul>
+    </div>
+    <div class="block">
+        <script type="text/javascript">
+            testShift();
+        </script>
+    </div>
+    <div class="block">
+        <script type="text/javascript">
+            printline("----------------------------- read only");
+            testForeach_ReadOnly();
+            printline("----------------------------- writable");
+            testForeach_Write();
+        </script>
+        <h4 class="note">
+            forEach will skip those 'empty' slots, so for sparse array, callback will not be
+            invoked against those 'un-existing' values.</h4>
+    </div>
+    <div class="block">
+        <script type="text/javascript">            testSort();</script>
+    </div>
+    <div class="block">
+        <script type="text/javascript">
+            testConcat();
+        </script>
+    </div>
+    <div class="block">
+        <h3>
+            slice</h3>
+        <script type="text/javascript">
+            testSlice();
+        </script>
+        <ul class="note">
+            <li>include the 'start', exclude the 'end'</li>
+        </ul>
+    </div>
+    <div class="block">
+        <script type="text/javascript">            testSplice_Remove();</script>
+    </div>
+    <div class="block">
+        <script type="text/javascript">            testSplice_Insert();</script>
+    </div>
+    <div class="block">
+        <script type="text/javascript">            testMap();</script>
+    </div>
+    <div class="block">
+        <script type="text/javascript">            testFilter();</script>
+    </div>
+    <div class="block">
+        <script type="text/javascript">            testEverySome();</script>
+    </div>
+    <div class="block">
+        <script type="text/javascript">            testReduce();</script>
+    </div>
+    <div class="block">
+        <script type="text/javascript">            testIndexOf();</script>
+    </div>
+</body>
+</html>

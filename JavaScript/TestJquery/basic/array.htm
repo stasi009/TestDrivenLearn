@@ -1,0 +1,393 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Test Javascript's Array</title>
+    <link rel="stylesheet" type="text/css" href="../common/qunit.css" />
+    <script type="text/javascript" src="../common/jquery.js"></script>
+    <script type="text/javascript" src="../common/qunit.js"></script>
+    <script type="text/javascript">
+
+        // create array by using "new Array"
+        function testNewArray() {
+            var arr = new Array();
+            equal(arr.length, 0);
+
+            arr = new Array(3);
+            equal(arr.length, 3, "allocate space but not filled yet");
+            ok(!("0" in arr), "but all index are not 'in' yet");
+        }
+
+        function testDefaultValues() {
+            var arr = new Array(3);
+            for (var index = 0; index < arr.length; index++) {
+                strictEqual(arr[index], undefined, "each un-filled element is undefined");
+            }
+        }
+
+        function testMixedTypes() {
+            var a = [1, "stasi", 3.14];
+            equal(a[0], 1);
+            equal(a[1], "stasi");
+            equal(a[2], 3.14);
+        }
+
+        function testIndexOverRange() {
+            var a = [1, 2, 3];
+            equal(undefined, a[10], "read over-range index returns undefined");
+            equal(3, a.length, "read over-range index never increase the size");
+
+            a[5] = "stasi";
+            equal("stasi", a[5], "write over-range index succeeds without error");
+            equal(6, a.length, "write over-range index increase the size");
+            ok(!(3 in a), "index in gap are not defined");
+            deepEqual([1, 2, 3, undefined, undefined, "stasi"], a);
+        }
+
+        function testShrink() {
+
+            var a = [1, 2, 3, 4, 5];
+            equal(a.length, 5);
+
+            a.length = 2;
+            deepEqual(a, [1, 2]);
+
+            a.length = 0;
+            deepEqual(a, []);
+        }
+
+        function testReferenceFeature() {
+            var a1 = [];
+            var a2 = a1;
+
+            a1[1] = 9;
+
+            equal(a2.length, 2);
+            deepEqual(a2, [undefined, 9]);
+        }
+
+        function testReferenceEqual() {
+            var a1 = [1, 2];
+            var a2 = [1, 2];
+
+            deepEqual(a1, a2, "same element in the same order");
+            ok(a1 != a2, "same elements, but isolated elements, are not equal");
+        }
+
+        function testToString() {
+            var a1 = ["stasi", 99];
+            equal("stasi,99", a1, "array is auto converted to string and compare");
+            ok("stasi,99" == a1, "array is auto converted to string and compare");
+        }
+
+        function testNotAllowNegIndex() {
+            var a = [1, 2, 3];
+            ok(!(-1 in a), "negative index not in the array");
+
+            a[-1] = 9;
+            equal(a.length, 3, "length of the array remain unchanged");
+            equal(a[2], 3, "-1 doesn't mean last index");
+            equal(a[-1], 9, "but create a new property called -1");
+        }
+
+        function testTypeof() {
+            var a = [1, 2, 3];
+            equal(typeof (a), "object");
+            ok(a instanceof Array);
+        }
+
+        function testPushPop() {
+            var a = [6];
+            a.push("stasi", 8);
+
+            equal(a.length, 3);
+            deepEqual(a, [6, "stasi", 8]);
+
+            equal(a.pop(), 8);
+            deepEqual(a, [6, "stasi"]);
+        }
+
+        function testShift() {
+            var a = [1, 2, 3];
+
+            equal(a.shift(), 1);
+            deepEqual(a, [2, 3]);
+
+            a.unshift("stasi");
+            deepEqual(a, ["stasi", 2, 3]);
+
+            a.unshift(8, 9, 6);
+            deepEqual(a, [8, 9, 6, "stasi", 2, 3], "multiple parameters are inserted once, NOT one by one, so they are in the same order as appeared in the parameter list");
+        }
+
+        function testForEach() {
+            var a = [1, 2, 3, 4];
+            delete a[0];
+
+            // won't loop variables that has been deleted
+            var sum = 0;
+            a.forEach(function (x) {
+                sum += x;
+            });
+
+            equal(sum, 9, "for reading");
+
+            // ----------- callback with three parameters
+            a = [1, 2, 3];
+            a.forEach(function (value, index, arr) {
+                equal(typeof index, "number");
+                arr[index] = value * value;
+            });
+            deepEqual(a, [1, 4, 9], "for writing back into itself");
+        }
+
+        function testForLoop() {
+            var a = ["stasi", "kgb", "gru"];
+            // use "for in" to loop an array will only yield each index
+            var result = [];
+            for (var index in a) {
+                result.push(index);
+            }
+            deepEqual(result, ["0", "1", "2"]);
+            
+            // loop the content other than the index
+            result = [];
+            for (var index = 0; index < a.length; index++) {
+                result.push(a[index]);
+            }
+            deepEqual(result, a);
+        }
+
+        function testMap() {
+            var a = [1, 2, 3].map(function (x) {
+                return -x;
+            });
+            deepEqual(a, [-1, -2, -3]);
+        }
+
+        function testFilter() {
+            var a = [1, 2, 3, 4, 5];
+            var b = a.filter(function (x) {
+                return x % 2 == 0;
+            });
+            deepEqual(b, [2, 4]);
+
+            delete a[2];
+            equal(a.length, 5);
+
+            b = a.filter(function () {
+                return true;
+            });
+            deepEqual(b, [1, 2, 4, 5], "filter skip missing elements, and its return value is always dense");
+        }
+
+        function testEverySome() {
+            var a = [1, 2, 3, 4, 5];
+
+            ok(a.every(function (x) {
+                return x < 10;
+            }));
+            ok(!a.every(function (x) {
+                return x % 2 == 0;
+            }));
+
+            ok(a.some(function (x) {
+                return x % 2 == 0;
+            }));
+
+            ok(!a.some(isNaN));
+        }
+
+        function testReduce() {
+            var datas = [1, 2, 3, 4, 5];
+
+            var sum = datas.reduce(function (accumulate, y) {
+                return accumulate + y;
+            }, 0);
+            equal(sum, 15);
+
+            var product = datas.reduce(function (accumulate, y) {
+                return accumulate * y;
+            }, 1);
+            equal(product, 120);
+
+            var max = datas.reduce(function (accumulate, y) {
+                return accumulate > y ? accumulate : y;
+            });
+            equal(max, 5, "no second argument, use the first element as the initial value");
+        }
+
+        function testJoin() {
+            var a = [9, "stasi", 6];
+
+            equal(a.join(), "9,stasi,6", "join by default (comma)");
+            equal(a.join(" "), "9 stasi 6", "join by specified character");
+        }
+
+        function testReverse() {
+            var a = [1, 2, 3];
+            a.reverse();
+            deepEqual(a, [3, 2, 1], "reverse in place other than returning a new copy");
+        }
+
+        function getAllIndexes(oneArray) {
+            var indexes = [];
+
+            for (var index in oneArray) {
+                indexes.push(index);
+            }
+            return indexes;
+        }
+
+        function testDelete() {
+            var a = [8, "stasi", 9];
+            equal(a.length, 3);
+            deepEqual(getAllIndexes(a), ["0", "1", "2"]);
+
+            delete a[1];
+            equal(a.length, 3);
+            deepEqual(getAllIndexes(a), ["0", "2"]);
+            ok(!(1 in a));
+            equal(a[1], undefined);
+        }
+
+        function testSpliceToRemove() {
+            var a = [8, "stasi", 9];
+            equal(a.length, 3);
+            deepEqual(getAllIndexes(a), ["0", "1", "2"]);
+
+            a.splice(1, 1);
+            equal(a.length, 2);
+            deepEqual(getAllIndexes(a), ["0", "1"]);
+            ok(1 in a);
+            deepEqual(a, [8, 9]);
+        }
+
+        function testSort() {
+            var numbers = [33, 4, 1111, 222];
+            numbers.sort();
+            deepEqual(numbers, [1111, 222, 33, 4], "by default, first conver to string, and sort by alphabetical order");
+
+            numbers.sort(function (a, b) {
+                return a - b;
+            });
+            deepEqual(numbers, [4, 33, 222, 1111], "sort by user-defined comparer");
+        }
+
+        function testConcat() {
+            var a = [1, 2, 3];
+            deepEqual(a.concat(4, 5), [1, 2, 3, 4, 5]);
+            deepEqual(a, [1, 2, 3], "return a new copy, the original array is unchanged");
+
+
+            deepEqual(a.concat([4, 5]), [1, 2, 3, 4, 5]);
+            deepEqual(a.concat([4, 5], [6, 7]), [1, 2, 3, 4, 5, 6, 7]);
+            deepEqual(a.concat(4, [5, [6, 7]]), [1, 2, 3, 4, 5, [6, 7]]);
+        }
+
+        function testSlice() {
+            var a = [1, 2, 3, 4, 5];
+
+            deepEqual(a.slice(0, 3), [1, 2, 3], "from the first argument, NOT include the second argument");
+            deepEqual(a.slice(3), [4, 5], "no second argument, then to the end");
+            deepEqual(a.slice(1, -1), [2, 3, 4], "-1 represents the end of the array");
+        }
+
+        function testSpliceRemoveAny() {
+
+            function fool(start, count) {
+                var a = [0, 1, 2, 3, 4];
+                var removed;
+
+                if (count === undefined) {
+                    removed = a.splice(start);
+                } else {
+                    removed = a.splice(start, count);
+                }
+
+                return { removed: removed, remain: a };
+            }
+
+            var result = fool(1, 2);
+            deepEqual(result.removed, [1, 2]);
+            deepEqual(result.remain, [0, 3, 4]);
+
+            result = fool(3);
+            deepEqual(result.removed, [3, 4]);
+            deepEqual(result.remain, [0, 1, 2]);
+
+            result = fool(0, 1);
+            deepEqual(result.removed, [0]);
+            equal(result.removed, 0, "removed returns[n] and [n] == n");
+            deepEqual(result.remain, [1, 2, 3, 4]);
+        }
+
+        function testSpliceInsertAny() {
+
+            var a = [0, 1, 2, 3];
+            var removed = a.splice(1, 0, "x", "y");
+
+            deepEqual(removed, []);
+            deepEqual(a, [0, "x", "y", 1, 2, 3]);
+
+            removed = a.splice(2, 2, ["stasi"], 698);
+            deepEqual(removed, ["y", 1]);
+            deepEqual(a, [0, "x", ["stasi"], 698, 2, 3]);
+        }
+
+        function testIndexOf() {
+            var a = [0, 1, 2, 1, 0];
+            equal(a.indexOf(1), 1);
+            equal(a.lastIndexOf(1), 3);
+            equal(a.indexOf(3), -1, "return -1 is none is found");
+        }
+
+        $(function () {
+            test("new Array", testNewArray);
+            test("default value for array", testDefaultValues);
+            test("array can contain mixed types", testMixedTypes);
+            test("read/write over-range index", testIndexOverRange);
+            test("unlike python, javascript doesn't allow negative index", testNotAllowNegIndex);
+            test("array is reference type", testReferenceFeature);
+            test("arrays with different elements are not equal", testReferenceEqual);
+            test("demo array's toString", testToString);
+            test("demo typeof array", testTypeof);
+            test("demo for loop", testForLoop);
+
+            module("remove from array");
+            test("shrink the array", testShrink);
+            test("delete from array won't change the length", testDelete);
+            test("splice will change the length and remove elements", testSpliceToRemove);
+
+            module("API");
+            test("push and pop like stack", testPushPop);
+            test("shift and unshift", testShift);
+            test("join an array", testJoin);
+            test("forEach", testForEach);
+            test("map", testMap);
+            test("filter", testFilter);
+            test("every and some", testEverySome);
+            test("reduce", testReduce);
+            test("reverse", testReverse);
+            test("sort", testSort);
+            test("concat", testConcat);
+            test("slice", testSlice);
+            test("use splice to remove any elements", testSpliceRemoveAny);
+            test("use splice to insert any elements", testSpliceInsertAny);
+            test("indexOf and lastIndexOf", testIndexOf);
+        });
+
+    </script>
+</head>
+<body>
+    <h1 id="qunit-header">Array Demonstration</h1>
+    <h2 id="qunit-banner"></h2>
+    <div id="qunit-testrunner-toolbar">
+    </div>
+    <h2 id="qunit-userAgent"></h2>
+    <ol id="qunit-tests">
+    </ol>
+    <div id="qunit-fixture">
+        test markup, will be hidden
+    </div>
+</body>
+</html>

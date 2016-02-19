@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demo selected selector</title>
+    <style type="text/css">
+        .block
+        {
+            background-color: lightgray;
+            border: 1px navy solid;
+            margin: 5px auto;
+        }
+        
+        #demoValue p
+        {
+            color: red;
+            margin: 4px;
+        }
+        #demoValue b
+        {
+            color: blue;
+        }
+    </style>
+    <script type="text/javascript" src="../common/jquery.js"></script>
+    <script type="text/javascript">
+
+        function demoSingleSelect() {
+            var log = $("#demoSingleSelect p");
+            $("#demoSingleSelect select").change(function (event) {
+                var target = event.target;
+                log.text("Event Target = " + target.tagName + ", and Value of current selection is " + $(target).val());
+            });
+        }
+
+        function demoMultiSelect() {
+            $("#demoMultiSelect select").change(function () {
+                var str = "";
+                $("#demoMultiSelect option:selected").each(function () {
+                    str += $(this).text() + " ";
+                });
+                $("#demoMultiSelect p").text(str);
+            }).change(); // trigger the first event
+        }
+
+        function demoValue() {
+            var singleSelect = $("#demoValue select:not([multiple])");
+            var multipleSelect = $("#demoValue select[multiple]");
+            var p = $("#demoValue p");
+
+            $("#demoValue select").change(function () {
+                var singleValue = singleSelect.val();
+                
+                // val() of multiple-select returns an array
+                // if no option is selected, it returns null
+                // so use "||[]" to return a default empty array
+                var multipleValues = multipleSelect.val() || [];
+                
+                p.html("<b>Single:</b> "
+                    + singleValue
+                    + " <b>Multiple:</b> "
+                    + multipleValues.join(", "));
+            });
+            $("#demoValue select:first").change(); // invoke the first event
+        }
+
+        $(function () {
+            demoSingleSelect();
+            demoMultiSelect();
+            demoValue();
+        });
+    </script>
+</head>
+<body>
+    <div class="block" id="demoSingleSelect">
+        <select>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+        </select>
+        <p>
+        </p>
+    </div>
+    <div class="block" id="demoMultiSelect">
+        <select name="garden" multiple="multiple">
+            <option>Flowers</option>
+            <option selected="selected">Shrubs</option>
+            <option>Trees</option>
+            <option selected="selected">Bushes</option>
+            <option>Grass</option>
+            <option>Dirt</option>
+        </select>
+        <p>
+        </p>
+    </div>
+    <div class="block" id="demoValue">
+        <select>
+            <option value="1">Single1</option>
+            <option value="2">Single2</option>
+        </select>
+        <select multiple="multiple">
+            <option value="1" selected="selected">Multiple1</option>
+            <option value="2">Multiple2</option>
+            <option value="3" selected="selected">Multiple3</option>
+        </select>
+        <p>
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>callback sample</title>
+    <script type="text/javascript" src="../common/commonFuncs.js"></script>
+    <script type="text/javascript">
+        function checkCallback(f, x, y) {
+            printline(f(x, y));
+        }
+
+        function checkCallback_Call(f, context, x, y) {
+            var result = f.call(context, x, y);
+            printline(result);
+        }
+
+        function test_globalfunc() {
+            checkCallback(function (x, y) {
+                return x + y;
+            }, 1, 2);
+        }
+
+        function Fool(seed) {
+            this.seed = seed;
+        }
+
+        Fool.prototype.add = function (x, y) {
+            console.log(this.constructor);
+            return this.seed + x + y;
+        };
+
+        /*
+        we cannot use "instance.method" as the callback
+        because if we do so, 'this' inside the method will be 'window' object
+        other than the instance to be bound
+        */
+        function test_instancefunc() {
+            var fool = new Fool(1000);
+            checkCallback(fool.add, 1, 2);
+        }
+
+        function test_bind_instancefunc() {
+            var fool = new Fool(9000);
+
+            // fool.add is exactly the same as 
+            // Fool.prototype.add
+            checkCallback(fool.add.bind(fool), 1, 2);
+        }
+
+        // this method is just mimic the underline behaviour of "bind"
+        function test_call_instancefunc() {
+            var fool = new Fool(1000);
+            checkCallback_Call(fool.add, fool, 6, 9);
+        }
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        test_globalfunc();
+
+        test_instancefunc();
+
+        test_bind_instancefunc();
+
+        test_call_instancefunc();
+    </script>
+</body>
+</html>

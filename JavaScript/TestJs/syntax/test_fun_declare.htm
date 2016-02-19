@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demonstrate function declaration</title>
+    <script type="text/javascript" src="../common/commonFuncs.js"></script>
+    <style type="text/css">
+        .note
+        {
+            color: orangered;
+            font-style: italic;
+        }
+        
+        .block
+        {
+            background-color: lightblue;
+            margin: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="block">
+        <h2>
+            first block</h2>
+        <script type="text/javascript">
+            var x = 66;
+            var y = 99;
+            printline("invoke before 'add' definition, result=" + add(x, y));
+            function add(x, y) {
+                return x + y;
+            }
+
+            try {
+                // because this function is defined in the script block below
+                // so it cannot be found, so it will cause an error
+                // !!!!!!!!!!!!!!!! chekanote: nothing will be printed below
+                var mustbeUndef = multiple(x, y);
+                printline("invoke a function defined in the later block, result must be " + mustbeUndef);
+            } catch (e) {
+                printError(e);
+            } 
+            
+        </script>
+    </div>
+    <div class="block">
+        <h2>
+            second block</h2>
+        <script type="text/javascript">
+            function multiple(x, y) {
+                return x * y;
+            }
+
+            function checkLocalVarFeature() {
+                printline("inside 'checkLocalVarFeature'");
+                printline("x=" + x);
+                printline("y=" + y);
+
+            }
+
+            printline("x is still valid in this block, x = " + x);
+            printline("y is still valid in this block, y = " + y);
+
+            // although 'add' is defined in the previous block
+            // but it is still accessible in the following block
+            printline("invoke 'add' which is defined in previous block, result=" + add(x, y));
+
+            checkLocalVarFeature();
+        </script>
+    </div>
+    <div class="note">
+        <h4>
+            Note</h4>
+        <ul>
+            <li>if a function is defined by declaration, it can be invoked before definition.</li>
+            <li>however, it can only pre-load declarations in the same script block.</li>
+        </ul>
+    </div>
+</body>
+</html>

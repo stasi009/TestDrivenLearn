@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demonstrate how call and apply work</title>
+    <script type="text/javascript" src="../common/commonFuncs.js"></script>
+    <script type="text/javascript">
+
+        function Person() {
+        }
+
+        Person.prototype = {
+            Name: "",
+            Hello: function (other) {
+                return sprintf("'%s' says hello to '%s'", this.Name, other);
+            }
+        };
+
+        function testCall() {
+            var p = new Person();
+            p.Name = "stasi";
+
+            var others = ["KGB", "cheka"];
+            for (var i = 0; i < others.length; i++) {
+                printline("***************************** [" + (i + 1) + "]");
+                // below are just two different invocation fashions 
+                // but can achive the same effect
+                printline("normal invocation: " + p.Hello(others[i]));
+                printline("by call: " + Person.prototype.Hello.call(p, others[i]));
+            }
+        }
+
+        function testBind_InstanceMethod() {
+
+            function add(b) {
+                return this.a + b;
+            }
+
+            var o = { a: 1 };
+            var fool = add.bind(o);
+
+            printline(fool(8));
+
+            o.a = 100;
+            printline(fool(8));
+        }
+
+        function testBind_GlobalFunction() {
+
+            function add(x, y) {
+                return x + y;
+            }
+
+            var fool = add.bind(null, 100); // fix x to be certain value
+
+            var args = [6, 8];
+            for (var i = 0; i < args.length; i++) {
+                printline(fool(args[i]));
+            }
+        }
+    </script>
+    <style type="text/css">
+        .block
+        {
+            background-color: wheat;
+            color: crimson;
+            margin: 10px;
+        }
+        
+        .note
+        {
+            color: navy;
+            border: 1px navy dashed;
+            margin: 0px;
+        }
+        
+        h3
+        {
+            color: navy;
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="block">
+        <h3>
+            call</h3>
+        <script type="text/javascript">            testCall();</script>
+    </div>
+    <div class="block">
+        <h3>
+            bind to instance method</h3>
+        <script type="text/javascript">            testBind_InstanceMethod();</script>
+    </div>
+    <div class="block">
+        <h3>
+            bind to global function</h3>
+        <script type="text/javascript">            testBind_GlobalFunction();</script>
+    </div>
+</body>
+</html>

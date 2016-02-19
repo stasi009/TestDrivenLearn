@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demonstration of XHR get</title>
+    <script type="text/javascript">
+
+        function Tester() {
+            this.ul = document.getElementsByTagName("ul")[0];
+            var self = this;
+
+            var btnGet = document.getElementById("get");
+            btnGet.onclick = function () {
+                self.onBtnGetClick();
+            };
+
+            var btnClear = document.getElementById("clear");
+            btnClear.onclick = function () {
+                self.onBtnClearClick();
+            };
+        }
+
+        Tester.prototype.appendListItem = function (text) {
+            var li = document.createElement("li");
+            li.innerHTML = text;
+            this.ul.appendChild(li);
+        };
+
+        Tester.prototype.onBtnGetClick = function () {
+            var self = this;
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "/testget");
+
+            xhr.onreadystatechange = function () {
+                if (this.readyState === 4 && this.status === 200) {
+                    var type = xhr.getResponseHeader("Content-Type");
+                    if (type.match(/^text/)) {
+                        self.appendListItem(this.responseText);
+                    }
+                }
+            }; // onreadystatechange callback
+
+            xhr.send(null);
+        };
+
+        Tester.prototype.onBtnClearClick = function () {
+            var ul = this.ul;
+
+            var request = new XMLHttpRequest();
+            request.open("GET", "/clearall");
+
+            request.onreadystatechange = function () {
+                if (this.readyState === 4 && this.status === 200) {
+                    var answer = this.responseText;
+                    if (answer === "yes") {
+                        ul.innerHTML = "";
+                    }
+                }
+            };
+
+            request.send(null);
+        };
+
+        window.onload = function () {
+            var tester = new Tester();
+        };
+    </script>
+</head>
+<body>
+    <h1>
+        XHR GET</h1>
+    <button id="get">
+        GET IT !</button>
+    <button id="clear">
+        Clear All</button>
+    <ul>
+    </ul>
+</body>
+</html>

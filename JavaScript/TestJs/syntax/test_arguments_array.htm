@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>vary-length parameters</title>
+    <script type="text/javascript" src="../common/commonFuncs.js"></script>
+    <script type="text/javascript">
+        // I didn't specify explictly the parameters in the declaration
+        // but we can access the passed-in parameters dynamically insde the function body
+        function supersum() {
+            var sum = 0;
+
+            for (var index = 0; index < arguments.length; index++) {
+                sum += arguments[index];
+            }
+
+            return sum;
+        }
+
+        function sum(x, y) {
+            return x + y;
+        }
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        var result = supersum(1, 2, 3, 4, 5);
+        printline(result);
+
+        result = supersum(result, "hello", " wsu", " from javascript");
+        printline(result);
+
+        printline(sum(1, 2));
+        printline(sum("wsu", " eecs"));
+    </script>
+</body>
+</html>

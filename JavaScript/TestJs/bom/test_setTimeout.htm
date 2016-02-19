@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>sample of setTimeout</title>
+    <script type="text/javascript">
+        function Counter() {
+            this.counter = 0;
+            this.tmhandle = undefined;
+            this.isTimerOn = false;
+        }
+
+        Counter.prototype.start = function () {
+            if (!this.isTimerOn) {
+                this.isTimerOn = true;
+                this.onTimerout();
+            }
+        };
+
+        Counter.prototype.onTimerout = function () {
+            document.getElementById("txt").value = this.counter;
+            this.counter++;
+
+            var self = this;
+            this.tmhandle = setTimeout(function () {
+                self.onTimerout();
+            }, 100);
+        };
+
+        Counter.prototype.stop = function () {
+            clearTimeout(this.tmhandle);
+            this.isTimerOn = false;
+        };
+
+        window.onload = function () {
+            var counter = new Counter();
+
+            document.getElementById("btnstart").onclick = function () {
+                counter.start();
+            };
+
+            document.getElementById("btnstop").onclick = function () {
+                counter.stop();
+            };
+        };
+        
+    </script>
+</head>
+<body>
+    <input type="button" id="btnstart" value="Start Count" />
+    <input type="text" id="txt" disabled="disabled"/>
+    <input type="button" id="btnstop" value="Stop Count" />
+</body>
+</html>

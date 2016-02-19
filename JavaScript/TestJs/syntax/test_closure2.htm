@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>closure</title>
+    <script type="text/javascript" src="../common/commonFuncs.js"></script>
+    <script type="text/javascript">
+        // the closure is fixed when defined
+        // OTHER THAN when executed
+        function closureFixedWhenDefined() {
+            var scope = "global scope";
+
+            function fool() {
+                var scope = "local scope";
+
+                return function () {
+                    return scope;
+                };
+            }
+
+            // the result must be "local scope"
+            // because closure is fixed when they are defined
+            // the binding fixed when defined will not be affected whereever that function
+            // is executed
+            printline(fool()());
+        }
+
+        function seedSample() {
+            var factory = function (seed) {
+                return function () {
+                    return ++seed;
+                };
+            };
+
+            var counter = factory(100);
+
+            var a = [];
+            for (var i = 0; i < 10; i++) {
+                a.push(counter());
+            }
+            printline(a);
+        }
+
+        function seedSample2() {
+            var factory = function () {
+                var seed = 0;
+
+                return {
+                    increase: function () {
+                        seed++;
+                    },
+                    current: function () {
+                        return seed;
+                    },
+                    reset: function () {
+                        seed = 0;
+                    }
+                };
+            };
+
+            // their seeds are totally independent
+            var c1 = factory(), c2 = factory();
+
+            for (var i = 0; i < 3; i++) {
+                c1.increase();
+                c2.increase();
+            }
+            printline(sprintf("c1's seed=%d,c2's seed=%d", c1.current(), c2.current()));
+
+            // only c1's seed is reset
+            // c2' seed is isolated, so it won't be affected
+            c1.reset();
+            for (var i = 0; i < 2; i++) {
+                c1.increase();
+                c2.increase();
+            }
+            printline(sprintf("c1's seed=%d,c2's seed=%d", c1.current(), c2.current()));
+        }
+
+        function testWithLoop_Shared() {
+            var funcs = [];
+
+            for (var i = 0; i < 5; i++) {
+                funcs[i] = function () {
+                    return i;
+                };
+            }
+
+            var values = funcs.map(function (f) {
+                return f();
+            });
+            printline(values);
+        }
+
+        function testWithLoop_Copy() {
+            var funcs = [];
+
+            for (var i = 0; i < 5; i++) {
+                // this is the classical way we can declare a isolated variable
+                // for each function
+                // however, it won't work in Javascript, because that "hosit" feature
+                // so 'temp' here will not be a isolated variable which limited to the loop
+                // scope, but another variable which can be visible through the 
+                // whole function
+                var temp = i;
+                funcs[i] = function () {
+                    return temp;
+                };
+            }
+
+            var values = funcs.map(function (f) {
+                return f();
+            });
+            printline(values);
+        }
+
+        function testWithLoop_IsolateByFunc() {
+            // 'define local varialbe' won't work in javascript
+            // because for...loop will not create its own scope
+            // so the only way to create local variable is to call another function
+            // in this way, the passed-in parameter will be copied
+            function copy(v) {
+                return function () {
+                    return v;
+                };
+            }
+
+            var funcs = [];
+
+            for (var i = 0; i < 5; i++) {
+                funcs[i] = copy(i);
+            }
+
+            var values = funcs.map(function (f) {
+                return f();
+            });
+            printline(values);
+        }
+        
+
+    </script>
+    <style type="text/css">
+        .block
+        {
+            background-color: lightgray;
+            color: crimson;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="block">
+        <script type="text/javascript">            closureFixedWhenDefined();</script>
+    </div>
+    <div class="block">
+        <script type="text/javascript">            seedSample();</script>
+    </div>
+    <div class="block">
+        <script type="text/javascript">            seedSample2();</script>
+    </div>
+    <div class="block">
+        <script type="text/javascript">
+            printline("############## different functions share the same loop-variable");
+            testWithLoop_Shared();
+            printline("############## like in C#, copy the loop-variable into local variable, but !!!!! it doesn work, because in javascript, all these variable are hoisted and is visible through the entire function");
+            testWithLoop_Copy();
+            printline("############## so in javascript, the only way to copy that loop-variable, is creating another function and passing loop-variable into that function, copying by passing parameter");
+            testWithLoop_IsolateByFunc();
+        </script>
+    </div>
+</body>
+</html>

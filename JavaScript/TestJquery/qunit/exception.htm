@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>QUnit's Equal Test</title>
+    <link rel="stylesheet" type="text/css" href="../common/qunit.css" />
+    <script type="text/javascript" src="../common/jquery.js"></script>
+    <script type="text/javascript" src="../common/qunit.js"></script>
+    <script type="text/javascript">
+
+        function demoThrowException() {
+            raises(function () {
+                throw new Error("error for test");
+            }, "pass, because an exception is thrown");
+
+            raises(function () { }, "fail, since no exception is thrown");
+        }
+
+        function CustomError() {
+        }
+
+        function demoExpectedType() {
+            raises(function () {
+                throw new CustomError();
+            }, CustomError, "pass, expected type of exception is thrown");
+
+            raises(function () {
+                throw new CustomError();
+            }, Error, "fail, although throw exception, but NOT expected type");
+        }
+
+        function demoCheckErrorDetails() {
+            // --------------------- throw primitive type
+            raises(function () {
+                throw -101;
+            }, function (e) {
+                return e == -101;
+            }, "pass, expected error number");
+
+            // --------------------- throw Error Type
+            raises(function () {
+                throw new Error("test");
+            }, function (e) {
+                return e.name == "Error" && e.message == "test";
+            }, "pass, expected error with right name and right message");
+        }
+
+        // ------------------------------ test entry
+        $(function () {
+            test("throw exception or not", demoThrowException);
+            test("expected exception type", demoExpectedType);
+            test("exception details", demoCheckErrorDetails);
+        });
+
+    </script>
+</head>
+<body>
+    <h1 id="qunit-header">
+        QUnit's Raise Test</h1>
+    <h2 id="qunit-banner">
+    </h2>
+    <div id="qunit-testrunner-toolbar">
+    </div>
+    <h2 id="qunit-userAgent">
+    </h2>
+    <ol id="qunit-tests">
+    </ol>
+    <div id="qunit-fixture">
+        test markup, will be hidden</div>
+</body>
+</html>

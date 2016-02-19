@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demonstrate the usage of NaN</title>
+    <script type="text/javascript" src="../common/commonFuncs.js"></script>
+    <script type="text/javascript">
+        function checkParsable(value) {
+            var parsed = parseInt(value);
+            if (isNaN(parsed)) {
+                document.writeln("<p class='correct'>" + wrapQuotation(value) + " cannot be parsed as integer </p>");
+            } else {
+                document.writeln("<p class='error'>" + wrapQuotation(value) + " can be parsed as " + wrapQuotation(parsed) + "</p>");
+            }
+        }
+    </script>
+    <style type="text/css">
+        .correct {
+            color: blue;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>
+            NaN</p>
+        <ul>
+            <li>Nothing equals to NaN, even NaN != NaN</li>
+            <li>so to check the input is parsable, we cannot compare result with NaN, but we have
+                to use the built-in 'isNaN' function</li>
+        </ul>
+        <script type="text/javascript">
+            var inputs = [1, "x",100.99,"7zip","abc100"];
+            for (var index = 0; index < inputs.length; index++) {
+                checkParsable(inputs[index]);
+            }
+        </script>
+    </div>
+</body>
+</html>

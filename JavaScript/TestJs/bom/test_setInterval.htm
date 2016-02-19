@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>sample of setInterval</title>
+    <script type="text/javascript">
+        function Counter(seed, displayid) {
+            this.tmhandle = undefined;
+            this.displayid = displayid;
+            this.on = false;
+            this.counter = seed;
+        }
+
+        Counter.prototype.start = function () {
+            if (!this.on) {
+                this.on = true;
+                this.tmhandle = setInterval(this.onTimerout.bind(this), 100);
+            }
+        };
+
+        Counter.prototype.onTimerout = function () {
+            this.counter++;
+            document.getElementById(this.displayid).value = this.counter;
+        };
+
+        Counter.prototype.stop = function () {
+            clearInterval(this.tmhandle);
+            this.on = false;
+        };
+
+        window.onload = function () {
+            var counter = new Counter(100, "txt");
+
+            document.getElementById("btnstart").onclick = function () {
+                counter.start();
+            };
+
+            document.getElementById("btnstop").onclick = function () {
+                counter.stop();
+            };
+        };
+
+    </script>
+</head>
+<body>
+    <input type="button" id="btnstart" value="Start Count" />
+    <input type="text" id="txt" style="text-align: center" disabled="disabled"/>
+    <input type="button" id="btnstop" value="Stop Count" />
+</body>
+</html>

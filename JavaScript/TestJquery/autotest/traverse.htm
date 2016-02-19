@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Test</title>
+    <link rel="stylesheet" type="text/css" href="../common/qunit.css" />
+    <script type="text/javascript" src="../common/jquery.js"></script>
+    <script type="text/javascript" src="../common/qunit.js"></script>
+    <script type="text/javascript">
+
+        function demoMultiWaysToQuery() {
+            // ---------- initialize the fixture
+            $("#qunit-fixture").append("<p>hello wsu</p>");
+
+            // ---------- query
+            var paragraphs = $("#qunit-fixture p");
+            equal(paragraphs.length, 1);
+
+            // ---------- check
+            equal(paragraphs[0].textContent, "hello wsu", "although container is jquery object, but each element is not, we cannot use text(), instead we have to use 'textContent' property");
+            equal($(paragraphs[0]).text(), "hello wsu", "the same reason as above, we must use $(element) to wrap the raw dom object into jquery object, and then 'text()' is available");
+            equal(paragraphs.first().text(), "hello wsu", "call first(), similar as [0], but the returning value is a jquery object, which has text() method");
+            equal(paragraphs.text(), "hello wsu", "since there is only one element in the array, so call text() on the array will get the same result");
+        }
+
+        function demoEach() {
+            $("#qunit-fixture").append("<p>p1</p><p id='second'>p2</p><p>p3</p>");
+
+            var paragraphs = $("#qunit-fixture p");
+            equal(paragraphs.length, 3);
+
+            var contents = [];
+            paragraphs.each(function (index) {
+                // function will be invoked as method of the matched element
+                // so 'this' is referenced to the matched DOM element
+                // but 'this' is the raw DOM element, we have to use $() to convert 
+                // it into jquery object
+                contents.push(index + "-" + $(this).text());
+            });
+            deepEqual(contents, ["0-p1", "1-p2", "2-p3"]);
+
+            // ---------------------- callback overload, with two parameter
+            contents = [];
+            paragraphs.each(function (index, domElement) {
+                contents.push(domElement.textContent + "." + index);
+            });
+            deepEqual(contents, ["p1.0", "p2.1", "p3.2"]);
+
+            // ---------------------- early termination
+            var loopCounter = 0;
+            paragraphs.each(function () {
+                ++loopCounter;
+                // return false to early terminate, ignore the following ones
+                return this.id == "second" ? false : true;
+            });
+            equal(loopCounter, 2, "early terminate by returning false");
+        }
+
+        function demoMap() {
+            $("#qunit-fixture").append("<p>p1</p><p>p2</p><p>p3</p>");
+
+            // ---------- callback accept not arguments
+            deepEqual($("#qunit-fixture p").map(function () {
+                return $(this).text();
+            }).toArray(), ["p1", "p2", "p3"]);
+
+            // ---------- callback accept both index and element
+            deepEqual($("#qunit-fixture p").map(function (i, e) {
+                return i + "," + $(e).text().toUpperCase();
+            }).toArray(), ["0,P1", "1,P2", "2,P3"]);
+        }
+
+        function demoGetEq() {
+            var fixture = $("#qunit-fixture");
+            fixture.append("<p>p1</p><p>p2</p><p>p3</p>");
+
+            var paragraphs = $("#qunit-fixture p");
+
+            equal($(paragraphs[0]).text(), "p1", "[index] returns raw DOM object");
+            equal($(paragraphs.get(1)).text(), "p2", "get(index) returns raw DOM object");
+            equal(paragraphs.eq(2).text(), "p3", "eq(index) returns wrapped jQuery set");
+            equal($("#qunit-fixture p:eq(2)").text(), "p3", "use :eq in the selector");
+        }
+
+        function demoAdd() {
+            var fixture = $("#qunit-fixture");
+            fixture.html("<div>hello</div><span> wsu</span>");
+
+            equal($("#qunit-fixture div,#qunit-fixture span").text(), "hello wsu");
+            equal($("span", fixture).add("div", fixture).text(), "hello wsu", "in the result after merging, elements are removed duplicates, and sorted according to their order in the document");
+        }
+
+        function demoNot() {
+            var fixture = $("#qunit-fixture");
+            fixture.html("<p>p1</p><p class='remove'>p2</p><p>p3</p>");
+
+            deepEqual($("#qunit-fixture p:not(.remove)").map(function () {
+                return $(this).text();
+            }).toArray(), ["p1", "p3"]);
+
+            deepEqual($("#qunit-fixture p").not(".remove").map(function (index, element) {
+                return $(element).text();
+            }).toArray(), ["p1", "p3"], "use 'not' by selector");
+
+            deepEqual($("#qunit-fixture p").not(function () {
+                return $(this).text() == "p1"; // return true to be excluded
+            }).map(function (i, e) {
+                return $(e).text().toUpperCase();
+            }).toArray(), ["P2", "P3"], "use 'not' by passing function");
+        }
+
+        function demoFilter() {
+
+            var fixture = $("#qunit-fixture");
+            fixture.html("<p>hello </p><p class='want'>jquery </p><p class='want'>from wsu</p>");
+
+            equal($("#qunit-fixture p").filter(".want").text(), "jquery from wsu");
+
+            equal($("#qunit-fixture p").filter(function (index) {
+                return index % 2 == 0;
+            }).text(), "hello from wsu", "callback returns true to remain the set");
+
+        }
+
+        function demoIs() {
+            $("#qunit-fixture").html("<p id='x'>p1</p><p>p2</p>");
+
+            var paragraphs = $("#qunit-fixture p");
+            ok(paragraphs.is("#x"), "at least one matches");
+            ok(!paragraphs.is(".noclass"), "no match at all");
+        }
+
+        function demoHas() {
+            $("#qunit-fixture").append("\
+            <div><p>div with p</p></div>\
+            <div>div without p</div>\
+            ");
+
+            equal($("#qunit-fixture div").has("p").html(), "<p>div with p</p>");
+        }
+
+        function demoFindVsChildren() {
+            var fixture = $("#qunit-fixture").html("<p>out-p</p><div><p>in-p</p></div>");
+
+            deepEqual(fixture.find("p").map(function (i, e) {
+                return $(e).text();
+            }).toArray(), ["out-p", "in-p"]);
+
+            deepEqual(fixture.children("p").map(function () {
+                return $(this).text();
+            }).toArray(), ["out-p"]);
+        }
+
+        $(function () {
+            test("demo different ways to query the same content", demoMultiWaysToQuery);
+            test("demo each() method of jquery object", demoEach);
+            test("demo map() on jquery object", demoMap);
+            test("demo get() and eq(). get() is like index, return raw DOM object; while eq() return the wrapped jQuery set", demoGetEq);
+            test("demo add to merge selections", demoAdd);
+            test("demo not", demoNot);
+            test("demo filter", demoFilter);
+            test("demo is: Determines if any element in the wrapped set matches the passed selector expression", demoIs);
+            test("demo has",demoHas);
+            test("'find' search all children, while 'children' only search direct ones", demoFindVsChildren);
+        });
+
+    </script>
+</head>
+<body>
+    <h1 id="qunit-header">Demonstration</h1>
+    <h2 id="qunit-banner"></h2>
+    <div id="qunit-testrunner-toolbar">
+    </div>
+    <h2 id="qunit-userAgent"></h2>
+    <ol id="qunit-tests">
+    </ol>
+    <div id="qunit-fixture">
+    </div>
+    <script type="text/javascript"></script>
+</body>
+</html>

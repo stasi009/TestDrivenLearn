@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demonstrate exception handling</title>
+    <script type="text/javascript" src="../common/commonFuncs.js"></script>
+    <style type="text/css">
+        h2 {
+            color: firebrick;
+        }
+        .block
+        {
+            background-color: wheat;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="block">
+        <script type="text/javascript">
+            function fool(hasError) {
+                if (hasError) {
+                    throw new Error("test");
+                } else {
+                    return 689;
+                }
+            }
+
+            printline("no error: " + fool(false));
+
+            printline("############################ has error but caught");
+            try {
+                printline("has error: " + fool(true));
+                printline("!!!!!!!!!! NEVER EXECUTED !!!!!!!!!!");
+            } catch (e) {
+                printline("!!! error caught !!! Name=" + e.name + ";Message=" + e.message);
+
+            } finally {
+                printline("************ finally is invoked.");
+            }
+
+            printline("############################ has error but NOT caught");
+            try {
+                try {
+                    fool(true);
+                } finally {
+                    printline("************ finally is invoked.");
+                }
+            } catch (e) {
+                printline("error caught by upper stack");
+
+            } 
+        </script>
+    </div>
+    <div class="block">
+        <h2>
+            primitive-type exception</h2>
+        <script type="text/javascript">
+            try {
+                throw -101;
+            } catch (e) {
+                printline("caught error: " + e);
+            }
+
+            try {
+                throw "just an error messsage";
+            } catch (e) {
+                printline("caught error: " + e);
+            } 
+        </script>
+    </div>
+</body>
+</html>

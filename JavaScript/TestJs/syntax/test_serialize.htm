@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>JSON Serialization</title>
+    <script type="text/javascript" src="../common/commonFuncs.js"></script>
+    <style type="text/css">
+        .block
+        {
+            background-color: wheat;
+            color: firebrick;
+            margin: 10px;
+        }
+        
+        .note
+        {
+            color: navy;
+            font-weight: bold;
+            margin: 0;
+            border: 1px navy dashed;
+        }
+    </style>
+    <script type="text/javascript">
+        function Point() {
+        }
+
+        Point.prototype = {
+            x: 1,
+            y: 2
+        };
+        Point.prototype.toString = function () {
+            return "(" + this.x + "," + this.y + ")";
+        };
+    </script>
+</head>
+<body>
+    <div class="block">
+        <script type="text/javascript">
+            var pnt = new Point();
+
+            printline("##################### only has inherited properties");
+            var s = JSON.stringify(pnt);
+            printline(s);
+
+            printline("##################### has its own properties");
+            pnt.x = 101;
+            printline(JSON.stringify(pnt));
+
+            var line = {
+                name: "line",
+                pnts: [pnt, { x: 3, y: 4}]
+            };
+            printline(JSON.stringify(line));
+        </script>
+        <h4 class="note">
+            JSON.stringify can only serialize "own enumerable" properties, it will NOT include
+            inherited properties in the string.</h4>
+    </div>
+</body>
+</html>
