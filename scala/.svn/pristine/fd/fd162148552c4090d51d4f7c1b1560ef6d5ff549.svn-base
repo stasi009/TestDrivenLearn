@@ -1,0 +1,42 @@
+package test
+
+import org.scalatest.Spec
+
+sealed class AbstractClassTest extends Spec {
+
+  object `demo abstract fields` {
+    
+    abstract class AbstractParent {
+      val number: Int
+      var name: String
+      
+      // template methods
+      def getMessage =   s"$name-$number"
+    }//class
+    
+    
+    sealed class ConstantChild(val number:Int,var name: String) extends AbstractParent
+    
+    sealed class GenericChild[T](private val _array: T*) extends AbstractParent {
+      val number = _array.length
+      
+      def name = _array.mkString
+      def name_=(newvalue: String) = throw new NotImplementedError
+    }
+    
+    def `demo 1` = {
+      val c = new ConstantChild(9,"cheka")
+      assertResult("cheka-9")(c.getMessage)
+      
+      c.name = "stasi"
+      assertResult("stasi-9")(c.getMessage)
+    }
+    
+    def `demo 2` = {
+      val g = new GenericChild[String]("hello","stasi","from","scala")
+      assert(g.number == 4)
+    }
+    
+  }//object
+  
+}

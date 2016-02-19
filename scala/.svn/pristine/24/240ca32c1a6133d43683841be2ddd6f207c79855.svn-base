@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;testscala/src/test/FunctionalTest.scala&apos; to &apos;FunctionBasicTest.scala&apos;" description="Rename resource &apos;FunctionalTest.scala&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/test/FunctionalTest.scala" name="FunctionBasicTest.scala" stamp="1408081129202" updateReferences="true"/>
+</session>

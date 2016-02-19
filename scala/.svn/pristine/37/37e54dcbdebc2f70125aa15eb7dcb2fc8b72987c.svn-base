@@ -1,0 +1,17 @@
+package demo
+
+import io.Source
+
+object FileIoDemo extends App {
+  
+  def demoReadText() = {
+    val source = Source.fromFile("resources/PythonZen.txt")
+    val lniterator = source.getLines
+    lniterator.zipWithIndex.foreach {case(ln,index)=>println(s"[$index]:$ln")}
+  }//def
+  
+  override def main(args: Array[String]) = {
+    demoReadText()
+  }//def
+
+}

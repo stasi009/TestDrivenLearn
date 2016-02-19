@@ -1,0 +1,21 @@
+package test
+
+import org.scalatest.Spec
+
+sealed class SortTest extends Spec {
+  
+  case class Person(id: Int,name: String)
+  
+  object `simple demo` {
+    
+    // sort with implicit ordering in ascending order
+    def `test sorted` = {
+      val a = Array(3,2,1)
+      val aa= a.sorted
+      assert(aa.isInstanceOf[Array[Int]])
+      assert(aa sameElements Array(1,2,3))
+    }
+    
+  }
+
+}

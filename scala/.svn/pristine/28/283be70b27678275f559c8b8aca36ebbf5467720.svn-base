@@ -1,0 +1,53 @@
+package test
+
+import org.scalatest.Spec
+
+sealed class FunctionBasicTest extends Spec {
+
+  object `overload issue` {
+    def sum(a: Int, b: Int) = a + b
+    def sum(a: Int, b: Int, c: Int) = a + b + c
+    def sum(a: Double, b: Double) = a + b
+  }
+
+  object `arguments issues` {
+
+    def decorate(content: String, left: String = "[", right: String = "]") = left + content + right
+
+    def `test default arguments` = {
+      assertResult("[stasi]") { decorate("stasi") }
+      assertResult("<<stasi>>") { decorate("stasi", "<<", ">>") }
+    }
+
+    def `pass arguments by name` = {
+      assertResult("<stasi>") {
+        decorate(left = "<", content = "stasi", right = ">")
+      }
+    }
+
+    // args's type is Seq
+    def sum(args: Int*) = {
+      var result = 0
+      for (i <- args) result += i
+      result
+    }
+
+    def `arguments with variable length` = {
+      assertResult(10) { sum(1, 2, 3, 4) }
+
+      // if a sequence is passed, we have to use "_*" to decompose it
+      assertResult(10) { sum(1 to 4: _*) }
+    }
+
+    /*
+     * when call a java method with variable arguments with type 'object'
+     * we have to convert any primitive type by hand
+     */
+    def `call java method with variable arguments` = {
+      // below code won't compile, because it needs variable 'object' arguments
+      // XXX val s = String.format("hello %d", 3)
+      assertResult("hello 9") { String.format("hello 9", 9: Integer) }
+      assertResult("hello 9") { String.format("hello 9", 9.asInstanceOf[Object]) }
+    } //def 
+  }
+}

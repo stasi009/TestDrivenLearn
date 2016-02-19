@@ -1,0 +1,62 @@
+package test
+
+import org.scalatest.Spec
+
+sealed class TraitTest extends Spec {
+
+  object `demo 1` {
+
+    trait Logger {
+      def log(msg: String): String
+      def info(msg: String) = log("Info: " + msg)
+      def warn(msg: String) = log("Warning: " + msg)
+      def severe(msg: String) = log("Severe: " + msg)
+    }
+
+    trait ForgetLogger extends Logger {
+      // no need to use "override" for a abstract member
+      def log(msg: String) = super.log("")
+    }
+
+    trait PassThroughLogger extends Logger {
+      // override is optional, you can neglect it
+      // however, adding it won't hurt
+      override def log(msg: String) = msg
+    }
+
+    trait IndexedLogger extends Logger {
+      private var _counter = 0
+
+      // "abstract" force this trait must mixin with a trait which has concrete implementation
+      abstract override def log(msg: String) = {
+        _counter += 1
+        super.log(s"${_counter} - $msg")
+      }
+    }
+
+    // one guideline to remember is: never use "abstract fields" in the constructor
+    trait ShorterLogger extends Logger {
+      val _maxLength: Int // wait to be overidden
+
+      abstract override def log(msg: String) = {
+        super.log {
+          if (msg.length <= _maxLength) msg
+          else msg.substring(0, _maxLength - 3) + "..."
+        }
+      }
+    }
+    
+    // extends 
+    sealed class Process extends Logger {
+      def run() {
+        info("1")
+        info("2")
+        warn("3")
+        severe("4")
+        info("5")
+      }
+    }
+
+  } //object
+
+}

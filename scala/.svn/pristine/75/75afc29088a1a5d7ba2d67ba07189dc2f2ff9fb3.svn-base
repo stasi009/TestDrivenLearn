@@ -1,0 +1,61 @@
+package test
+
+import org.scalatest.Spec
+
+/*
+ * sealed: you can inherit this class, but only in the same source file
+ * final: you cannot inherit this class, even in the same source file
+ */
+sealed class ClassInheritTest extends Spec {
+
+  class Person(val name: String) {
+    // must use "override" to override a method that is NOT abstract
+    // override an abstract method, "override" modifier is not necessary, but also won't hurt
+    override def toString = s"Person[$name]"
+  }
+
+  // pay attention that "name" doesn't have "val" before it
+  // because that will generate a new copy field and getter/setter
+  // just make it a parameter and pass it into the constructor of the parent class
+  sealed class Employee(name: String, val salary: Int) extends Person(name) {
+    override def toString = super.toString + s", salary: $salary"
+  }
+
+  // override member field
+  sealed class SecretAgent(val codeName: String) extends Person("") {
+    override val name = "secret"
+    override def toString = "secret"
+  }
+
+  object `test override` {
+
+    def `override methods` = {
+      val p = new Person("cheka")
+      assert(p.toString == "Person[cheka]")
+
+      val e = new Employee("stasi", 100)
+      assert(e.name == "stasi")
+      assert(e.toString == "Person[stasi], salary: 100")
+    }
+    
+    def `override fields` = {
+      val s = new SecretAgent("lion")
+      assert(s.codeName == "lion")
+      assert(s.name == "secret")
+      assert(s.toString == "secret")
+    }
+    
+    object `test polymorphism` {
+      def getName(p: Person) = p.name 
+      
+      def `test polymorphism 1` = {
+        val people = Seq(new Person("cheka"),new Employee("stasi",100),new SecretAgent("alpha"))
+        val names = people map getName
+        assert(names == Seq(""))
+      }
+      
+    }
+
+  } //object
+
+}

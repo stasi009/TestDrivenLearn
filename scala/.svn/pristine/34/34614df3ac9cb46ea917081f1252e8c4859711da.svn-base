@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="scala.scalatest">
+<stringAttribute key="SCALATEST_LAUNCH_INCLUDE_NESTED" value="false"/>
+<setAttribute key="SCALATEST_LAUNCH_TESTS_NAME">
+<setEntry value="test basic types test collections"/>
+</setAttribute>
+<stringAttribute key="SCALATEST_LAUNCH_TYPE" value="SUITE"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="test.SerializeTest"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="testscala"/>
+</launchConfiguration>

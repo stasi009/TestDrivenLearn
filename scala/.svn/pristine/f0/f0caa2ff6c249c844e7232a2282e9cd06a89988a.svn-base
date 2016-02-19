@@ -1,0 +1,14 @@
+package test
+
+import org.scalatest.Spec
+
+sealed class PartialFunctionTest extends Spec {
+
+  object `basic operations` {
+    def `demo 1` = {
+      val isEven = { case x if x % 2 == 0 => x + " is even" }
+
+    } //def
+  } //object
+
+}

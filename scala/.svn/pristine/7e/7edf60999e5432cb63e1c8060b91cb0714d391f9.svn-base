@@ -1,0 +1,13 @@
+package demo
+
+import io.Source
+
+object FileIoDemo extends App {
+  
+  def demoReadTxts() = {
+    val source = Source.fromFile("PythonZen.txt")
+    val lniterator = source.getLines
+    lniterator.zipWithIndex.foreach(t=>{})
+  }//def
+
+}

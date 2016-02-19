@@ -1,0 +1,31 @@
+package test
+
+import java.io.ByteArrayInputStream
+import java.io.ByteArrayOutputStream
+import java.io.ObjectInputStream
+import java.io.ObjectOutputStream
+import org.scalatest.Spec
+
+sealed class SerializeTest extends Spec {
+  
+  def serializeCopy[T](src: T) = {
+    val byteOutStream = new ByteArrayOutputStream
+    val objOutStream = new ObjectOutputStream(byteOutStream)
+    objOutStream.writeObject(src)
+    
+    val byteInStream = new ByteArrayInputStream(byteOutStream.toByteArray)
+    val objInStream = new ObjectInputStream(byteInStream)
+    val cpy = objInStream.readObject()
+    
+    cpy.asInstanceOf[T]
+  }//def
+  
+  object `test basic types` {
+    def `test primitive type` = {
+      assert(serializeCopy(9) == 8)
+      
+      
+    }//def
+  }//object
+
+}//class

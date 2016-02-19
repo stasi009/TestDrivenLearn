@@ -1,0 +1,14 @@
+package demo
+
+object OtherDemo extends App {
+
+  def demoForeach() = {
+    val numbers = Seq("a", "b", "c")
+    ((1 to 3) zip numbers) foreach { println }
+  }
+
+  override def main(args: Array[String]) = {
+    demoForeach()
+  } //def main
+
+}

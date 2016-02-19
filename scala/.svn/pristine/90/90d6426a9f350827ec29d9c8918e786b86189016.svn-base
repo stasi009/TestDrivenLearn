@@ -1,0 +1,1365 @@
+!SESSION 2014-08-14 20:03:18.541 -----------------------------------------------
+eclipse.buildId=3.0.4-2.11-20140723-2253-Typesafe
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-08-14 20:10:12.514
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-08-14 20:10:12.515
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\stasi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2014-08-14 20:14:18.291 -----------------------------------------------
+eclipse.buildId=3.0.4-2.11-20140723-2253-Typesafe
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-08-14 20:14:37.909
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-08-14 20:14:37.910
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\stasi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2014-08-14 20:17:42.180 -----------------------------------------------
+eclipse.buildId=3.0.4-2.11-20140723-2253-Typesafe
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-08-14 20:20:00.680
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-08-14 20:20:00.682
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\stasi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2014-08-14 21:10:35.298 -----------------------------------------------
+eclipse.buildId=3.0.4-2.11-20140723-2253-Typesafe
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-08-14 21:12:39.519
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-08-14 21:12:39.578
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\stasi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2014-08-15 07:55:24.468 -----------------------------------------------
+eclipse.buildId=3.0.4-2.11-20140723-2253-Typesafe
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-08-15 07:57:16.985
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-08-15 07:57:16.985
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\zhaochuanlin'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 4 4 2014-08-15 08:07:27.049
+!MESSAGE Conflicting handlers for org.eclipse.ui.navigate.backwardHistory: {ActionHandler(org.eclipse.ui.internal.dialogs.PreferencePageHistory$1@474c07b1)} vs {ActionHandler(org.eclipse.ui.internal.NavigationHistoryAction@4eb3dfb9)}
+
+!ENTRY org.eclipse.ui 4 4 2014-08-15 08:07:50.950
+!MESSAGE Conflicting handlers for org.eclipse.ui.navigate.backwardHistory: {ActionHandler(org.eclipse.ui.internal.dialogs.PreferencePageHistory$1@31e060e8)} vs {ActionHandler(org.eclipse.ui.internal.NavigationHistoryAction@4eb3dfb9)}
+!SESSION 2014-08-15 08:17:29.092 -----------------------------------------------
+eclipse.buildId=3.0.4-2.11-20140723-2253-Typesafe
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-08-15 08:22:59.156
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-08-15 08:22:59.203
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\zhaochuanlin'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 4 4 2014-08-15 09:56:36.981
+!MESSAGE Conflicting handlers for org.eclipse.ui.navigate.backwardHistory: {ActionHandler(org.eclipse.ui.internal.NavigationHistoryAction@3bce0725)} vs {ActionHandler(org.eclipse.ui.internal.dialogs.PreferencePageHistory$1@1d2062be)}
+
+!ENTRY org.eclipse.ui 4 4 2014-08-15 13:33:55.004
+!MESSAGE Conflicting handlers for org.eclipse.ui.navigate.backwardHistory: {ActionHandler(org.eclipse.ui.internal.dialogs.PreferencePageHistory$1@267e0a00)} vs {ActionHandler(org.eclipse.ui.internal.NavigationHistoryAction@3bce0725)}
+!SESSION 2014-08-17 17:33:31.707 -----------------------------------------------
+eclipse.buildId=3.0.4-2.11-20140723-2253-Typesafe
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-08-17 17:34:16.723
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-08-17 17:34:16.724
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\stasi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 4 4 2014-08-17 17:35:37.277
+!MESSAGE Conflicting handlers for org.eclipse.ui.navigate.backwardHistory: {ActionHandler(org.eclipse.ui.internal.NavigationHistoryAction@6a6832b1)} vs {ActionHandler(org.eclipse.ui.internal.dialogs.PreferencePageHistory$1@1bf71c5d)}
+
+!ENTRY org.scala-ide.sdt.core 4 0 2014-08-17 18:25:00.902
+!MESSAGE Error during askOption
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(Unknown Source)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.nameString(PimpedTrees.scala:336)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.namePosition(PimpedTrees.scala:244)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.nsc.util.InterruptReq.execute(InterruptReq.scala:26)
+	at scala.tools.nsc.interactive.Global$$anonfun$pollForWork$1.apply$mcV$sp(Global.scala:446)
+	at scala.util.control.Breaks.breakable(Breaks.scala:38)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:420)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2014-08-17 18:25:01.911
+!MESSAGE Error during askOption
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(Unknown Source)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.nameString(PimpedTrees.scala:336)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.namePosition(PimpedTrees.scala:244)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.nsc.util.InterruptReq.execute(InterruptReq.scala:26)
+	at scala.tools.nsc.interactive.Global$$anonfun$pollForWork$1.apply$mcV$sp(Global.scala:446)
+	at scala.util.control.Breaks.breakable(Breaks.scala:38)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:420)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2014-08-17 18:25:07.920
+!MESSAGE Error during askOption
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(Unknown Source)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.nameString(PimpedTrees.scala:336)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.namePosition(PimpedTrees.scala:244)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.nsc.util.InterruptReq.execute(InterruptReq.scala:26)
+	at scala.tools.nsc.interactive.Global$$anonfun$pollForWork$1.apply$mcV$sp(Global.scala:446)
+	at scala.util.control.Breaks.breakable(Breaks.scala:38)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:420)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2014-08-17 20:47:16.110
+!MESSAGE Error during askOption
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(Unknown Source)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.nameString(PimpedTrees.scala:336)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.namePosition(PimpedTrees.scala:244)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.nsc.util.InterruptReq.execute(InterruptReq.scala:26)
+	at scala.tools.nsc.interactive.Global$$anonfun$pollForWork$1.apply$mcV$sp(Global.scala:446)
+	at scala.util.control.Breaks.breakable(Breaks.scala:38)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:420)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2014-08-17 20:47:17.642
+!MESSAGE Error during askOption
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(Unknown Source)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.nameString(PimpedTrees.scala:336)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.namePosition(PimpedTrees.scala:244)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.nsc.util.InterruptReq.execute(InterruptReq.scala:26)
+	at scala.tools.nsc.interactive.Global$$anonfun$pollForWork$1.apply$mcV$sp(Global.scala:446)
+	at scala.util.control.Breaks.breakable(Breaks.scala:38)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:420)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2014-08-17 20:47:22.186
+!MESSAGE Error during askOption
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(Unknown Source)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.nameString(PimpedTrees.scala:336)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.namePosition(PimpedTrees.scala:244)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.nsc.util.InterruptReq.execute(InterruptReq.scala:26)
+	at scala.tools.nsc.interactive.Global$$anonfun$pollForWork$1.apply$mcV$sp(Global.scala:446)
+	at scala.util.control.Breaks.breakable(Breaks.scala:38)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:420)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2014-08-17 20:47:24.222
+!MESSAGE Error during askOption
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(Unknown Source)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.nameString(PimpedTrees.scala:336)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.namePosition(PimpedTrees.scala:244)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.nsc.util.InterruptReq.execute(InterruptReq.scala:26)
+	at scala.tools.nsc.interactive.Global$$anonfun$pollForWork$1.apply$mcV$sp(Global.scala:446)
+	at scala.util.control.Breaks.breakable(Breaks.scala:38)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:420)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2014-08-17 20:47:26.232
+!MESSAGE Error during askOption
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(Unknown Source)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.nameString(PimpedTrees.scala:336)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.namePosition(PimpedTrees.scala:244)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.nsc.util.InterruptReq.execute(InterruptReq.scala:26)
+	at scala.tools.nsc.interactive.Global$$anonfun$pollForWork$1.apply$mcV$sp(Global.scala:446)
+	at scala.util.control.Breaks.breakable(Breaks.scala:38)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:420)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2014-08-17 20:47:28.739
+!MESSAGE Error during askOption
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(Unknown Source)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.nameString(PimpedTrees.scala:336)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.namePosition(PimpedTrees.scala:244)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.nsc.util.InterruptReq.execute(InterruptReq.scala:26)
+	at scala.tools.nsc.interactive.Global$$anonfun$pollForWork$1.apply$mcV$sp(Global.scala:446)
+	at scala.util.control.Breaks.breakable(Breaks.scala:38)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:420)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+!SESSION 2014-08-18 08:22:29.211 -----------------------------------------------
+eclipse.buildId=3.0.4-2.11-20140723-2253-Typesafe
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-08-18 08:29:42.072
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-08-18 08:29:42.072
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\zhaochuanlin'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jdt.core 4 4 2014-08-18 08:32:54.889
+!MESSAGE File not found: '/testscala/src/test/ExampleScalaTestSpec.scala'
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/testscala/src/test/ExampleScalaTestSpec.scala' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:341)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:215)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:287)
+	at org.eclipse.jdt.internal.core.util.Util.getResourceContentsAsCharArray(Util.java:1187)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getContents(CompilationUnit.java:649)
+	at scala.tools.eclipse.javaelements.ScalaSourceFile.getContents(ScalaSourceFile.scala:146)
+	at scala.tools.eclipse.InteractiveCompilationUnit$class.sourceFile$default$1(InteractiveCompilationUnit.scala:37)
+	at scala.tools.eclipse.javaelements.ScalaSourceFile.sourceFile$default$1(ScalaSourceFile.scala:69)
+	at scala.tools.eclipse.ScalaPresentationCompiler$$anon$1.default(ScalaPresentationCompiler.scala:67)
+	at scala.tools.eclipse.ScalaPresentationCompiler$$anon$1.default(ScalaPresentationCompiler.scala:65)
+	at scala.collection.mutable.HashMap.apply(HashMap.scala:65)
+	at scala.tools.eclipse.ScalaPresentationCompiler.withSourceFile(ScalaPresentationCompiler.scala:107)
+	at scala.tools.eclipse.ScalaProject$$anonfun$withSourceFile$1.apply(ScalaProject.scala:589)
+	at scala.tools.eclipse.ScalaProject$$anonfun$withSourceFile$1.apply(ScalaProject.scala:588)
+	at scala.tools.eclipse.ScalaProject$$anonfun$withPresentationCompiler$1.apply(ScalaProject.scala:582)
+	at scala.tools.eclipse.ScalaProject$$anonfun$withPresentationCompiler$1.apply(ScalaProject.scala:581)
+	at scala.tools.eclipse.util.Cached$class.apply(Cached.scala:41)
+	at scala.tools.eclipse.ScalaProject$$anon$1.apply(ScalaProject.scala:95)
+	at scala.tools.eclipse.ScalaProject.withPresentationCompiler(ScalaProject.scala:581)
+	at scala.tools.eclipse.ScalaProject.withSourceFile(ScalaProject.scala:590)
+	at scala.tools.eclipse.InteractiveCompilationUnit$class.withSourceFile(InteractiveCompilationUnit.scala:66)
+	at scala.tools.eclipse.javaelements.ScalaSourceFile.withSourceFile(ScalaSourceFile.scala:69)
+	at scala.tools.eclipse.ScalaHover.getHoverInfo(ScalaHover.scala:43)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2014-08-18 08:32:54.889
+!MESSAGE Resource '/testscala/src/test/ExampleScalaTestSpec.scala' does not exist.
+
+!ENTRY org.eclipse.jdt.core 4 4 2014-08-18 09:16:35.577
+!MESSAGE File not found: '/testscala/src/test/Utility.scala'
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/testscala/src/test/Utility.scala' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:341)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:215)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:287)
+	at org.eclipse.jdt.internal.core.util.Util.getResourceContentsAsCharArray(Util.java:1187)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getContents(CompilationUnit.java:649)
+	at scala.tools.eclipse.javaelements.ScalaSourceFile.getContents(ScalaSourceFile.scala:146)
+	at scala.tools.eclipse.InteractiveCompilationUnit$class.sourceFile$default$1(InteractiveCompilationUnit.scala:37)
+	at scala.tools.eclipse.javaelements.ScalaSourceFile.sourceFile$default$1(ScalaSourceFile.scala:69)
+	at scala.tools.eclipse.ScalaPresentationCompiler$$anon$1.default(ScalaPresentationCompiler.scala:67)
+	at scala.tools.eclipse.ScalaPresentationCompiler$$anon$1.default(ScalaPresentationCompiler.scala:65)
+	at scala.collection.mutable.HashMap.apply(HashMap.scala:65)
+	at scala.tools.eclipse.ScalaPresentationCompiler.withSourceFile(ScalaPresentationCompiler.scala:107)
+	at scala.tools.eclipse.ScalaProject$$anonfun$withSourceFile$1.apply(ScalaProject.scala:589)
+	at scala.tools.eclipse.ScalaProject$$anonfun$withSourceFile$1.apply(ScalaProject.scala:588)
+	at scala.tools.eclipse.ScalaProject$$anonfun$withPresentationCompiler$1.apply(ScalaProject.scala:582)
+	at scala.tools.eclipse.ScalaProject$$anonfun$withPresentationCompiler$1.apply(ScalaProject.scala:581)
+	at scala.tools.eclipse.util.Cached$class.apply(Cached.scala:41)
+	at scala.tools.eclipse.ScalaProject$$anon$1.apply(ScalaProject.scala:95)
+	at scala.tools.eclipse.ScalaProject.withPresentationCompiler(ScalaProject.scala:581)
+	at scala.tools.eclipse.ScalaProject.withSourceFile(ScalaProject.scala:590)
+	at scala.tools.eclipse.InteractiveCompilationUnit$class.withSourceFile(InteractiveCompilationUnit.scala:66)
+	at scala.tools.eclipse.javaelements.ScalaSourceFile.withSourceFile(ScalaSourceFile.scala:69)
+	at scala.tools.eclipse.ScalaHover.getHoverInfo(ScalaHover.scala:43)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2014-08-18 09:16:35.577
+!MESSAGE Resource '/testscala/src/test/Utility.scala' does not exist.
+
+!ENTRY org.scala-ide.sdt.core 1 0 2014-08-18 09:18:39.048
+!MESSAGE Timeout while resolving hyperlink in D:\study\Computer Science\practice\JVM\scala\testscala\src\test\StringTest.scala at: offset: 2361, length: 0
+
+!ENTRY org.scala-ide.sdt.core 4 0 2014-08-18 10:21:49.208
+!MESSAGE Error during askOption
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(Unknown Source)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.nameString(PimpedTrees.scala:336)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.namePosition(PimpedTrees.scala:244)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.nsc.util.InterruptReq.execute(InterruptReq.scala:26)
+	at scala.tools.nsc.interactive.Global$$anonfun$pollForWork$1.apply$mcV$sp(Global.scala:446)
+	at scala.util.control.Breaks.breakable(Breaks.scala:38)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:420)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2014-08-18 10:21:49.218
+!MESSAGE Error during askOption
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(Unknown Source)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.nameString(PimpedTrees.scala:336)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.namePosition(PimpedTrees.scala:244)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.nsc.util.InterruptReq.execute(InterruptReq.scala:26)
+	at scala.tools.nsc.interactive.Global$$anonfun$pollForWork$1.apply$mcV$sp(Global.scala:446)
+	at scala.util.control.Breaks.breakable(Breaks.scala:38)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:420)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2014-08-18 10:21:51.240
+!MESSAGE Error during askOption
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(Unknown Source)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.nameString(PimpedTrees.scala:336)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.namePosition(PimpedTrees.scala:244)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.nsc.util.InterruptReq.execute(InterruptReq.scala:26)
+	at scala.tools.nsc.interactive.Global$$anonfun$pollForWork$1.apply$mcV$sp(Global.scala:446)
+	at scala.util.control.Breaks.breakable(Breaks.scala:38)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:420)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2014-08-18 10:21:51.240
+!MESSAGE Error during askOption
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(Unknown Source)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.nameString(PimpedTrees.scala:336)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.namePosition(PimpedTrees.scala:244)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.nsc.util.InterruptReq.execute(InterruptReq.scala:26)
+	at scala.tools.nsc.interactive.Global$$anonfun$pollForWork$1.apply$mcV$sp(Global.scala:446)
+	at scala.util.control.Breaks.breakable(Breaks.scala:38)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:420)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2014-08-18 10:21:55.242
+!MESSAGE Error during askOption
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(Unknown Source)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.nameString(PimpedTrees.scala:336)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.namePosition(PimpedTrees.scala:251)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.nsc.util.InterruptReq.execute(InterruptReq.scala:26)
+	at scala.tools.nsc.interactive.Global$$anonfun$pollForWork$1.apply$mcV$sp(Global.scala:446)
+	at scala.util.control.Breaks.breakable(Breaks.scala:38)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:420)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2014-08-18 10:21:55.242
+!MESSAGE Error during askOption
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(Unknown Source)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.nameString(PimpedTrees.scala:336)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.namePosition(PimpedTrees.scala:251)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.nsc.util.InterruptReq.execute(InterruptReq.scala:26)
+	at scala.tools.nsc.interactive.Global$$anonfun$pollForWork$1.apply$mcV$sp(Global.scala:446)
+	at scala.util.control.Breaks.breakable(Breaks.scala:38)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:420)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2014-08-18 10:21:55.242
+!MESSAGE Error during askOption
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(Unknown Source)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.nameString(PimpedTrees.scala:336)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.namePosition(PimpedTrees.scala:244)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.nsc.util.InterruptReq.execute(InterruptReq.scala:26)
+	at scala.tools.nsc.interactive.Global$$anonfun$pollForWork$1.apply$mcV$sp(Global.scala:446)
+	at scala.util.control.Breaks.breakable(Breaks.scala:38)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:420)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2014-08-18 10:21:55.242
+!MESSAGE Error during askOption
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(Unknown Source)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.nameString(PimpedTrees.scala:336)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.namePosition(PimpedTrees.scala:244)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.nsc.util.InterruptReq.execute(InterruptReq.scala:26)
+	at scala.tools.nsc.interactive.Global$$anonfun$pollForWork$1.apply$mcV$sp(Global.scala:446)
+	at scala.util.control.Breaks.breakable(Breaks.scala:38)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:420)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2014-08-18 10:21:59.233
+!MESSAGE Error during askOption
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(Unknown Source)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.nameString(PimpedTrees.scala:336)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.namePosition(PimpedTrees.scala:251)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.nsc.util.InterruptReq.execute(InterruptReq.scala:26)
+	at scala.tools.nsc.interactive.Global$$anonfun$pollForWork$1.apply$mcV$sp(Global.scala:446)
+	at scala.util.control.Breaks.breakable(Breaks.scala:38)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:420)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2014-08-18 10:21:59.243
+!MESSAGE Error during askOption
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(Unknown Source)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.nameString(PimpedTrees.scala:336)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.namePosition(PimpedTrees.scala:244)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.nsc.util.InterruptReq.execute(InterruptReq.scala:26)
+	at scala.tools.nsc.interactive.Global$$anonfun$pollForWork$1.apply$mcV$sp(Global.scala:446)
+	at scala.util.control.Breaks.breakable(Breaks.scala:38)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:420)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2014-08-18 10:21:59.243
+!MESSAGE Error during askOption
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(Unknown Source)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.nameString(PimpedTrees.scala:336)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.namePosition(PimpedTrees.scala:244)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.nsc.util.InterruptReq.execute(InterruptReq.scala:26)
+	at scala.tools.nsc.interactive.Global$$anonfun$pollForWork$1.apply$mcV$sp(Global.scala:446)
+	at scala.util.control.Breaks.breakable(Breaks.scala:38)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:420)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2014-08-18 10:22:00.254
+!MESSAGE Error during askOption
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(Unknown Source)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.nameString(PimpedTrees.scala:336)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.namePosition(PimpedTrees.scala:244)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.nsc.util.InterruptReq.execute(InterruptReq.scala:26)
+	at scala.tools.nsc.interactive.Global$$anonfun$pollForWork$1.apply$mcV$sp(Global.scala:446)
+	at scala.util.control.Breaks.breakable(Breaks.scala:38)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:420)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2014-08-18 10:22:00.254
+!MESSAGE Error during askOption
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(Unknown Source)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.nameString(PimpedTrees.scala:336)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.namePosition(PimpedTrees.scala:244)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.nsc.util.InterruptReq.execute(InterruptReq.scala:26)
+	at scala.tools.nsc.interactive.Global$$anonfun$pollForWork$1.apply$mcV$sp(Global.scala:446)
+	at scala.util.control.Breaks.breakable(Breaks.scala:38)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:420)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2014-08-18 10:22:04.256
+!MESSAGE Error during askOption
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(Unknown Source)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.nameString(PimpedTrees.scala:336)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.namePosition(PimpedTrees.scala:244)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.nsc.util.InterruptReq.execute(InterruptReq.scala:26)
+	at scala.tools.nsc.interactive.Global$$anonfun$pollForWork$1.apply$mcV$sp(Global.scala:446)
+	at scala.util.control.Breaks.breakable(Breaks.scala:38)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:420)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2014-08-18 10:22:04.256
+!MESSAGE Error during askOption
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(Unknown Source)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.nameString(PimpedTrees.scala:336)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.namePosition(PimpedTrees.scala:244)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.nsc.util.InterruptReq.execute(InterruptReq.scala:26)
+	at scala.tools.nsc.interactive.Global$$anonfun$pollForWork$1.apply$mcV$sp(Global.scala:446)
+	at scala.util.control.Breaks.breakable(Breaks.scala:38)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:420)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2014-08-18 10:22:13.342
+!MESSAGE Error during askOption
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(Unknown Source)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.nameString(PimpedTrees.scala:336)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.namePosition(PimpedTrees.scala:244)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.nsc.util.InterruptReq.execute(InterruptReq.scala:26)
+	at scala.tools.nsc.interactive.Global$$anonfun$pollForWork$1.apply$mcV$sp(Global.scala:446)
+	at scala.util.control.Breaks.breakable(Breaks.scala:38)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:420)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2014-08-18 10:22:17.855
+!MESSAGE Error during askOption
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(Unknown Source)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.nameString(PimpedTrees.scala:336)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.namePosition(PimpedTrees.scala:244)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.nsc.util.InterruptReq.execute(InterruptReq.scala:26)
+	at scala.tools.nsc.interactive.Global$$anonfun$pollForWork$1.apply$mcV$sp(Global.scala:446)
+	at scala.util.control.Breaks.breakable(Breaks.scala:38)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:420)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2014-08-18 10:22:20.877
+!MESSAGE Error during askOption
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(Unknown Source)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.nameString(PimpedTrees.scala:336)
+	at scala.tools.refactoring.common.PimpedTrees$TreeMethodsForPositions.namePosition(PimpedTrees.scala:244)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.eclipse.semantichighlighting.classifier.SafeSymbol$$anonfun$5.apply(SafeSymbol.scala:109)
+	at scala.tools.nsc.util.InterruptReq.execute(InterruptReq.scala:26)
+	at scala.tools.nsc.interactive.Global$$anonfun$pollForWork$1.apply$mcV$sp(Global.scala:446)
+	at scala.util.control.Breaks.breakable(Breaks.scala:38)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:420)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.eclipse.core.net 1 0 2014-08-18 16:23:14.027
+!MESSAGE System property http.proxyHost is set to isa but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2014-08-18 16:23:14.027
+!MESSAGE System property http.proxyPort is set to 8080 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2014-08-18 16:23:14.027
+!MESSAGE System property https.proxyHost is set to isa but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2014-08-18 16:23:14.027
+!MESSAGE System property https.proxyPort is set to 8080 but should not be set.
+!SESSION 2014-08-18 19:50:59.472 -----------------------------------------------
+eclipse.buildId=3.0.4-2.11-20140723-2253-Typesafe
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-08-18 19:54:11.455
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-08-18 19:54:11.456
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\stasi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2014-08-18 19:56:53.626
+!MESSAGE Error setting focus to : org.eclipse.e4.ui.model.application.ui.basic.impl.PartImpl ArrayBufferTest.scala
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4397)
+	at org.eclipse.swt.SWT.error(SWT.java:4312)
+	at org.eclipse.swt.SWT.error(SWT.java:4283)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:472)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:344)
+	at org.eclipse.swt.widgets.Control.setFocus(Control.java:3321)
+	at org.eclipse.swt.widgets.Composite.setFocus(Composite.java:1040)
+	at org.eclipse.swt.widgets.Composite.setFocus(Composite.java:1040)
+	at org.eclipse.ui.texteditor.StatusTextEditor.setFocus(StatusTextEditor.java:120)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor.setFocus(JavaEditor.java:2389)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.delegateSetFocus(CompatibilityPart.java:192)
+	at sun.reflect.GeneratedMethodAccessor30.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:56)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:243)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:249)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:220)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:107)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.focusGui(PartRenderingEngine.java:763)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer$2.setFocus(ContributedPartRenderer.java:102)
+	at org.eclipse.swt.custom.CTabItem.setFocus(CTabItem.java:329)
+	at org.eclipse.swt.custom.CTabFolder.setFocus(CTabFolder.java:2528)
+	at org.eclipse.swt.widgets.Control.fixFocus(Control.java:1053)
+	at org.eclipse.swt.widgets.Control.setVisible(Control.java:3819)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3068)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3025)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1157)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer$1.handleEvent(LazyStackRenderer.java:65)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler$1.run(UIEventHandler.java:41)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:180)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:150)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4688)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:205)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:38)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:135)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:78)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:39)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:80)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:58)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:374)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElement(ElementContainerImpl.java:171)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.hidePart(PartServiceImpl.java:1159)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.hidePart(PartServiceImpl.java:1113)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.closePart(StackRenderer.java:1120)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.access$5(StackRenderer.java:1102)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer$12.close(StackRenderer.java:996)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1852)
+	at org.eclipse.swt.custom.CTabFolder$1.handleEvent(CTabFolder.java:284)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1057)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4170)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:140)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:611)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1426)
+
+!ENTRY org.eclipse.text 4 2 2014-08-18 21:24:21.791
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.text".
+!STACK 0
+org.eclipse.jface.text.BadPositionCategoryException
+	at org.eclipse.jface.text.AbstractDocument.removePositionCategory(AbstractDocument.java:1138)
+	at scala.tools.eclipse.ui.ScalaCompletionProposal$$anon$2.left(ScalaCompletionProposal.scala:183)
+	at org.eclipse.jface.text.link.LinkedModeModel.exit(LinkedModeModel.java:341)
+	at org.eclipse.jface.text.link.LinkedModeModel$DocumentListener.documentChanged(LinkedModeModel.java:202)
+	at org.eclipse.jface.text.AbstractDocument.doFireDocumentChanged2(AbstractDocument.java:769)
+	at org.eclipse.jface.text.AbstractDocument.doFireDocumentChanged(AbstractDocument.java:736)
+	at org.eclipse.jface.text.AbstractDocument.doFireDocumentChanged(AbstractDocument.java:721)
+	at org.eclipse.jface.text.AbstractDocument.fireDocumentChanged(AbstractDocument.java:796)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1191)
+	at org.eclipse.core.internal.filebuffers.SynchronizableDocument.replace(SynchronizableDocument.java:194)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1210)
+	at org.eclipse.core.internal.filebuffers.SynchronizableDocument.replace(SynchronizableDocument.java:180)
+	at org.eclipse.jface.text.projection.ProjectionTextStore.replace(ProjectionTextStore.java:111)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1184)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1210)
+	at org.eclipse.jface.text.projection.ProjectionDocument.replace(ProjectionDocument.java:629)
+	at org.eclipse.jface.text.DefaultDocumentAdapter.replaceTextRange(DefaultDocumentAdapter.java:248)
+	at org.eclipse.swt.custom.StyledText.modifyContent(StyledText.java:7198)
+	at org.eclipse.swt.custom.StyledText.sendKeyEvent(StyledText.java:8030)
+	at org.eclipse.swt.custom.StyledText.doBackspace(StyledText.java:2278)
+	at org.eclipse.swt.custom.StyledText.invokeAction(StyledText.java:7008)
+	at org.eclipse.swt.custom.StyledText.handleKey(StyledText.java:5932)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5959)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5636)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1057)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1081)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1108)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1104)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1525)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4723)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:344)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4611)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4977)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3757)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:140)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:611)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1426)
+!SESSION 2014-08-19 08:25:39.789 -----------------------------------------------
+eclipse.buildId=3.0.4-2.11-20140723-2253-Typesafe
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-08-19 08:26:37.773
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-08-19 08:26:37.773
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\zhaochuanlin'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.core.net 1 0 2014-08-19 09:05:49.280
+!MESSAGE System property http.proxyHost is set to isa but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2014-08-19 09:05:49.280
+!MESSAGE System property http.proxyPort is set to 8080 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2014-08-19 09:05:49.280
+!MESSAGE System property https.proxyHost is set to isa but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2014-08-19 09:05:49.280
+!MESSAGE System property https.proxyPort is set to 8080 but should not be set.
+
+!ENTRY org.eclipse.search 4 0 2014-08-19 10:32:32.808
+!MESSAGE Problems encountered during text search.
+!SUBENTRY 1 org.eclipse.search 4 4 2014-08-19 10:32:32.808
+!MESSAGE File 'testscala/src/test/RangeTest.scala' has been skipped, problem while reading: ('Resource is out of sync with the file system: '/testscala/src/test/RangeTest.scala'.').
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/testscala/src/test/RangeTest.scala'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:793)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.getInputStream(FileCharSequenceProvider.java:283)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.initializeReader(FileCharSequenceProvider.java:277)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.reset(FileCharSequenceProvider.java:269)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider.newCharSequence(FileCharSequenceProvider.java:40)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFile(TextSearchVisitor.java:260)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFiles(TextSearchVisitor.java:196)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.search(TextSearchVisitor.java:172)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.search(TextSearchVisitor.java:184)
+	at org.eclipse.search.core.text.TextSearchEngine$1.search(TextSearchEngine.java:56)
+	at org.eclipse.search.internal.ui.text.FileSearchQuery.run(FileSearchQuery.java:190)
+	at org.eclipse.search2.internal.ui.InternalSearchUI$InternalSearchJob.run(InternalSearchUI.java:91)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 2 org.eclipse.core.resources 4 274 2014-08-19 10:32:32.808
+!MESSAGE Resource is out of sync with the file system: '/testscala/src/test/RangeTest.scala'.
+!SUBENTRY 1 org.eclipse.search 4 4 2014-08-19 10:32:32.808
+!MESSAGE File 'testscala/src/test/MutableMapTest.scala' has been skipped, problem while reading: ('Resource is out of sync with the file system: '/testscala/src/test/MutableMapTest.scala'.').
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/testscala/src/test/MutableMapTest.scala'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:793)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.getInputStream(FileCharSequenceProvider.java:283)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.initializeReader(FileCharSequenceProvider.java:277)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.reset(FileCharSequenceProvider.java:269)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider.newCharSequence(FileCharSequenceProvider.java:40)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFile(TextSearchVisitor.java:260)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFiles(TextSearchVisitor.java:196)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.search(TextSearchVisitor.java:172)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.search(TextSearchVisitor.java:184)
+	at org.eclipse.search.core.text.TextSearchEngine$1.search(TextSearchEngine.java:56)
+	at org.eclipse.search.internal.ui.text.FileSearchQuery.run(FileSearchQuery.java:190)
+	at org.eclipse.search2.internal.ui.InternalSearchUI$InternalSearchJob.run(InternalSearchUI.java:91)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 2 org.eclipse.core.resources 4 274 2014-08-19 10:32:32.808
+!MESSAGE Resource is out of sync with the file system: '/testscala/src/test/MutableMapTest.scala'.
+!SUBENTRY 1 org.eclipse.search 4 4 2014-08-19 10:32:32.808
+!MESSAGE File 'testscala/src/test/ImmutableMapTest.scala' has been skipped, problem while reading: ('Resource is out of sync with the file system: '/testscala/src/test/ImmutableMapTest.scala'.').
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/testscala/src/test/ImmutableMapTest.scala'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:793)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.getInputStream(FileCharSequenceProvider.java:283)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.initializeReader(FileCharSequenceProvider.java:277)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.reset(FileCharSequenceProvider.java:269)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider.newCharSequence(FileCharSequenceProvider.java:40)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFile(TextSearchVisitor.java:260)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFiles(TextSearchVisitor.java:196)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.search(TextSearchVisitor.java:172)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.search(TextSearchVisitor.java:184)
+	at org.eclipse.search.core.text.TextSearchEngine$1.search(TextSearchEngine.java:56)
+	at org.eclipse.search.internal.ui.text.FileSearchQuery.run(FileSearchQuery.java:190)
+	at org.eclipse.search2.internal.ui.InternalSearchUI$InternalSearchJob.run(InternalSearchUI.java:91)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 2 org.eclipse.core.resources 4 274 2014-08-19 10:32:32.808
+!MESSAGE Resource is out of sync with the file system: '/testscala/src/test/ImmutableMapTest.scala'.
+!SUBENTRY 1 org.eclipse.search 4 4 2014-08-19 10:32:32.808
+!MESSAGE File 'testscala/src/test/EqualityTest.scala' has been skipped, problem while reading: ('Resource is out of sync with the file system: '/testscala/src/test/EqualityTest.scala'.').
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/testscala/src/test/EqualityTest.scala'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:793)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.getInputStream(FileCharSequenceProvider.java:283)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.initializeReader(FileCharSequenceProvider.java:277)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.reset(FileCharSequenceProvider.java:269)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider.newCharSequence(FileCharSequenceProvider.java:40)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFile(TextSearchVisitor.java:260)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFiles(TextSearchVisitor.java:196)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.search(TextSearchVisitor.java:172)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.search(TextSearchVisitor.java:184)
+	at org.eclipse.search.core.text.TextSearchEngine$1.search(TextSearchEngine.java:56)
+	at org.eclipse.search.internal.ui.text.FileSearchQuery.run(FileSearchQuery.java:190)
+	at org.eclipse.search2.internal.ui.InternalSearchUI$InternalSearchJob.run(InternalSearchUI.java:91)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 2 org.eclipse.core.resources 4 274 2014-08-19 10:32:32.808
+!MESSAGE Resource is out of sync with the file system: '/testscala/src/test/EqualityTest.scala'.
+!SUBENTRY 1 org.eclipse.search 4 4 2014-08-19 10:32:32.808
+!MESSAGE File 'testscala/src/test/ArrayBufferTest.scala' has been skipped, problem while reading: ('Resource is out of sync with the file system: '/testscala/src/test/ArrayBufferTest.scala'.').
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/testscala/src/test/ArrayBufferTest.scala'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:793)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.getInputStream(FileCharSequenceProvider.java:283)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.initializeReader(FileCharSequenceProvider.java:277)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.reset(FileCharSequenceProvider.java:269)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider.newCharSequence(FileCharSequenceProvider.java:40)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFile(TextSearchVisitor.java:260)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFiles(TextSearchVisitor.java:196)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.search(TextSearchVisitor.java:172)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.search(TextSearchVisitor.java:184)
+	at org.eclipse.search.core.text.TextSearchEngine$1.search(TextSearchEngine.java:56)
+	at org.eclipse.search.internal.ui.text.FileSearchQuery.run(FileSearchQuery.java:190)
+	at org.eclipse.search2.internal.ui.InternalSearchUI$InternalSearchJob.run(InternalSearchUI.java:91)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 2 org.eclipse.core.resources 4 274 2014-08-19 10:32:32.808
+!MESSAGE Resource is out of sync with the file system: '/testscala/src/test/ArrayBufferTest.scala'.
+
+!ENTRY org.eclipse.search 4 0 2014-08-19 10:33:28.344
+!MESSAGE Problems encountered during text search.
+!SUBENTRY 1 org.eclipse.search 4 4 2014-08-19 10:33:28.344
+!MESSAGE File 'testscala/src/test/MutableMapTest.scala' has been skipped, problem while reading: ('Resource is out of sync with the file system: '/testscala/src/test/MutableMapTest.scala'.').
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/testscala/src/test/MutableMapTest.scala'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:793)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.getInputStream(FileCharSequenceProvider.java:283)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.initializeReader(FileCharSequenceProvider.java:277)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.reset(FileCharSequenceProvider.java:269)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider.newCharSequence(FileCharSequenceProvider.java:40)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFile(TextSearchVisitor.java:260)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFiles(TextSearchVisitor.java:196)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.search(TextSearchVisitor.java:172)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.search(TextSearchVisitor.java:184)
+	at org.eclipse.search.core.text.TextSearchEngine$1.search(TextSearchEngine.java:56)
+	at org.eclipse.search.internal.ui.text.FileSearchQuery.run(FileSearchQuery.java:190)
+	at org.eclipse.search2.internal.ui.InternalSearchUI$InternalSearchJob.run(InternalSearchUI.java:91)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 2 org.eclipse.core.resources 4 274 2014-08-19 10:33:28.344
+!MESSAGE Resource is out of sync with the file system: '/testscala/src/test/MutableMapTest.scala'.
+!SUBENTRY 1 org.eclipse.search 4 4 2014-08-19 10:33:28.344
+!MESSAGE File 'testscala/src/test/ImmutableMapTest.scala' has been skipped, problem while reading: ('Resource is out of sync with the file system: '/testscala/src/test/ImmutableMapTest.scala'.').
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/testscala/src/test/ImmutableMapTest.scala'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:793)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.getInputStream(FileCharSequenceProvider.java:283)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.initializeReader(FileCharSequenceProvider.java:277)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.reset(FileCharSequenceProvider.java:269)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider.newCharSequence(FileCharSequenceProvider.java:40)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFile(TextSearchVisitor.java:260)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFiles(TextSearchVisitor.java:196)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.search(TextSearchVisitor.java:172)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.search(TextSearchVisitor.java:184)
+	at org.eclipse.search.core.text.TextSearchEngine$1.search(TextSearchEngine.java:56)
+	at org.eclipse.search.internal.ui.text.FileSearchQuery.run(FileSearchQuery.java:190)
+	at org.eclipse.search2.internal.ui.InternalSearchUI$InternalSearchJob.run(InternalSearchUI.java:91)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 2 org.eclipse.core.resources 4 274 2014-08-19 10:33:28.344
+!MESSAGE Resource is out of sync with the file system: '/testscala/src/test/ImmutableMapTest.scala'.
+!SUBENTRY 1 org.eclipse.search 4 4 2014-08-19 10:33:28.344
+!MESSAGE File 'testscala/src/test/EqualityTest.scala' has been skipped, problem while reading: ('Resource is out of sync with the file system: '/testscala/src/test/EqualityTest.scala'.').
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/testscala/src/test/EqualityTest.scala'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:793)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.getInputStream(FileCharSequenceProvider.java:283)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.initializeReader(FileCharSequenceProvider.java:277)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.reset(FileCharSequenceProvider.java:269)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider.newCharSequence(FileCharSequenceProvider.java:40)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFile(TextSearchVisitor.java:260)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFiles(TextSearchVisitor.java:196)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.search(TextSearchVisitor.java:172)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.search(TextSearchVisitor.java:184)
+	at org.eclipse.search.core.text.TextSearchEngine$1.search(TextSearchEngine.java:56)
+	at org.eclipse.search.internal.ui.text.FileSearchQuery.run(FileSearchQuery.java:190)
+	at org.eclipse.search2.internal.ui.InternalSearchUI$InternalSearchJob.run(InternalSearchUI.java:91)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 2 org.eclipse.core.resources 4 274 2014-08-19 10:33:28.344
+!MESSAGE Resource is out of sync with the file system: '/testscala/src/test/EqualityTest.scala'.
+!SUBENTRY 1 org.eclipse.search 4 4 2014-08-19 10:33:28.344
+!MESSAGE File 'testscala/src/test/ArrayBufferTest.scala' has been skipped, problem while reading: ('Resource is out of sync with the file system: '/testscala/src/test/ArrayBufferTest.scala'.').
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/testscala/src/test/ArrayBufferTest.scala'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:793)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.getInputStream(FileCharSequenceProvider.java:283)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.initializeReader(FileCharSequenceProvider.java:277)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.reset(FileCharSequenceProvider.java:269)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider.newCharSequence(FileCharSequenceProvider.java:40)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFile(TextSearchVisitor.java:260)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFiles(TextSearchVisitor.java:196)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.search(TextSearchVisitor.java:172)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.search(TextSearchVisitor.java:184)
+	at org.eclipse.search.core.text.TextSearchEngine$1.search(TextSearchEngine.java:56)
+	at org.eclipse.search.internal.ui.text.FileSearchQuery.run(FileSearchQuery.java:190)
+	at org.eclipse.search2.internal.ui.InternalSearchUI$InternalSearchJob.run(InternalSearchUI.java:91)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 2 org.eclipse.core.resources 4 274 2014-08-19 10:33:28.344
+!MESSAGE Resource is out of sync with the file system: '/testscala/src/test/ArrayBufferTest.scala'.
+
+!ENTRY org.eclipse.search 4 0 2014-08-19 10:33:39.295
+!MESSAGE Problems encountered during text search.
+!SUBENTRY 1 org.eclipse.search 4 4 2014-08-19 10:33:39.295
+!MESSAGE File 'testscala/src/test/MutableMapTest.scala' has been skipped, problem while reading: ('Resource is out of sync with the file system: '/testscala/src/test/MutableMapTest.scala'.').
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/testscala/src/test/MutableMapTest.scala'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:793)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.getInputStream(FileCharSequenceProvider.java:283)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.initializeReader(FileCharSequenceProvider.java:277)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.reset(FileCharSequenceProvider.java:269)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider.newCharSequence(FileCharSequenceProvider.java:40)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFile(TextSearchVisitor.java:260)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFiles(TextSearchVisitor.java:196)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.search(TextSearchVisitor.java:172)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.search(TextSearchVisitor.java:184)
+	at org.eclipse.search.core.text.TextSearchEngine$1.search(TextSearchEngine.java:56)
+	at org.eclipse.search.internal.ui.text.FileSearchQuery.run(FileSearchQuery.java:190)
+	at org.eclipse.search2.internal.ui.InternalSearchUI$InternalSearchJob.run(InternalSearchUI.java:91)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 2 org.eclipse.core.resources 4 274 2014-08-19 10:33:39.295
+!MESSAGE Resource is out of sync with the file system: '/testscala/src/test/MutableMapTest.scala'.
+!SUBENTRY 1 org.eclipse.search 4 4 2014-08-19 10:33:39.295
+!MESSAGE File 'testscala/src/test/ImmutableMapTest.scala' has been skipped, problem while reading: ('Resource is out of sync with the file system: '/testscala/src/test/ImmutableMapTest.scala'.').
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/testscala/src/test/ImmutableMapTest.scala'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:793)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.getInputStream(FileCharSequenceProvider.java:283)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.initializeReader(FileCharSequenceProvider.java:277)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.reset(FileCharSequenceProvider.java:269)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider.newCharSequence(FileCharSequenceProvider.java:40)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFile(TextSearchVisitor.java:260)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFiles(TextSearchVisitor.java:196)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.search(TextSearchVisitor.java:172)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.search(TextSearchVisitor.java:184)
+	at org.eclipse.search.core.text.TextSearchEngine$1.search(TextSearchEngine.java:56)
+	at org.eclipse.search.internal.ui.text.FileSearchQuery.run(FileSearchQuery.java:190)
+	at org.eclipse.search2.internal.ui.InternalSearchUI$InternalSearchJob.run(InternalSearchUI.java:91)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 2 org.eclipse.core.resources 4 274 2014-08-19 10:33:39.295
+!MESSAGE Resource is out of sync with the file system: '/testscala/src/test/ImmutableMapTest.scala'.
+!SUBENTRY 1 org.eclipse.search 4 4 2014-08-19 10:33:39.295
+!MESSAGE File 'testscala/src/test/EqualityTest.scala' has been skipped, problem while reading: ('Resource is out of sync with the file system: '/testscala/src/test/EqualityTest.scala'.').
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/testscala/src/test/EqualityTest.scala'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:793)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.getInputStream(FileCharSequenceProvider.java:283)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.initializeReader(FileCharSequenceProvider.java:277)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.reset(FileCharSequenceProvider.java:269)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider.newCharSequence(FileCharSequenceProvider.java:40)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFile(TextSearchVisitor.java:260)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFiles(TextSearchVisitor.java:196)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.search(TextSearchVisitor.java:172)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.search(TextSearchVisitor.java:184)
+	at org.eclipse.search.core.text.TextSearchEngine$1.search(TextSearchEngine.java:56)
+	at org.eclipse.search.internal.ui.text.FileSearchQuery.run(FileSearchQuery.java:190)
+	at org.eclipse.search2.internal.ui.InternalSearchUI$InternalSearchJob.run(InternalSearchUI.java:91)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 2 org.eclipse.core.resources 4 274 2014-08-19 10:33:39.295
+!MESSAGE Resource is out of sync with the file system: '/testscala/src/test/EqualityTest.scala'.
+!SUBENTRY 1 org.eclipse.search 4 4 2014-08-19 10:33:39.295
+!MESSAGE File 'testscala/src/test/ArrayBufferTest.scala' has been skipped, problem while reading: ('Resource is out of sync with the file system: '/testscala/src/test/ArrayBufferTest.scala'.').
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/testscala/src/test/ArrayBufferTest.scala'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:793)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.getInputStream(FileCharSequenceProvider.java:283)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.initializeReader(FileCharSequenceProvider.java:277)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.reset(FileCharSequenceProvider.java:269)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider.newCharSequence(FileCharSequenceProvider.java:40)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFile(TextSearchVisitor.java:260)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFiles(TextSearchVisitor.java:196)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.search(TextSearchVisitor.java:172)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.search(TextSearchVisitor.java:184)
+	at org.eclipse.search.core.text.TextSearchEngine$1.search(TextSearchEngine.java:56)
+	at org.eclipse.search.internal.ui.text.FileSearchQuery.run(FileSearchQuery.java:190)
+	at org.eclipse.search2.internal.ui.InternalSearchUI$InternalSearchJob.run(InternalSearchUI.java:91)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 2 org.eclipse.core.resources 4 274 2014-08-19 10:33:39.295
+!MESSAGE Resource is out of sync with the file system: '/testscala/src/test/ArrayBufferTest.scala'.
+
+!ENTRY org.eclipse.search 4 0 2014-08-19 10:34:12.897
+!MESSAGE Problems encountered during text search.
+!SUBENTRY 1 org.eclipse.search 4 4 2014-08-19 10:34:12.897
+!MESSAGE File 'testscala/src/test/MutableMapTest.scala' has been skipped, problem while reading: ('Resource is out of sync with the file system: '/testscala/src/test/MutableMapTest.scala'.').
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/testscala/src/test/MutableMapTest.scala'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:793)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.getInputStream(FileCharSequenceProvider.java:283)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.initializeReader(FileCharSequenceProvider.java:277)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.reset(FileCharSequenceProvider.java:269)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider.newCharSequence(FileCharSequenceProvider.java:40)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFile(TextSearchVisitor.java:260)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFiles(TextSearchVisitor.java:196)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.search(TextSearchVisitor.java:172)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.search(TextSearchVisitor.java:184)
+	at org.eclipse.search.core.text.TextSearchEngine$1.search(TextSearchEngine.java:56)
+	at org.eclipse.search.internal.ui.text.FileSearchQuery.run(FileSearchQuery.java:190)
+	at org.eclipse.search2.internal.ui.InternalSearchUI$InternalSearchJob.run(InternalSearchUI.java:91)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 2 org.eclipse.core.resources 4 274 2014-08-19 10:34:12.897
+!MESSAGE Resource is out of sync with the file system: '/testscala/src/test/MutableMapTest.scala'.
+!SUBENTRY 1 org.eclipse.search 4 4 2014-08-19 10:34:12.897
+!MESSAGE File 'testscala/src/test/ImmutableMapTest.scala' has been skipped, problem while reading: ('Resource is out of sync with the file system: '/testscala/src/test/ImmutableMapTest.scala'.').
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/testscala/src/test/ImmutableMapTest.scala'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:793)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.getInputStream(FileCharSequenceProvider.java:283)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.initializeReader(FileCharSequenceProvider.java:277)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.reset(FileCharSequenceProvider.java:269)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider.newCharSequence(FileCharSequenceProvider.java:40)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFile(TextSearchVisitor.java:260)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFiles(TextSearchVisitor.java:196)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.search(TextSearchVisitor.java:172)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.search(TextSearchVisitor.java:184)
+	at org.eclipse.search.core.text.TextSearchEngine$1.search(TextSearchEngine.java:56)
+	at org.eclipse.search.internal.ui.text.FileSearchQuery.run(FileSearchQuery.java:190)
+	at org.eclipse.search2.internal.ui.InternalSearchUI$InternalSearchJob.run(InternalSearchUI.java:91)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 2 org.eclipse.core.resources 4 274 2014-08-19 10:34:12.897
+!MESSAGE Resource is out of sync with the file system: '/testscala/src/test/ImmutableMapTest.scala'.
+!SUBENTRY 1 org.eclipse.search 4 4 2014-08-19 10:34:12.897
+!MESSAGE File 'testscala/src/test/EqualityTest.scala' has been skipped, problem while reading: ('Resource is out of sync with the file system: '/testscala/src/test/EqualityTest.scala'.').
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/testscala/src/test/EqualityTest.scala'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:793)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.getInputStream(FileCharSequenceProvider.java:283)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.initializeReader(FileCharSequenceProvider.java:277)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.reset(FileCharSequenceProvider.java:269)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider.newCharSequence(FileCharSequenceProvider.java:40)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFile(TextSearchVisitor.java:260)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFiles(TextSearchVisitor.java:196)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.search(TextSearchVisitor.java:172)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.search(TextSearchVisitor.java:184)
+	at org.eclipse.search.core.text.TextSearchEngine$1.search(TextSearchEngine.java:56)
+	at org.eclipse.search.internal.ui.text.FileSearchQuery.run(FileSearchQuery.java:190)
+	at org.eclipse.search2.internal.ui.InternalSearchUI$InternalSearchJob.run(InternalSearchUI.java:91)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 2 org.eclipse.core.resources 4 274 2014-08-19 10:34:12.897
+!MESSAGE Resource is out of sync with the file system: '/testscala/src/test/EqualityTest.scala'.
+!SUBENTRY 1 org.eclipse.search 4 4 2014-08-19 10:34:12.897
+!MESSAGE File 'testscala/src/test/ArrayBufferTest.scala' has been skipped, problem while reading: ('Resource is out of sync with the file system: '/testscala/src/test/ArrayBufferTest.scala'.').
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/testscala/src/test/ArrayBufferTest.scala'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:793)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.getInputStream(FileCharSequenceProvider.java:283)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.initializeReader(FileCharSequenceProvider.java:277)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.reset(FileCharSequenceProvider.java:269)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider.newCharSequence(FileCharSequenceProvider.java:40)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFile(TextSearchVisitor.java:260)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFiles(TextSearchVisitor.java:196)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.search(TextSearchVisitor.java:172)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.search(TextSearchVisitor.java:184)
+	at org.eclipse.search.core.text.TextSearchEngine$1.search(TextSearchEngine.java:56)
+	at org.eclipse.search.internal.ui.text.FileSearchQuery.run(FileSearchQuery.java:190)
+	at org.eclipse.search2.internal.ui.InternalSearchUI$InternalSearchJob.run(InternalSearchUI.java:91)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 2 org.eclipse.core.resources 4 274 2014-08-19 10:34:12.897
+!MESSAGE Resource is out of sync with the file system: '/testscala/src/test/ArrayBufferTest.scala'.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2014-08-19 14:43:38.448
+!MESSAGE AT: RangePosition(D:\study\Computer Science\practice\JVM\scala\testscala\src\test\CaseClassTest.scala, 91, 98, 921)
+!STACK 0
+scala.reflect.internal.FatalError: no progress in completing object case class polymorphism: <?>
+	at scala.reflect.internal.Reporting$class.abort(Reporting.scala:59)
+	at scala.reflect.internal.SymbolTable.abort(SymbolTable.scala:16)
+	at scala.reflect.internal.Symbols$Symbol.info(Symbols.scala:1437)
+	at scala.reflect.internal.Symbols$Symbol.initialize(Symbols.scala:1576)
+	at scala.tools.nsc.typechecker.Namers$class.companionSymbolOf(Namers.scala:1771)
+	at scala.tools.nsc.interactive.Global$$anon$5.companionSymbolOf(Global.scala:221)
+	at scala.tools.nsc.typechecker.Namers$Namer.standardEnsureCompanionObject(Namers.scala:520)
+	at scala.tools.nsc.typechecker.AnalyzerPlugins$$anon$14.default(AnalyzerPlugins.scala:441)
+	at scala.tools.nsc.typechecker.AnalyzerPlugins$$anon$14.default(AnalyzerPlugins.scala:438)
+	at scala.tools.nsc.typechecker.AnalyzerPlugins$class.invoke(AnalyzerPlugins.scala:369)
+	at scala.tools.nsc.typechecker.AnalyzerPlugins$class.pluginsEnsureCompanionObject(AnalyzerPlugins.scala:438)
+	at scala.tools.nsc.interactive.Global$$anon$5.pluginsEnsureCompanionObject(Global.scala:221)
+	at scala.tools.nsc.typechecker.Namers$Namer.ensureCompanionObject(Namers.scala:514)
+	at scala.tools.nsc.typechecker.Namers$Namer.enterClassDef(Namers.scala:711)
+	at scala.tools.nsc.typechecker.Namers$Namer.dispatch$1(Namers.scala:284)
+	at scala.tools.nsc.typechecker.Namers$Namer.standardEnterSym(Namers.scala:298)
+	at scala.tools.nsc.typechecker.AnalyzerPlugins$class.pluginsEnterSym(AnalyzerPlugins.scala:422)
+	at scala.tools.nsc.interactive.Global$$anon$5.pluginsEnterSym(Global.scala:221)
+	at scala.tools.nsc.typechecker.Namers$Namer.enterSym(Namers.scala:274)
+	at scala.tools.nsc.typechecker.Namers$Namer$$anonfun$enterSyms$1.apply(Namers.scala:499)
+	at scala.tools.nsc.typechecker.Namers$Namer$$anonfun$enterSyms$1.apply(Namers.scala:498)
+	at scala.collection.LinearSeqOptimized$class.foldLeft(LinearSeqOptimized.scala:110)
+	at scala.collection.immutable.List.foldLeft(List.scala:83)
+	at scala.tools.nsc.typechecker.Namers$Namer.enterSyms(Namers.scala:498)
+	at scala.tools.nsc.typechecker.Namers$Namer.templateSig(Namers.scala:922)
+	at scala.tools.nsc.typechecker.Namers$Namer.moduleSig(Namers.scala:986)
+	at scala.tools.nsc.typechecker.Namers$Namer.getSig$1(Namers.scala:1524)
+	at scala.tools.nsc.typechecker.Namers$Namer.typeSig(Namers.scala:1539)
+	at scala.tools.nsc.typechecker.Namers$Namer$$anonfun$monoTypeCompleter$1$$anonfun$apply$1.apply$mcV$sp(Namers.scala:778)
+	at scala.tools.nsc.typechecker.Namers$Namer$$anonfun$monoTypeCompleter$1$$anonfun$apply$1.apply(Namers.scala:777)
+	at scala.tools.nsc.typechecker.Namers$Namer$$anonfun$monoTypeCompleter$1$$anonfun$apply$1.apply(Namers.scala:777)
+	at scala.tools.nsc.typechecker.Namers$Namer.scala$tools$nsc$typechecker$Namers$Namer$$logAndValidate(Namers.scala:1566)
+	at scala.tools.nsc.typechecker.Namers$Namer$$anonfun$monoTypeCompleter$1.apply(Namers.scala:777)
+	at scala.tools.nsc.typechecker.Namers$Namer$$anonfun$monoTypeCompleter$1.apply(Namers.scala:769)
+	at scala.tools.nsc.typechecker.Namers$$anon$1.completeImpl(Namers.scala:1681)
+	at scala.tools.nsc.typechecker.Namers$LockingTypeCompleter$class.complete(Namers.scala:1689)
+	at scala.tools.nsc.typechecker.Namers$$anon$1.complete(Namers.scala:1679)
+	at scala.reflect.internal.Symbols$Symbol.info(Symbols.scala:1429)
+	at scala.reflect.internal.Symbols$Symbol.initialize(Symbols.scala:1576)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:4909)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5293)
+	at scala.tools.nsc.typechecker.Typers$Typer.scala$tools$nsc$typechecker$Typers$Typer$$typedInternal(Typers.scala:5320)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5267)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5271)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedByValueExpr(Typers.scala:5349)
+	at scala.tools.nsc.typechecker.Typers$Typer.scala$tools$nsc$typechecker$Typers$Typer$$typedStat$1(Typers.scala:2985)
+	at scala.tools.nsc.typechecker.Typers$Typer$$anonfun$61.apply(Typers.scala:3089)
+	at scala.tools.nsc.typechecker.Typers$Typer$$anonfun$61.apply(Typers.scala:3089)
+	at scala.collection.immutable.List.loop$1(List.scala:172)
+	at scala.collection.immutable.List.mapConserve(List.scala:188)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStats(Typers.scala:3089)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedTemplate(Typers.scala:1892)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedClassDef(Typers.scala:1738)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedMemberDef$1(Typers.scala:5206)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5256)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5293)
+	at scala.tools.nsc.typechecker.Typers$Typer.scala$tools$nsc$typechecker$Typers$Typer$$typedInternal(Typers.scala:5320)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5267)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5271)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedByValueExpr(Typers.scala:5349)
+	at scala.tools.nsc.typechecker.Typers$Typer.scala$tools$nsc$typechecker$Typers$Typer$$typedStat$1(Typers.scala:2985)
+	at scala.tools.nsc.typechecker.Typers$Typer$$anonfun$61.apply(Typers.scala:3089)
+	at scala.tools.nsc.typechecker.Typers$Typer$$anonfun$61.apply(Typers.scala:3089)
+	at scala.collection.immutable.List.loop$1(List.scala:172)
+	at scala.collection.immutable.List.mapConserve(List.scala:188)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStats(Typers.scala:3089)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedPackageDef$1(Typers.scala:4916)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedMemberDef$1(Typers.scala:5209)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5256)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5293)
+	at scala.tools.nsc.typechecker.Typers$Typer.scala$tools$nsc$typechecker$Typers$Typer$$typedInternal(Typers.scala:5320)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5267)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5271)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5345)
+	at scala.tools.nsc.typechecker.Analyzer$typerFactory$$anon$3.apply(Analyzer.scala:102)
+	at scala.tools.nsc.Global$GlobalPhase.applyPhase(Global.scala:410)
+	at scala.tools.nsc.interactive.Global$TyperRun$$anonfun$applyPhase$1.apply(Global.scala:1217)
+	at scala.tools.nsc.interactive.Global$TyperRun$$anonfun$applyPhase$1.apply(Global.scala:1217)
+	at scala.reflect.internal.SymbolTable.enteringPhase(SymbolTable.scala:235)
+	at scala.tools.nsc.interactive.Global$TyperRun.applyPhase(Global.scala:1217)
+	at scala.tools.nsc.interactive.Global$TyperRun.typeCheck(Global.scala:1210)
+	at scala.tools.nsc.interactive.Global.scala$tools$nsc$interactive$Global$$typeCheck(Global.scala:659)
+	at scala.tools.nsc.interactive.Global$$anonfun$backgroundCompile$5$$anonfun$apply$8.apply(Global.scala:574)
+	at scala.tools.nsc.interactive.Global$$anonfun$backgroundCompile$5.apply(Global.scala:570)
+	at scala.tools.nsc.interactive.Global$$anonfun$backgroundCompile$5.apply(Global.scala:570)
+	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:778)
+	at scala.collection.immutable.List.foreach(List.scala:381)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:777)
+	at scala.tools.nsc.interactive.Global.backgroundCompile(Global.scala:570)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:25)
+
+!ENTRY org.eclipse.jdt.core 4 4 2014-08-19 15:00:08.302
+!MESSAGE File not found: '/testscala/src/test/PartialFunction.scala'
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/testscala/src/test/PartialFunction.scala' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:341)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:215)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:287)
+	at org.eclipse.jdt.internal.core.util.Util.getResourceContentsAsCharArray(Util.java:1187)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getContents(CompilationUnit.java:649)
+	at scala.tools.eclipse.javaelements.ScalaSourceFile.getContents(ScalaSourceFile.scala:146)
+	at scala.tools.eclipse.InteractiveCompilationUnit$class.sourceFile$default$1(InteractiveCompilationUnit.scala:37)
+	at scala.tools.eclipse.javaelements.ScalaSourceFile.sourceFile$default$1(ScalaSourceFile.scala:69)
+	at scala.tools.eclipse.ScalaPresentationCompiler$$anon$1.default(ScalaPresentationCompiler.scala:67)
+	at scala.tools.eclipse.ScalaPresentationCompiler$$anon$1.default(ScalaPresentationCompiler.scala:65)
+	at scala.collection.mutable.HashMap.apply(HashMap.scala:65)
+	at scala.tools.eclipse.ScalaPresentationCompiler.withSourceFile(ScalaPresentationCompiler.scala:107)
+	at scala.tools.eclipse.ScalaProject$$anonfun$withSourceFile$1.apply(ScalaProject.scala:589)
+	at scala.tools.eclipse.ScalaProject$$anonfun$withSourceFile$1.apply(ScalaProject.scala:588)
+	at scala.tools.eclipse.ScalaProject$$anonfun$withPresentationCompiler$1.apply(ScalaProject.scala:582)
+	at scala.tools.eclipse.ScalaProject$$anonfun$withPresentationCompiler$1.apply(ScalaProject.scala:581)
+	at scala.tools.eclipse.util.Cached$class.apply(Cached.scala:41)
+	at scala.tools.eclipse.ScalaProject$$anon$1.apply(ScalaProject.scala:95)
+	at scala.tools.eclipse.ScalaProject.withPresentationCompiler(ScalaProject.scala:581)
+	at scala.tools.eclipse.ScalaProject.withSourceFile(ScalaProject.scala:590)
+	at scala.tools.eclipse.InteractiveCompilationUnit$class.withSourceFile(InteractiveCompilationUnit.scala:66)
+	at scala.tools.eclipse.javaelements.ScalaSourceFile.withSourceFile(ScalaSourceFile.scala:69)
+	at scala.tools.eclipse.ScalaHover.getHoverInfo(ScalaHover.scala:43)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2014-08-19 15:00:08.302
+!MESSAGE Resource '/testscala/src/test/PartialFunction.scala' does not exist.

@@ -1,0 +1,42 @@
+package test
+
+import org.scalatest.Spec
+
+sealed class MutableMapTest extends Spec {
+  
+  object `basic operations` {
+    
+    def `add or update with ()` = {
+      val m = collection.mutable.HashMap("stasi"->1,"kgb"->9,"gru"->8)
+      
+      // add new key-value pair
+      m("cia") = 4
+      
+      // update existing key-value pair
+      m("stasi") = 100
+      
+      // check
+      assertResult(4)(m.size)
+      val expected = Seq("stasi"->100,"kgb"->9,"gru"->8,"cia"->4)
+      for ((k,v) <- expected) {
+        assert(m(k) == v)
+      }
+    }
+    
+    def `add multiple with +=` = {
+      val m = collection.mutable.HashMap("stasi"->1,"kgb"->9,"gru"->8)
+      
+      // update one, and add two new ones
+      m += ("stasi"->100,"cia"->4,"fbi"->6)
+      
+      // check
+      assert(m.size == 5)
+      val expected = Seq("stasi"->100,"kgb"->9,"gru"->8,"cia"->4,"fbi"->6)
+      for ((k,v) <- expected) {
+        assert(m(k) == v)
+      }
+    }
+    
+  }// object
+
+}

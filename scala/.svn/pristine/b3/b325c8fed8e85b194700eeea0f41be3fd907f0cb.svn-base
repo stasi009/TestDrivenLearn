@@ -1,0 +1,18 @@
+package test
+
+import org.scalatest.Spec
+
+sealed class FunctionalOperatorsTest extends Spec {
+
+  object `test operators` {
+    def `test zip` = {
+      // segments can have different length
+      // zipped result has the shortest length among segments
+      val ids = Seq(1, 2, 3, 4)
+      val names = Seq("a", "b", "c")
+
+      assertResult(Seq((1, "a"), (2, "b"), (3, "c")))(ids zip names)
+    } //def
+  } //object
+
+}

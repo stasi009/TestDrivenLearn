@@ -1,0 +1,46 @@
+package test
+
+import org.scalatest.Spec
+
+class PatternMatchTest extends Spec {
+
+  object `demo usage` {
+
+    def `simple demo1` = {
+
+      def __fool(ch: Char) = {
+        ch match {
+          case '+' => 1
+          case '-' => -1
+          case _ => 0
+        } //match
+      } // __fool function
+
+      for ((ch, sign) <- Array(('+', 1), ('-', -1), (' ', 0))) {
+        assertResult(sign)(__fool(ch))
+      } //for
+
+    }
+    
+    def `match constants capital letter` = {
+      val Positive = 1
+      val Negative = 2
+      val Zero = 3
+      
+      def __fool(flag: Int) = {
+        flag match {
+          case Positive => "positive"
+          case Negative => "negative"
+          case Zero => "zero"
+        }
+      }
+      
+      assertResult("positive")(__fool(Positive))
+      assertResult("negative")(__fool(Negative))
+      assertResult("zero")(__fool(Zero))
+      
+    }
+    
+  } // object
+
+}

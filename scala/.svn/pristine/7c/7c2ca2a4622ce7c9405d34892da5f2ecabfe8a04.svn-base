@@ -1,0 +1,27 @@
+package test
+
+import org.scalatest.Spec
+import collection.JavaConversions._
+import collection.mutable
+import java.util.{List=>JList}
+
+sealed class JavaCollectionConvertTest extends Spec {
+  
+  object `test conversion` {
+    
+    def `arraybuffer to java list` = {
+      val ab = mutable.ArrayBuffer(1,2,3)
+      
+      val jIntList: JList[Int] = ab
+      val jIntegerList: JList[Integer] = ab map {x=>x:java.lang.Integer}
+      
+      // changes will reflect on underlying collection
+      jIntList.add(100)
+      jIntegerList.add(1000)
+      
+      assert(ab sameElements Array(1,2,3,100,1000))
+    }//def
+    
+  }//object
+
+}//class

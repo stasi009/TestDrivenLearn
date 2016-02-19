@@ -1,0 +1,18 @@
+package test
+
+import org.scalatest.Spec
+
+sealed class ImmutableSetTest extends Spec {
+
+  object `basic operation` {
+
+    def `test add` = {
+      val original = Set(1, 2, 3)
+
+      val s1 = original + 1
+      assert(s1 eq original)
+    }
+
+  } //object
+
+}

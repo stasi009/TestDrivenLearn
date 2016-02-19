@@ -1,0 +1,17 @@
+package test
+
+import org.scalatest.Spec
+
+/*
+ * view and stream are both lazy-evaluated data structures
+ * the difference between them:
+ * 1. view are always lazy-evaluated for all its elements. however, stream is active for its head, but lazy for its tail part
+ * 2. stream cache all its previous-accessed elements. while, view has no memory, always re-generate
+ */
+sealed class LazyViewTest extends Spec {
+  
+  object `demo how view works` {
+    
+  }//object
+
+}

@@ -1,0 +1,16 @@
+package demo
+
+import java.util.Calendar
+
+object DateTimeDemo extends App {
+
+  def demoCalendar() = {
+    val c = Calendar.getInstance()
+    println(c.get(Calendar.YEAR))
+  }
+
+  override def main(args: Array[String]) = {
+    demoCalendar()
+  } //main
+
+}

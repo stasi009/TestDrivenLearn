@@ -1,0 +1,27 @@
+package test
+
+import org.scalatest.Spec
+
+class OtherTest extends Spec {
+  
+  def `conditional expression` = {
+    
+    def __fool(flag: Boolean) = {
+      if (flag) "true" else "false"
+    }
+    
+    assertResult("true")(__fool(true))
+    assertResult("false")(__fool(false))
+  }
+  
+  def `block expression` = {
+    val a = 9
+    val b = {
+      val x = a+1
+      val y = -a
+      x*y
+    }
+    assert(b === -90)
+  }
+
+}

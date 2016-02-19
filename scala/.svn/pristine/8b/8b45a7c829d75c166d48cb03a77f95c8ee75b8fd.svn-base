@@ -1,0 +1,38 @@
+package test
+
+import org.scalatest.Spec
+import collection.mutable.ArrayBuffer
+
+/*
+ * An implementation of the Buffer class using an array to represent the assembled sequence internally. 
+ * Append, update and random access take constant time (amortized time). 
+ * Prepends and removes are linear in the buffer size.
+ */
+sealed class ArrayBufferTest extends Spec {
+  
+  object `demo usages` {
+    
+    def `add elements with +=` = {
+      val b = ArrayBuffer[Int]()
+      
+      // add one
+      b += 1
+      assert(b sameElements Array(1))
+      
+      // add multiple elements by enclosing them in ()
+      b += (8,9,10)
+      assert(b sameElements Array(1,8,9,10))
+    }
+    
+    def `append collection with ++=` = {
+      val b = ArrayBuffer[Int]()
+      
+      b ++= Array(1,2)
+      b ++= Vector(3,4)
+      
+      assert(b sameElements Array(1,2,3,4))
+    }
+  }
+  
+
+}

@@ -1,0 +1,42 @@
+package test
+
+import org.scalatest.Spec
+import annotation.tailrec
+
+/*
+ * A List is a finite immutable sequence. 
+ * They provide constant-time access to their first element as well as the rest of the list, 
+ * and they have a constant-time cons operation for adding a new element to the front of the list. 
+ * Many other operations take linear time.
+ */
+sealed class ListTest extends Spec {
+
+  object `recurisve operations` {
+
+    def mylength[T](lst: List[T]) = {
+
+      @tailrec
+      def __length(lst: List[T], currentLength: Int): Int = {
+        lst match {
+          case Nil => currentLength
+          case head :: tail => __length(tail, currentLength + 1)
+        } //match
+      } //def
+
+      __length(lst, 0)
+    } //def
+
+    def mysum[T](lst: List[T])(init0: T)(op: (T, T) => T) = {
+
+      @tailrec
+      def __sum(lst: List[T], currentSum: T): T = {
+        lst match {
+          case Nil => currentSum
+          case head :: tail => __sum(tail, op(head, currentSum))
+        } //match
+      } //def
+    }
+
+  } //object
+
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="reference" key="selection"/>
+		<list key="findhistory">
+			<item value="reference"/>
+			<item value="ThrowIllegalArgEx"/>
+			<item value="ThrowRuntimeEx"/>
+		</list>
+	</section>
+</section>

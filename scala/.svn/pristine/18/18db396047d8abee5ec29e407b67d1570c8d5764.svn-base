@@ -1,0 +1,27 @@
+package test
+
+import org.scalatest.Spec
+
+sealed class EqualityTest extends Spec {
+
+  object `basic demo` {
+
+    def `demo eq and ==` = {
+      val original = "hello scala"
+      val interned = "hello scala"
+      val newinstance = "hello scala"
+
+      // ----------- eq checks identity equality
+      assert(original eq interned)
+      assert(!(original eq newinstance))
+
+      // ----------- == is based on "equals"
+      // by default, "equals" also performs identity equality
+      // however, "equals" can be overriden to provide "value-based equality" checking
+      assert(original == interned)
+      assert(original == newinstance)
+    } //def
+
+  } //object
+
+}

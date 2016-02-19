@@ -1,0 +1,32 @@
+package test
+
+import org.scalatest.Spec
+
+sealed class EnumerationTest extends Spec {
+  
+  object TrafficLightColor extends Enumeration {
+    val Red,Yellow,Green = Value
+  }// object
+  
+  /*
+   * pay attention that the type of the enumeration is not TrafficLightColor
+   * but TrafficeLightColor.Value
+   */
+  def doWhat(color: TrafficLightColor.Value) = {
+    color match {
+      case TrafficLightColor.Red => "Stop"
+      case TrafficLightColor.Yellow => "Caution"
+      case TrafficLightColor.Green => "Go"
+    }//match
+  }
+  
+  object `demo enumeration` {
+    def `test values` = {
+      val allcolors = TrafficLightColor.values
+      val names = allcolors map {_.toString}
+      assert(names == Set("Red","Yello","Green"))
+    }
+    
+  }//object
+
+}

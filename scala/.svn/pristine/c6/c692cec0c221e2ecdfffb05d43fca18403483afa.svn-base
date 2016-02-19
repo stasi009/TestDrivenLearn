@@ -1,0 +1,21 @@
+
+
+package test
+
+import org.scalatest.Spec
+
+class CaseClassTest extends Spec {
+  
+  object `demo usage` {
+    case class Fool(number: Int,name: String)
+    
+    def `test construct` = {
+      val f1 = Fool(1,"abc")
+      assertResult(1)(f1.number)
+      
+      val f2 = Fool(name="cd",number=9)// use named arguments
+      assertResult("cd")(f2.name)
+    }
+  }
+
+}

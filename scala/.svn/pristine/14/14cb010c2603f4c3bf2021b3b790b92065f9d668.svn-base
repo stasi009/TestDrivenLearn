@@ -1,0 +1,59 @@
+package test
+
+import org.scalatest.Spec
+import java.io.IOException
+
+sealed class ExceptionTest extends Spec {
+  
+  sealed class Tester {
+    private val ThrowRuntimeEx = 1
+    private val ThrowIllegalArgEx = 2
+    private val ThrowIoEx = 3
+
+    private var _runtimeEx = false
+    private var _illegalArgEx = false
+    private var _ioEx = false
+    private var _finally = false
+    
+    def runtimeExCaught = _runtimeEx
+    def illegalArgExCaught = _illegalArgEx
+    def ioExCaught = _ioEx
+    def finallyInvoked = _finally
+    
+    def run(choice: Int) = {
+      try {
+        choice match {
+          case `ThrowRuntimeEx` => throw new RuntimeException
+          case `ThrowIllegalArgEx` => throw new IllegalArgumentException
+          case `ThrowIoEx` => throw new IOException
+        }
+      } catch {
+        case ex: IllegalArgumentException => _illegalArgEx = true
+        case ex: RuntimeException => _runtimeEx = true
+      } //catch
+      finally {
+        _finally = true
+      }//finally
+    }//run
+  }
+  
+  object `demo usage` {
+    
+    def safeDivide(x: Int,y: Int) = {
+      try{
+        Some(x/y)
+      } catch {
+        case _: ArithmeticException => None
+      }// case
+    }// safeDivide
+    
+    def `demo catch` = {
+      assertResult(2)(safeDivide(5, 2).get)
+      assert(safeDivide(6, 0).isEmpty)
+    }
+    
+    def `throw sub exception`
+    
+  }
+
+}

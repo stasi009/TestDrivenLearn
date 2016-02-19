@@ -1,0 +1,14 @@
+package test
+
+import org.scalatest.Spec
+
+sealed class ImmutableMapTest extends Spec {
+  
+  object `basic operations` {
+    
+    def `initialize a map` = {
+      // initialize with existing key-value pairs
+    }
+  }
+
+}
