@@ -1,0 +1,6 @@
+
+change the content and save
+to trigger copy. 
+
+this file will be copied into the bin directory automatically by the compiler
+which can be accessed by class's getResource function
