@@ -1,4 +1,4 @@
-
+﻿
 def demo_readline() :
     with open("datas/ZenOfPython.txt","rt") as file:# 'r'-->read, 't'-->text mode
         counter = 0
@@ -10,6 +10,14 @@ def demo_readline() :
             # use rstrip() to remove the "newline breaker" at the end of each line
             print("[%d] %s"%(counter,txt.rstrip()))
             txt = file.readline()
+
+def demo_file_as_iterable():
+    file_object = open("myfile", 'r')
+    count = 0
+    for line in file_object:
+        count = count + 1
+    print(count)
+    file_object.close()
             
 def demo_readlines() :
     with open("datas/ZenOfPython.txt","rt") as file:
