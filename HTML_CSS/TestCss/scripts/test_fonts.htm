@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>test fonts</title>
+    <style type="text/css">
+        #serif
+        {
+            font-family: "Times New Roman" ,Times,serif;
+        }
+        #sansserif
+        {
+            font-family: Arial,Helvetica,sans-serif;
+        }
+        .note
+        {
+            font-weight: bolder;
+            color : orangered;
+        }
+        #font-style-normal
+        {
+            font-style: normal;
+        }
+        #font-style-italic
+        {
+            font-style: italic;
+        }
+        #font-size-px
+        {
+            font-size: 15px;
+        }
+        #font-size-em
+        {
+            font-size: 2em;
+        }
+        #font-size-percent-big
+        {
+            font-size: 150%;
+        }
+        #font-size-percent-small
+        {
+            font-size: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        CSS font family</h1>
+    <p id="serif">
+        This is a paragraph, shown in the Times New Roman font.</p>
+    <p id="sansserif">
+        This is a paragraph, shown in the Arial font.</p>
+    <div class="note">
+        notes about font family
+        <ul>
+            <li>The font-family property should hold several font names as a "fallback" system.
+                If the browser does not support the first font, it tries the next font.</li>
+            <li>Start with the font you want, and end with a generic family, to let the browser
+                pick a similar font in the generic family, if no other fonts are available.</li>
+            <li>If the name of a font family is more than one word, it must be in quotation marks,
+                like font-family: "Times New Roman".</li>
+        </ul>
+    </div>
+    <hr />
+    <h1>
+        CSS font style</h1>
+    <ul>
+        <li id="font-style-normal">normal</li>
+        <li id="font-style-italic">italic</li>
+    </ul>
+    <hr />
+    <h1>
+        CSS font size</h1>
+    <ul>
+        <li>
+            <p id="font-size-px">
+                size set by unit "px"</p>
+        </li>
+        <li>
+            <p id="font-size-em">
+                size set by unit "em"</p>
+        </li>
+        <li>
+            <p id="font-size-percent-big">
+                large relative size</p>
+        </li>
+        <li>
+            <p id="font-size-percent-small">
+                small relative size</p>
+        </li>
+    </ul>
+    <div class="note">
+        notes about font family
+        <ul>
+            <li>The em size unit is recommended by the W3C. 1em is equal to the current font size.
+                The default text size in browsers is 16px. So, the default size of 1em is 16px.</li>
+            <li>For relative, ‘%’ and ‘em’ are equally good.</li>
+        </ul>
+    </div>
+    <hr />
+</body>
+</html>

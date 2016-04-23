@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demonstrate positioning</title>
+    <style type="text/css">
+        h2
+        {
+            color: firebrick;
+        }
+        
+        .note
+        {
+            color: orangered;
+            font-style: italic;
+        }
+        
+        .title
+        {
+            color: navy;
+            text-align: center;
+        }
+        
+        .attention
+        {
+            font-weight: bolder;
+            text-decoration: underline;
+            font-size: 120%;
+        }
+        
+        .fixPosition
+        {
+            position: fixed;
+            top: 30%;
+            right: 40%;
+            font-weight: bolder;
+            font-size: 200%;
+            color: navy;
+            background-color: yellow;
+            border: 1px green dashed;
+            padding: 2px;
+        }
+        
+        .sample
+        {
+            border: 1px blue solid;
+            width: 80%;
+            margin: 1em auto;
+            padding: 5px;
+        }
+        
+        .relativePosMoveLeft
+        {
+            position: relative;
+            left: -100px;
+        }
+        
+        .relativePosMoveRight
+        {
+            position: relative;
+            left: 250px;
+        }
+        
+        /*chekanote: I also find myself that: 
+        if the position is NOT absolute, then width is 100% according to its container
+        but if the position is absolute, then width becomes just equal to the length of the content*/
+        .relativePosMoveUp
+        {
+            position: relative;
+            top: -40px;
+            left: 100px;
+            width: 50%;
+            background-color: lightblue;
+        }
+        
+        .absolutePos
+        {
+            position: absolute;
+            left: 60px;
+            bottom: -10px;
+            background-color: yellow;
+        }
+        
+        .moveToBackground
+        {
+            position: absolute;
+            left: 250px;
+            top: 15px;
+            background-color: yellow;
+            z-index: -1;
+        }
+        
+        #showbox p
+        {
+            border: 1px dashed dodgerblue;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center">
+        <a href="http://www.w3schools.com/css/css_positioning.asp" target="_blank">CSS Positioning
+            on W3C School</a></h1>
+    <h2>
+        Static Positioning</h2>
+    <p class="note">
+        HTML elements are positioned static <span class="attention">by default</span>. A
+        static positioned element is always positioned according to the normal flow of the
+        page.</p>
+    <h2>
+        Fixed Positioning</h2>
+    <ul class="note">
+        <li>An element with fixed position is positioned relative to the browser window</li>
+        <li>It will not move even if the window is scrolled</li>
+        <li>Fixed positioned elements are <span class="attention">removed from the normal flow</span>.
+            The document and other elements behave like the fixed positioned element does not
+            exist.</li>
+        <li>Fixed positioned elements can overlap other elements.</li>
+    </ul>
+    <h2>
+        Relative Positioning</h2>
+    <ul class="note">
+        <li>A relative positioned element is positioned relative to its <span class="attention">
+            normal</span> position.</li>
+        <li>The content of relatively positioned elements can be moved and overlap other elements,
+            but the reserved space for the element is still <span class="attention">preserved</span>
+            in the normal flow.</li>
+        <li>Relatively positioned elements are often used as container blocks for absolutely
+            positioned elements.</li>
+    </ul>
+    <h2>
+        Absolute Positioning</h2>
+    <ul class="note">
+        <li>An absolute position element is positioned relative to the first parent element
+            that has a position other than static. If no such element is found, the containing
+            block is &lt;html&gt;</li>
+        <li>Absolutely positioned elements are <span class="attention">removed</span> from the
+            normal flow. The document and other elements behave like the absolutely positioned
+            element does not exist.</li>
+    </ul>
+    <h2>
+        Z-Index</h2>
+    <ul class="note">
+        <li>The z-index property specifies the stack order of an element (which element should
+            be placed in front of, or behind, the others</li>
+        <li>An element can have a positive or negative stack order</li>
+        <li>An element with greater stack order is always in front of an element with a lower
+            stack order.</li>
+        <li>If two positioned elements overlap, without a z-index specified, the element positioned
+            last in the HTML code will be shown on top.</li>
+    </ul>
+    <!--****************************************************************-->
+    <h2 class="fixPosition">
+        Fixed Positioning</h2>
+    <div class="sample">
+        <div id="showbox">
+            <p>
+                This is a heading with no position</p>
+            <p class="relativePosMoveLeft">
+                This paragraph is moved left according to its normal position</p>
+            <p class="relativePosMoveRight">
+                This paragraph is moved right according to its normal position</p>
+        </div>
+    </div>
+    <div class="sample">
+        <h3 class="title">
+            Relative Position Sample
+        </h3>
+        <p>
+            This is a heading with no position</p>
+        <p class="relativePosMoveUp">
+            This heading is moved upwards according to its normal position</p>
+        <p class="note">
+            <b>Note:</b> Even if the content of the relatively positioned element is moved,
+            the reserved space for the element is still preserved in the normal flow.</p>
+    </div>
+    <div class="sample" style="position: relative">
+        <h3 class="title">
+            Absolute Demo</h3>
+        <p>
+            This is a paragraph with no position</p>
+        <p class="absolutePos">
+            This paragraph has absolute positioning.</p>
+        <p class="note">
+            <b>Note:</b> Absolutely positioned elements are removed from the normal flow. The
+            document and other elements behave like the absolutely positioned element does not
+            exist..</p>
+    </div>
+    <div class="sample" style="position: relative">
+        <p style="background-color: lightgreen">
+            This is a heading with no position</p>
+        <p class="moveToBackground">
+            This paragraph is moved upwards according to its normal position</p>
+    </div>
+</body>
+</html>

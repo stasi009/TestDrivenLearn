@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>test tables</title>
+
+    <style type="text/css">
+        h2 
+        {
+            color: orange;
+            text-align: center;
+        }
+        table
+        {
+            border-collapse:collapse;
+        }
+        table, td, th
+        {
+            border:1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+<!--***************************************************************-->
+<h2>definition of table</h2>
+<ul>
+<li>Each table starts with a table tag. </li>
+<li>Each table row starts with a tr tag.</li>
+<li>Each table data starts with a td tag.</li>
+</ul>
+
+<!--***************************************************************-->
+<h2>simple tables</h2>
+<table  >
+<caption>Monthly savings</caption>
+<tr>
+<th>Header 1</th>
+<th>Header 2</th>
+<th>Header 3</th>
+</tr>
+<tr>
+  <td>100</td>
+  <td>200</td>
+  <td>300</td>
+</tr>
+<tr>
+  <td>400</td>
+  <td>500</td>
+  <td>600</td>
+</tr>
+</table>
+
+<!--***************************************************************-->
+<h2>vertical headers</h2>
+<table >
+<tr>
+<th>first name: </th>
+<td>cheka</td>
+</tr>
+<tr>
+<th>last name: </th>
+<td>stasi</td>
+</tr>
+</table>
+
+<!--***************************************************************-->
+<h2>span multiple rows/columns</h2>
+
+<h4>colspan</h4>
+<table >
+<tr>
+  <th>Name</th>
+  <th colspan="2">Telephone</th>
+</tr>
+<tr>
+  <td>Bill Gates</td>
+  <td>555 77 854</td>
+  <td>555 77 855</td>
+</tr>
+</table>
+
+<h4>rowspan</h4>
+<table>
+<tr>
+  <th>First Name:</th>
+  <td>Bill Gates</td>
+</tr>
+<tr>
+  <th rowspan="2">Telephone:</th>
+  <td>555 77 854</td>
+</tr>
+<tr>
+  <td>555 77 855</td>
+</tr>
+</table>
+
+</body>
+</html>

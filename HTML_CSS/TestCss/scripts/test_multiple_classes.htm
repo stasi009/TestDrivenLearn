@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demonstrate attach multiple classes to single element</title>
+    <style type="text/css">
+        .shared {
+            font-weight: bolder;
+            font-size: 2em;
+            text-decoration: underline;
+            border: 1px orangered solid;
+            background-color: yellow;
+            text-align: center;
+            width: 80%;
+            margin: 5px auto;       
+        }
+        
+        .specific1 {
+            color: crimson;
+        }
+        
+        .specific2 {
+            color: navy;
+        }        
+    </style>
+    <link rel="stylesheet" type="text/css" href="common1.css" />
+</head>
+    <body>
+        <p class="shared specific1">Hello world</p>
+        <p class="shared specific2">Hello WSU from Stasi</p>
+        
+        <div class="note">
+            <p>Inheritance is not part of the CSS standard. To walk around this limition, we can add multiple classes to a single DOM element. to see details, visit <a href="http://stackoverflow.com/questions/1065435/can-a-css-class-inherit-one-or-more-other-classes">"Can a CSS class inherit one or more other classes?"</a>.</p>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demonstrate how to build navigation bar</title>
+    <style type="text/css">
+        #navigationbar
+        {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        #navigationbar li
+        {
+            float: left;
+        }
+        #navigationbar a
+        {
+            display: block;
+            width: 60px;
+            text-decoration: none;
+            color: white;
+            background-color: #98bf21;
+            border-right: 1px solid white;
+            padding: 0.2em 0.6em;
+        }
+        
+        .note
+        {
+            color: orangered;
+            font-style: italic;
+            margin: 10px;
+            clear: both; /*conflit between 'margin' and 'clear', if 'clear' is set, margin to bottom becomes useless*/
+            padding: 10px 0px 0px 0px;
+        }
+        
+        .attention
+        {
+            font-weight: bold;
+            font-size: 150%;
+        }
+    </style>
+</head>
+<body>
+    <ul id="navigationbar">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+    </ul>
+    <div class="note">
+        <h4>
+            Example explained:</h4>
+        <ul>
+            <li>float:left - use float to get block elements to slide next to each other</li>
+            <li>display:block - Displaying the links as block elements makes the whole link area
+                clickable (not just the text), and it allows us to specify the width</li>
+            <li>width:60px - Since block elements take up the full width available, they cannot
+                float next to each other. We specify the width of the links to 60px</li>
+            <li><span class="attention">conflit between 'margin' and 'clear', if 'clear' is set,
+                margin to bottom becomes useless</span></li>
+        </ul>
+    </div>
+</body>
+</html>

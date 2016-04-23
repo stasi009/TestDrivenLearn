@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demonstration of padding</title>
+    <style type="text/css">
+        #sample
+        {
+            border: 1px navy dashed;
+            width: 80%;
+            margin: auto;
+        }
+        
+        #sample p
+        {
+            background-color: yellow;
+            border: 2px green solid;
+            text-align: center;
+            margin: 15px;
+        }
+        #sample p.padding
+        {
+            padding: 50px 30px;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        The padding clears an area around the content (inside the border) of an element.
+        The padding is affected by the background color of the element.
+    </p>
+    <div id="sample">
+        <p>
+            This is a paragraph with no specified padding.</p>
+        <p class="padding">
+            This is a paragraph with specified paddings.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demo the usage of margin</title>
+    <style type="text/css">
+        #sample {
+            border: 1px teal solid;
+            width: 60%;
+            margin: auto;
+            background-color: lightblue;
+        }
+        #sample p
+        {
+            background-color: yellow;
+            border: 2px grey solid;
+        }
+        #sample p.margin
+        {
+            margin: 10px 50px;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        The margin clears an area around an element (outside the border). The margin does
+        not have a background color, and is completely transparent.
+        <br />
+        see details: <a href="http://www.w3schools.com/css/css_margin.asp" target="_blank">"CSS
+            Margin in W3C School"</a>
+    </p>
+    <div id="sample">
+        <p>
+            This is a paragraph with no specified margins.</p>
+        <p class="margin">
+            This is a paragraph with specified margins.</p>
+    </div>
+</body>
+</html>

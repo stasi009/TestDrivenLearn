@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demonstrate box model</title>
+    <style type="text/css">
+        .attention {
+            font-weight: bolder;
+            color: blue;
+        }
+        
+        #demo1 {
+            border: grey 1em solid;
+            padding: 1em;
+            margin: 2em;
+            width: 60%;
+        }
+        
+        #demo2 
+        {
+            border: grey 1em solid;
+            width: 40%;
+            /*manually specify the margin at top and buttom
+            and let the browser calculate the margin on horizontal dimension
+            this will put the whole block in horizontal-center position*/
+            margin: 2em auto;
+            background-color: yellow;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+    <body>
+        <div id="demo1">
+            Explanation of the different parts: (from outside to inside)<br/>
+            <ul>
+                <li><span class="attention">Margin</span> - Clears an area around the border. The margin does not have a background color, it is completely transparent</li>
+                <li><span class="attention">Border</span> - A border that goes around the padding and content. The border is affected by the background color of the box</li>
+                <li><span class="attention">Padding</span> - Clears an area around the content. The padding is affected by the background color of the box</li>
+                <li><span class="attention">Content</span> - The content of the box, where text and images appear</li>
+            </ul>
+        </div>
+        <hr/>
+        
+        <p id="demo2">CONTENT</p>
+        
+        <p style="border: 1px green dotted;text-align: center"><a href="http://www.w3schools.com/css/css_boxmodel.asp" target="_blank">explanation from W3C school</a></p>
+        
+
+    </body>
+</html>

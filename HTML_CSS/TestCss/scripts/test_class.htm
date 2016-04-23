@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>test css class</title>
+    <style type="text/css">
+        /*all 'center' class will center-aligned
+        but only 'center' within <p> will be changed color*/
+        .center
+        {
+            text-align: center;
+        }
+        p.center
+        {
+            color: red;
+        }
+        .right
+        {
+            text-align: right;
+        }
+        .txtstyle
+        {
+            font-weight: bold;
+            font-style: italic;
+        }
+        .txtcolor
+        {
+            color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="center">
+        center-aligned h1.</h1>
+    <p class="center">
+        center-aligned paragraph.</p>
+    <h2 class="right">
+        right-aligned h2.</h2>
+    <p class="right">
+        right-aligned paragraph.</p>
+    <hr />
+    <h2>
+        single element can belong to multiple classes</h2>
+    <ul>
+        <li class="txtstyle">only has 'weight' class</li>
+        <li class="txtcolor">only has 'color' class</li>
+        <li class="txtstyle txtcolor">has both 'weight' and 'color' class</li>
+    </ul>
+</body>
+</html>

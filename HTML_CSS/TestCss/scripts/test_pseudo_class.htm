@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Demonstrate Pseduo Class</title>
+    <style type="text/css">
+        
+        div {
+            border: 2px dotted blue;
+            text-align: center;
+        }
+        
+        a:link
+        {
+            color: green;
+        }
+        a:visited
+        {
+            color: yellow;
+        }
+        a:hover
+        {
+            color: orangered;
+            font-style: italic;
+            font-size: 3em;
+        }
+        a:active
+        {
+            color: blue;
+        }
+        
+        input:focus {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        the reason calling it "pseudo class" is: you can achieve the same dynamic effect
+        by using javascript. you can attach event handler, and inside that event handler,
+        you dynamically add certain 'class' attribute to that element, so that element will
+        be updated dynamically.
+        <br />
+        so by using this "pseduo class" feature, all these dynamic visual effects will be
+        implemented by the browser without the need to code in javascript manually.
+    </p>
+    <p style="text-align: center; font-size: 2em">
+        <a >link</a>
+    </p>
+    <div>
+        <input type="text"/>
+    </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>test font size</title>
+    <style type="text/css">
+        h1
+        {
+            font-size: 2.5em;
+        }
+        h2
+        {
+            font-size: 1.875em;
+        }
+        p
+        {
+            font-size: 0.875em;
+        }
+        #bigsize {
+            font-size: 1.5em;
+            color: red;
+        }
+        #smallsize {
+            font-size: 0.5em;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="bigsize">
+        <h1>header1 in block 1</h1>
+        <h2>header2 in block 1</h2>
+        <p>paragraph in block 1</p>
+    </div>
+    <hr />
+    <div id="smallsize">
+        <h1>header1 in block 2</h1>
+        <h2>header2 in block 2</h2>
+        <p>paragraph in block 2</p>
+    </div>
+    
+    <h3 style="color: green">when we use em or percentage to define size, the real size when rendering is calculated based on the size of the parent container. the h1, h2, p elements inside below two blocks have the same definition, but since the parent div have different size, then those h1, h2, p will have different size.</h3>
+    <div style="font-size: 32px;border: green 2px solid">
+        <h1>h1</h1>
+        <h2>h2</h2>
+        <p>paragraph</p>
+    </div>
+    
+    <div style="font-size: 8px;border: green 2px solid">
+        <h1>h1</h1>
+        <h2>h2</h2>
+        <p>paragraph</p>
+    </div>
+</body>
+</html>

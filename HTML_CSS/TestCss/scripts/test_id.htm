@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>test id</title>
+    <style type="text/css">
+        #paragraph
+        {
+            color: red;
+            text-align: center;
+        }
+        /*define sub-style within id*/
+        #note
+        {
+            font-family: Arial;
+            font-weight: bold;
+            font-style: italic;
+        }
+        /*CSS selector: parent children, that measn, select all children within parent*/
+        #note h1
+        {
+            color: crimson;
+        }
+        #note p
+        {
+            color: navy;
+        }
+        
+        /*chekanote: element#id, that means, if to be selected, not only need to match the id
+        but it also need to match the element type
+        when the element will be selected only when both type and id are matched.
+        below codes, indicates, only h1 with id 'somestyle' will be selected
+        other types of element with that id will not be selected*/
+        h1#somestyle
+        {
+            color: firebrick;
+            font-size: 2em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <p id="paragraph">
+        paragraph with id attribute.<br />
+        it will affected by css.</p>
+    <p>
+        paragraph without id attribute.
+        <br />
+        it won't be affected by css.</p>
+    <hr />
+    <div id="note">
+        <h1>
+            header</h1>
+        <p>
+            paragraph</p>
+    </div>
+    <p id="somestyle">
+        although it has matched id, but since its type is not matched, this element will
+        not be selected.</p>
+</body>
+</html>

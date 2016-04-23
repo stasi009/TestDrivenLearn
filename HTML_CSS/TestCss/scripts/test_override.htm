@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>test override effect of css</title>
+    <link rel="stylesheet" type="text/css" href="style1.css"/>
+    <!--most recently defined style win-->
+    <style type="text/css">
+        p {
+            color: yellow;
+            font-size: small;
+        }
+    </style>
+</head>
+    <body>
+        <h1>use style defined in external style sheet.</h1>
+        <p>use style defined in head</p>
+        <!--first inherit, and then override-->
+        <p style="color: blue; text-align: right">override by inline style.</p>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+﻿
+/*comments*/
+body {
+    background-color: tan;
+}
+h1 {
+    color: maroon;
+    font-size: 30pt;
+}
+hr 
+{
+    /*comments*/
+    color: navy;
+}
+p 
+{
+    font-size: 15pt;
+    margin-left: 15px;
+}
+a:link { color: green;}
+a:visited { color: yellow;}
+a:hover{ color: black;}
+a:active { color: blue;}

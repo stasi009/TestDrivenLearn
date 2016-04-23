@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demonstrate the effect of border and outline</title>
+    <style type="text/css">
+        .attention {
+            font-weight: bolder;
+            color: red;
+        }
+        
+        #demo1 
+        {
+            border: 1em solid red;
+            outline: blue dotted thick
+        }
+    </style>
+</head>
+    <body>
+        <p>
+            An outline is a line that is drawn around elements <span class="attention">(outside the borders)</span> to make the element "stand out".
+            <br/>
+            However, the outline property is different from the border property.
+            <span class="attention">
+                The outline is not a part of an element's dimensions; 
+                the element's total width and height is not affected by the width of the outline.
+            </span>
+            <br/>
+            <a href="http://www.w3schools.com/css/css_outline.asp" target="_blank">details explanation from W3C school</a>
+        </p>
+        
+        <div id="demo1">
+            <p>demo of border and outline</p>
+            <ul>
+                <li>the <span style="color: red">red</span> one is border, it is inside</li>
+                <li>the <span style="color: blue">blue</span> one is outline, it is outside</li>
+            </ul>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,17 @@
+﻿body
+{
+    background-color : LightYellow;
+}
+h1 
+{
+    font-size : x-large;
+}
+h2
+{
+    color : Navy;
+}
+p 
+{
+    margin-left: 25%;
+    font-size: small    ;
+}

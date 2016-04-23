@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>selector based on attributes</title>
+    <style type="text/css">
+        h2
+        {
+            color: firebrick;
+        }
+        
+        .sample
+        {
+            margin: auto;
+            border: 2px green dotted;
+            width: 80%;
+        }
+        
+        [title]
+        {
+            color: teal;
+            font-style: italic;
+        }
+        
+        #attrStartWith p[lang|=en] {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <!--**************************************************-->
+    <h2>
+        with 'Title' Attribute:</h2>
+    <div class="sample">
+        <h1 title="Hello world">
+            Hello world</h1>
+        <a title="W3Schools" href="http://w3schools.com">W3Schools</a>
+    </div>
+    <!--**************************************************-->
+    <h2>
+        Without 'Title' Attribute:</h2>
+    <div class="sample">
+        <p>
+            Hello!</p>
+    </div>
+    <!--**************************************************-->
+    <h2>
+        [lang|=en] Selects all elements with a lang attribute value starting with "en"</h2>
+    <div class="sample">
+        <div id="attrStartWith">
+            <p lang="en">
+                Hello!</p>
+            <p lang="en-us">
+                Hi!</p>
+            <p lang="en-gb">
+                Ello!</p>
+            <p lang="us">
+                Hi!</p>
+            <p lang="no">
+                Hei!</p>
+        </div>
+    </div>
+</body>
+</html>

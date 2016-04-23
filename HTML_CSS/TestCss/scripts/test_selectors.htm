@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demonstrate selectors</title>
+    <style type="text/css">
+        .title
+        {
+            color: crimson;
+        }
+        
+        .sample
+        {
+            margin: auto;
+            border: 2px green dotted;
+            width: 80%;
+        }
+        
+        /*
+        only certain types of elements will be affected by this class
+        the same rule applies on type#id
+        so 'type.class' and 'type#id' both means:
+        only when both types and class/id satisfies, the elements will be chosen
+        */
+        p.class1
+        {
+            text-align: center;
+            color: blue;
+        }
+        
+        .class2
+        {
+        }
+        #id1
+        {
+        }
+        #id1 h4, .class2 p
+        {
+            color: navy;
+            text-align: center;
+        }
+        
+        #pseudoElement p:first-letter
+        {
+            font-size: 2em;
+            font-weight: bolder;
+            color: navy;
+        }
+        
+        #selectByAttribute a[target=_blank] {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <p style="text-align: center; font-weight: bolder;">
+        see: <a href="http://www.w3schools.com/cssref/css_selectors.asp">CSS Selector Reference</a></p>
+    <!--************************** select only certain types *******************-->
+    <h2 class="title">
+        class which only affect certain types</h2>
+    <div class="sample">
+        <p>
+            paragraph without any class.
+        </p>
+        <p class="class1">
+            both paragraph and class1</p>
+        <h4 class="class1">
+            class1 but not paragraph.</h4>
+    </div>
+    <!--*********************** inside *********************** -->
+    <h2 class="title">
+        "element1 element2": select all element2 inside element1</h2>
+    <div class="sample">
+        <div>
+            <p>
+                this paragraph is not in class2</p>
+        </div>
+        <div class="class2">
+            <p>
+                this paragraph is in class2</p>
+        </div>
+        <hr />
+        <h4>
+            h4 not in id1</h4>
+        <div id="id1">
+            <h4>
+                h4 in id1</h4>
+        </div>
+    </div>
+    <!--********************** pseudo elements *************************-->
+    <h2 class="title">Pseudo Elements</h2>
+    <div class="sample">
+        <div id="pseudoElement">
+            <p>
+                My name is Donald.</p>
+            <p>
+                I live in Duckburg.</p>
+            <p>
+                My best friend is Mickey.</p>
+        </div>
+    </div>
+    <!--************************* select based on attributes ***************** -->
+    <h2 class="title">Select based on attributes</h2>
+    <div class="sample">
+        <div id="selectByAttribute">
+            only elements with certain attribute value will be chosen
+            <ul>
+                <li><a href="http://www.w3schools.com">w3schools.com</a></li>
+                <li><a href="http://www.disney.com" target="_blank">disney.com</a></li>
+                <li><a href="http://www.wikipedia.org" target="_top">wikipedia.org</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

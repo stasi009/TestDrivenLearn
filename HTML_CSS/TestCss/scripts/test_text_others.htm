@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>test text others</title>
+    <style type="text/css">
+        a.nodecoration
+        {
+            text-decoration: none;
+        }
+        #overline {
+            text-decoration: overline;
+        }
+        #line-through {
+            text-decoration: line-through;
+        }
+        #underline {
+            text-decoration: underline;
+        }
+        #uppercase { text-transform: uppercase;}
+        #lowercase { text-transform: lowercase;}
+        #capitalize { text-transform: capitalize;}
+        
+        span {
+            font-weight: bold;
+            font-size: large;
+            color: green;
+        }
+        #indent { text-indent: 50px;}
+    </style>
+</head>
+<body>
+    <h4>
+        with/without decoration to links</h4>
+    <ul>
+        <li>Link to: <a href="http://www.w3schools.com">normal link</a></li>
+        <li>Link to: <a class="nodecoration" href="http://www.w3schools.com">link without decoration.</a></li>
+    </ul>
+    <hr />
+    
+    <h4>
+        decoration on texts</h4>
+    <ul>
+        <li id="overline">overline</li>
+        <li id="line-through">line-through</li>
+        <li id="underline">underline</li>
+    </ul>
+    <hr />
+    
+    <h4>
+        transformation</h4>
+    <ul>
+        <li id="uppercase">This is some text.</li>
+        <li id="lowercase">This is some text.</li>
+        <li id="capitalize">This is some text.</li>
+    </ul>
+    <hr />
+    
+    <h4>Indentation</h4>
+    <p><span>Note: Normal.</span> In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.'</p>
+    <p id="indent"><span>Note: Indent.</span> In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.'</p>
+    <hr />
+
+</body>
+</html>

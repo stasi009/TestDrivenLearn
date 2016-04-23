@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>test css styles on links</title>
+    <link rel="stylesheet" type="text/css" href="common1.css" />
+    <style type="text/css">
+        a:link /* unvisited link */
+        {
+            color: #FF0000;
+            text-decoration: none; /*remove underline*/
+            background-color:lightyellow;
+        }
+        a:visited /* visited link */
+        {
+            color: #00FF00;
+            text-decoration: none;
+            background-color:#FFFF85;
+        }
+        
+        a:hover /* mouse over link */
+        {
+            color: #FF00FF;
+            text-decoration: underline;
+            background-color:#FF704D;
+        }
+        
+        a:active /* selected link */
+        {
+            color: #0000FF;
+            text-decoration: underline;
+            background-color:#FF704D;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <a href="http://abcnews.go.com/">ABCNews.com - Breaking News, Latest News & Top Video
+            News - ABC News</a></p>
+    <hr />
+    <div class="note">
+        <p>
+            When setting the style for several link states, there are some order rules:</p>
+        <ul>
+            <li>a:hover MUST come after a:link and a:visited</li>
+            <li>a:active MUST come after a:hover</li>
+        </ul>
+    </div>
+</body>
+</html>

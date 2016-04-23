@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demonstration of display</title>
+    <style type="text/css">
+        h2
+        {
+            color: firebrick;
+        }
+        
+        .hidden
+        {
+            visibility: hidden;
+        }
+        
+        .none
+        {
+            display: none;
+        }
+        
+        .sample
+        {
+            border: 1px orangered solid;
+            width: 80%;
+            margin: auto;
+        }
+        
+        .note
+        {
+            color: orangered;
+            font-style: italic;
+        }
+        
+        .attention
+        {
+            font-size: 150%;
+            font-weight: bolder;
+            text-decoration: underline;
+        }
+        
+        .horizonlist li
+        {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <!--#####################################################-->
+    <h2>
+        visibility:hidden</h2>
+    <div class="sample">
+        <h1>
+            This is a visible heading</h1>
+        <h1 class="hidden">
+            This is a hidden heading</h1>
+        <p class="note">
+            <span class="attention">visibility:hidden</span> hides an element, but it will still
+            take up the same space as before. The element will be hidden, but still affect the
+            layout.</p>
+    </div>
+    <!--#####################################################-->
+    <h2>
+        display:none</h2>
+    <div class="sample">
+        <h1>
+            This is a visible heading</h1>
+        <h1 class="none">
+            This is a none heading</h1>
+        <p class="note">
+            <span class="attention">display:none</span> hides an element, and it will not take
+            up any space. The element will be hidden, and the page will be displayed as if the
+            element is not there:</p>
+    </div>
+    <!--#####################################################-->
+    <h2>
+        Display this link list as a horizontal menu:</h2>
+    <div class="sample">
+        <ul class="horizonlist">
+            <li><a href="http://www.cnn.com/" target="_blank">CNN</a></li>
+            <li><a href="http://abcnews.go.com/" target="_blank">ABC News</a></li>
+            <li><a href="http://www.globaltimes.cn/" target="_blank">Global Times</a></li>
+        </ul>
+    </div>
+</body>
+</html>

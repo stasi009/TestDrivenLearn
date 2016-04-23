@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demonstrate forms</title>
+    <style type="text/css">
+        h4
+        {
+            color: green;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form id="test" action="test.asp" method="get">
+    <h4>
+        Text Sample</h4>
+    First name:
+    <input type="text" name="FirstName" value="Mickey" /><br />
+    Last name:
+    <input type="text" name="LastName" value="Mouse" /><br />
+    <h4>
+        Radio Sample</h4>
+    <input type="radio" name="sex" value="male" checked="checked" />
+    Male<br />
+    <input type="radio" name="sex" value="female" />
+    Female
+    <br />
+    <p>
+        <b>Note:</b> When a user clicks on a radio-button, it becomes checked, and all other
+        radio-buttons with <b>equal name</b> become unchecked.</p>
+    <h4>
+        Checkbox Sample</h4>
+    <input type="checkbox" name="vehicle" value="Bike" checked="checked" />
+    I have a bike<br />
+    <input type="checkbox" name="vehicle" value="Car" />
+    I have a car
+    <h4>
+        Button/Submit Sample</h4>
+    <input type="button" value="Hello world!" />
+    <br />
+    <input type="button" value="ClickMe" />
+    <br />
+    <input type="submit" value="Submit" />
+    <p>
+        <b>Note:</b> type=submit, is just a special button which will send the form to the
+        server.</p>
+    <h4>
+        Select/DropdownList Sample with "value/selected" attributes</h4>
+    <select>
+        <option value="volvo">Volvo XC90</option>
+        <option value="saab">Saab 95</option>
+        <option value="mercedes" selected="selected">Mercedes SLK</option>
+        <option value="audi">Audi TT</option>
+    </select>
+    <h4>
+        Select/DropdownList Sample with "size" property</h4>
+    <select size="10">
+        <option value="volvo">Volvo XC90</option>
+        <option value="saab">Saab 95</option>
+        <option value="mercedes" selected="selected">Mercedes SLK</option>
+        <option value="audi">Audi TT</option>
+    </select>
+    <h4>
+        Multiple Selection</h4>
+    <select multiple="multiple" name="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="opel">Opel</option>
+        <option value="audi">Audi</option>
+    </select>
+    <h4>
+        Textarea Sample</h4>
+    <textarea rows="10" cols="30">
+The cat was playing in the garden.
+</textarea>
+    <h4>
+        FieldSet</h4>
+    <fieldset>
+        <legend>Shipping Method</legend>
+        <label>
+            <input type="radio" name="method" value="1st">First-class</label>
+        <label>
+            <input type="radio" name="method" value="2day">2-day Air</label>
+        <label>
+            <input type="radio" name="method" value="overnite">Overnight</label>
+    </fieldset>
+    </form>
+</body>
+</html>

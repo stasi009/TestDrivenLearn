@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demonstrate how floating works</title>
+    <style type="text/css">
+        #thumbnail img
+        {
+            float: left;
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>
+            no floating effect</h2>
+        <p>
+            <img src="../images/pla.jpg" width="100" height="100" />
+            This is some text. This is some text. This is some text. This is some text. This
+            is some text. This is some text. This is some text. This is some text. This is some
+            text. This is some text. This is some text. This is some text. This is some text.
+            This is some text. This is some text. This is some text. This is some text. This
+            is some text. This is some text. This is some text. This is some text. This is some
+            text. This is some text. This is some text. This is some text. This is some text.
+            This is some text. This is some text. This is some text. This is some text.
+        </p>
+    </div>
+    <div>
+        <h2>
+            floating to left</h2>
+        <p>
+            <img src="../images/pla.jpg" width="100" height="100" style="float: left;" />
+            This is some text. This is some text. This is some text. This is some text. This
+            is some text. This is some text. This is some text. This is some text. This is some
+            text. This is some text. This is some text. This is some text. This is some text.
+            This is some text. This is some text. This is some text. This is some text. This
+            is some text. This is some text. This is some text. This is some text. This is some
+            text. This is some text. This is some text. This is some text. This is some text.
+            This is some text. This is some text. This is some text. This is some text.
+        </p>
+    </div>
+    <div style="clear: both">
+        <h2>
+            floating to right and clear from previous effect</h2>
+        <p>
+            <img src="../images/pla.jpg" width="100" height="100" style="float: right;" />
+            This is some text. This is some text. This is some text. This is some text. This
+            is some text. This is some text. This is some text. This is some text. This is some
+            text. This is some text. This is some text. This is some text. This is some text.
+            This is some text. This is some text. This is some text. This is some text. This
+            is some text. This is some text. This is some text. This is some text. This is some
+            text. This is some text. This is some text. This is some text. This is some text.
+            This is some text. This is some text. This is some text. This is some text.
+        </p>
+    </div>
+    <div>
+        <h2>
+            Image Gallery</h2>
+        <div id="thumbnail">
+            <p>Chinese Army</p>
+            <img src="../images/pla.jpg" />
+            <p style="clear: both">German Army</p>
+            <img src="../images/general.jpg" />
+            <img src="../images/panzer.jpg" />
+        </div>
+    </div>
+</body>
+</html>

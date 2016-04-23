@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>demonstrate alignment in CSS</title>
+    <style type="text/css">
+        h2
+        {
+            color: firebrick;
+        }
+        
+        #centerAlignByAutoMargin
+        {
+            width: 60%;
+            margin: auto;
+            background-color: cyan;
+        }
+        
+        #absolutePosition
+        {
+            width: 60%;
+            background-color: cyan;
+            position: absolute;
+            right: 0px;
+            padding: 5px;
+        }
+        
+        #alignByFloating
+        {
+            width: 300px;
+            background-color: #b0e0e6;
+            margin: 90px auto auto auto;
+            float: right;
+        }
+        
+        .note
+        {
+            color: orangered;
+            font-style: italic;
+        }
+        
+        .attention
+        {
+            font-weight: bold;
+            font-size: 150%;
+        }
+    </style>
+</head>
+<body>
+    <!--####################################################-->
+    <h2>
+        Center align by using auto margin</h2>
+    <div id="centerAlignByAutoMargin">
+        <p>
+            In my younger and more vulnerable years my father gave me some advice that I've
+            been turning over in my mind ever since.</p>
+        <p>
+            'Whenever you feel like criticizing anyone,' he told me, 'just remember that all
+            the people in this world haven't had the advantages that you've had.'</p>
+    </div>
+    <!--####################################################-->
+    <h2>
+        Align by absolute positioning</h2>
+    <div id="absolutePosition">
+        <p>
+            In my younger and more vulnerable years my father gave me some advice that I've
+            been turning over in my mind ever since.</p>
+        <p>
+            'Whenever you feel like criticizing anyone,' he told me, 'just remember that all
+            the people in this world haven't had the advantages that you've had.'</p>
+    </div>
+    <p class="note">
+        <span class="attention">Note:</span> Absolute positioned elements are removed from
+        the normal flow, and can overlap elements.</p>
+    <!--####################################################-->
+    <h2>
+        Align by using float</h2>
+    <div id="alignByFloating">
+        <p>
+            In my younger and more vulnerable years my father gave me some advice that I've
+            been turning over in my mind ever since.</p>
+        <p>
+            'Whenever you feel like criticizing anyone,' he told me, 'just remember that all
+            the people in this world haven't had the advantages that you've had.'</p>
+    </div>
+</body>
+</html>
