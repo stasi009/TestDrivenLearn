@@ -16,7 +16,7 @@
     <PythonWsgiHandler>{StartupModule}.wsgi_app</PythonWsgiHandler>
     <Name>HelloFlask</Name>
     <RootNamespace>HelloFlask</RootNamespace>
-    <InterpreterId>{9ec1cb14-f782-45ee-b926-7471269e4b7f}</InterpreterId>
+    <InterpreterId>{f4cce76c-8267-4f53-a90e-96697a418a65}</InterpreterId>
     <InterpreterVersion>2.7</InterpreterVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -35,7 +35,7 @@
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="flaskenv\">
-      <Id>{9ec1cb14-f782-45ee-b926-7471269e4b7f}</Id>
+      <Id>{f4cce76c-8267-4f53-a90e-96697a418a65}</Id>
       <BaseInterpreter>{9a7a9026-48c1-4688-9d5d-e5699d47d074}</BaseInterpreter>
       <Version>2.7</Version>
       <Description>flaskenv (Python 64-bit 2.7)</Description>
