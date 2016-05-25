@@ -1,3 +1,6 @@
 *.swp
 /Python/PlayFlask/HelloFlask/flaskenv
 *.suo
+/Python/PlayFlask/HelloFlask/bin
+/Python/PlayFlask/HelloFlask/obj/Debug
+*.pyc
