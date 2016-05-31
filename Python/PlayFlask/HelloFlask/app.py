@@ -9,8 +9,7 @@ app = Flask(__name__)
 # Make the WSGI interface available at the top level so wfastcgi can get it.
 wsgi_app = app.wsgi_app
 
-from routes import *
-
+from routes import * # it must after 'app' is defined, because routes needs 'app'
 if __name__ == '__main__':
     import os
     HOST = os.environ.get('SERVER_HOST', 'localhost')
