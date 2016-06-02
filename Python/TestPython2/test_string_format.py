@@ -1,6 +1,7 @@
 ﻿
 import unittest
 import math
+from datetime import datetime
 
 class StringFormatTest(unittest.TestCase):
 
@@ -39,12 +40,59 @@ class StringFormatTest(unittest.TestCase):
         s = "{0} is the food of {users[1]}".format("Ambrosia",users=["men", "the gods", "others"])
         self.assertEqual("Ambrosia is the food of the gods",s)
 
-    def test_float_numbers(self):
+    def test_access_attributes(self):
+        person = {'first': 'Jean-Luc', 'last': 'Picard'}
+        self.assertEqual("Jean-Luc Picard"  ,'{p[first]} {p[last]}'.format(p=person))
+
+        data = [4, 8, 15, 16, 23, 42]
+        self.assertEqual("23 42",'{d[4]} {d[5]}'.format(d=data))
+
+    def test_datetime(self):
+        s = '{:%Y-%m-%d %H:%M}'.format(datetime(2001, 2, 3, 4, 5))
+        self.assertEqual("2001-02-03 04:05",s)
+
+    def test_integer(self):
+        self.assertEqual('count=998',"count={}".format(998))
+        # seems no difference after adding ":d"
+        self.assertEqual('count=699',"count={:d}".format(699))
+        self.assertEqual('x=    99    ', "x={:^10}".format(99))
+
+        # padding with zero
+        self.assertEqual('0089', '{:04d}'.format(89))
+
+        # show plus sign
+        self.assertEqual('+9', '{:+d}'.format(9))
+
+    def test_float(self):
+        # basic, no precision control
+        self.assertEqual('value=1.234', "value={}".format(1.234))
+
         # using position arguments
-        self.assertEqual('pi = 3.14, e = 2.718',"pi = {0:.2f}, e = {1:.3f}".format(math.pi,math.e))
+        # 'f' is necessary, otherwise it controls the whole width, not
+        # precision, and will truncate
+        self.assertEqual('pi=3.14, e=2.718',"pi={0:.2f}, e={1:.3f}".format(math.pi,math.e))
 
         # using named arguments
-        self.assertEqual('pi = 3.142, e = 2.72',"pi = {pi:.3f}, e = {e:.2f}".format(pi = math.pi,e = math.e))
+        self.assertEqual('pi=3.142, e=2.72',"pi={pi:.3f}, e={e:.2f}".format(pi = math.pi,e = math.e))
+
+        # control both width and precision
+        self.assertEqual('pi= 3.142  , e=  2.72  ',"pi={pi:^8.3f}, e={e:^8.2f}".format(pi = math.pi,e = math.e))
+
+        # pad with zero
+        self.assertEqual('pi=03.14200, e=002.7200',"pi={pi:^08.3f}, e={e:^08.2f}".format(pi = math.pi,e = math.e))
+
+    def test_truncate_string(self):
+        # number behind '.', for float, it controls precision, for string, it
+        # controls the length
+        self.assertEqual("12", "{:.2}".format("123456789"))
+
+        # width can also be pass in dynamically
+        self.assertEqual("123", "{:.{}}".format("123456789",3))
+
+        # combine truncate and padding together
+        # number before .  controls the whole width, number behind .  controls
+        # truncating
+        self.assertEqual(" 123 ", "{:^5.3}".format("123456789"))
 
     def test_width_control(self):
         # left alignment
@@ -52,6 +100,9 @@ class StringFormatTest(unittest.TestCase):
 
         # right alignment
         self.assertEqual('    b is second',"{:>5} is second".format("b"))
+
+        # center alignment
+        self.assertEqual('  c   is third',"{:^5} is third".format("c"))
 
         # specify fill characters
         self.assertEqual('a**** is first',"{:*<5} is first".format("a"))
@@ -61,7 +112,24 @@ class StringFormatTest(unittest.TestCase):
         self.assertEqual('a     is first',"{0:{1}} is first".format("a",5))
         self.assertEqual('a     is first',"{content:{width}} is first".format(width=5,content="a"))
 
+    def test_object_str_repr(self):
+        class Data(object):
+            def __init__(self,v): self.v = v
+            def __str__(self): return 'str{}'.format(self.v)
+            def __repr__(self): return 'repr{}'.format(self.v)
 
+        self.assertEqual('str1 repr2', '{0!s} {1!r}'.format(Data(1),Data(2)))
+
+    def test_custom_format(self):
+        """
+        You can define custom format handling in your own objects by overriding __format__()
+        """
+        class Data(object):
+            def __init__(self,v) : self.v = v
+            def __format__(self, format):                 return "{}{}".format(format,self.v)
+
+        d = Data(99)
+        self.assertEqual('default prefix: 99, specified prefix: zz99', "default prefix: {0}, specified prefix: {0:zz}".format(d))
 
 
 if __name__ == "__main__":
