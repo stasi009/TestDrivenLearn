@@ -87,6 +87,9 @@
     <Compile Include="test_set.py" />
     <Compile Include="test_sort.py" />
     <Compile Include="test_string.py" />
+    <Compile Include="test_string_format.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="test_string_io.py" />
     <Compile Include="test_tuple.py" />
     <Compile Include="test_with_context.py">
