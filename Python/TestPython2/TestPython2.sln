@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "TestPython2", "TestPython2.pyproj", "{78093B67-684D-4F35-8DBF-217035E808D7}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PlayDatabase", "..\PlayDatabase\PlayDatabase.pyproj", "{8A7FF062-6035-447A-91E8-02BF6D3A7CAE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,8 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{78093B67-684D-4F35-8DBF-217035E808D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{78093B67-684D-4F35-8DBF-217035E808D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A7FF062-6035-447A-91E8-02BF6D3A7CAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A7FF062-6035-447A-91E8-02BF6D3A7CAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
