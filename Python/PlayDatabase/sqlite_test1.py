@@ -15,6 +15,11 @@ Database = "tests.db"
 
 ################################ INSERT
 def raw_insert(cars):
+    """
+    this method is not recommended
+    You shouldn’t assemble your query using Python’s string operations because doing so is insecure
+    it makes your program vulnerable to an SQL injection attack
+    """
     template = "INSERT INTO Cars(Brand,Price) VALUES('{brand}',{price})"
 
     with sqlite3.connect(Database) as conn:
@@ -40,12 +45,14 @@ def placeholder_insert():
 
 def insert_many(self):
     with sqlite3.connect(Database) as conn:
+        # the second parameter doesn't need to be a concrete list
+        # it can be a iterator/generator
         conn.executemany("INSERT INTO Cars(Brand,Price) VALUES(?,?)",((c.brand,c.price) for c in SampleCars))
 
 ################################ Load
 def cursor2cars(cursor):
     cars = []
-    for row in cursor:
+    for row in cursor:# each row is a tuple
         c = Car(brand=row[1],model=row[2],price=row[3])
         c.id = row[0] # we don't need to cast type, it has already to cast to correct type
         cars.append(c)
@@ -80,15 +87,23 @@ def load_by_parameter(brand):
     with sqlite3.connect(Database) as conn:
         conn.text_factory = str # by default, it will return unicode, so change it to 'str'
         
-        # the real parameter expects a tuple or list, so we have to wrap it into tuple
+        # ?  placeholder
+        # the real parameter expects a tuple or list, so we have to wrap it
+        # into tuple
         # even there is just only one element
         cursor = conn.execute("SELECT Id,Brand,Model,Price FROM Cars WHERE Brand=?",(brand,))
         Car.display(cursor2cars(cursor))
 
+        # named placeholder
+        cursor = conn.execute("SELECT COUNT(*) AS Count,AVG(Price) FROM Cars WHERE Brand=:brand",{"brand":brand})
+        # we know the result is only one row, so we can call fetchone()
+        row = cursor.fetchone()
+        print "'{brand}' has {total} cars, average price is {avgprice:.3f}".format(brand=brand,total=row[0],avgprice=row[1])
+
 if __name__ == "__main__":
     # Car.display(SampleCars)
     # raw_insert(SampleCars)
-    load_by_placeholder("Audi")
+    load_by_parameter("Mercedes")
 
 
 
