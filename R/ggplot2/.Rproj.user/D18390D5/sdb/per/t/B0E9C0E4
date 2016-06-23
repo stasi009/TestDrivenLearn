@@ -1,0 +1,16 @@
+{
+    "contents" : "appendix: Introduction to ggplot2\n==================\nlibrary(gcookbook) # For the data set\nsimpledat\n\n   A1 A2 A3\nB1 10  7 12\nB2  9 11  6\n\n    \n    \n====================================\nbarplot(simpledat, beside=TRUE)\n    \n    \n====================================\nt(simpledat)\n\n   B1 B2\nA1 10  9\nA2  7 11\nA3 12  6\n\n    \n    \n====================================\nbarplot(t(simpledat), beside=TRUE)\n    \n    \n====================================\nplot(simpledat[1,], type=\"l\")\nlines(simpledat[2,], type=\"l\", col=\"blue\")\n    \n    \n====================================\nsimpledat_long\n\n Aval Bval value\n   A1   B1    10\n   A1   B2     9\n   A2   B1     7\n   A2   B2    11\n   A3   B1    12\n   A3   B2     6\n\n    \n    \n====================================\nlibrary(ggplot2)\nggplot(simpledat_long, aes(x=Aval, y=value, fill=Bval)) +\n    geom_bar(stat=\"identity\", position=\"dodge\")\n    \n    \n====================================\nggplot(simpledat_long, aes(x=Bval, y=value, fill=Aval)) +\n    geom_bar(stat=\"identity\", position=\"dodge\")\n    \n    \n====================================\nggplot(simpledat_long, aes(x=Aval, y=value, colour=Bval, group=Bval)) + geom_line()\n!!! xxx ggplot(simpledat_long, aes(x=Aval, y=value, color=Bval)) + geom_line()\nqplot(Aval,value, group=Bval,color=Bval,data=simpledat_long, geom=\"line\")\n    \n    \n====================================\ndat <- data.frame(xval=1:4, yval=c(3,5,6,9), group=c(\"A\",\"B\",\"A\",\"B\"))\ndat\n\n xval yval group\n    1    3     A\n    2    5     B\n    3    6     A\n    4    9     B\n\n    \n    \n====================================\nggplot(dat, aes(x=xval, y=yval))\n    \n    \n====================================\nggplot(dat, aes(x=xval, y=yval)) + geom_point()\n    \n    \n====================================\np <- ggplot(dat, aes(x=xval, y=yval))\np + geom_point()\n    \n    \n====================================\np + geom_point(aes(colour=group))\n    \n    \n====================================\np + geom_point(colour=\"blue\")\n    \n    \n====================================\np + geom_point() + scale_x_continuous(limits=c(0,8))\n    \n    \n====================================\np + geom_point() +\n    scale_colour_manual(values=c(\"orange\",\"forestgreen\"))\n    \n    \n==================",
+    "created" : 1406344934708.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3899138180",
+    "id" : "B0E9C0E4",
+    "lastKnownWriteTime" : 1406353859,
+    "path" : "D:/study/Computer Science/practice/R/ggplot2/R Graphics Cookbook/appa.R",
+    "project_path" : "R Graphics Cookbook/appa.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
