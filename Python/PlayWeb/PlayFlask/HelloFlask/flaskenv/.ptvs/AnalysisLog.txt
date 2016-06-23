@@ -1,0 +1,1220 @@
+﻿
+2016-05-25T12:08:54: Start analysis
+2016-05-25T12:08:54: [WARNING] Library was set explicitly - skipping path detection
+2016-05-25T12:08:54: IncludeModulesFromModulePath = win32com
+2016-05-25T12:08:54: Deleting 0 files
+2016-05-25T12:08:54: Scraping builtin modules
+2016-05-25T12:08:54: Command: D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Scripts\python.exe "C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\PythonScraper.py" D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\.ptvs\ "C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\\"
+2016-05-25T12:08:55: Output
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\__builtin__.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\_codecs.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\_collections.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\_functools.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\_heapq.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\_io.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\_locale.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\_md5.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\_random.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\_sha.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\_sha256.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\_sha512.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\_sre.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\_struct.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\_subprocess.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\_warnings.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\_weakref.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\_winreg.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\array.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\binascii.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\cPickle.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\cStringIO.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\cmath.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\datetime.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\errno.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\exceptions.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\future_builtins.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\gc.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\imp.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\itertools.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\marshal.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\math.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\mmap.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\msvcrt.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\nt.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\operator.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\signal.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\sys.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\thread.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\time.idb
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\xxsubtype.idb
+2016-05-25T12:08:55: Scraped builtin modules
+2016-05-25T12:08:55: astropy.CallDepth = 0
+2016-05-25T12:08:55: matplotlib.CallDepth = 3
+2016-05-25T12:08:55: pandas.CallDepth = 0
+2016-05-25T12:08:55: sympy.CallDepth = 0
+2016-05-25T12:08:55: Start group "D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib" with 143 files
+2016-05-25T12:08:55: Parsing "abc" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\abc.py")
+2016-05-25T12:08:56: Parsing "codecs" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\codecs.py")
+2016-05-25T12:08:56: Parsing "copy_reg" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\copy_reg.py")
+2016-05-25T12:08:56: Parsing "fnmatch" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\fnmatch.py")
+2016-05-25T12:08:56: Parsing "genericpath" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\genericpath.py")
+2016-05-25T12:08:56: Parsing "linecache" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\linecache.py")
+2016-05-25T12:08:56: Parsing "locale" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\locale.py")
+2016-05-25T12:08:56: Parsing "ntpath" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\ntpath.py")
+2016-05-25T12:08:56: Parsing "os" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\os.py")
+2016-05-25T12:08:56: Parsing "posixpath" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\posixpath.py")
+2016-05-25T12:08:56: Parsing "re" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\re.py")
+2016-05-25T12:08:56: Parsing "site" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site.py")
+2016-05-25T12:08:56: Parsing "sre" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\sre.py")
+2016-05-25T12:08:56: Parsing "sre_compile" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\sre_compile.py")
+2016-05-25T12:08:56: Parsing "sre_constants" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\sre_constants.py")
+2016-05-25T12:08:56: Parsing "sre_parse" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\sre_parse.py")
+2016-05-25T12:08:56: Parsing "stat" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\stat.py")
+2016-05-25T12:08:56: Parsing "types" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\types.py")
+2016-05-25T12:08:56: Parsing "UserDict" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\UserDict.py")
+2016-05-25T12:08:56: Parsing "warnings" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\warnings.py")
+2016-05-25T12:08:56: Parsing "_abcoll" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\_abcoll.py")
+2016-05-25T12:08:56: Parsing "_weakrefset" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\_weakrefset.py")
+2016-05-25T12:08:56: Parsing "distutils" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\distutils\__init__.py")
+2016-05-25T12:08:56: Parsing "encodings.aliases" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\aliases.py")
+2016-05-25T12:08:56: Parsing "encodings.ascii" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\ascii.py")
+2016-05-25T12:08:56: Parsing "encodings.base64_codec" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\base64_codec.py")
+2016-05-25T12:08:56: Parsing "encodings.big5" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\big5.py")
+2016-05-25T12:08:56: Parsing "encodings.big5hkscs" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\big5hkscs.py")
+2016-05-25T12:08:56: Parsing "encodings.bz2_codec" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\bz2_codec.py")
+2016-05-25T12:08:56: Parsing "encodings.charmap" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\charmap.py")
+2016-05-25T12:08:56: Parsing "encodings.cp037" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\cp037.py")
+2016-05-25T12:08:56: Parsing "encodings.cp1006" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\cp1006.py")
+2016-05-25T12:08:56: Parsing "encodings.cp1026" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\cp1026.py")
+2016-05-25T12:08:56: Parsing "encodings.cp1140" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\cp1140.py")
+2016-05-25T12:08:56: Parsing "encodings.cp1250" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\cp1250.py")
+2016-05-25T12:08:56: Parsing "encodings.cp1251" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\cp1251.py")
+2016-05-25T12:08:56: Parsing "encodings.cp1252" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\cp1252.py")
+2016-05-25T12:08:56: Parsing "encodings.cp1253" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\cp1253.py")
+2016-05-25T12:08:56: Parsing "encodings.cp1254" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\cp1254.py")
+2016-05-25T12:08:56: Parsing "encodings.cp1255" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\cp1255.py")
+2016-05-25T12:08:56: Parsing "encodings.cp1256" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\cp1256.py")
+2016-05-25T12:08:56: Parsing "encodings.cp1257" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\cp1257.py")
+2016-05-25T12:08:56: Parsing "encodings.cp1258" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\cp1258.py")
+2016-05-25T12:08:56: Parsing "encodings.cp424" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\cp424.py")
+2016-05-25T12:08:56: Parsing "encodings.cp437" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\cp437.py")
+2016-05-25T12:08:56: Parsing "encodings.cp500" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\cp500.py")
+2016-05-25T12:08:56: Parsing "encodings.cp720" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\cp720.py")
+2016-05-25T12:08:56: Parsing "encodings.cp737" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\cp737.py")
+2016-05-25T12:08:56: Parsing "encodings.cp775" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\cp775.py")
+2016-05-25T12:08:56: Parsing "encodings.cp850" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\cp850.py")
+2016-05-25T12:08:56: Parsing "encodings.cp852" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\cp852.py")
+2016-05-25T12:08:56: Parsing "encodings.cp855" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\cp855.py")
+2016-05-25T12:08:56: Parsing "encodings.cp856" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\cp856.py")
+2016-05-25T12:08:56: Parsing "encodings.cp857" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\cp857.py")
+2016-05-25T12:08:56: Parsing "encodings.cp858" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\cp858.py")
+2016-05-25T12:08:56: Parsing "encodings.cp860" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\cp860.py")
+2016-05-25T12:08:56: Parsing "encodings.cp861" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\cp861.py")
+2016-05-25T12:08:56: Parsing "encodings.cp862" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\cp862.py")
+2016-05-25T12:08:56: Parsing "encodings.cp863" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\cp863.py")
+2016-05-25T12:08:56: Parsing "encodings.cp864" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\cp864.py")
+2016-05-25T12:08:56: Parsing "encodings.cp865" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\cp865.py")
+2016-05-25T12:08:56: Parsing "encodings.cp866" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\cp866.py")
+2016-05-25T12:08:56: Parsing "encodings.cp869" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\cp869.py")
+2016-05-25T12:08:56: Parsing "encodings.cp874" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\cp874.py")
+2016-05-25T12:08:56: Parsing "encodings.cp875" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\cp875.py")
+2016-05-25T12:08:56: Parsing "encodings.cp932" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\cp932.py")
+2016-05-25T12:08:56: Parsing "encodings.cp949" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\cp949.py")
+2016-05-25T12:08:56: Parsing "encodings.cp950" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\cp950.py")
+2016-05-25T12:08:56: Parsing "encodings.euc_jisx0213" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\euc_jisx0213.py")
+2016-05-25T12:08:56: Parsing "encodings.euc_jis_2004" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\euc_jis_2004.py")
+2016-05-25T12:08:56: Parsing "encodings.euc_jp" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\euc_jp.py")
+2016-05-25T12:08:56: Parsing "encodings.euc_kr" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\euc_kr.py")
+2016-05-25T12:08:56: Parsing "encodings.gb18030" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\gb18030.py")
+2016-05-25T12:08:56: Parsing "encodings.gb2312" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\gb2312.py")
+2016-05-25T12:08:56: Parsing "encodings.gbk" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\gbk.py")
+2016-05-25T12:08:56: Parsing "encodings.hex_codec" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\hex_codec.py")
+2016-05-25T12:08:56: Parsing "encodings.hp_roman8" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\hp_roman8.py")
+2016-05-25T12:08:56: Parsing "encodings.hz" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\hz.py")
+2016-05-25T12:08:56: Parsing "encodings.idna" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\idna.py")
+2016-05-25T12:08:56: Parsing "encodings.iso2022_jp" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\iso2022_jp.py")
+2016-05-25T12:08:56: Parsing "encodings.iso2022_jp_1" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\iso2022_jp_1.py")
+2016-05-25T12:08:56: Parsing "encodings.iso2022_jp_2" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\iso2022_jp_2.py")
+2016-05-25T12:08:56: Parsing "encodings.iso2022_jp_2004" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\iso2022_jp_2004.py")
+2016-05-25T12:08:56: Parsing "encodings.iso2022_jp_3" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\iso2022_jp_3.py")
+2016-05-25T12:08:56: Parsing "encodings.iso2022_jp_ext" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\iso2022_jp_ext.py")
+2016-05-25T12:08:56: Parsing "encodings.iso2022_kr" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\iso2022_kr.py")
+2016-05-25T12:08:56: Parsing "encodings.iso8859_1" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\iso8859_1.py")
+2016-05-25T12:08:56: Parsing "encodings.iso8859_10" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\iso8859_10.py")
+2016-05-25T12:08:56: Parsing "encodings.iso8859_11" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\iso8859_11.py")
+2016-05-25T12:08:56: Parsing "encodings.iso8859_13" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\iso8859_13.py")
+2016-05-25T12:08:56: Parsing "encodings.iso8859_14" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\iso8859_14.py")
+2016-05-25T12:08:56: Parsing "encodings.iso8859_15" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\iso8859_15.py")
+2016-05-25T12:08:56: Parsing "encodings.iso8859_16" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\iso8859_16.py")
+2016-05-25T12:08:56: Parsing "encodings.iso8859_2" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\iso8859_2.py")
+2016-05-25T12:08:56: Parsing "encodings.iso8859_3" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\iso8859_3.py")
+2016-05-25T12:08:56: Parsing "encodings.iso8859_4" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\iso8859_4.py")
+2016-05-25T12:08:56: Parsing "encodings.iso8859_5" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\iso8859_5.py")
+2016-05-25T12:08:56: Parsing "encodings.iso8859_6" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\iso8859_6.py")
+2016-05-25T12:08:56: Parsing "encodings.iso8859_7" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\iso8859_7.py")
+2016-05-25T12:08:56: Parsing "encodings.iso8859_8" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\iso8859_8.py")
+2016-05-25T12:08:56: Parsing "encodings.iso8859_9" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\iso8859_9.py")
+2016-05-25T12:08:56: Parsing "encodings.johab" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\johab.py")
+2016-05-25T12:08:56: Parsing "encodings.koi8_r" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\koi8_r.py")
+2016-05-25T12:08:56: Parsing "encodings.koi8_u" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\koi8_u.py")
+2016-05-25T12:08:56: Parsing "encodings.latin_1" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\latin_1.py")
+2016-05-25T12:08:56: Parsing "encodings.mac_arabic" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\mac_arabic.py")
+2016-05-25T12:08:56: Parsing "encodings.mac_centeuro" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\mac_centeuro.py")
+2016-05-25T12:08:56: Parsing "encodings.mac_croatian" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\mac_croatian.py")
+2016-05-25T12:08:56: Parsing "encodings.mac_cyrillic" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\mac_cyrillic.py")
+2016-05-25T12:08:56: Parsing "encodings.mac_farsi" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\mac_farsi.py")
+2016-05-25T12:08:56: Parsing "encodings.mac_greek" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\mac_greek.py")
+2016-05-25T12:08:56: Parsing "encodings.mac_iceland" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\mac_iceland.py")
+2016-05-25T12:08:56: Parsing "encodings.mac_latin2" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\mac_latin2.py")
+2016-05-25T12:08:56: Parsing "encodings.mac_roman" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\mac_roman.py")
+2016-05-25T12:08:56: Parsing "encodings.mac_romanian" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\mac_romanian.py")
+2016-05-25T12:08:56: Parsing "encodings.mac_turkish" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\mac_turkish.py")
+2016-05-25T12:08:56: Parsing "encodings.mbcs" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\mbcs.py")
+2016-05-25T12:08:56: Parsing "encodings.palmos" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\palmos.py")
+2016-05-25T12:08:56: Parsing "encodings.ptcp154" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\ptcp154.py")
+2016-05-25T12:08:56: Parsing "encodings.punycode" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\punycode.py")
+2016-05-25T12:08:56: Parsing "encodings.quopri_codec" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\quopri_codec.py")
+2016-05-25T12:08:56: Parsing "encodings.raw_unicode_escape" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\raw_unicode_escape.py")
+2016-05-25T12:08:56: Parsing "encodings.rot_13" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\rot_13.py")
+2016-05-25T12:08:56: Parsing "encodings.shift_jis" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\shift_jis.py")
+2016-05-25T12:08:56: Parsing "encodings.shift_jisx0213" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\shift_jisx0213.py")
+2016-05-25T12:08:56: Parsing "encodings.shift_jis_2004" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\shift_jis_2004.py")
+2016-05-25T12:08:56: Parsing "encodings.string_escape" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\string_escape.py")
+2016-05-25T12:08:56: Parsing "encodings.tis_620" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\tis_620.py")
+2016-05-25T12:08:56: Parsing "encodings.undefined" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\undefined.py")
+2016-05-25T12:08:56: Parsing "encodings.unicode_escape" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\unicode_escape.py")
+2016-05-25T12:08:56: Parsing "encodings.unicode_internal" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\unicode_internal.py")
+2016-05-25T12:08:56: Parsing "encodings.utf_16" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\utf_16.py")
+2016-05-25T12:08:56: Parsing "encodings.utf_16_be" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\utf_16_be.py")
+2016-05-25T12:08:56: Parsing "encodings.utf_16_le" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\utf_16_le.py")
+2016-05-25T12:08:56: Parsing "encodings.utf_32" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\utf_32.py")
+2016-05-25T12:08:56: Parsing "encodings.utf_32_be" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\utf_32_be.py")
+2016-05-25T12:08:56: Parsing "encodings.utf_32_le" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\utf_32_le.py")
+2016-05-25T12:08:56: Parsing "encodings.utf_7" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\utf_7.py")
+2016-05-25T12:08:56: Parsing "encodings.utf_8" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\utf_8.py")
+2016-05-25T12:08:56: Parsing "encodings.utf_8_sig" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\utf_8_sig.py")
+2016-05-25T12:08:56: Parsing "encodings.uu_codec" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\uu_codec.py")
+2016-05-25T12:08:56: Parsing "encodings.zlib_codec" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\zlib_codec.py")
+2016-05-25T12:08:56: Parsing "encodings" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\encodings\__init__.py")
+2016-05-25T12:08:56: Parsing complete
+2016-05-25T12:08:56: Analyzing "abc"
+2016-05-25T12:08:56: Analyzing "codecs"
+2016-05-25T12:08:56: Analyzing "copy_reg"
+2016-05-25T12:08:56: Analyzing "fnmatch"
+2016-05-25T12:08:56: Analyzing "genericpath"
+2016-05-25T12:08:56: Analyzing "linecache"
+2016-05-25T12:08:56: Analyzing "locale"
+2016-05-25T12:08:56: Analyzing "ntpath"
+2016-05-25T12:08:56: Analyzing "os"
+2016-05-25T12:08:56: Analyzing "posixpath"
+2016-05-25T12:08:56: Analyzing "re"
+2016-05-25T12:08:56: Analyzing "site"
+2016-05-25T12:08:56: Analyzing "sre"
+2016-05-25T12:08:56: Analyzing "sre_compile"
+2016-05-25T12:08:56: Analyzing "sre_constants"
+2016-05-25T12:08:56: Analyzing "sre_parse"
+2016-05-25T12:08:56: Analyzing "stat"
+2016-05-25T12:08:56: Analyzing "types"
+2016-05-25T12:08:56: Analyzing "UserDict"
+2016-05-25T12:08:56: Analyzing "warnings"
+2016-05-25T12:08:56: Analyzing "_abcoll"
+2016-05-25T12:08:56: Analyzing "_weakrefset"
+2016-05-25T12:08:56: Analyzing "distutils"
+2016-05-25T12:08:56: Analyzing "encodings.aliases"
+2016-05-25T12:08:56: Analyzing "encodings.ascii"
+2016-05-25T12:08:56: Analyzing "encodings.base64_codec"
+2016-05-25T12:08:56: Analyzing "encodings.big5"
+2016-05-25T12:08:56: Analyzing "encodings.big5hkscs"
+2016-05-25T12:08:56: Analyzing "encodings.bz2_codec"
+2016-05-25T12:08:56: Analyzing "encodings.charmap"
+2016-05-25T12:08:56: Analyzing "encodings.cp037"
+2016-05-25T12:08:56: Analyzing "encodings.cp1006"
+2016-05-25T12:08:56: Analyzing "encodings.cp1026"
+2016-05-25T12:08:56: Analyzing "encodings.cp1140"
+2016-05-25T12:08:56: Analyzing "encodings.cp1250"
+2016-05-25T12:08:56: Analyzing "encodings.cp1251"
+2016-05-25T12:08:56: Analyzing "encodings.cp1252"
+2016-05-25T12:08:56: Analyzing "encodings.cp1253"
+2016-05-25T12:08:56: Analyzing "encodings.cp1254"
+2016-05-25T12:08:56: Analyzing "encodings.cp1255"
+2016-05-25T12:08:56: Analyzing "encodings.cp1256"
+2016-05-25T12:08:56: Analyzing "encodings.cp1257"
+2016-05-25T12:08:56: Analyzing "encodings.cp1258"
+2016-05-25T12:08:56: Analyzing "encodings.cp424"
+2016-05-25T12:08:56: Analyzing "encodings.cp437"
+2016-05-25T12:08:56: Analyzing "encodings.cp500"
+2016-05-25T12:08:56: Analyzing "encodings.cp720"
+2016-05-25T12:08:56: Analyzing "encodings.cp737"
+2016-05-25T12:08:56: Analyzing "encodings.cp775"
+2016-05-25T12:08:56: Analyzing "encodings.cp850"
+2016-05-25T12:08:56: Analyzing "encodings.cp852"
+2016-05-25T12:08:56: Analyzing "encodings.cp855"
+2016-05-25T12:08:56: Analyzing "encodings.cp856"
+2016-05-25T12:08:56: Analyzing "encodings.cp857"
+2016-05-25T12:08:56: Analyzing "encodings.cp858"
+2016-05-25T12:08:56: Analyzing "encodings.cp860"
+2016-05-25T12:08:56: Analyzing "encodings.cp861"
+2016-05-25T12:08:56: Analyzing "encodings.cp862"
+2016-05-25T12:08:56: Analyzing "encodings.cp863"
+2016-05-25T12:08:56: Analyzing "encodings.cp864"
+2016-05-25T12:08:56: Analyzing "encodings.cp865"
+2016-05-25T12:08:56: Analyzing "encodings.cp866"
+2016-05-25T12:08:56: Analyzing "encodings.cp869"
+2016-05-25T12:08:56: Analyzing "encodings.cp874"
+2016-05-25T12:08:56: Analyzing "encodings.cp875"
+2016-05-25T12:08:56: Analyzing "encodings.cp932"
+2016-05-25T12:08:56: Analyzing "encodings.cp949"
+2016-05-25T12:08:56: Analyzing "encodings.cp950"
+2016-05-25T12:08:56: Analyzing "encodings.euc_jisx0213"
+2016-05-25T12:08:56: Analyzing "encodings.euc_jis_2004"
+2016-05-25T12:08:56: Analyzing "encodings.euc_jp"
+2016-05-25T12:08:56: Analyzing "encodings.euc_kr"
+2016-05-25T12:08:56: Analyzing "encodings.gb18030"
+2016-05-25T12:08:56: Analyzing "encodings.gb2312"
+2016-05-25T12:08:56: Analyzing "encodings.gbk"
+2016-05-25T12:08:56: Analyzing "encodings.hex_codec"
+2016-05-25T12:08:56: Analyzing "encodings.hp_roman8"
+2016-05-25T12:08:56: Analyzing "encodings.hz"
+2016-05-25T12:08:56: Analyzing "encodings.idna"
+2016-05-25T12:08:56: Analyzing "encodings.iso2022_jp"
+2016-05-25T12:08:56: Analyzing "encodings.iso2022_jp_1"
+2016-05-25T12:08:56: Analyzing "encodings.iso2022_jp_2"
+2016-05-25T12:08:56: Analyzing "encodings.iso2022_jp_2004"
+2016-05-25T12:08:56: Analyzing "encodings.iso2022_jp_3"
+2016-05-25T12:08:56: Analyzing "encodings.iso2022_jp_ext"
+2016-05-25T12:08:56: Analyzing "encodings.iso2022_kr"
+2016-05-25T12:08:56: Analyzing "encodings.iso8859_1"
+2016-05-25T12:08:56: Analyzing "encodings.iso8859_10"
+2016-05-25T12:08:56: Analyzing "encodings.iso8859_11"
+2016-05-25T12:08:56: Analyzing "encodings.iso8859_13"
+2016-05-25T12:08:56: Analyzing "encodings.iso8859_14"
+2016-05-25T12:08:56: Analyzing "encodings.iso8859_15"
+2016-05-25T12:08:56: Analyzing "encodings.iso8859_16"
+2016-05-25T12:08:56: Analyzing "encodings.iso8859_2"
+2016-05-25T12:08:56: Analyzing "encodings.iso8859_3"
+2016-05-25T12:08:56: Analyzing "encodings.iso8859_4"
+2016-05-25T12:08:56: Analyzing "encodings.iso8859_5"
+2016-05-25T12:08:56: Analyzing "encodings.iso8859_6"
+2016-05-25T12:08:56: Analyzing "encodings.iso8859_7"
+2016-05-25T12:08:56: Analyzing "encodings.iso8859_8"
+2016-05-25T12:08:56: Analyzing "encodings.iso8859_9"
+2016-05-25T12:08:56: Analyzing "encodings.johab"
+2016-05-25T12:08:56: Analyzing "encodings.koi8_r"
+2016-05-25T12:08:56: Analyzing "encodings.koi8_u"
+2016-05-25T12:08:56: Analyzing "encodings.latin_1"
+2016-05-25T12:08:56: Analyzing "encodings.mac_arabic"
+2016-05-25T12:08:56: Analyzing "encodings.mac_centeuro"
+2016-05-25T12:08:56: Analyzing "encodings.mac_croatian"
+2016-05-25T12:08:56: Analyzing "encodings.mac_cyrillic"
+2016-05-25T12:08:56: Analyzing "encodings.mac_farsi"
+2016-05-25T12:08:56: Analyzing "encodings.mac_greek"
+2016-05-25T12:08:56: Analyzing "encodings.mac_iceland"
+2016-05-25T12:08:56: Analyzing "encodings.mac_latin2"
+2016-05-25T12:08:56: Analyzing "encodings.mac_roman"
+2016-05-25T12:08:56: Analyzing "encodings.mac_romanian"
+2016-05-25T12:08:56: Analyzing "encodings.mac_turkish"
+2016-05-25T12:08:56: Analyzing "encodings.mbcs"
+2016-05-25T12:08:56: Analyzing "encodings.palmos"
+2016-05-25T12:08:56: Analyzing "encodings.ptcp154"
+2016-05-25T12:08:56: Analyzing "encodings.punycode"
+2016-05-25T12:08:56: Analyzing "encodings.quopri_codec"
+2016-05-25T12:08:56: Analyzing "encodings.raw_unicode_escape"
+2016-05-25T12:08:56: Analyzing "encodings.rot_13"
+2016-05-25T12:08:56: Analyzing "encodings.shift_jis"
+2016-05-25T12:08:56: Analyzing "encodings.shift_jisx0213"
+2016-05-25T12:08:56: Analyzing "encodings.shift_jis_2004"
+2016-05-25T12:08:56: Analyzing "encodings.string_escape"
+2016-05-25T12:08:56: Analyzing "encodings.tis_620"
+2016-05-25T12:08:56: Analyzing "encodings.undefined"
+2016-05-25T12:08:56: Analyzing "encodings.unicode_escape"
+2016-05-25T12:08:56: Analyzing "encodings.unicode_internal"
+2016-05-25T12:08:56: Analyzing "encodings.utf_16"
+2016-05-25T12:08:56: Analyzing "encodings.utf_16_be"
+2016-05-25T12:08:56: Analyzing "encodings.utf_16_le"
+2016-05-25T12:08:56: Analyzing "encodings.utf_32"
+2016-05-25T12:08:56: Analyzing "encodings.utf_32_be"
+2016-05-25T12:08:56: Analyzing "encodings.utf_32_le"
+2016-05-25T12:08:56: Analyzing "encodings.utf_7"
+2016-05-25T12:08:56: Analyzing "encodings.utf_8"
+2016-05-25T12:08:56: Analyzing "encodings.utf_8_sig"
+2016-05-25T12:08:56: Analyzing "encodings.uu_codec"
+2016-05-25T12:08:56: Analyzing "encodings.zlib_codec"
+2016-05-25T12:08:56: Analyzing "encodings"
+2016-05-25T12:08:56: Starting analysis of 143 modules
+2016-05-25T12:08:57: Analysis complete
+2016-05-25T12:08:57: Saving group "D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib"
+2016-05-25T12:08:57: End of group "D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib"
+2016-05-25T12:08:57: Start group "D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages" with 2 files
+2016-05-25T12:08:58: Parsing "easy_install" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\easy_install.py")
+2016-05-25T12:08:58: Parsing "itsdangerous" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\itsdangerous.py")
+2016-05-25T12:08:58: Parsing complete
+2016-05-25T12:08:58: Analyzing "easy_install"
+2016-05-25T12:08:58: Analyzing "itsdangerous"
+2016-05-25T12:08:58: Starting analysis of 2 modules
+2016-05-25T12:08:58: Analysis complete
+2016-05-25T12:08:58: Saving group "D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages"
+2016-05-25T12:08:58: End of group "D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages"
+2016-05-25T12:08:58: Start group "D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\flask" with 36 files
+2016-05-25T12:08:58: Parsing "flask.app" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\flask\app.py")
+2016-05-25T12:08:58: Parsing "flask.blueprints" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\flask\blueprints.py")
+2016-05-25T12:08:58: Parsing "flask.config" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\flask\config.py")
+2016-05-25T12:08:58: Parsing "flask.ctx" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\flask\ctx.py")
+2016-05-25T12:08:58: Parsing "flask.debughelpers" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\flask\debughelpers.py")
+2016-05-25T12:08:58: Parsing "flask.exthook" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\flask\exthook.py")
+2016-05-25T12:08:58: Parsing "flask.globals" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\flask\globals.py")
+2016-05-25T12:08:58: Parsing "flask.helpers" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\flask\helpers.py")
+2016-05-25T12:08:58: Parsing "flask.json" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\flask\json.py")
+2016-05-25T12:08:58: Parsing "flask.logging" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\flask\logging.py")
+2016-05-25T12:08:58: Parsing "flask.module" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\flask\module.py")
+2016-05-25T12:08:58: Parsing "flask.sessions" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\flask\sessions.py")
+2016-05-25T12:08:58: Parsing "flask.signals" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\flask\signals.py")
+2016-05-25T12:08:58: Parsing "flask.templating" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\flask\templating.py")
+2016-05-25T12:08:58: Parsing "flask.testing" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\flask\testing.py")
+2016-05-25T12:08:58: Parsing "flask.views" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\flask\views.py")
+2016-05-25T12:08:58: Parsing "flask.wrappers" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\flask\wrappers.py")
+2016-05-25T12:08:58: Parsing "flask._compat" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\flask\_compat.py")
+2016-05-25T12:08:58: Parsing "flask" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\flask\__init__.py")
+2016-05-25T12:08:58: Parsing "flask.ext" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\flask\ext\__init__.py")
+2016-05-25T12:08:58: Parsing "flask.testsuite.appctx" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\flask\testsuite\appctx.py")
+2016-05-25T12:08:58: Parsing "flask.testsuite.basic" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\flask\testsuite\basic.py")
+2016-05-25T12:08:58: Parsing "flask.testsuite.blueprints" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\flask\testsuite\blueprints.py")
+2016-05-25T12:08:58: Parsing "flask.testsuite.config" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\flask\testsuite\config.py")
+2016-05-25T12:08:58: Parsing "flask.testsuite.deprecations" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\flask\testsuite\deprecations.py")
+2016-05-25T12:08:58: Parsing "flask.testsuite.examples" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\flask\testsuite\examples.py")
+2016-05-25T12:08:58: Parsing "flask.testsuite.ext" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\flask\testsuite\ext.py")
+2016-05-25T12:08:58: Parsing "flask.testsuite.helpers" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\flask\testsuite\helpers.py")
+2016-05-25T12:08:58: Parsing "flask.testsuite.regression" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\flask\testsuite\regression.py")
+2016-05-25T12:08:58: Parsing "flask.testsuite.reqctx" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\flask\testsuite\reqctx.py")
+2016-05-25T12:08:58: Parsing "flask.testsuite.signals" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\flask\testsuite\signals.py")
+2016-05-25T12:08:58: Parsing "flask.testsuite.subclassing" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\flask\testsuite\subclassing.py")
+2016-05-25T12:08:58: Parsing "flask.testsuite.templating" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\flask\testsuite\templating.py")
+2016-05-25T12:08:58: Parsing "flask.testsuite.testing" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\flask\testsuite\testing.py")
+2016-05-25T12:08:58: Parsing "flask.testsuite.views" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\flask\testsuite\views.py")
+2016-05-25T12:08:58: Parsing "flask.testsuite" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\flask\testsuite\__init__.py")
+2016-05-25T12:08:58: Parsing complete
+2016-05-25T12:08:58: Analyzing "flask.app"
+2016-05-25T12:08:58: Analyzing "flask.blueprints"
+2016-05-25T12:08:58: Analyzing "flask.config"
+2016-05-25T12:08:58: Analyzing "flask.ctx"
+2016-05-25T12:08:58: Analyzing "flask.debughelpers"
+2016-05-25T12:08:58: Analyzing "flask.exthook"
+2016-05-25T12:08:58: Analyzing "flask.globals"
+2016-05-25T12:08:58: Analyzing "flask.helpers"
+2016-05-25T12:08:58: Analyzing "flask.json"
+2016-05-25T12:08:58: Analyzing "flask.logging"
+2016-05-25T12:08:58: Analyzing "flask.module"
+2016-05-25T12:08:58: Analyzing "flask.sessions"
+2016-05-25T12:08:58: Analyzing "flask.signals"
+2016-05-25T12:08:58: Analyzing "flask.templating"
+2016-05-25T12:08:58: Analyzing "flask.testing"
+2016-05-25T12:08:58: Analyzing "flask.views"
+2016-05-25T12:08:58: Analyzing "flask.wrappers"
+2016-05-25T12:08:58: Analyzing "flask._compat"
+2016-05-25T12:08:58: Analyzing "flask"
+2016-05-25T12:08:58: Analyzing "flask.ext"
+2016-05-25T12:08:58: Analyzing "flask.testsuite.appctx"
+2016-05-25T12:08:58: Analyzing "flask.testsuite.basic"
+2016-05-25T12:08:58: Analyzing "flask.testsuite.blueprints"
+2016-05-25T12:08:58: Analyzing "flask.testsuite.config"
+2016-05-25T12:08:58: Analyzing "flask.testsuite.deprecations"
+2016-05-25T12:08:58: Analyzing "flask.testsuite.examples"
+2016-05-25T12:08:58: Analyzing "flask.testsuite.ext"
+2016-05-25T12:08:58: Analyzing "flask.testsuite.helpers"
+2016-05-25T12:08:58: Analyzing "flask.testsuite.regression"
+2016-05-25T12:08:58: Analyzing "flask.testsuite.reqctx"
+2016-05-25T12:08:58: Analyzing "flask.testsuite.signals"
+2016-05-25T12:08:58: Analyzing "flask.testsuite.subclassing"
+2016-05-25T12:08:58: Analyzing "flask.testsuite.templating"
+2016-05-25T12:08:58: Analyzing "flask.testsuite.testing"
+2016-05-25T12:08:58: Analyzing "flask.testsuite.views"
+2016-05-25T12:08:58: Analyzing "flask.testsuite"
+2016-05-25T12:08:58: Starting analysis of 36 modules
+2016-05-25T12:08:59: Analysis complete
+2016-05-25T12:08:59: Saving group "D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\flask"
+2016-05-25T12:08:59: End of group "D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\flask"
+2016-05-25T12:08:59: Start group "D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\jinja2" with 23 files
+2016-05-25T12:09:00: Parsing "jinja2.bccache" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\jinja2\bccache.py")
+2016-05-25T12:09:00: Parsing "jinja2.compiler" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\jinja2\compiler.py")
+2016-05-25T12:09:00: Parsing "jinja2.constants" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\jinja2\constants.py")
+2016-05-25T12:09:00: Parsing "jinja2.debug" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\jinja2\debug.py")
+2016-05-25T12:09:00: Parsing "jinja2.defaults" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\jinja2\defaults.py")
+2016-05-25T12:09:00: Parsing "jinja2.environment" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\jinja2\environment.py")
+2016-05-25T12:09:00: Parsing "jinja2.exceptions" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\jinja2\exceptions.py")
+2016-05-25T12:09:00: Parsing "jinja2.ext" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\jinja2\ext.py")
+2016-05-25T12:09:00: Parsing "jinja2.filters" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\jinja2\filters.py")
+2016-05-25T12:09:00: Parsing "jinja2.lexer" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\jinja2\lexer.py")
+2016-05-25T12:09:00: Parsing "jinja2.loaders" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\jinja2\loaders.py")
+2016-05-25T12:09:00: Parsing "jinja2.meta" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\jinja2\meta.py")
+2016-05-25T12:09:00: Parsing "jinja2.nodes" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\jinja2\nodes.py")
+2016-05-25T12:09:00: Parsing "jinja2.optimizer" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\jinja2\optimizer.py")
+2016-05-25T12:09:00: Parsing "jinja2.parser" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\jinja2\parser.py")
+2016-05-25T12:09:00: Parsing "jinja2.runtime" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\jinja2\runtime.py")
+2016-05-25T12:09:00: Parsing "jinja2.sandbox" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\jinja2\sandbox.py")
+2016-05-25T12:09:00: Parsing "jinja2.tests" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\jinja2\tests.py")
+2016-05-25T12:09:00: Parsing "jinja2.utils" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\jinja2\utils.py")
+2016-05-25T12:09:00: Parsing "jinja2.visitor" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\jinja2\visitor.py")
+2016-05-25T12:09:00: Parsing "jinja2._compat" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\jinja2\_compat.py")
+2016-05-25T12:09:00: Parsing "jinja2._stringdefs" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\jinja2\_stringdefs.py")
+2016-05-25T12:09:00: Parsing "jinja2" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\jinja2\__init__.py")
+2016-05-25T12:09:00: Parsing complete
+2016-05-25T12:09:00: Analyzing "jinja2.bccache"
+2016-05-25T12:09:00: Analyzing "jinja2.compiler"
+2016-05-25T12:09:00: Analyzing "jinja2.constants"
+2016-05-25T12:09:00: Analyzing "jinja2.debug"
+2016-05-25T12:09:00: Analyzing "jinja2.defaults"
+2016-05-25T12:09:00: Analyzing "jinja2.environment"
+2016-05-25T12:09:00: Analyzing "jinja2.exceptions"
+2016-05-25T12:09:00: Analyzing "jinja2.ext"
+2016-05-25T12:09:00: Analyzing "jinja2.filters"
+2016-05-25T12:09:00: Analyzing "jinja2.lexer"
+2016-05-25T12:09:00: Analyzing "jinja2.loaders"
+2016-05-25T12:09:00: Analyzing "jinja2.meta"
+2016-05-25T12:09:00: Analyzing "jinja2.nodes"
+2016-05-25T12:09:00: Analyzing "jinja2.optimizer"
+2016-05-25T12:09:00: Analyzing "jinja2.parser"
+2016-05-25T12:09:00: Analyzing "jinja2.runtime"
+2016-05-25T12:09:00: Analyzing "jinja2.sandbox"
+2016-05-25T12:09:00: Analyzing "jinja2.tests"
+2016-05-25T12:09:00: Analyzing "jinja2.utils"
+2016-05-25T12:09:00: Analyzing "jinja2.visitor"
+2016-05-25T12:09:00: Analyzing "jinja2._compat"
+2016-05-25T12:09:00: Analyzing "jinja2._stringdefs"
+2016-05-25T12:09:00: Analyzing "jinja2"
+2016-05-25T12:09:00: Starting analysis of 23 modules
+2016-05-25T12:09:01: Analysis complete
+2016-05-25T12:09:01: Saving group "D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\jinja2"
+2016-05-25T12:09:01: End of group "D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\jinja2"
+2016-05-25T12:09:01: Start group "D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\markupsafe" with 5 files
+2016-05-25T12:09:01: Parsing "markupsafe.tests" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\markupsafe\tests.py")
+2016-05-25T12:09:01: Parsing "markupsafe._compat" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\markupsafe\_compat.py")
+2016-05-25T12:09:01: Parsing "markupsafe._constants" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\markupsafe\_constants.py")
+2016-05-25T12:09:01: Parsing "markupsafe._native" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\markupsafe\_native.py")
+2016-05-25T12:09:01: Parsing "markupsafe" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\markupsafe\__init__.py")
+2016-05-25T12:09:01: Parsing complete
+2016-05-25T12:09:01: Analyzing "markupsafe.tests"
+2016-05-25T12:09:01: Analyzing "markupsafe._compat"
+2016-05-25T12:09:01: Analyzing "markupsafe._constants"
+2016-05-25T12:09:01: Analyzing "markupsafe._native"
+2016-05-25T12:09:01: Analyzing "markupsafe"
+2016-05-25T12:09:01: Starting analysis of 5 modules
+2016-05-25T12:09:01: Analysis complete
+2016-05-25T12:09:01: Saving group "D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\markupsafe"
+2016-05-25T12:09:01: End of group "D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\markupsafe"
+2016-05-25T12:09:01: Start group "D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip" with 227 files
+2016-05-25T12:09:02: Parsing "pip.basecommand" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\basecommand.py")
+2016-05-25T12:09:02: Parsing "pip.baseparser" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\baseparser.py")
+2016-05-25T12:09:02: Parsing "pip.cmdoptions" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\cmdoptions.py")
+2016-05-25T12:09:02: Parsing "pip.download" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\download.py")
+2016-05-25T12:09:02: Parsing "pip.exceptions" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\exceptions.py")
+2016-05-25T12:09:02: Parsing "pip.index" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\index.py")
+2016-05-25T12:09:02: Parsing "pip.locations" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\locations.py")
+2016-05-25T12:09:02: Parsing "pip.pep425tags" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\pep425tags.py")
+2016-05-25T12:09:02: Parsing "pip.status_codes" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\status_codes.py")
+2016-05-25T12:09:02: Parsing "pip.wheel" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\wheel.py")
+2016-05-25T12:09:02: Parsing "pip" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\__init__.py")
+2016-05-25T12:09:02: Parsing "pip.__main__" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\__main__.py")
+2016-05-25T12:09:02: Parsing "pip.commands.completion" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\commands\completion.py")
+2016-05-25T12:09:02: Parsing "pip.commands.freeze" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\commands\freeze.py")
+2016-05-25T12:09:02: Parsing "pip.commands.help" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\commands\help.py")
+2016-05-25T12:09:02: Parsing "pip.commands.install" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\commands\install.py")
+2016-05-25T12:09:02: Parsing "pip.commands.list" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\commands\list.py")
+2016-05-25T12:09:02: Parsing "pip.commands.search" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\commands\search.py")
+2016-05-25T12:09:02: Parsing "pip.commands.show" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\commands\show.py")
+2016-05-25T12:09:02: Parsing "pip.commands.uninstall" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\commands\uninstall.py")
+2016-05-25T12:09:02: Parsing "pip.commands.unzip" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\commands\unzip.py")
+2016-05-25T12:09:02: Parsing "pip.commands.wheel" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\commands\wheel.py")
+2016-05-25T12:09:02: Parsing "pip.commands.zip" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\commands\zip.py")
+2016-05-25T12:09:02: Parsing "pip.commands" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\commands\__init__.py")
+2016-05-25T12:09:02: Parsing "pip.compat.dictconfig" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\compat\dictconfig.py")
+2016-05-25T12:09:02: Parsing "pip.compat" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\compat\__init__.py")
+2016-05-25T12:09:02: Parsing "pip.models.index" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\models\index.py")
+2016-05-25T12:09:02: Parsing "pip.models" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\models\__init__.py")
+2016-05-25T12:09:02: Parsing "pip.operations.freeze" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\operations\freeze.py")
+2016-05-25T12:09:02: Parsing "pip.operations" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\operations\__init__.py")
+2016-05-25T12:09:02: Parsing "pip.req.req_file" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\req\req_file.py")
+2016-05-25T12:09:02: Parsing "pip.req.req_install" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\req\req_install.py")
+2016-05-25T12:09:02: Parsing "pip.req.req_requirement" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\req\req_requirement.py")
+2016-05-25T12:09:02: Parsing "pip.req.req_set" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\req\req_set.py")
+2016-05-25T12:09:02: Parsing "pip.req.req_uninstall" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\req\req_uninstall.py")
+2016-05-25T12:09:02: Parsing "pip.req" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\req\__init__.py")
+2016-05-25T12:09:02: Parsing "pip.utils.appdirs" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\utils\appdirs.py")
+2016-05-25T12:09:02: Parsing "pip.utils.build" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\utils\build.py")
+2016-05-25T12:09:02: Parsing "pip.utils.deprecation" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\utils\deprecation.py")
+2016-05-25T12:09:02: Parsing "pip.utils.filesystem" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\utils\filesystem.py")
+2016-05-25T12:09:02: Parsing "pip.utils.logging" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\utils\logging.py")
+2016-05-25T12:09:02: Parsing "pip.utils.outdated" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\utils\outdated.py")
+2016-05-25T12:09:02: Parsing "pip.utils.ui" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\utils\ui.py")
+2016-05-25T12:09:02: Parsing "pip.utils" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\utils\__init__.py")
+2016-05-25T12:09:02: Parsing "pip.vcs.bazaar" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\vcs\bazaar.py")
+2016-05-25T12:09:02: Parsing "pip.vcs.git" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\vcs\git.py")
+2016-05-25T12:09:02: Parsing "pip.vcs.mercurial" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\vcs\mercurial.py")
+2016-05-25T12:09:02: Parsing "pip.vcs.subversion" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\vcs\subversion.py")
+2016-05-25T12:09:02: Parsing "pip.vcs" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\vcs\__init__.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.ipaddress" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\ipaddress.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.retrying" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\retrying.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.six" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\six.py")
+2016-05-25T12:09:02: Parsing "pip._vendor" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\__init__.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.cachecontrol.adapter" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\cachecontrol\adapter.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.cachecontrol.cache" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\cachecontrol\cache.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.cachecontrol.compat" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\cachecontrol\compat.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.cachecontrol.controller" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\cachecontrol\controller.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.cachecontrol.filewrapper" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\cachecontrol\filewrapper.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.cachecontrol.heuristics" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\cachecontrol\heuristics.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.cachecontrol.serialize" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\cachecontrol\serialize.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.cachecontrol.wrapper" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\cachecontrol\wrapper.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.cachecontrol" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\cachecontrol\__init__.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.cachecontrol.caches.file_cache" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\cachecontrol\caches\file_cache.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.cachecontrol.caches.redis_cache" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\cachecontrol\caches\redis_cache.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.cachecontrol.caches" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\cachecontrol\caches\__init__.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.colorama.ansi" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\colorama\ansi.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.colorama.ansitowin32" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\colorama\ansitowin32.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.colorama.initialise" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\colorama\initialise.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.colorama.win32" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\colorama\win32.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.colorama.winterm" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\colorama\winterm.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.colorama" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\colorama\__init__.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.distlib.compat" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\distlib\compat.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.distlib.database" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\distlib\database.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.distlib.index" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\distlib\index.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.distlib.locators" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\distlib\locators.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.distlib.manifest" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\distlib\manifest.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.distlib.markers" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\distlib\markers.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.distlib.metadata" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\distlib\metadata.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.distlib.resources" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\distlib\resources.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.distlib.scripts" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\distlib\scripts.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.distlib.util" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\distlib\util.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.distlib.version" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\distlib\version.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.distlib.wheel" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\distlib\wheel.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.distlib" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\distlib\__init__.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.distlib._backport.misc" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\distlib\_backport\misc.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.distlib._backport.shutil" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\distlib\_backport\shutil.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.distlib._backport.sysconfig" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\distlib\_backport\sysconfig.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.distlib._backport.tarfile" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\distlib\_backport\tarfile.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.distlib._backport" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\distlib\_backport\__init__.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.html5lib.constants" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\html5lib\constants.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.html5lib.html5parser" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\html5lib\html5parser.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.html5lib.ihatexml" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\html5lib\ihatexml.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.html5lib.inputstream" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\html5lib\inputstream.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.html5lib.sanitizer" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\html5lib\sanitizer.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.html5lib.tokenizer" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\html5lib\tokenizer.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.html5lib.utils" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\html5lib\utils.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.html5lib" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\html5lib\__init__.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.html5lib.filters.alphabeticalattributes" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\html5lib\filters\alphabeticalattributes.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.html5lib.filters.inject_meta_charset" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\html5lib\filters\inject_meta_charset.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.html5lib.filters.lint" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\html5lib\filters\lint.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.html5lib.filters.optionaltags" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\html5lib\filters\optionaltags.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.html5lib.filters.sanitizer" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\html5lib\filters\sanitizer.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.html5lib.filters.whitespace" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\html5lib\filters\whitespace.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.html5lib.filters._base" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\html5lib\filters\_base.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.html5lib.filters" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\html5lib\filters\__init__.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.html5lib.serializer.htmlserializer" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\html5lib\serializer\htmlserializer.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.html5lib.serializer" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\html5lib\serializer\__init__.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.html5lib.treeadapters.sax" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\html5lib\treeadapters\sax.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.html5lib.treeadapters" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\html5lib\treeadapters\__init__.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.html5lib.treebuilders.dom" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\html5lib\treebuilders\dom.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.html5lib.treebuilders.etree" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\html5lib\treebuilders\etree.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.html5lib.treebuilders.etree_lxml" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\html5lib\treebuilders\etree_lxml.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.html5lib.treebuilders._base" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\html5lib\treebuilders\_base.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.html5lib.treebuilders" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\html5lib\treebuilders\__init__.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.html5lib.treewalkers.dom" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\html5lib\treewalkers\dom.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.html5lib.treewalkers.etree" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\html5lib\treewalkers\etree.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.html5lib.treewalkers.genshistream" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\html5lib\treewalkers\genshistream.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.html5lib.treewalkers.lxmletree" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\html5lib\treewalkers\lxmletree.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.html5lib.treewalkers.pulldom" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\html5lib\treewalkers\pulldom.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.html5lib.treewalkers._base" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\html5lib\treewalkers\_base.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.html5lib.treewalkers" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\html5lib\treewalkers\__init__.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.html5lib.trie.datrie" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\html5lib\trie\datrie.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.html5lib.trie.py" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\html5lib\trie\py.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.html5lib.trie._base" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\html5lib\trie\_base.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.html5lib.trie" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\html5lib\trie\__init__.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.lockfile.linklockfile" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\lockfile\linklockfile.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.lockfile.mkdirlockfile" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\lockfile\mkdirlockfile.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.lockfile.pidlockfile" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\lockfile\pidlockfile.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.lockfile.sqlitelockfile" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\lockfile\sqlitelockfile.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.lockfile.symlinklockfile" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\lockfile\symlinklockfile.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.lockfile" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\lockfile\__init__.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.packaging.specifiers" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\packaging\specifiers.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.packaging.version" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\packaging\version.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.packaging._compat" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\packaging\_compat.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.packaging._structures" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\packaging\_structures.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.packaging.__about__" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\packaging\__about__.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.packaging" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\packaging\__init__.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.pkg_resources" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\pkg_resources\__init__.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.pkg_resources.tests.test_pkg_resources" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\pkg_resources\tests\test_pkg_resources.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.pkg_resources.tests.test_resources" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\pkg_resources\tests\test_resources.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.pkg_resources.tests" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\pkg_resources\tests\__init__.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.progress.bar" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\progress\bar.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.progress.counter" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\progress\counter.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.progress.helpers" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\progress\helpers.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.progress.spinner" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\progress\spinner.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.progress" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\progress\__init__.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.adapters" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\adapters.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.api" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\api.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.auth" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\auth.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.certs" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\certs.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.compat" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\compat.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.cookies" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\cookies.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.exceptions" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\exceptions.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.hooks" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\hooks.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.models" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\models.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.sessions" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\sessions.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.status_codes" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\status_codes.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.structures" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\structures.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.utils" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\utils.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\__init__.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\__init__.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.chardet.big5freq" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\chardet\big5freq.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.chardet.big5prober" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\chardet\big5prober.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.chardet.chardetect" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\chardet\chardetect.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.chardet.chardistribution" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\chardet\chardistribution.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.chardet.charsetgroupprober" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\chardet\charsetgroupprober.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.chardet.charsetprober" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\chardet\charsetprober.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.chardet.codingstatemachine" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\chardet\codingstatemachine.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.chardet.compat" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\chardet\compat.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.chardet.constants" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\chardet\constants.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.chardet.cp949prober" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\chardet\cp949prober.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.chardet.escprober" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\chardet\escprober.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.chardet.escsm" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\chardet\escsm.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.chardet.eucjpprober" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\chardet\eucjpprober.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.chardet.euckrfreq" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\chardet\euckrfreq.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.chardet.euckrprober" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\chardet\euckrprober.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.chardet.euctwfreq" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\chardet\euctwfreq.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.chardet.euctwprober" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\chardet\euctwprober.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.chardet.gb2312freq" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\chardet\gb2312freq.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.chardet.gb2312prober" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\chardet\gb2312prober.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.chardet.hebrewprober" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\chardet\hebrewprober.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.chardet.jisfreq" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\chardet\jisfreq.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.chardet.jpcntx" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\chardet\jpcntx.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.chardet.langbulgarianmodel" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\chardet\langbulgarianmodel.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.chardet.langcyrillicmodel" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\chardet\langcyrillicmodel.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.chardet.langgreekmodel" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\chardet\langgreekmodel.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.chardet.langhebrewmodel" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\chardet\langhebrewmodel.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.chardet.langhungarianmodel" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\chardet\langhungarianmodel.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.chardet.langthaimodel" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\chardet\langthaimodel.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.chardet.latin1prober" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\chardet\latin1prober.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.chardet.mbcharsetprober" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\chardet\mbcharsetprober.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.chardet.mbcsgroupprober" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\chardet\mbcsgroupprober.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.chardet.mbcssm" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\chardet\mbcssm.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.chardet.sbcharsetprober" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\chardet\sbcharsetprober.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.chardet.sbcsgroupprober" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\chardet\sbcsgroupprober.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.chardet.sjisprober" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\chardet\sjisprober.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.chardet.universaldetector" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\chardet\universaldetector.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.chardet.utf8prober" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\chardet\utf8prober.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.chardet" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\chardet\__init__.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.urllib3.connection" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\connection.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.urllib3.connectionpool" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\connectionpool.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.urllib3.exceptions" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\exceptions.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.urllib3.fields" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\fields.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.urllib3.filepost" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\filepost.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.urllib3.poolmanager" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\poolmanager.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.urllib3.request" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\request.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.urllib3.response" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\response.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.urllib3._collections" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\_collections.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.urllib3" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\__init__.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.urllib3.contrib.ntlmpool" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\contrib\ntlmpool.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.urllib3.contrib.pyopenssl" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\contrib\pyopenssl.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.urllib3.contrib" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\contrib\__init__.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.urllib3.packages.ordered_dict" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\packages\ordered_dict.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.urllib3.packages.six" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\packages\six.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.urllib3.packages" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\packages\__init__.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.urllib3.packages.ssl_match_hostname._implementation" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\packages\ssl_match_hostname\_implementation.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.urllib3.packages.ssl_match_hostname" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\packages\ssl_match_hostname\__init__.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.urllib3.util.connection" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\util\connection.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.urllib3.util.request" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\util\request.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.urllib3.util.response" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\util\response.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.urllib3.util.retry" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\util\retry.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.urllib3.util.ssl_" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\util\ssl_.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.urllib3.util.timeout" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\util\timeout.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.urllib3.util.url" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\util\url.py")
+2016-05-25T12:09:02: Parsing "pip._vendor.requests.packages.urllib3.util" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\requests\packages\urllib3\util\__init__.py")
+2016-05-25T12:09:02: Parsing "pip._vendor._markerlib.markers" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\_markerlib\markers.py")
+2016-05-25T12:09:02: Parsing "pip._vendor._markerlib" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip\_vendor\_markerlib\__init__.py")
+2016-05-25T12:09:02: Parsing complete
+2016-05-25T12:09:02: Analyzing "pip.basecommand"
+2016-05-25T12:09:02: Analyzing "pip.baseparser"
+2016-05-25T12:09:02: Analyzing "pip.cmdoptions"
+2016-05-25T12:09:02: Analyzing "pip.download"
+2016-05-25T12:09:02: Analyzing "pip.exceptions"
+2016-05-25T12:09:02: Analyzing "pip.index"
+2016-05-25T12:09:02: Analyzing "pip.locations"
+2016-05-25T12:09:02: Analyzing "pip.pep425tags"
+2016-05-25T12:09:02: Analyzing "pip.status_codes"
+2016-05-25T12:09:02: Analyzing "pip.wheel"
+2016-05-25T12:09:02: Analyzing "pip"
+2016-05-25T12:09:02: Analyzing "pip.__main__"
+2016-05-25T12:09:02: Analyzing "pip.commands.completion"
+2016-05-25T12:09:02: Analyzing "pip.commands.freeze"
+2016-05-25T12:09:02: Analyzing "pip.commands.help"
+2016-05-25T12:09:02: Analyzing "pip.commands.install"
+2016-05-25T12:09:02: Analyzing "pip.commands.list"
+2016-05-25T12:09:02: Analyzing "pip.commands.search"
+2016-05-25T12:09:02: Analyzing "pip.commands.show"
+2016-05-25T12:09:02: Analyzing "pip.commands.uninstall"
+2016-05-25T12:09:02: Analyzing "pip.commands.unzip"
+2016-05-25T12:09:02: Analyzing "pip.commands.wheel"
+2016-05-25T12:09:02: Analyzing "pip.commands.zip"
+2016-05-25T12:09:02: Analyzing "pip.commands"
+2016-05-25T12:09:02: Analyzing "pip.compat.dictconfig"
+2016-05-25T12:09:02: Analyzing "pip.compat"
+2016-05-25T12:09:02: Analyzing "pip.models.index"
+2016-05-25T12:09:02: Analyzing "pip.models"
+2016-05-25T12:09:02: Analyzing "pip.operations.freeze"
+2016-05-25T12:09:02: Analyzing "pip.operations"
+2016-05-25T12:09:02: Analyzing "pip.req.req_file"
+2016-05-25T12:09:02: Analyzing "pip.req.req_install"
+2016-05-25T12:09:02: Analyzing "pip.req.req_requirement"
+2016-05-25T12:09:02: Analyzing "pip.req.req_set"
+2016-05-25T12:09:02: Analyzing "pip.req.req_uninstall"
+2016-05-25T12:09:02: Analyzing "pip.req"
+2016-05-25T12:09:02: Analyzing "pip.utils.appdirs"
+2016-05-25T12:09:02: Analyzing "pip.utils.build"
+2016-05-25T12:09:02: Analyzing "pip.utils.deprecation"
+2016-05-25T12:09:02: Analyzing "pip.utils.filesystem"
+2016-05-25T12:09:02: Analyzing "pip.utils.logging"
+2016-05-25T12:09:02: Analyzing "pip.utils.outdated"
+2016-05-25T12:09:02: Analyzing "pip.utils.ui"
+2016-05-25T12:09:02: Analyzing "pip.utils"
+2016-05-25T12:09:02: Analyzing "pip.vcs.bazaar"
+2016-05-25T12:09:02: Analyzing "pip.vcs.git"
+2016-05-25T12:09:02: Analyzing "pip.vcs.mercurial"
+2016-05-25T12:09:02: Analyzing "pip.vcs.subversion"
+2016-05-25T12:09:02: Analyzing "pip.vcs"
+2016-05-25T12:09:02: Analyzing "pip._vendor.ipaddress"
+2016-05-25T12:09:02: Analyzing "pip._vendor.retrying"
+2016-05-25T12:09:02: Analyzing "pip._vendor.six"
+2016-05-25T12:09:02: Analyzing "pip._vendor"
+2016-05-25T12:09:02: Analyzing "pip._vendor.cachecontrol.adapter"
+2016-05-25T12:09:02: Analyzing "pip._vendor.cachecontrol.cache"
+2016-05-25T12:09:02: Analyzing "pip._vendor.cachecontrol.compat"
+2016-05-25T12:09:02: Analyzing "pip._vendor.cachecontrol.controller"
+2016-05-25T12:09:02: Analyzing "pip._vendor.cachecontrol.filewrapper"
+2016-05-25T12:09:02: Analyzing "pip._vendor.cachecontrol.heuristics"
+2016-05-25T12:09:02: Analyzing "pip._vendor.cachecontrol.serialize"
+2016-05-25T12:09:02: Analyzing "pip._vendor.cachecontrol.wrapper"
+2016-05-25T12:09:02: Analyzing "pip._vendor.cachecontrol"
+2016-05-25T12:09:02: Analyzing "pip._vendor.cachecontrol.caches.file_cache"
+2016-05-25T12:09:02: Analyzing "pip._vendor.cachecontrol.caches.redis_cache"
+2016-05-25T12:09:02: Analyzing "pip._vendor.cachecontrol.caches"
+2016-05-25T12:09:02: Analyzing "pip._vendor.colorama.ansi"
+2016-05-25T12:09:02: Analyzing "pip._vendor.colorama.ansitowin32"
+2016-05-25T12:09:02: Analyzing "pip._vendor.colorama.initialise"
+2016-05-25T12:09:02: Analyzing "pip._vendor.colorama.win32"
+2016-05-25T12:09:02: Analyzing "pip._vendor.colorama.winterm"
+2016-05-25T12:09:02: Analyzing "pip._vendor.colorama"
+2016-05-25T12:09:02: Analyzing "pip._vendor.distlib.compat"
+2016-05-25T12:09:02: Analyzing "pip._vendor.distlib.database"
+2016-05-25T12:09:02: Analyzing "pip._vendor.distlib.index"
+2016-05-25T12:09:02: Analyzing "pip._vendor.distlib.locators"
+2016-05-25T12:09:02: Analyzing "pip._vendor.distlib.manifest"
+2016-05-25T12:09:02: Analyzing "pip._vendor.distlib.markers"
+2016-05-25T12:09:02: Analyzing "pip._vendor.distlib.metadata"
+2016-05-25T12:09:02: Analyzing "pip._vendor.distlib.resources"
+2016-05-25T12:09:02: Analyzing "pip._vendor.distlib.scripts"
+2016-05-25T12:09:02: Analyzing "pip._vendor.distlib.util"
+2016-05-25T12:09:02: Analyzing "pip._vendor.distlib.version"
+2016-05-25T12:09:02: Analyzing "pip._vendor.distlib.wheel"
+2016-05-25T12:09:02: Analyzing "pip._vendor.distlib"
+2016-05-25T12:09:02: Analyzing "pip._vendor.distlib._backport.misc"
+2016-05-25T12:09:02: Analyzing "pip._vendor.distlib._backport.shutil"
+2016-05-25T12:09:02: Analyzing "pip._vendor.distlib._backport.sysconfig"
+2016-05-25T12:09:02: Analyzing "pip._vendor.distlib._backport.tarfile"
+2016-05-25T12:09:02: Analyzing "pip._vendor.distlib._backport"
+2016-05-25T12:09:02: Analyzing "pip._vendor.html5lib.constants"
+2016-05-25T12:09:02: Analyzing "pip._vendor.html5lib.html5parser"
+2016-05-25T12:09:02: Analyzing "pip._vendor.html5lib.ihatexml"
+2016-05-25T12:09:02: Analyzing "pip._vendor.html5lib.inputstream"
+2016-05-25T12:09:02: Analyzing "pip._vendor.html5lib.sanitizer"
+2016-05-25T12:09:02: Analyzing "pip._vendor.html5lib.tokenizer"
+2016-05-25T12:09:02: Analyzing "pip._vendor.html5lib.utils"
+2016-05-25T12:09:02: Analyzing "pip._vendor.html5lib"
+2016-05-25T12:09:02: Analyzing "pip._vendor.html5lib.filters.alphabeticalattributes"
+2016-05-25T12:09:02: Analyzing "pip._vendor.html5lib.filters.inject_meta_charset"
+2016-05-25T12:09:02: Analyzing "pip._vendor.html5lib.filters.lint"
+2016-05-25T12:09:02: Analyzing "pip._vendor.html5lib.filters.optionaltags"
+2016-05-25T12:09:02: Analyzing "pip._vendor.html5lib.filters.sanitizer"
+2016-05-25T12:09:02: Analyzing "pip._vendor.html5lib.filters.whitespace"
+2016-05-25T12:09:02: Analyzing "pip._vendor.html5lib.filters._base"
+2016-05-25T12:09:02: Analyzing "pip._vendor.html5lib.filters"
+2016-05-25T12:09:02: Analyzing "pip._vendor.html5lib.serializer.htmlserializer"
+2016-05-25T12:09:02: Analyzing "pip._vendor.html5lib.serializer"
+2016-05-25T12:09:02: Analyzing "pip._vendor.html5lib.treeadapters.sax"
+2016-05-25T12:09:02: Analyzing "pip._vendor.html5lib.treeadapters"
+2016-05-25T12:09:02: Analyzing "pip._vendor.html5lib.treebuilders.dom"
+2016-05-25T12:09:02: Analyzing "pip._vendor.html5lib.treebuilders.etree"
+2016-05-25T12:09:02: Analyzing "pip._vendor.html5lib.treebuilders.etree_lxml"
+2016-05-25T12:09:02: Analyzing "pip._vendor.html5lib.treebuilders._base"
+2016-05-25T12:09:02: Analyzing "pip._vendor.html5lib.treebuilders"
+2016-05-25T12:09:02: Analyzing "pip._vendor.html5lib.treewalkers.dom"
+2016-05-25T12:09:02: Analyzing "pip._vendor.html5lib.treewalkers.etree"
+2016-05-25T12:09:02: Analyzing "pip._vendor.html5lib.treewalkers.genshistream"
+2016-05-25T12:09:02: Analyzing "pip._vendor.html5lib.treewalkers.lxmletree"
+2016-05-25T12:09:02: Analyzing "pip._vendor.html5lib.treewalkers.pulldom"
+2016-05-25T12:09:02: Analyzing "pip._vendor.html5lib.treewalkers._base"
+2016-05-25T12:09:02: Analyzing "pip._vendor.html5lib.treewalkers"
+2016-05-25T12:09:02: Analyzing "pip._vendor.html5lib.trie.datrie"
+2016-05-25T12:09:02: Analyzing "pip._vendor.html5lib.trie.py"
+2016-05-25T12:09:02: Analyzing "pip._vendor.html5lib.trie._base"
+2016-05-25T12:09:02: Analyzing "pip._vendor.html5lib.trie"
+2016-05-25T12:09:02: Analyzing "pip._vendor.lockfile.linklockfile"
+2016-05-25T12:09:02: Analyzing "pip._vendor.lockfile.mkdirlockfile"
+2016-05-25T12:09:02: Analyzing "pip._vendor.lockfile.pidlockfile"
+2016-05-25T12:09:02: Analyzing "pip._vendor.lockfile.sqlitelockfile"
+2016-05-25T12:09:02: Analyzing "pip._vendor.lockfile.symlinklockfile"
+2016-05-25T12:09:02: Analyzing "pip._vendor.lockfile"
+2016-05-25T12:09:02: Analyzing "pip._vendor.packaging.specifiers"
+2016-05-25T12:09:02: Analyzing "pip._vendor.packaging.version"
+2016-05-25T12:09:02: Analyzing "pip._vendor.packaging._compat"
+2016-05-25T12:09:02: Analyzing "pip._vendor.packaging._structures"
+2016-05-25T12:09:02: Analyzing "pip._vendor.packaging.__about__"
+2016-05-25T12:09:02: Analyzing "pip._vendor.packaging"
+2016-05-25T12:09:02: Analyzing "pip._vendor.pkg_resources"
+2016-05-25T12:09:02: Analyzing "pip._vendor.pkg_resources.tests.test_pkg_resources"
+2016-05-25T12:09:02: Analyzing "pip._vendor.pkg_resources.tests.test_resources"
+2016-05-25T12:09:02: Analyzing "pip._vendor.pkg_resources.tests"
+2016-05-25T12:09:02: Analyzing "pip._vendor.progress.bar"
+2016-05-25T12:09:02: Analyzing "pip._vendor.progress.counter"
+2016-05-25T12:09:02: Analyzing "pip._vendor.progress.helpers"
+2016-05-25T12:09:02: Analyzing "pip._vendor.progress.spinner"
+2016-05-25T12:09:02: Analyzing "pip._vendor.progress"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.adapters"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.api"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.auth"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.certs"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.compat"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.cookies"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.exceptions"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.hooks"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.models"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.sessions"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.status_codes"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.structures"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.utils"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.chardet.big5freq"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.chardet.big5prober"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.chardet.chardetect"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.chardet.chardistribution"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.chardet.charsetgroupprober"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.chardet.charsetprober"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.chardet.codingstatemachine"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.chardet.compat"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.chardet.constants"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.chardet.cp949prober"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.chardet.escprober"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.chardet.escsm"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.chardet.eucjpprober"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.chardet.euckrfreq"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.chardet.euckrprober"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.chardet.euctwfreq"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.chardet.euctwprober"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.chardet.gb2312freq"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.chardet.gb2312prober"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.chardet.hebrewprober"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.chardet.jisfreq"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.chardet.jpcntx"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.chardet.langbulgarianmodel"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.chardet.langcyrillicmodel"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.chardet.langgreekmodel"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.chardet.langhebrewmodel"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.chardet.langhungarianmodel"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.chardet.langthaimodel"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.chardet.latin1prober"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.chardet.mbcharsetprober"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.chardet.mbcsgroupprober"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.chardet.mbcssm"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.chardet.sbcharsetprober"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.chardet.sbcsgroupprober"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.chardet.sjisprober"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.chardet.universaldetector"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.chardet.utf8prober"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.chardet"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.urllib3.connection"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.urllib3.connectionpool"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.urllib3.exceptions"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.urllib3.fields"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.urllib3.filepost"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.urllib3.poolmanager"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.urllib3.request"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.urllib3.response"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.urllib3._collections"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.urllib3"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.urllib3.contrib.ntlmpool"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.urllib3.contrib.pyopenssl"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.urllib3.contrib"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.urllib3.packages.ordered_dict"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.urllib3.packages.six"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.urllib3.packages"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.urllib3.packages.ssl_match_hostname._implementation"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.urllib3.packages.ssl_match_hostname"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.urllib3.util.connection"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.urllib3.util.request"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.urllib3.util.response"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.urllib3.util.retry"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.urllib3.util.ssl_"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.urllib3.util.timeout"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.urllib3.util.url"
+2016-05-25T12:09:02: Analyzing "pip._vendor.requests.packages.urllib3.util"
+2016-05-25T12:09:02: Analyzing "pip._vendor._markerlib.markers"
+2016-05-25T12:09:02: Analyzing "pip._vendor._markerlib"
+2016-05-25T12:09:02: Starting analysis of 227 modules
+2016-05-25T12:09:06: Analysis complete
+2016-05-25T12:09:06: Saving group "D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip"
+2016-05-25T12:09:06: End of group "D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pip"
+2016-05-25T12:09:06: Start group "D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pkg_resources" with 11 files
+2016-05-25T12:09:07: Parsing "pkg_resources" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pkg_resources\__init__.py")
+2016-05-25T12:09:07: Parsing "pkg_resources.tests.test_pkg_resources" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pkg_resources\tests\test_pkg_resources.py")
+2016-05-25T12:09:07: Parsing "pkg_resources.tests.test_resources" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pkg_resources\tests\test_resources.py")
+2016-05-25T12:09:07: Parsing "pkg_resources.tests" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pkg_resources\tests\__init__.py")
+2016-05-25T12:09:07: Parsing "pkg_resources._vendor" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pkg_resources\_vendor\__init__.py")
+2016-05-25T12:09:07: Parsing "pkg_resources._vendor.packaging.specifiers" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pkg_resources\_vendor\packaging\specifiers.py")
+2016-05-25T12:09:07: Parsing "pkg_resources._vendor.packaging.version" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pkg_resources\_vendor\packaging\version.py")
+2016-05-25T12:09:07: Parsing "pkg_resources._vendor.packaging._compat" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pkg_resources\_vendor\packaging\_compat.py")
+2016-05-25T12:09:07: Parsing "pkg_resources._vendor.packaging._structures" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pkg_resources\_vendor\packaging\_structures.py")
+2016-05-25T12:09:07: Parsing "pkg_resources._vendor.packaging.__about__" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pkg_resources\_vendor\packaging\__about__.py")
+2016-05-25T12:09:07: Parsing "pkg_resources._vendor.packaging" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pkg_resources\_vendor\packaging\__init__.py")
+2016-05-25T12:09:07: Parsing complete
+2016-05-25T12:09:07: Analyzing "pkg_resources"
+2016-05-25T12:09:07: Analyzing "pkg_resources.tests.test_pkg_resources"
+2016-05-25T12:09:07: Analyzing "pkg_resources.tests.test_resources"
+2016-05-25T12:09:07: Analyzing "pkg_resources.tests"
+2016-05-25T12:09:07: Analyzing "pkg_resources._vendor"
+2016-05-25T12:09:07: Analyzing "pkg_resources._vendor.packaging.specifiers"
+2016-05-25T12:09:07: Analyzing "pkg_resources._vendor.packaging.version"
+2016-05-25T12:09:07: Analyzing "pkg_resources._vendor.packaging._compat"
+2016-05-25T12:09:07: Analyzing "pkg_resources._vendor.packaging._structures"
+2016-05-25T12:09:07: Analyzing "pkg_resources._vendor.packaging.__about__"
+2016-05-25T12:09:07: Analyzing "pkg_resources._vendor.packaging"
+2016-05-25T12:09:07: Starting analysis of 11 modules
+2016-05-25T12:09:07: Analysis complete
+2016-05-25T12:09:07: Saving group "D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pkg_resources"
+2016-05-25T12:09:07: End of group "D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\pkg_resources"
+2016-05-25T12:09:07: Start group "D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools" with 62 files
+2016-05-25T12:09:08: Parsing "setuptools.archive_util" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\archive_util.py")
+2016-05-25T12:09:08: Parsing "setuptools.compat" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\compat.py")
+2016-05-25T12:09:08: Parsing "setuptools.depends" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\depends.py")
+2016-05-25T12:09:08: Parsing "setuptools.dist" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\dist.py")
+2016-05-25T12:09:08: Parsing "setuptools.extension" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\extension.py")
+2016-05-25T12:09:08: Parsing "setuptools.lib2to3_ex" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\lib2to3_ex.py")
+2016-05-25T12:09:08: Parsing "setuptools.msvc9_support" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\msvc9_support.py")
+2016-05-25T12:09:08: Parsing "setuptools.package_index" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\package_index.py")
+2016-05-25T12:09:08: Parsing "setuptools.py26compat" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\py26compat.py")
+2016-05-25T12:09:08: Parsing "setuptools.py27compat" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\py27compat.py")
+2016-05-25T12:09:08: Parsing "setuptools.py31compat" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\py31compat.py")
+2016-05-25T12:09:08: Parsing "setuptools.sandbox" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\sandbox.py")
+2016-05-25T12:09:08: Parsing "setuptools.ssl_support" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\ssl_support.py")
+2016-05-25T12:09:08: Parsing "setuptools.unicode_utils" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\unicode_utils.py")
+2016-05-25T12:09:08: Parsing "setuptools.utils" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\utils.py")
+2016-05-25T12:09:08: Parsing "setuptools.version" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\version.py")
+2016-05-25T12:09:08: Parsing "setuptools.windows_support" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\windows_support.py")
+2016-05-25T12:09:08: Parsing "setuptools" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\__init__.py")
+2016-05-25T12:09:08: Parsing "setuptools.command.alias" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\command\alias.py")
+2016-05-25T12:09:08: Parsing "setuptools.command.bdist_egg" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\command\bdist_egg.py")
+2016-05-25T12:09:08: Parsing "setuptools.command.bdist_rpm" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\command\bdist_rpm.py")
+2016-05-25T12:09:08: Parsing "setuptools.command.bdist_wininst" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\command\bdist_wininst.py")
+2016-05-25T12:09:08: Parsing "setuptools.command.build_ext" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\command\build_ext.py")
+2016-05-25T12:09:08: Parsing "setuptools.command.build_py" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\command\build_py.py")
+2016-05-25T12:09:08: Parsing "setuptools.command.develop" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\command\develop.py")
+2016-05-25T12:09:08: Parsing "setuptools.command.easy_install" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\command\easy_install.py")
+2016-05-25T12:09:08: Parsing "setuptools.command.egg_info" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\command\egg_info.py")
+2016-05-25T12:09:08: Parsing "setuptools.command.install" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\command\install.py")
+2016-05-25T12:09:08: Parsing "setuptools.command.install_egg_info" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\command\install_egg_info.py")
+2016-05-25T12:09:08: Parsing "setuptools.command.install_lib" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\command\install_lib.py")
+2016-05-25T12:09:08: Parsing "setuptools.command.install_scripts" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\command\install_scripts.py")
+2016-05-25T12:09:08: Parsing "setuptools.command.register" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\command\register.py")
+2016-05-25T12:09:08: Parsing "setuptools.command.rotate" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\command\rotate.py")
+2016-05-25T12:09:08: Parsing "setuptools.command.saveopts" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\command\saveopts.py")
+2016-05-25T12:09:08: Parsing "setuptools.command.sdist" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\command\sdist.py")
+2016-05-25T12:09:08: Parsing "setuptools.command.setopt" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\command\setopt.py")
+2016-05-25T12:09:08: Parsing "setuptools.command.test" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\command\test.py")
+2016-05-25T12:09:08: Parsing "setuptools.command.upload_docs" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\command\upload_docs.py")
+2016-05-25T12:09:08: Parsing "setuptools.command" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\command\__init__.py")
+2016-05-25T12:09:08: Parsing "setuptools.tests.contexts" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\tests\contexts.py")
+2016-05-25T12:09:08: Parsing "setuptools.tests.environment" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\tests\environment.py")
+2016-05-25T12:09:08: Parsing "setuptools.tests.fixtures" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\tests\fixtures.py")
+2016-05-25T12:09:08: Parsing "setuptools.tests.py26compat" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\tests\py26compat.py")
+2016-05-25T12:09:08: Parsing "setuptools.tests.server" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\tests\server.py")
+2016-05-25T12:09:08: Parsing "setuptools.tests.test_bdist_egg" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\tests\test_bdist_egg.py")
+2016-05-25T12:09:08: Parsing "setuptools.tests.test_build_ext" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\tests\test_build_ext.py")
+2016-05-25T12:09:08: Parsing "setuptools.tests.test_develop" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\tests\test_develop.py")
+2016-05-25T12:09:08: Parsing "setuptools.tests.test_dist_info" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\tests\test_dist_info.py")
+2016-05-25T12:09:08: Parsing "setuptools.tests.test_easy_install" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\tests\test_easy_install.py")
+2016-05-25T12:09:08: Parsing "setuptools.tests.test_egg_info" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\tests\test_egg_info.py")
+2016-05-25T12:09:08: Parsing "setuptools.tests.test_find_packages" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\tests\test_find_packages.py")
+2016-05-25T12:09:08: Parsing "setuptools.tests.test_integration" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\tests\test_integration.py")
+2016-05-25T12:09:08: Parsing "setuptools.tests.test_markerlib" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\tests\test_markerlib.py")
+2016-05-25T12:09:08: Parsing "setuptools.tests.test_msvc9compiler" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\tests\test_msvc9compiler.py")
+2016-05-25T12:09:08: Parsing "setuptools.tests.test_packageindex" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\tests\test_packageindex.py")
+2016-05-25T12:09:08: Parsing "setuptools.tests.test_sandbox" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\tests\test_sandbox.py")
+2016-05-25T12:09:08: Parsing "setuptools.tests.test_sdist" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\tests\test_sdist.py")
+2016-05-25T12:09:08: Parsing "setuptools.tests.test_test" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\tests\test_test.py")
+2016-05-25T12:09:08: Parsing "setuptools.tests.test_upload_docs" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\tests\test_upload_docs.py")
+2016-05-25T12:09:08: Parsing "setuptools.tests.test_windows_wrappers" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\tests\test_windows_wrappers.py")
+2016-05-25T12:09:08: Parsing "setuptools.tests.textwrap" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\tests\textwrap.py")
+2016-05-25T12:09:08: Parsing "setuptools.tests" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools\tests\__init__.py")
+2016-05-25T12:09:08: Parsing complete
+2016-05-25T12:09:08: Analyzing "setuptools.archive_util"
+2016-05-25T12:09:08: Analyzing "setuptools.compat"
+2016-05-25T12:09:08: Analyzing "setuptools.depends"
+2016-05-25T12:09:08: Analyzing "setuptools.dist"
+2016-05-25T12:09:08: Analyzing "setuptools.extension"
+2016-05-25T12:09:08: Analyzing "setuptools.lib2to3_ex"
+2016-05-25T12:09:08: Analyzing "setuptools.msvc9_support"
+2016-05-25T12:09:08: Analyzing "setuptools.package_index"
+2016-05-25T12:09:08: Analyzing "setuptools.py26compat"
+2016-05-25T12:09:08: Analyzing "setuptools.py27compat"
+2016-05-25T12:09:08: Analyzing "setuptools.py31compat"
+2016-05-25T12:09:08: Analyzing "setuptools.sandbox"
+2016-05-25T12:09:08: Analyzing "setuptools.ssl_support"
+2016-05-25T12:09:08: Analyzing "setuptools.unicode_utils"
+2016-05-25T12:09:08: Analyzing "setuptools.utils"
+2016-05-25T12:09:08: Analyzing "setuptools.version"
+2016-05-25T12:09:08: Analyzing "setuptools.windows_support"
+2016-05-25T12:09:08: Analyzing "setuptools"
+2016-05-25T12:09:08: Analyzing "setuptools.command.alias"
+2016-05-25T12:09:08: Analyzing "setuptools.command.bdist_egg"
+2016-05-25T12:09:08: Analyzing "setuptools.command.bdist_rpm"
+2016-05-25T12:09:08: Analyzing "setuptools.command.bdist_wininst"
+2016-05-25T12:09:08: Analyzing "setuptools.command.build_ext"
+2016-05-25T12:09:08: Analyzing "setuptools.command.build_py"
+2016-05-25T12:09:08: Analyzing "setuptools.command.develop"
+2016-05-25T12:09:08: Analyzing "setuptools.command.easy_install"
+2016-05-25T12:09:08: Analyzing "setuptools.command.egg_info"
+2016-05-25T12:09:08: Analyzing "setuptools.command.install"
+2016-05-25T12:09:08: Analyzing "setuptools.command.install_egg_info"
+2016-05-25T12:09:08: Analyzing "setuptools.command.install_lib"
+2016-05-25T12:09:08: Analyzing "setuptools.command.install_scripts"
+2016-05-25T12:09:08: Analyzing "setuptools.command.register"
+2016-05-25T12:09:08: Analyzing "setuptools.command.rotate"
+2016-05-25T12:09:08: Analyzing "setuptools.command.saveopts"
+2016-05-25T12:09:08: Analyzing "setuptools.command.sdist"
+2016-05-25T12:09:08: Analyzing "setuptools.command.setopt"
+2016-05-25T12:09:08: Analyzing "setuptools.command.test"
+2016-05-25T12:09:08: Analyzing "setuptools.command.upload_docs"
+2016-05-25T12:09:08: Analyzing "setuptools.command"
+2016-05-25T12:09:08: Analyzing "setuptools.tests.contexts"
+2016-05-25T12:09:08: Analyzing "setuptools.tests.environment"
+2016-05-25T12:09:08: Analyzing "setuptools.tests.fixtures"
+2016-05-25T12:09:08: Analyzing "setuptools.tests.py26compat"
+2016-05-25T12:09:08: Analyzing "setuptools.tests.server"
+2016-05-25T12:09:08: Analyzing "setuptools.tests.test_bdist_egg"
+2016-05-25T12:09:08: Analyzing "setuptools.tests.test_build_ext"
+2016-05-25T12:09:08: Analyzing "setuptools.tests.test_develop"
+2016-05-25T12:09:08: Analyzing "setuptools.tests.test_dist_info"
+2016-05-25T12:09:08: Analyzing "setuptools.tests.test_easy_install"
+2016-05-25T12:09:08: Analyzing "setuptools.tests.test_egg_info"
+2016-05-25T12:09:08: Analyzing "setuptools.tests.test_find_packages"
+2016-05-25T12:09:08: Analyzing "setuptools.tests.test_integration"
+2016-05-25T12:09:08: Analyzing "setuptools.tests.test_markerlib"
+2016-05-25T12:09:08: Analyzing "setuptools.tests.test_msvc9compiler"
+2016-05-25T12:09:08: Analyzing "setuptools.tests.test_packageindex"
+2016-05-25T12:09:08: Analyzing "setuptools.tests.test_sandbox"
+2016-05-25T12:09:08: Analyzing "setuptools.tests.test_sdist"
+2016-05-25T12:09:08: Analyzing "setuptools.tests.test_test"
+2016-05-25T12:09:08: Analyzing "setuptools.tests.test_upload_docs"
+2016-05-25T12:09:08: Analyzing "setuptools.tests.test_windows_wrappers"
+2016-05-25T12:09:08: Analyzing "setuptools.tests.textwrap"
+2016-05-25T12:09:08: Analyzing "setuptools.tests"
+2016-05-25T12:09:08: Starting analysis of 62 modules
+2016-05-25T12:09:08: Analysis complete
+2016-05-25T12:09:08: Saving group "D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools"
+2016-05-25T12:09:09: End of group "D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\setuptools"
+2016-05-25T12:09:09: Start group "D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug" with 39 files
+2016-05-25T12:09:09: Parsing "werkzeug.datastructures" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug\datastructures.py")
+2016-05-25T12:09:09: Parsing "werkzeug.exceptions" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug\exceptions.py")
+2016-05-25T12:09:09: Parsing "werkzeug.filesystem" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug\filesystem.py")
+2016-05-25T12:09:09: Parsing "werkzeug.formparser" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug\formparser.py")
+2016-05-25T12:09:09: Parsing "werkzeug.http" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug\http.py")
+2016-05-25T12:09:09: Parsing "werkzeug.local" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug\local.py")
+2016-05-25T12:09:09: Parsing "werkzeug.posixemulation" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug\posixemulation.py")
+2016-05-25T12:09:09: Parsing "werkzeug.routing" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug\routing.py")
+2016-05-25T12:09:09: Parsing "werkzeug.script" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug\script.py")
+2016-05-25T12:09:09: Parsing "werkzeug.security" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug\security.py")
+2016-05-25T12:09:09: Parsing "werkzeug.serving" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug\serving.py")
+2016-05-25T12:09:09: Parsing "werkzeug.test" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug\test.py")
+2016-05-25T12:09:09: Parsing "werkzeug.testapp" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug\testapp.py")
+2016-05-25T12:09:09: Parsing "werkzeug.urls" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug\urls.py")
+2016-05-25T12:09:09: Parsing "werkzeug.useragents" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug\useragents.py")
+2016-05-25T12:09:09: Parsing "werkzeug.utils" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug\utils.py")
+2016-05-25T12:09:09: Parsing "werkzeug.wrappers" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug\wrappers.py")
+2016-05-25T12:09:09: Parsing "werkzeug.wsgi" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug\wsgi.py")
+2016-05-25T12:09:09: Parsing "werkzeug._compat" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug\_compat.py")
+2016-05-25T12:09:09: Parsing "werkzeug._internal" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug\_internal.py")
+2016-05-25T12:09:09: Parsing "werkzeug._reloader" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug\_reloader.py")
+2016-05-25T12:09:09: Parsing "werkzeug" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug\__init__.py")
+2016-05-25T12:09:09: Parsing "werkzeug.contrib.atom" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug\contrib\atom.py")
+2016-05-25T12:09:09: Parsing "werkzeug.contrib.cache" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug\contrib\cache.py")
+2016-05-25T12:09:09: Parsing "werkzeug.contrib.fixers" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug\contrib\fixers.py")
+2016-05-25T12:09:09: Parsing "werkzeug.contrib.iterio" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug\contrib\iterio.py")
+2016-05-25T12:09:09: Parsing "werkzeug.contrib.jsrouting" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug\contrib\jsrouting.py")
+2016-05-25T12:09:09: Parsing "werkzeug.contrib.limiter" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug\contrib\limiter.py")
+2016-05-25T12:09:09: Parsing "werkzeug.contrib.lint" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug\contrib\lint.py")
+2016-05-25T12:09:09: Parsing "werkzeug.contrib.profiler" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug\contrib\profiler.py")
+2016-05-25T12:09:09: Parsing "werkzeug.contrib.securecookie" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug\contrib\securecookie.py")
+2016-05-25T12:09:09: Parsing "werkzeug.contrib.sessions" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug\contrib\sessions.py")
+2016-05-25T12:09:09: Parsing "werkzeug.contrib.testtools" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug\contrib\testtools.py")
+2016-05-25T12:09:09: Parsing "werkzeug.contrib.wrappers" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug\contrib\wrappers.py")
+2016-05-25T12:09:09: Parsing "werkzeug.contrib" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug\contrib\__init__.py")
+2016-05-25T12:09:09: Parsing "werkzeug.debug.console" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug\debug\console.py")
+2016-05-25T12:09:09: Parsing "werkzeug.debug.repr" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug\debug\repr.py")
+2016-05-25T12:09:09: Parsing "werkzeug.debug.tbtools" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug\debug\tbtools.py")
+2016-05-25T12:09:09: Parsing "werkzeug.debug" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug\debug\__init__.py")
+2016-05-25T12:09:09: Parsing complete
+2016-05-25T12:09:09: Analyzing "werkzeug.datastructures"
+2016-05-25T12:09:09: Analyzing "werkzeug.exceptions"
+2016-05-25T12:09:09: Analyzing "werkzeug.filesystem"
+2016-05-25T12:09:09: Analyzing "werkzeug.formparser"
+2016-05-25T12:09:09: Analyzing "werkzeug.http"
+2016-05-25T12:09:09: Analyzing "werkzeug.local"
+2016-05-25T12:09:09: Analyzing "werkzeug.posixemulation"
+2016-05-25T12:09:09: Analyzing "werkzeug.routing"
+2016-05-25T12:09:09: Analyzing "werkzeug.script"
+2016-05-25T12:09:09: Analyzing "werkzeug.security"
+2016-05-25T12:09:09: Analyzing "werkzeug.serving"
+2016-05-25T12:09:09: Analyzing "werkzeug.test"
+2016-05-25T12:09:09: Analyzing "werkzeug.testapp"
+2016-05-25T12:09:09: Analyzing "werkzeug.urls"
+2016-05-25T12:09:09: Analyzing "werkzeug.useragents"
+2016-05-25T12:09:09: Analyzing "werkzeug.utils"
+2016-05-25T12:09:09: Analyzing "werkzeug.wrappers"
+2016-05-25T12:09:09: Analyzing "werkzeug.wsgi"
+2016-05-25T12:09:09: Analyzing "werkzeug._compat"
+2016-05-25T12:09:09: Analyzing "werkzeug._internal"
+2016-05-25T12:09:09: Analyzing "werkzeug._reloader"
+2016-05-25T12:09:09: Analyzing "werkzeug"
+2016-05-25T12:09:09: Analyzing "werkzeug.contrib.atom"
+2016-05-25T12:09:09: Analyzing "werkzeug.contrib.cache"
+2016-05-25T12:09:09: Analyzing "werkzeug.contrib.fixers"
+2016-05-25T12:09:09: Analyzing "werkzeug.contrib.iterio"
+2016-05-25T12:09:09: Analyzing "werkzeug.contrib.jsrouting"
+2016-05-25T12:09:09: Analyzing "werkzeug.contrib.limiter"
+2016-05-25T12:09:09: Analyzing "werkzeug.contrib.lint"
+2016-05-25T12:09:09: Analyzing "werkzeug.contrib.profiler"
+2016-05-25T12:09:09: Analyzing "werkzeug.contrib.securecookie"
+2016-05-25T12:09:09: Analyzing "werkzeug.contrib.sessions"
+2016-05-25T12:09:09: Analyzing "werkzeug.contrib.testtools"
+2016-05-25T12:09:09: Analyzing "werkzeug.contrib.wrappers"
+2016-05-25T12:09:09: Analyzing "werkzeug.contrib"
+2016-05-25T12:09:09: Analyzing "werkzeug.debug.console"
+2016-05-25T12:09:09: Analyzing "werkzeug.debug.repr"
+2016-05-25T12:09:09: Analyzing "werkzeug.debug.tbtools"
+2016-05-25T12:09:09: Analyzing "werkzeug.debug"
+2016-05-25T12:09:09: Starting analysis of 39 modules
+2016-05-25T12:09:10: Analysis complete
+2016-05-25T12:09:10: Saving group "D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug"
+2016-05-25T12:09:10: End of group "D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\werkzeug"
+2016-05-25T12:09:10: Start group "D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\_markerlib" with 2 files
+2016-05-25T12:09:11: Parsing "_markerlib.markers" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\_markerlib\markers.py")
+2016-05-25T12:09:11: Parsing "_markerlib" ("D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\_markerlib\__init__.py")
+2016-05-25T12:09:11: Parsing complete
+2016-05-25T12:09:11: Analyzing "_markerlib.markers"
+2016-05-25T12:09:11: Analyzing "_markerlib"
+2016-05-25T12:09:11: Starting analysis of 2 modules
+2016-05-25T12:09:11: Analysis complete
+2016-05-25T12:09:11: Saving group "D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\_markerlib"
+2016-05-25T12:09:11: End of group "D:\study\Practice\GithubRepository\TestDrivenLearn\Python\PlayFlask\HelloFlask\flaskenv\Lib\site-packages\_markerlib"
+2016-05-25T12:09:11: Deleting 0 files
+
+2016-05-26T13:39:39: Start analysis
+2016-05-26T13:39:39: [WARNING] Library was set explicitly - skipping path detection
+2016-05-26T13:39:39: IncludeModulesFromModulePath = win32com
+2016-05-26T13:39:39: Deleting 0 files
