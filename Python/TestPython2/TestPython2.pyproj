@@ -29,9 +29,15 @@
   <ItemGroup>
     <Compile Include="demo_argparse.py" />
     <Compile Include="demo_import.py" />
+    <Compile Include="demo_logging.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="demo_print_input.py" />
     <Compile Include="demo_pyunit.py" />
     <Compile Include="demo_textfile_io.py" />
+    <Compile Include="demo_threading.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="packages1\circle.py" />
     <Compile Include="packages1\module1.py" />
     <Compile Include="packages1\mylist.py" />
