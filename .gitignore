@@ -5,5 +5,6 @@
 /Python/PlayFlask/HelloFlask/obj/Debug
 *.pyc
 *.suo
+*.v12.suo
 *.mdf
 *.ldf
