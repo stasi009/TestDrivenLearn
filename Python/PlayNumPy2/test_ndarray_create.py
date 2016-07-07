@@ -93,6 +93,24 @@ class NdArrayCreateTest(unittest.TestCase):
         self.assertEqual(8,float_array.itemsize)
         npt.assert_allclose([0.0,1.0,2.0],float_array)
         
+    def test_init_with_same_value(self):
+        """
+        use full or full_like to create and initialize an array filled with same value
+        """
+        # by default, it will initialize as float array
+        npt.assert_allclose([[ 9.,  9.,  9.],
+                             [ 9.,  9.,  9.]], np.full((2,3),9))
+
+        # specify the data type
+        npt.assert_equal([[ 9,  9,  9],                        
+                          [ 9,  9,  9]], np.full((2,3),9,dtype=np.int))
+
+        # full_like
+        x = np.ones((3,4))
+        npt.assert_equal([[8, 8, 8, 8],
+                          [8, 8, 8, 8],
+                          [8, 8, 8, 8]],  np.full_like(x,8,dtype=np.int))
+
     def test_empty(self):
         # unlike "zeros", the returned array isn't initialized
         # it is just filled with random values
