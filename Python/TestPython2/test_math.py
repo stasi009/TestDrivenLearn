@@ -1,4 +1,4 @@
-
+﻿
 import unittest
 import random
 import math
@@ -42,6 +42,10 @@ class MathTest(unittest.TestCase):
         self.assertAlmostEqual(0.75,3/4.0)
         self.assertAlmostEqual(1.333333333333333,float(4)/3)
         self.assertAlmostEqual(1.5,3.0/2)
+
+        ################### MOD
+        self.assertEqual(1,3%2)
+        self.assertEqual(2,10%4)
         
         ################### FLOOR DIVISION
         # no matter what the type is, int or float
