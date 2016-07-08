@@ -33,8 +33,8 @@ class SeriesTest(unittest.TestCase):
         npt.assert_array_equal(["a","b","x","y"],s.index)
         npt.assert_allclose([1,3.14,6.8,9.9],s.values)
 
-        # can pass in index, not only reorder the index, but missing index set
-        # to NaN
+        # can pass in index, not only reorder the index,
+        # but missing index set to NaN
         s2 = pd.Series(adict,index=["z","y","x"])
         pdt.assert_series_equal(pd.Series([np.nan,9.9,6.8],
                                           index=["z","y","x"]),s2)
@@ -47,7 +47,7 @@ class SeriesTest(unittest.TestCase):
 
     def test_index_by_slice(self):
         s = pd.Series(range(10),index=list("abcdefghij"))
-        pdt.assert_series_equal( pd.Series([1,2,3],index = list("bcd")), s[1:4] )
+        pdt.assert_series_equal(pd.Series([1,2,3],index = list("bcd")), s[1:4])
 
     def test_index_by_name(self):
         s = pd.Series([6,8,9,1],index=["a","b","c","d"])
@@ -107,13 +107,13 @@ class SeriesTest(unittest.TestCase):
         # non-overlapped will return NaN
         # returned indices is a union of input indices
         sum1 = s1 + s2
-        pdt.assert_series_equal( pd.Series([np.NaN,18.0,7.0,np.NaN],index=["a","b","c","d"]),sum1 )
+        pdt.assert_series_equal(pd.Series([np.NaN,18.0,7.0,np.NaN],index=["a","b","c","d"]),sum1)
 
         # ----------------- pass in fill_value for non-overlapped indices
         # then since "a" is missing in s2, so s2.a will be 0.0
         # also since "d" is missing in s1, so s1.d will be 0.0
         sum2 = s1.add(s2,fill_value=0)
-        pdt.assert_series_equal( pd.Series([1,18.0,7.0,8.0],index=["a","b","c","d"]),sum2 )
+        pdt.assert_series_equal(pd.Series([1,18.0,7.0,8.0],index=["a","b","c","d"]),sum2)
 
     def test_equal(self):
         s1 = pd.Series([1,2,3],index=["a","b","c"])
@@ -127,6 +127,10 @@ class SeriesTest(unittest.TestCase):
         s3 = pd.Series([3,2,1],index=["c","b","a"])
         self.assertFalse(s1.equals(s3))# order matters
         tt.ignore_order_assert_series_equal(s1,s3)
+
+        # "==" is different from "equals", but returns an array which indicates
+        # equality on each position
+        npt.assert_equal([True,True,True],(s1 == s2).values)
 
     def test_name(self):
         """ both series and its index can have name """
@@ -144,7 +148,7 @@ class SeriesTest(unittest.TestCase):
     def test_reindex(self):
         s1 = pd.Series([1,2,3],index=["a","b","c"])
 
-        # ---------- reorder
+        # ---------- subset and reorder
         s2 = s1.reindex(["c","a"])
         npt.assert_equal([3,1],s2.values)
 
@@ -193,7 +197,7 @@ class SeriesTest(unittest.TestCase):
         # by default, return a ordered new series, the original isn't changed
         pdt.assert_series_equal(pd.Series([np.nan,4, 7, np.nan,-3, 2],index=list("abcdef")),s)
 
-        # !!! sort in place
+        # !!!  sort in place
         s.order(ascending=False,inplace=True)
         pdt.assert_series_equal(pd.Series([7.,   4.,   2.,  -3.,  np.nan,  np.nan],index=list("cbfead")),s)
 

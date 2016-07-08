@@ -85,13 +85,17 @@ class FrameUpdateTest(unittest.TestCase):
         # ------------ drop rows
         npt.assert_equal([[7, 8, 9]], df.drop(["record1","record2"]).values)
 
-        # ------------ drop columns
-        npt.assert_equal( [[1],       
-                           [4],       
-                           [7]],df.drop(["b","c"],axis=1).values)
-
         # ------------ return dropped frame, the original isn't affected
         npt.assert_equal([[1, 2, 3],       
                           [4, 5, 6],       
                           [7, 8, 9]],df.values)
+
+        # ------------ drop columns
+        # ------------ specify inplace=True, modify in place
+        df.drop(["b","c"],axis=1,inplace=True)
+        npt.assert_equal( [[1],       
+                           [4],       
+                           [7]],df.values)
+
+        
 

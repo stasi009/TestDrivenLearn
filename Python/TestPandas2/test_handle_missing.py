@@ -84,7 +84,7 @@ class HandleMissingTest(unittest.TestCase):
                                              [np.nan,  6.5,  3.]],index=df.index,columns=df.columns),  df.fillna({"b":-1,"c":0}))
 
         # fill in place
-        _ = df.fillna({"a":-999,"b":-1,"c":0},inplace=True)
+        _ = df.fillna({"a":-999,"b":-1,"c":0},inplace=True)# although in place, still have return value, but itself
         pdt.assert_frame_equal(pd.DataFrame([[1. ,    6.5,    3.],       
                                              [1. ,   -1. ,    0.],       
                                              [-999. ,   -1. ,    0.],       
