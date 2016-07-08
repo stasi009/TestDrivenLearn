@@ -68,6 +68,11 @@ class FrameIndexSliceTest(unittest.TestCase):
                           [9, 7]],df[["c","a"]].values)
 
     def test_select_rows_by_slice(self):
+        """
+        so the rule is: 
+        given a list df[['a','b']] indicates accessing columns
+        given a slice df[1:3] indicates accessing rows
+        """
         frame = pd.DataFrame(np.arange(1,10).reshape(3,3),
                              columns = ["a","b","c"],
                              index = ["record1","record2","record3"])
@@ -185,6 +190,7 @@ class FrameIndexSliceTest(unittest.TestCase):
 
         # I don't think integer-position-based column indexing is useful
         # so only demonstrate integer-position-based row indexing
+        # if only specify one dimension in iloc, it is always for rows
         subframe = frame.iloc[[2,1]]
 
         expected = pd.DataFrame([[7, 8, 9],       

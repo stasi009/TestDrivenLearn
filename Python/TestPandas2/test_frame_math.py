@@ -69,7 +69,8 @@ class FrameMathTest(unittest.TestCase):
 
     def test_broadcast_along_rows(self):
         """
-        By default, arithmetic between DataFrame and Series matches the index of the Series on the DataFrame's columns, broadcasting down the rows
+        By default, arithmetic between DataFrame and Series matches the index of the Series on the DataFrame's columns, 
+        broadcasting down the rows
         """
         df = pd.DataFrame(np.arange(1,10).reshape(3,3),
                              columns = ["a","b","c"],
