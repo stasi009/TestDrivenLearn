@@ -1,18 +1,19 @@
 ﻿
 /*comments*/
 body {
-    background-color: tan;
+    background-color:tan;
 }
 h1 {
     color: maroon;
     font-size: 30pt;
 }
-hr 
+hr
 {
     /*comments*/
     color: navy;
+    height: 30pt;
 }
-p 
+p
 {
     font-size: 15pt;
     margin-left: 15px;

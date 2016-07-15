@@ -3,6 +3,12 @@
 <head>
     <title>test font size</title>
     <style type="text/css">
+    /*
+    em: Relative to the font-size of the element (2em means 2 times the size of the current font)
+    cm,mm
+    px: pixels (1px = 1/96th of 1in)
+    pt: points (1pt = 1/72 of 1in)
+    */
         h1
         {
             font-size: 2.5em;
@@ -37,14 +43,14 @@
         <h2>header2 in block 2</h2>
         <p>paragraph in block 2</p>
     </div>
-    
+
     <h3 style="color: green">when we use em or percentage to define size, the real size when rendering is calculated based on the size of the parent container. the h1, h2, p elements inside below two blocks have the same definition, but since the parent div have different size, then those h1, h2, p will have different size.</h3>
     <div style="font-size: 32px;border: green 2px solid">
         <h1>h1</h1>
         <h2>h2</h2>
         <p>paragraph</p>
     </div>
-    
+
     <div style="font-size: 8px;border: green 2px solid">
         <h1>h1</h1>
         <h2>h2</h2>
