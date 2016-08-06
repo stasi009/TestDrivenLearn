@@ -10,3 +10,5 @@
 *.ldf
 Python/TestPandas2/pydata-book/ch02/movielens/ratings.dat
 Python/TestPandas2/pydata-book/ch07/foods-2011-10-03.json
+
+Python/TestPandas2/data/usagov_bitly_data2012-03-16-1331923249.txt
