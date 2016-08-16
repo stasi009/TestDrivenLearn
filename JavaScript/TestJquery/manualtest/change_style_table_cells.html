@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>demo selected selector</title>
+    <title>change style dynamically</title>
     <style type="text/css">
         .Cleanliness
         {
@@ -37,17 +37,25 @@
     <script type="text/javascript" src="../common/jquery.js"></script>
     <script type="text/javascript">
 
+        function on_aspect_changed(event) {
+            var target = event.target;
+            segments = target.name.split('_');
+            id = segments[1];
+
+            $("#sent_"+id).attr('class',$(target).val());
+        }
+
+        function on_sentiment_changed(event) {
+            var target = event.target;
+            segments = target.name.split('_');
+            id = segments[1];
+
+            $("#no_"+id).attr('class',$(target).val());
+        }
+
         $(function () {
-            $(".aspect_select").change(function (event) {
-                var target = event.target;
-                //window.alert("Event Target = " + target.name + ", and Value of current selection is " + );
-
-                segments = target.name.split('_');
-                id = segments[1];
-
-                $("#sent_"+id).attr('class',$(target).val());
-            });
-
+            $(".aspect_select").change(on_aspect_changed);
+            $(".sentiment_select").change(on_sentiment_changed);
         });
     </script>
 </head>
