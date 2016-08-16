@@ -43,6 +43,7 @@
             id = segments[1];
 
             $("#sent_"+id).attr('class',$(target).val());
+            $("#cell_aspect_"+id).attr('class',$(target).val());
         }
 
         function on_sentiment_changed(event) {
@@ -51,6 +52,7 @@
             id = segments[1];
 
             $("#no_"+id).attr('class',$(target).val());
+            $("#cell_sentiment_"+id).attr('class',$(target).val());
         }
 
         $(function () {
@@ -72,7 +74,7 @@
             <td id="no_1" class="Positive"> 1 </td>
             <td id="sent_1" class="Cleanliness"> abc abc abc abc abc abc abc abc abc abc abc abc  </td>
 
-            <td>
+            <td id="cell_aspect_1">
                 <select name="aspect_1" class="aspect_select">
                     <option value="Cleanliness" selected>Cleanliness</option>
                     <option value="Service">Servie</option>
@@ -80,7 +82,7 @@
                 </select>
             </td>
 
-            <td>
+            <td id="cell_sentiment_1">
                 <select name="sentiment_1" class="sentiment_select">
                     <option value="Positive" selected>Positive</option>
                     <option value="Negative">Negative</option>
@@ -93,7 +95,7 @@
             <td id="no_2" class="Negative"> 2 </td>
             <td id="sent_2" class="Service"> xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz   </td>
 
-            <td>
+            <td id="cell_aspect_2">
                 <select name="aspect_2" class="aspect_select">
                     <option value="Cleanliness">Cleanliness</option>
                     <option value="Service" selected>Servie</option>
@@ -101,7 +103,7 @@
                 </select>
             </td>
 
-            <td>
+            <td id="cell_sentiment_2">
                 <select name="sentiment_2" class="sentiment_select">
                     <option value="Positive">Positive</option>
                     <option value="Negative">Negative</option>
