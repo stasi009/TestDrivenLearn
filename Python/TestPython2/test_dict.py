@@ -6,6 +6,11 @@ class DictTest(unittest.TestCase):
     def testConstruct(self):
         expected_dict = {1:"cheka",2:"stasi"}
         
+        # ---------- construct from list comprehension
+    	original_dict = {"cheka":1,"stasi":2}
+        dict_from_lstcomph = { v:k for k,v in original_dict} 
+        self.assertEqual(expected_dict,dict_from_lstcomph)
+
         # ---------- construct from sequence
         dict_from_tuple = dict(  ([1,"cheka"],[2,"stasi"])  ) 
         self.assertEqual(expected_dict,dict_from_tuple)
