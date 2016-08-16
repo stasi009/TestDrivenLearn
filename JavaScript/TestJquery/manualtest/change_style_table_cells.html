@@ -43,7 +43,8 @@
             id = segments[1];
 
             $("#sent_"+id).attr('class',$(target).val());
-            $("#cell_aspect_"+id).attr('class',$(target).val());
+            //$("#cell_aspect_"+id).attr('class',$(target).val());
+            $(target).attr('class',$(target).val());
         }
 
         function on_sentiment_changed(event) {
@@ -52,7 +53,8 @@
             id = segments[1];
 
             $("#no_"+id).attr('class',$(target).val());
-            $("#cell_sentiment_"+id).attr('class',$(target).val());
+            // $("#cell_sentiment_"+id).attr('class',$(target).val());
+            $(target).attr('class',$(target).val());
         }
 
         $(function () {
