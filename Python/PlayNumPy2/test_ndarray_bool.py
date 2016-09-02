@@ -13,7 +13,7 @@ class NdArrayBoolTest(unittest.TestCase):
         npt.assert_equal([4,2,6],a[indices])
 
         # ------------------------- 2d array
-        a = np.asarray([[1,2,3],                       
+        a = np.asarray([[1,2,3],
                         [4,5,6]])
         (rows,cols) = np.where(a%2==0)
         npt.assert_equal([0,1,1],rows)
@@ -33,25 +33,26 @@ class NdArrayBoolTest(unittest.TestCase):
                          [4,5,6],
                          [7,8,9]] )
         b = a%2==0
-        npt.assert_equal([[False,  True, False],       
-                          [ True, False,  True],       
+        npt.assert_equal([[False,  True, False],
+                          [ True, False,  True],
                           [False,  True, False]],b)
 
         npt.assert_equal([2,4,6,8], a[b])# return 1d array
 
     def test_composite(self):
         a = np.arange(1,5)
-        
+
         b1 = a > 2
         npt.assert_equal([False,False,True,True],b1)
-        
+
         b2 = a%2 == 0
         npt.assert_equal([False,True,False,True],b2)
 
         # composite use operator
         npt.assert_equal([False,False,False,True],b1 & b2)
         npt.assert_equal([False,True,True,True],b1 | b2)
-        npt.assert_equal([True,True,False,False],-b1)
+        # -b is deprecated, should use ~b instead
+        npt.assert_equal([True,True,False,False],~b1)
 
         # composite use function
         npt.assert_equal([False,False,False,True],np.logical_and(b1,b2))
@@ -77,5 +78,3 @@ class NdArrayBoolTest(unittest.TestCase):
 
         # -------------- on non-boolean array, where non-zero evaluates to be True
         self.assertFalse(np.zeros((2,3)).any())
-
-
