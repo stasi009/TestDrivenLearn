@@ -55,12 +55,22 @@ class FrameBasicsTest(unittest.TestCase):
         # "debt" is a column not exist in dict, so it will be all NAN
         self.assertTrue(np.all(frame2.debt.isnull()))
 
+    def test_from_list_of_dicts(self):
+        list_of_dicts = [{'a':1,'b':2},{'a':3,'c':4},{'b':5,'c':6}]
+        """
+             a    b    c
+        0  1.0  2.0  NaN
+        1  3.0  NaN  4.0
+        2  NaN  5.0  6.0
+        """
+        df = pd.DataFrame(list_of_dicts)
+
     def test_index1(self):
         data = {"b":[3,4],
                 "c":[5,6],
                 "a":[1,2]}
         frame = pd.DataFrame(data)
-        
+
         # columns become attributes
         npt.assert_equal([3,4], frame.b.values)
 
@@ -86,5 +96,5 @@ class FrameBasicsTest(unittest.TestCase):
                              index = ["record1","record2","record3"])
 
         # by default, head, tail will show 5 rows
-        pdt.assert_frame_equal(pd.DataFrame([[4, 5, 6],       
+        pdt.assert_frame_equal(pd.DataFrame([[4, 5, 6],
                                              [7, 8, 9]],columns=df.columns,index=["record2","record3"]),df.tail(2),check_dtype=False)
