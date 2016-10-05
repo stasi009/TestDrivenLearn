@@ -4,6 +4,13 @@ import collections
 
 class DefaultDictTest(unittest.TestCase):
 
+    def sample(self):
+        d = defaultdict(lambda: [None,None])
+        d["x"][0] = 1
+        d["y"][1] = 99
+        d['z'][1] = -1
+        d['x'][1] = 8
+
     def _count_without_defdict(self,sequence):
         counts = {}
         for e in sequence:
@@ -59,8 +66,8 @@ class DefaultDictTest(unittest.TestCase):
 
 class CounterTest(unittest.TestCase):
 
-    def test_demo1(self):         
-        c = collections.Counter('gallahad')    
+    def test_demo1(self):
+        c = collections.Counter('gallahad')
         self.assertEqual(3,c['a'])
         self.assertEqual(2,c['l'])
         self.assertEqual(0,c['x'])# non-existed, return 0
@@ -74,8 +81,5 @@ class NamedTupleTest(unittest.TestCase):
         self.assertEqual(2,p.y)
 
         # attributes are read-only, cannot be set
-        with self.assertRaises(AttributeError):        
+        with self.assertRaises(AttributeError):
             p.x = 3
-
-
-     
