@@ -1,15 +1,22 @@
+
 import random
 import numpy as np
 
 
-class Preprocessing:
+def load_texts(filename):
+    with open(filename,'rt') as inf:
+        for line in inf:
+            yield line.strip().replace('\n', ' ')
+
+
+class BatchGenerator(object):
 
     VOCABULARY = \
         " $%'()+,-./0123456789:;=?ABCDEFGHIJKLMNOPQRSTUVWXYZ" \
         "\\^_abcdefghijklmnopqrstuvwxyz{|}"
 
-    def __init__(self, texts, length, batch_size):
-        self.texts = texts
+    def __init__(self, filename,length, batch_size):
+        self.texts = list(load_texts(filename))
         self.length = length
         self.batch_size = batch_size
         self.lookup = {x: i for i, x in enumerate(self.VOCABULARY)}

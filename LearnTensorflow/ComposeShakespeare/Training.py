@@ -5,7 +5,7 @@ import numpy as np
 
 from helpers import overwrite_graph
 from helpers import ensure_directory
-from ArxivAbstracts import ArxivAbstracts
+from BatchGenerator import ArxivAbstracts
 from Preprocessing import Preprocessing
 from PredictiveCodingModel import PredictiveCodingModel
 
