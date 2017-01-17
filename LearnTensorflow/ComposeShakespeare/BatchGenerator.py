@@ -16,7 +16,9 @@ class BatchGenerator(object):
         "\\^_abcdefghijklmnopqrstuvwxyz{|}"
 
     def __init__(self, filename,length, batch_size):
-        self.texts = list(load_texts(filename))
+        if filename is not None:
+            self.texts = list(load_texts(filename))
+
         self.length = length
         self.batch_size = batch_size
         self.lookup = {x: i for i, x in enumerate(self.VOCABULARY)}

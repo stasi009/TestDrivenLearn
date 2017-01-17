@@ -3,7 +3,8 @@ import tensorflow as tf
 from helpers import AttrDict
 
 def get_params():
-    checkpoint_dir = './arxiv-predictive-coding'
+    corpus_name = "tiny-shakespeare.txt"
+    checkpoint_dir = './shakespeare_model'
     max_length = 50
     sampling_temperature = 0.7
     rnn_cell = tf.nn.rnn_cell.GRUCell

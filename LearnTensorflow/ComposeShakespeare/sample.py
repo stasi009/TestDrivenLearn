@@ -1,4 +1,6 @@
 from Sampling import Sampling
 from get_params import get_params
 
-print(Sampling(get_params())('We', 500))
+
+if __name__ == "__main__":
+    print(Sampling(get_params())('I', 500))

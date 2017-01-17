@@ -2,12 +2,17 @@ import tensorflow as tf
 from helpers import lazy_property
 
 
-class PredictiveCodingModel:
+class PredictiveCodingModel(object):
 
     def __init__(self, params, sequence, initial=None):
         self.params = params
         self.sequence = sequence
-        self.initial = initial
+
+        if initial is None:
+            self.initial = None
+        else:
+            self.initial = tuple(tf.unstack(initial))
+
         self.prediction
         self.state
         self.cost
@@ -26,10 +31,12 @@ class PredictiveCodingModel:
 
     @lazy_property
     def mask(self):
+        # mask is a [batch_size,time_steps] 2D matrix
         return tf.reduce_max(tf.abs(self.target), reduction_indices=2)
 
     @lazy_property
     def length(self):
+        # length is [batch_size] 1D array
         return tf.reduce_sum(self.mask, reduction_indices=1)
 
     @lazy_property
@@ -65,8 +72,7 @@ class PredictiveCodingModel:
 
     @lazy_property
     def error(self):
-        error = tf.not_equal(
-            tf.argmax(self.prediction, 2), tf.argmax(self.target, 2))
+        error = tf.not_equal(tf.argmax(self.prediction, 2), tf.argmax(self.target, 2))
         error = tf.cast(error, tf.float32)
         return self._average(error)
 
@@ -90,17 +96,22 @@ class PredictiveCodingModel:
         return optimize
 
     def _average(self, data):
+        """
+        :param data: shape [batch_size,time_step]
+        :return: a scalar
+        """
         data *= self.mask
-        length = tf.reduce_sum(self.length, 0)
-        data = tf.reduce_sum(data, reduction_indices=1) / length
+        # average along time axis
+        # length = tf.reduce_sum(self.length, 0)
+        data = tf.reduce_sum(data, reduction_indices=1) / self.length
+        # average along example axis
         data = tf.reduce_mean(data)
         return data
 
     def _shared_softmax(self, data, out_size):
         max_length = int(data.get_shape()[1])
-        in_size = int(data.get_shape()[2])
-        weight = tf.Variable(tf.truncated_normal(
-            [in_size, out_size], stddev=0.01))
+        in_size = int(data.get_shape()[2]) # i.e., vocabulary size
+        weight = tf.Variable(tf.truncated_normal([in_size, out_size], stddev=0.01))
         bias = tf.Variable(tf.constant(0.1, shape=[out_size]))
         # Flatten to apply same weights to all time steps.
         flat = tf.reshape(data, [-1, in_size])

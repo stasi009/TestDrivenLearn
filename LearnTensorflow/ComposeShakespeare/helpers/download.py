@@ -2,8 +2,6 @@ import os
 import shutil
 import errno
 from lxml import etree
-from urllib.request import urlopen
-
 
 def ensure_directory(directory):
     """

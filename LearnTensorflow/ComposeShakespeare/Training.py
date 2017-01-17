@@ -5,22 +5,19 @@ import numpy as np
 
 from helpers import overwrite_graph
 from helpers import ensure_directory
-from BatchGenerator import ArxivAbstracts
-from Preprocessing import Preprocessing
+from BatchGenerator import BatchGenerator
 from PredictiveCodingModel import PredictiveCodingModel
 
 
-class Training:
+class Training(object):
 
     @overwrite_graph
-    def __init__(self, params, cache_dir, categories, keywords, amount=None):
+    def __init__(self, params):
         self.params = params
-        self.texts = ArxivAbstracts(cache_dir, categories, keywords, amount).data
-        self.prep = Preprocessing(
-            self.texts, self.params.max_length, self.params.batch_size)
-        self.sequence = tf.placeholder(
-            tf.float32,
-            [None, self.params.max_length, len(self.prep.VOCABULARY)])
+        self.prep = BatchGenerator(self.params.corpus_name, self.params.max_length, self.params.batch_size)
+
+        self.sequence = tf.placeholder(tf.float32,[None, self.params.max_length, len(self.prep.VOCABULARY)])
+
         self.model = PredictiveCodingModel(self.params, self.sequence)
         self._init_or_load_session()
 
@@ -28,26 +25,21 @@ class Training:
         print('Start training')
         self.logprobs = []
         batches = iter(self.prep)
-        for epoch in range(self.epoch, self.params.epochs + 1):
+        for epoch in xrange(self.epoch, self.params.epochs + 1):
             self.epoch = epoch
-            for _ in range(self.params.epoch_size):
+            for _ in xrange(self.params.epoch_size):
                 self._optimization(next(batches))
             self._evaluation()
         return np.array(self.logprobs)
 
     def _optimization(self, batch):
-        logprob, _ = self.sess.run(
-            (self.model.logprob, self.model.optimize),
-            {self.sequence: batch})
+        logprob, _ = self.sess.run((self.model.logprob, self.model.optimize),{self.sequence: batch})
         if np.isnan(logprob):
             raise Exception('training diverged')
         self.logprobs.append(logprob)
 
     def _evaluation(self):
-        self.saver.save(self.sess, os.path.join(
-            self.params.checkpoint_dir, 'model'), self.epoch)
-        self.saver.save(self.sess, os.path.join(
-            self.params.checkpoint_dir, 'model'), self.epoch)
+        self.saver.save(self.sess, os.path.join(self.params.checkpoint_dir, 'model'), self.epoch)
         perplexity = 2 ** -(sum(self.logprobs[-self.params.epoch_size:]) /
                             self.params.epoch_size)
         print('Epoch {:2d} perplexity {:5.4f}'.format(self.epoch, perplexity))
@@ -64,5 +56,5 @@ class Training:
         else:
             ensure_directory(self.params.checkpoint_dir)
             print('Randomly initialize variables')
-            self.sess.run(tf.initialize_all_variables())
+            self.sess.run(tf.global_variables_initializer())
             self.epoch = 1
