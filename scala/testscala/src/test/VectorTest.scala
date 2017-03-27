@@ -5,7 +5,7 @@ import org.scalatest.Spec
 
 /*
  * Vector is a collection type that addresses the inefficiency for random access on lists. 
- * Vectors allow accessing any element of the list in ¡°effectively¡± constant time
+ * Vectors allow accessing any element of the list in effectively constant time
  * 
  * algorithms using vectors do not have to be careful about accessing just the head of the sequence. 
  * They can access and modify elements at arbitrary locations

@@ -46,3 +46,5 @@ HTML_CSS/.DS_Store
 LearnTensorflow/ComposeShakespeare/.idea
 
 LearnTensorflow/ComposeShakespeare/shakespeare_model
+
+*.jar

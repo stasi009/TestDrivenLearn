@@ -13,7 +13,7 @@ sealed class JavaCollectionConvertTest extends Spec {
       val ab = mutable.ArrayBuffer(1,2,3)
       
       /*
-       * these conversion work by setting up a ¡°wrapper¡± object that forwards all operations to 
+       * these conversion work by setting up a wrapper object that forwards all operations to 
        * the underlying collection object. So collections are not copied when converting between Java and Scala
        */
       val jIntList: JList[Int] = ab

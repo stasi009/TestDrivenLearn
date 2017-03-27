@@ -10,8 +10,8 @@ sealed class ClassBasicTest extends Spec {
     def `access privilege` = {
       class Fool {
         /*
-         * when you don¡¯t specify any modifier, everything is public. 
-         * Scala doesn¡¯t provide any modifier to mark members as public
+         * when you don't specify any modifier, everything is public. 
+         * Scala doesn't provide any modifier to mark members as public
          */
         var defaultVarField = 0
         val defaultValField = 1
