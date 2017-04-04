@@ -26,6 +26,27 @@ sealed class NumbersTest extends Spec {
   
   object `demo api usages` {
     
+    def `range returned by to` = {
+      val range = 1 to 10
+      assert(range.isInstanceOf[Range])
+      assert(range.isInstanceOf[IndexedSeq[Int]])
+      
+      assert(range.length == 10)
+      assert(range.contains(1))
+      assert(range.contains(10))//include both ends
+      assert(!range.contains(99))
+    }
+    
+    def `range returned by until` = {
+      // by using until, it returns [lowbound,highbound)
+      val range = 1 until 10
+      assert(range.isInstanceOf[Range])
+      
+      assert(range.length == 9)
+      assert(range.contains(1))
+      assert(! range.contains(10))//not include the high boundary
+    }
+    
     def `define numbers` = {
       assert(9.isInstanceOf[Int])
       assert(9L.isInstanceOf[Long])
