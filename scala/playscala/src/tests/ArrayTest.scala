@@ -66,14 +66,17 @@ sealed class ArrayTest extends Spec {
   } //object
 
   object `basic operations` {
-    
+
     def `access single element` = {
       // to access single element, not use [], but use ()
-      val a = Array(1,2,3)
+      val a = Array(1, 2, 3)
       intercept[ArrayIndexOutOfBoundsException] { a(10) }
-      
+
+      // unlike Python, Array doesn't support indexing from backwards
+      intercept[ArrayIndexOutOfBoundsException] { a(-1) }
+
       assertResult(3)(a(2))
-      
+
       a(1) = -99
       assert(a sameElements Array(1, -99, 3))
     }
@@ -165,6 +168,21 @@ sealed class ArrayTest extends Spec {
       val x = Array(4, 6, 8, 1, 5)
       val y = x.sorted
       assert(y sameElements Array(1, 4, 5, 6, 8))
+
+      // y is a new copy which is isolated from original
+      y(1) = -99
+      assert(y sameElements Array(1, -99, 5, 6, 8))
+      assert(x sameElements Array(4, 6, 8, 1, 5))
+    }
+
+    def `test sortWith` = {
+      val x = Array(4, 6, 8, 1, 5)
+
+      val sortedAscending = x.sortWith(_ < _)
+      assert(sortedAscending sameElements Array(1, 4, 5, 6, 8))
+
+      val sortedDescending = x.sortWith(_ > _)
+      assert(sortedDescending sameElements Array(8, 6, 5, 4, 1))
     }
 
     def `sort in place` = {
