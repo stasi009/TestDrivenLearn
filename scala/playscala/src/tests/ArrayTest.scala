@@ -68,8 +68,14 @@ sealed class ArrayTest extends Spec {
   object `basic operations` {
     
     def `access single element` = {
+      // to access single element, not use [], but use ()
       val a = Array(1,2,3)
       intercept[ArrayIndexOutOfBoundsException] { a(10) }
+      
+      assertResult(3)(a(2))
+      
+      a(1) = -99
+      assert(a sameElements Array(1, -99, 3))
     }
 
     /*
@@ -189,6 +195,9 @@ sealed class ArrayTest extends Spec {
       assert(original != sameContent)
     }
 
+    /**
+     * eq is also checking reference equality
+     */
     def `eq and equals` = {
       val original = Array(1, 2, 3)
       val sameRef = original

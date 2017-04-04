@@ -5,6 +5,20 @@ import org.scalatest.Spec
 sealed class ForLoopTest extends Spec {
 
   object `demo usage` {
+    
+    def `simple demo` = {
+      var sum = 0
+      for (i <- Array(9, 8, 6)) {
+        sum += i
+      }
+      assertResult(23)(sum)
+      
+      var product = 1
+      for (i <- 1 to 3) {
+        product *= i
+      }
+      assertResult(6)(product)
+    }
 
     case class Person(id: Int, name: String)
     val _people = Vector(Person(1, "stasi"), Person(8, "kgb"), Person(9, "cheka"))
@@ -72,6 +86,20 @@ sealed class ForLoopTest extends Spec {
       } yield s"<$i,$j>"
       assertResult(Vector("<1,3>", "<2,2>", "<2,3>", "<3,1>", "<3,2>", "<3,3>"))(txts)
     }
+    
+    def `for loop generate new collection, NOT a view` = {
+      val original = Array(1,2,3,4)
+      
+      val newcopy = for (e <- original if e%2==0) yield e
+      assert(newcopy sameElements Array(2,4))
+      
+      // change on the returned collection
+      newcopy(0) *= -1
+      assert(newcopy sameElements Array(-2,4))
+      
+      // won't affect the original collection
+      assert(original sameElements Array(1,2,3,4))
+    }
 
     def `cross multiple lines` = {
       val txts = for {
@@ -96,14 +124,6 @@ sealed class ForLoopTest extends Spec {
       val actual = for (i <- 1 to 3; j <- 4 to 6) yield s"[$i,$j]"
       val expected = Vector("[1,4]", "[1,5]", "[1,6]", "[2,4]", "[2,5]", "[2,6]", "[3,4]", "[3,5]", "[3,6]")
       assertResult(expected)(actual)
-    }
-
-    def `simple demo` = {
-      var sum = 0
-      for (i <- Array(9, 8, 6)) {
-        sum += i
-      }
-      assertResult(23)(sum)
     }
   }
 }
