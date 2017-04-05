@@ -49,11 +49,15 @@ class StringTest extends Spec {
       val s2 = "hello stasi"
       val s3 = new String("hello stasi")
 
+      // 'eq' checks reference equality
       assert(s1 == s2)
       assert(s1 eq s2) // because of the "intern" mechanism
 
-      assert(s1 == s3)
-      assert(!(s1 eq s3))
+      // '==' call 'equals'
+      // by default, 'equals' just call 'eq' to check reference equality
+      // however, string overrides 'equals' to provide content equality
+      assert(s1 == s3) // content equal
+      assert(!(s1 eq s3)) // but points to different object
     }
 
     def `compare inequality` = {

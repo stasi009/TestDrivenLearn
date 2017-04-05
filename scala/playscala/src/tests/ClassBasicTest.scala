@@ -173,7 +173,7 @@ sealed class ClassBasicTest extends Spec {
         private var _age = 0
         
         def this(name: String) = {
-          this() // start with a call to primary constructor
+          this() // must start with a call to primary constructor
           _name = name
         }
         
