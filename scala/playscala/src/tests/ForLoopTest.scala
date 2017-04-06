@@ -32,7 +32,7 @@ sealed class ForLoopTest extends Spec {
       } //def
     } //extractor object
 
-    // match failure is siliently ignored
+    // match failure is silently ignored
     def `for loop and pattern match 1` = {
       val students = Seq(
         "11,Justin,Kaohsiung",

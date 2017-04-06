@@ -1,6 +1,7 @@
 package demo
 
 import io.Source
+import java.io.PrintWriter
 
 object FileIoDemo extends App {
 
@@ -37,10 +38,21 @@ object FileIoDemo extends App {
     val iterator = iteratorFromFile("resources/PythonZen.txt")
     iterator.zipWithIndex.foreach { case (ln, index) => println(s"[$index]:$ln") }
   }
+  
+  def demoWriteText() = {
+    // under Mac, by default, it can automatically written as UTF-8
+    val fout = new PrintWriter("resources/chinese_texts.txt")
+    val texts = Array("我叫赵小胖","我在竹间","我去过重庆")
+    for (txt <- texts) {
+      fout.println(txt)
+    }
+    fout.close()
+  }
 
   override def main(args: Array[String]) = {
-    demoReadText()
+    // demoReadText()
     // demoIteratorDisposeProblem()
+    demoWriteText()
   } //def
 
 }

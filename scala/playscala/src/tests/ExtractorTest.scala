@@ -15,7 +15,7 @@ sealed class ExtractorTest extends Spec {
   } //extractor object
 
   object IsMale {
-    // return Boolean to indicate "matched or not"
+    // return Boolean (other than Optional) to indicate "matched or not"
     def unapply(s: String) = s.toLowerCase == "male"
   }
 
