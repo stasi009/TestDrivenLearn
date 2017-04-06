@@ -139,8 +139,7 @@ sealed class HighOrderFuncTest extends Spec {
 
   object `function as parameter and result` {
 
-    def `function as input` = {
-
+    def `function as input 1` = {
       def fool(converter: Int => String) = (1 to 3) map converter
 
       assertResult(Seq("1", "2", "3"))(fool { _.toString })
@@ -151,6 +150,13 @@ sealed class HighOrderFuncTest extends Spec {
         case 3 => "three"
       })
     } //def
+
+    def `function as input 2` = {
+      // demo define function parameter which has two arguments
+      def fool(f: (Int, Int) => Int) = f(9, 8)
+      assertResult(17)(fool { _ + _ })
+      assertResult(72)(fool { _ * _ })
+    }
 
     def `function as output` = {
       def mulby(factor: Int) = (x: Int) => x * factor

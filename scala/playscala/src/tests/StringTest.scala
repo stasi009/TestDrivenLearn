@@ -88,6 +88,7 @@ class StringTest extends Spec {
     def `support Unicode` = {
       val name = "史塔西" // unicode string
       assertResult('塔')(name(1)) // unicode character
+      assertResult(3)(name.length)
     }
 
     def `index within string` = {

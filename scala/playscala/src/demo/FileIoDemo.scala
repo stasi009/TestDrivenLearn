@@ -5,7 +5,11 @@ import io.Source
 object FileIoDemo extends App {
 
   def demoReadText() = {
-    val source = Source.fromFile("resources/PythonZen.txt")
+    // val source = Source.fromFile("resources/PythonZen.txt")
+    val source = Source.fromFile("resources/Python箴言.txt", "utf-8")
+
+    // source can be used as Iterator[Char]
+    // lniterator is Iterator[String], and different from Python, the ending '\n' has been trimed
     val lniterator = source.getLines
     lniterator.zipWithIndex.foreach { case (ln, index) => println(s"[$index]:$ln") }
     source.close()
