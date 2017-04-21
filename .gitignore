@@ -50,3 +50,5 @@ LearnTensorflow/ComposeShakespeare/shakespeare_model
 *.jar
 
 scala/playscala/.cache-main
+
+scala/playscala/.cache-main

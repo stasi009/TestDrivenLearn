@@ -5,6 +5,10 @@ import collection.immutable.Range
 import collection.immutable.IndexedSeq
 import common.Utility
 
+/**
+ * Ranges are represented in constant space, because they can be defined by just three numbers: 
+ * their start, their end, and the stepping value
+ */
 class RangeTest extends Spec {
   
   object `simple test` {
