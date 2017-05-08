@@ -2,7 +2,7 @@ package tests
 
 import org.scalatest.Spec
 
-sealed class FunctionalOperatorsTest extends Spec {
+sealed class FuncOperatorsTest extends Spec {
 
   object `test operators` {
 
@@ -101,7 +101,20 @@ sealed class FunctionalOperatorsTest extends Spec {
       val characters = names flatMap { _.toCharArray }
       assertResult(Seq('s', 't', 'a', 's', 'i', 'k', 'g', 'b'))(characters)
     }
+    
+    /**
+     * If you use flatMap with a function that returns an Option, 
+     * resulting collection contains all values v for which the function returns Some(v).
+     */
+    def `test flatMap Option` = {
+      val names = Seq("stasi", "kgb")
+      val result = names.zipWithIndex flatMap { case (name,idx) => if(idx % 2 ==0) Some(name) else None }
+      assertResult(Seq("stasi"))(result)
+    }
 
+    /**
+     * 'collect' yields a collection of all function values of the arguments on which it is defined
+     */
     def `test collect` = {
       val characters = Seq('a', 'b', 'c', 'c', 'b', 'a')
       assertResult(Seq(1, -1, -1, 1)) { characters collect { case 'a' => 1; case 'b' => -1 } }
