@@ -2,7 +2,7 @@ package tests
 
 import org.scalatest.Spec
 
-sealed class PartialFunctionTest extends Spec {
+sealed class PartialFuncTest extends Spec {
 
   object `basic operations` {
     val isEven: PartialFunction[Int, String] = { case x if x % 2 == 0 => x + " is even" }
