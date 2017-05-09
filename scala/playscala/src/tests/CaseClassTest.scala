@@ -13,7 +13,7 @@ class CaseClassTest extends Spec {
     sealed trait OsObject
     case class File(name: String) extends OsObject
     case class Process(name: String, priority: Int) extends OsObject
-    case object Unknown extends OsObject
+    case object Unknown extends OsObject // singletons object
 
     def getName(osobj: OsObject) = {
       osobj match {

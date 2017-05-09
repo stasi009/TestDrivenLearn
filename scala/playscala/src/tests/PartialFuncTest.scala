@@ -2,6 +2,10 @@ package tests
 
 import org.scalatest.Spec
 
+/**
+ * A set of case clauses enclosed in braces is a partial function—
+ * a function which may not be defined for all inputs.
+ */
 sealed class PartialFuncTest extends Spec {
 
   object `basic operations` {
