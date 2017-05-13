@@ -49,6 +49,14 @@ LearnTensorflow/ComposeShakespeare/shakespeare_model
 
 *.jar
 
-scala/playscala/.cache-main
+scala/.metadata
 
 scala/playscala/.cache-main
+
+scala/demo-apps/.cache-main
+
+scala/demo-apps/bin
+
+scala/demo-apps/target
+
+scala/demo-apps/project/target

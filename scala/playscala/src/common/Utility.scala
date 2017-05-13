@@ -18,7 +18,7 @@ object Utility {
 
   // implicit class not be top-level class
   // and AnyVal cannot be nested inside another class
-  // extending AnyVal is to avoid the runtime allocation 
+  // extending AnyVal is to avoid the runtime memory allocation 
   // (compiler will treat it like extension method in C#, which is defined as static method in static class)
   implicit class MyRangeMaker(val left: Int) extends AnyVal {
     def -->(right: Int) = left to right

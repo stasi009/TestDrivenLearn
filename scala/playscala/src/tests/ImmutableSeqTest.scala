@@ -1,10 +1,24 @@
 package tests
 
 import org.scalatest.Spec
+import java.lang.IndexOutOfBoundsException
 
 sealed class ImmutableSeqTest extends Spec {
 
   object `common api usage` {
+    
+    /**
+     * all Seq, both IndexedSeq and LinearSeq support accessing by index
+     */
+    def `test index access` = {
+      val s = Seq(1, 2, 3)
+
+      assertResult(2)(s(1))
+      intercept[IndexOutOfBoundsException] {s(10)}
+      
+      // doesn't support negative indexing
+      intercept[IndexOutOfBoundsException] {s(-1)}
+    }
 
     def `append and prepend` = {
       val s = Seq(1, 2, 3)

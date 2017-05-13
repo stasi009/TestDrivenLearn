@@ -96,7 +96,7 @@ sealed class ClassBasicTest extends Spec {
       // use scala way to access
       p.name = "gru"
       assert(p.name == "gru")
-      
+
       // use java bean's way to access
       p.setName("kgb")
       assert(p.getName() == "kgb")
@@ -119,24 +119,24 @@ sealed class ClassBasicTest extends Spec {
       p.tag = "russian"
       assert(p.tag == "russian")
     } //def
-    
+
     def `primary constructor 2` = {
       var counter = 0
-      
+
       class Fool(value: Int) {
         // this is the body of the primary constructor
         // which will be executed during the construction
         val square = value * value
         counter += 1
-        
+
         override def toString() = s"$value * $value = $square"
       }
-      
+
       val f = new Fool(3)
       assert(f.square == 9)
       assert(f.toString == "3 * 3 = 9")
       assert(counter == 1)
-      
+
       for (index <- 1 to 10) new Fool(index)
       assert(counter == 11)
     }
@@ -153,67 +153,67 @@ sealed class ClassBasicTest extends Spec {
       // f.id
       // f.name
     } //def
-    
+
     def `auxiliary constructor 1` = {
-      class DbClient(val host: String,val port: Int) {
+      class DbClient(val host: String, val port: Int) {
         // auxiliary constructor is called 'this'
         // and it must start with a call to primary constructor or other auxiliary constructor
-        def this() = this("localhost",7027)
+        def this() = this("localhost", 7027)
       }
-      
+
       val client = new DbClient
       assert(client.host == "localhost")
       assert(client.port == 7027)
-    }//def
-    
+    } //def
+
     def `auxiliary constructor 2` = {
       sealed class Person {
         // this class doesn't define any primary constructor
         private var _name = ""
         private var _age = 0
-        
+
         def this(name: String) = {
           this() // must start with a call to primary constructor
           _name = name
         }
-        
-        def this(name: String,age:Int) = {
-          this(name)// start with a call to other auxiliary constructor
+
+        def this(name: String, age: Int) = {
+          this(name) // start with a call to other auxiliary constructor
           _age = age
         }
-        
-        def name = _name 
+
+        def name = _name
         def age = _age
-      }//class
-      
+      } //class
+
       val p1 = new Person
       assert(p1.name.isEmpty)
       assert(p1.age == 0)
-     
+
       val p2 = new Person("cheka")
       assert(p2.name == "cheka")
       assert(p2.age == 0)
-      
-      val p3 = new Person("stasi",9)
+
+      val p3 = new Person("stasi", 9)
       assert(p3.name == "stasi")
       assert(p3.age == 9)
     }
-    
+
     def `constructor with default value` = {
       sealed class Person(val age: Int = 0, val name: String = "")
-      
+
       val p1 = new Person
       assert(p1.name.isEmpty)
       assert(p1.age == 0)
-      
-      val p2 = new Person(name="cheka")
+
+      val p2 = new Person(name = "cheka")
       assert(p2.name == "cheka")
       assert(p2.age == 0)
-      
-      val p3 = new Person(age=9,name="stasi")
+
+      val p3 = new Person(age = 9, name = "stasi")
       assert(p3.name == "stasi")
       assert(p3.age == 9)
-    }//def
+    } //def
 
   } //object
 }
