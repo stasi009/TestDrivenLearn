@@ -37,7 +37,7 @@
 
 TEST(CPPLibTest, FindMaxHandlesSizeOne) {
   CPPLib cpplib;
-  std::vector<int> inputs = {2};
+  std::vector<int> inputs = {3};
   EXPECT_EQ(cpplib.FindMax(inputs), 3);
 }
 
