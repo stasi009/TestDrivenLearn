@@ -60,3 +60,7 @@ scala/demo-apps/bin
 scala/demo-apps/target
 
 scala/demo-apps/project/target
+
+CPP/*/bazel-bin
+CPP/*/bazel-out
+CPP/*/bazel-test*
