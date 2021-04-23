@@ -2,7 +2,7 @@
 #include <vector>
 #include "gtest/gtest.h"
 
-TEST(StlTest, Constructor)
+TEST(VectorTest, Constructor)
 {
     // --------- 初始化一个长度为0的vector
     std::vector<int> vec1;
