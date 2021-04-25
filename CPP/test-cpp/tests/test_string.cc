@@ -1,6 +1,7 @@
 
 #include "gtest/gtest.h"
 #include <map>
+#include <sstream>
 
 using namespace ::std;
 
@@ -23,4 +24,15 @@ TEST(StringTest, ImplictConversion)
 
     int v = map1["abc"];
     ASSERT_EQ(v, 89);
+}
+
+TEST(StringTest, FormatString)
+{
+    double pi = 3.14159265359;
+    std::ostringstream sstream;
+    sstream << "PI = " << std::fixed << std::setprecision(2) << pi;
+
+    string actual = sstream.str();
+    string expected = "PI = 3.14";
+    ASSERT_EQ(actual,expected);
 }
