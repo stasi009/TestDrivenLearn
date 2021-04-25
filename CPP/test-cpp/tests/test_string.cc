@@ -17,7 +17,7 @@ TEST(StringTest, ImplictConversion)
 {
     // 从c-str literal到string有implicit conversion
     // 所以下面的代码中，尽管声明key的类型是std::string
-    // 但是可以直接有c-style string来插入和检索
+    // 但是可以直接用c-style string来插入和检索
     map<string, int> map1;
     map1.insert({"abc", 89});
 
