@@ -1,6 +1,7 @@
 
 #include <iostream>
 #include <vector>
+#include <iterator>
 #include "gtest/gtest.h"
 
 using namespace ::std;
@@ -24,6 +25,10 @@ TEST(VectorTest, Constructor)
     ASSERT_EQ(vec3[0], 11);
     ASSERT_EQ(vec3[1], 22);
     ASSERT_EQ(vec3[2], 33);
+
+    // another syntax to construct via initializer_list
+    auto vec4 = std::vector<int>{88, 99};
+    ASSERT_EQ(vec4[0], 88);
 }
 
 TEST(VectorTest, AccessByIndex)
@@ -48,4 +53,54 @@ TEST(VectorTest, AccessByIndex)
     ASSERT_EQ(vec1[0], 11);
     ASSERT_EQ(vec1[1], 999);
     ASSERT_EQ(vec1[2], 888);
+}
+
+TEST(VectorTest, Equal)
+{
+    std::vector<int> vec = {11, 22, 33};
+
+    // write by iterator
+    for (std::vector<int>::iterator iter = begin(vec); iter != end(vec); ++iter)
+    {
+        // *iter can be both read and written
+        // change in place
+        *iter *= 2;
+    }
+
+    std::vector<int> expected = {22, 44, 66};
+    ASSERT_TRUE(vec == expected);
+}
+
+TEST(VectorTest, LoopByIterator)
+{
+    std::vector<int> vec = {11, 22, 33};
+
+    // read by iterator
+    int index = 0;
+    for (std::vector<int>::const_iterator citer = cbegin(vec); citer != cend(vec); ++citer)
+    {
+        ASSERT_EQ(*citer, vec[index]);
+        ++index;
+    }
+
+    // write by iterator
+    for (std::vector<int>::iterator iter = begin(vec); iter != end(vec); ++iter)
+    {
+        // *iter can be both read and written
+        // change in place
+        *iter *= 2;
+    }
+    ASSERT_TRUE(vec == (std::vector<int>{22, 44, 66}));
+}
+
+TEST(VectorTest, Swap)
+{
+    std::vector<int> vec1 = {11, 22, 33};
+    std::vector<int> vec2 = {99, 88};
+
+    // swap the contents of two vectors in constant time.
+    vec1.swap(vec2);
+
+    ASSERT_EQ(vec1, (std::vector<int>{99, 88}));
+    ASSERT_EQ(vec2, (std::vector<int>{11, 22, 33}));
 }
