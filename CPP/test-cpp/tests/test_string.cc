@@ -36,3 +36,9 @@ TEST(StringTest, FormatString)
     string expected = "PI = 3.14";
     ASSERT_EQ(actual,expected);
 }
+
+TEST(StringTest, Equal)
+{
+    auto a = string("stasi");
+    ASSERT_TRUE(a == "stasi");// rhs c-str is implicitly cast to string
+}

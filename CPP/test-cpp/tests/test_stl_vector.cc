@@ -93,6 +93,18 @@ TEST(VectorTest, LoopByIterator)
     ASSERT_TRUE(vec == (std::vector<int>{22, 44, 66}));
 }
 
+TEST(VectorTest, RangeBasedLoop)
+{
+    std::vector<int> vec = {11, 22, 33};
+
+    for (auto& n: vec)
+    {
+        n*=2;// change in place
+    }
+
+    ASSERT_EQ(vec,(std::vector<int>{22,44,66}));
+}
+
 TEST(VectorTest, Swap)
 {
     std::vector<int> vec1 = {11, 22, 33};
