@@ -42,3 +42,10 @@ TEST(StringTest, Equal)
     auto a = string("stasi");
     ASSERT_TRUE(a == "stasi");// rhs c-str is implicitly cast to string
 }
+
+TEST(StringTest, Append)
+{
+    auto a = string("cheka");
+    a.append(" kgb");
+    ASSERT_EQ(a,"cheka kgb");
+}

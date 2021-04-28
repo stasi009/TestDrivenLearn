@@ -83,7 +83,7 @@ TEST(VectorTest, LoopByIterator)
         ++index;
     }
 
-    // write by iterator
+    // in-place change by iterator
     for (std::vector<int>::iterator iter = begin(vec); iter != end(vec); ++iter)
     {
         // *iter can be both read and written
@@ -93,16 +93,35 @@ TEST(VectorTest, LoopByIterator)
     ASSERT_TRUE(vec == (std::vector<int>{22, 44, 66}));
 }
 
+TEST(VectorTest, LoopAndChange)
+{
+    std::vector<string> vec = {"a", "b", "c"};
+
+    // --------- loop change by iterator
+    for (auto it = begin(vec); it != end(vec); ++it)
+    {
+        it->append("_x");
+    }
+    ASSERT_EQ(vec, (std::vector<string>{"a_x", "b_x", "c_x"}));
+
+    // --------- loop change in range-based loop
+    for (auto &s : vec)
+    {
+        s.append("_y");
+    }
+    ASSERT_EQ(vec, (std::vector<string>{"a_x_y", "b_x_y", "c_x_y"}));
+}
+
 TEST(VectorTest, RangeBasedLoop)
 {
     std::vector<int> vec = {11, 22, 33};
 
-    for (auto& n: vec)
+    for (auto &n : vec)
     {
-        n*=2;// change in place
+        n *= 2; // change in place
     }
 
-    ASSERT_EQ(vec,(std::vector<int>{22,44,66}));
+    ASSERT_EQ(vec, (std::vector<int>{22, 44, 66}));
 }
 
 TEST(VectorTest, Swap)
@@ -115,4 +134,19 @@ TEST(VectorTest, Swap)
 
     ASSERT_EQ(vec1, (std::vector<int>{99, 88}));
     ASSERT_EQ(vec2, (std::vector<int>{11, 22, 33}));
+}
+
+TEST(VectorTest, AssignOperator)
+{
+    auto vec1 = std::vector<int>{1, 2, 3};
+    auto vec2 = std::vector<int>{8, 9};
+
+    // assign operator makes a copy
+    vec2 = vec1;
+    ASSERT_EQ(vec2.size(), 3);
+    ASSERT_EQ(vec2[0], 1);
+
+    // copy, not reference
+    vec2[0] = -99;
+    ASSERT_EQ(vec1[0], 1); // not affect source which is copied from
 }
