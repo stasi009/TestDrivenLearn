@@ -75,6 +75,11 @@ TEST(VectorTest, LoopByIterator)
 {
     std::vector<int> vec = {11, 22, 33};
 
+    // random access by iterator
+    vector<int>::const_iterator citer = cbegin(vec);
+    citer += 2;
+    ASSERT_EQ(*citer,33);
+
     // read by iterator
     int index = 0;
     for (std::vector<int>::const_iterator citer = cbegin(vec); citer != cend(vec); ++citer)
@@ -116,6 +121,7 @@ TEST(VectorTest, RangeBasedLoop)
 {
     std::vector<int> vec = {11, 22, 33};
 
+    // you can also use const auto& to perform ready-only access
     for (auto &n : vec)
     {
         n *= 2; // change in place
@@ -149,4 +155,50 @@ TEST(VectorTest, AssignOperator)
     // copy, not reference
     vec2[0] = -99;
     ASSERT_EQ(vec1[0], 1); // not affect source which is copied from
+}
+
+TEST(VectorTest, PushAndPop)
+{
+    // push
+    auto vec1 = std::vector<int>();
+    vec1.push_back(9);
+    vec1.push_back(8);
+    vec1.push_back(6);
+    ASSERT_EQ(vec1,(std::vector<int>{9,8,6}));
+
+    // pop
+    // pop_back() does not return the element that it removed. 
+    // If you want that element, you must first retrieve it with back().
+    vec1.pop_back(); 
+    ASSERT_EQ(vec1,(std::vector<int>{9,8}));
+}
+
+TEST(VectorTest, MoveSemantics)
+{
+    auto vec1 = vector<string>();
+
+    // triggers a call to the move version because the call to the string constructor results in a temporary object
+    vec1.push_back((string(5, 'a')));
+
+    // 'move' explicitly saying that myElement should be moved into the vector. 
+    // Note that after this call, myElement is in a valid but otherwise indeterminate state.
+    auto s = string("xyz");
+    vec1.push_back(move(s));
+
+    ASSERT_EQ(vec1,(vector<string>{"aaaaa","xyz"}));
+}
+
+TEST(VectorTest, Emplace)
+{
+    auto vec1 = vector<string>();
+
+    // Emplace means “to put into place.” An example is emplace_back() on a vector object, which does not copy or move anything. 
+    // Instead, it makes space in the container, call the constructor, constructs the object in place,
+    vec1.emplace_back(3,'x');
+
+    // above code is equivalent to following code
+    // invoke the move-version, since the argument is a temporary object
+    vec1.push_back(string(5,'y'));
+
+    ASSERT_EQ(vec1,(vector<string>{"xxx","yyyyy"}));
 }

@@ -12,6 +12,9 @@ TEST(StringTest, Construct)
 
     string s2 = "xy";
     ASSERT_EQ(s2.size(), 2);
+
+    string s3(3,'x');
+    ASSERT_EQ(s3,"xxx");
 }
 
 TEST(StringTest, ImplictConversion)
