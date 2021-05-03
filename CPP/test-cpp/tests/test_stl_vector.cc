@@ -11,6 +11,7 @@ TEST(VectorTest, Constructor)
     // --------- 初始化一个长度为0的vector
     std::vector<int> vec1;
     ASSERT_EQ(vec1.size(), 0);
+    ASSERT_TRUE(vec1.empty());
 
     // --------- 初始化为指定长度，然后用指定值填充
     std::vector<int> vec2(3, 8);
@@ -78,7 +79,7 @@ TEST(VectorTest, LoopByIterator)
     // random access by iterator
     vector<int>::const_iterator citer = cbegin(vec);
     citer += 2;
-    ASSERT_EQ(*citer,33);
+    ASSERT_EQ(*citer, 33);
 
     // read by iterator
     int index = 0;
@@ -130,6 +131,7 @@ TEST(VectorTest, RangeBasedLoop)
     ASSERT_EQ(vec, (std::vector<int>{22, 44, 66}));
 }
 
+// Swap内部用的是Move Semantics，所以是constant time complexity
 TEST(VectorTest, Swap)
 {
     std::vector<int> vec1 = {11, 22, 33};
@@ -164,13 +166,13 @@ TEST(VectorTest, PushAndPop)
     vec1.push_back(9);
     vec1.push_back(8);
     vec1.push_back(6);
-    ASSERT_EQ(vec1,(std::vector<int>{9,8,6}));
+    ASSERT_EQ(vec1, (std::vector<int>{9, 8, 6}));
 
     // pop
-    // pop_back() does not return the element that it removed. 
+    // pop_back() does not return the element that it removed.
     // If you want that element, you must first retrieve it with back().
-    vec1.pop_back(); 
-    ASSERT_EQ(vec1,(std::vector<int>{9,8}));
+    vec1.pop_back();
+    ASSERT_EQ(vec1, (std::vector<int>{9, 8}));
 }
 
 TEST(VectorTest, MoveSemantics)
@@ -180,25 +182,35 @@ TEST(VectorTest, MoveSemantics)
     // triggers a call to the move version because the call to the string constructor results in a temporary object
     vec1.push_back((string(5, 'a')));
 
-    // 'move' explicitly saying that myElement should be moved into the vector. 
+    // 'move' explicitly saying that myElement should be moved into the vector.
     // Note that after this call, myElement is in a valid but otherwise indeterminate state.
     auto s = string("xyz");
     vec1.push_back(move(s));
 
-    ASSERT_EQ(vec1,(vector<string>{"aaaaa","xyz"}));
+    ASSERT_EQ(vec1, (vector<string>{"aaaaa", "xyz"}));
 }
 
 TEST(VectorTest, Emplace)
 {
     auto vec1 = vector<string>();
 
-    // Emplace means “to put into place.” An example is emplace_back() on a vector object, which does not copy or move anything. 
+    // Emplace means “to put into place.” An example is emplace_back() on a vector object, which does not copy or move anything.
     // Instead, it makes space in the container, call the constructor, constructs the object in place,
-    vec1.emplace_back(3,'x');
+    vec1.emplace_back(3, 'x');
 
     // above code is equivalent to following code
     // invoke the move-version, since the argument is a temporary object
-    vec1.push_back(string(5,'y'));
+    vec1.push_back(string(5, 'y'));
 
-    ASSERT_EQ(vec1,(vector<string>{"xxx","yyyyy"}));
+    ASSERT_EQ(vec1, (vector<string>{"xxx", "yyyyy"}));
+}
+
+TEST(VectorTest, ReserveAndCapacity)
+{
+    auto vec1 = vector<string>();
+    ASSERT_EQ(vec1.size(), 0);
+
+    vec1.reserve(10);
+    ASSERT_EQ(vec1.size(), 0);
+    ASSERT_EQ(vec1.capacity(), 10);
 }
